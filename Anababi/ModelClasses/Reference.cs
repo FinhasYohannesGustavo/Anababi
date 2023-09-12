@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Anababi.ModelClasses
 {
 
-    internal class Reference
+    public class Reference
     {
         public enum ReferenceType
         {

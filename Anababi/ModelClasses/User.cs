@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Anababi.ModelClasses
 {
-    internal class User
+    public class User
     {
         public int id { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string username { get; set; }
         private string _password { get; set; }
+
+        public byte[]? profilePic { get; set; }
 
         public User()
         {
