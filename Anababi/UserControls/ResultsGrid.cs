@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows;
 using Anababi.ModelClasses;
 
 namespace Anababi.UserControls
@@ -100,10 +101,12 @@ namespace Anababi.UserControls
             {
                 //VisualArts were sent
                 //Code for extracting a Reference object from a button
-                Reference Reference = (Reference)btn.Tag;
+                Reference reference = (Reference)btn.Tag;
 
                 //Create a center display for the visual art
-                UserExperience.CreateCenterDisplayForArt(Reference, requiredPanel);
+                //UserExperience.CreateCenterDisplayForArt(Reference, requiredPanel);
+                CenterDisplayForm popup = new CenterDisplayForm(reference);
+                popup.Show();
             }
             else
             {

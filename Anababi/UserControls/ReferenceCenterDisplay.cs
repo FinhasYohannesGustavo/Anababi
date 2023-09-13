@@ -23,17 +23,15 @@ namespace Anababi.UserControls
 
     private void CenterDisplay_Load(object sender, EventArgs e)
     {
-        //Set the label representing the title of the artwork.
-        //LblArtworkTitle.Text = Art.Title;
+            //Set the label representing the title of the book.
+            titleLabel.Text = reference.title;
 
 
         //Set the background image of the artPage (tab in the TabControl) to the image of the VisualArt.
-        Image artPageImage = UserExperience.byteArrayToImage(reference.coverImage);
-        //artPage.BackgroundImage = artPageImage;
-        //Set the layout of the background image of the artPage.
-        //artPage.BackgroundImageLayout = ImageLayout.Zoom;
+        splitContainer1.Panel1.BackgroundImage = UserExperience.byteArrayToImage(reference.coverImage);
+       
         //Set the text of the TextBox representing the description of the art.
-        //textBoxDescription.Text = reference.description;
+        descriptionLabel.Text= reference.description;
 
     }
 
@@ -44,5 +42,7 @@ namespace Anababi.UserControls
         //to the page he/she was before clicking on the artwork to be viewed.
         this.Hide();
     }
-}
+
+      
+    }
 }
