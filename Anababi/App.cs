@@ -3,7 +3,7 @@ namespace Anababi
 {
     public partial class App : Form
     {
-        static Library library = null!;
+        static Library Library { get; set; } = null!;
         public App()
         {
             InitializeComponent();
@@ -16,25 +16,25 @@ namespace Anababi
 
             //This is dummy data and will be replaced by the verified User object from the Login page.
             User user = new User();
-            user.id = 1;
-            user.firstName = "Yelielew";
-            user.lastName = "Aymertim";
-            user.username = "yelielew";
-            user.profilePic = UserExperience.ImageToByteArray(Properties.Resources.Afewerk_Tekle);
+            user.Id = 1;
+            user.FirstName = "Yelielew";
+            user.LastName = "Aymertim";
+            user.Username = "yelielew";
+            user.ProfilePic = UserExperience.ImageToByteArray(Properties.Resources.Afewerk_Tekle);
 
             User administrator = new User();
-            administrator.id = 2;
-            administrator.firstName = "Aytal";
-            administrator.lastName = "Esuga";
-            administrator.username = "aytal_esuga";
-            administrator.isAdmin = true;
-            administrator.profilePic = UserExperience.ImageToByteArray(Properties.Resources.goneGirl);
+            administrator.Id = 2;
+            administrator.FirstName = "Aytal";
+            administrator.LastName = "Esuga";
+            administrator.Username = "aytal_esuga";
+            administrator.IsAdmin = true;
+            administrator.ProfilePic = UserExperience.ImageToByteArray(Properties.Resources.goneGirl);
 
-            //Create a library object with all users, administrators and references.
+            //Create a library object with all users, Administrators and References.
             List<User> users = new List<User> { user};
             List<Reference> references = UserExperience.GetDummyReferences();
             List<User> administrators = new List<User> { administrator};
-            library = new Library(users, administrators, references);
+            Library = new Library(users, administrators, references);
             
 
             //Everything below will be inside the button-click event of the user authentication UserControl.

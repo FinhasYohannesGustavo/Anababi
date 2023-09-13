@@ -5,13 +5,13 @@ namespace Anababi.ModelClasses
     internal class User
     {
         [Key]
-        public int id { get; set; }
-        public string firstName { get; set; } = null!;
-        public string lastName { get; set; } = null!;
-        public string username { get; set; } = null!;
+        public int Id { get; set; }
+        public string FirstName { get; set; } = null!;
+        public string LastName { get; set; } = null!;
+        public string Username { get; set; } = null!;
         private string _password { get; set; } = null!;
-        public byte[]? profilePic { get; set; }
-        internal bool isAdmin { get; set; } = false;
+        public byte[]? ProfilePic { get; set; }
+        internal bool IsAdmin { get; set; } = false;
 
         public void Login() { }
         public void Logout() { }
@@ -22,9 +22,9 @@ namespace Anababi.ModelClasses
         internal string AddReference(Reference reference)
         {
             string confirmationMessage;
-            if(this.isAdmin)
+            if(this.IsAdmin)
             {
-                // Code for adding a reference.
+                // Code for adding a Reference.
                 confirmationMessage = "Reference added.";
 
             }
@@ -36,9 +36,9 @@ namespace Anababi.ModelClasses
         internal string ModifyReference(Reference reference)
         {
             string confirmationMessage;
-            if(this.isAdmin)
+            if(this.IsAdmin)
             {
-                // Code for adding a reference.
+                // Code for adding a Reference.
                 confirmationMessage = "Reference modified.";
 
             }
@@ -50,9 +50,9 @@ namespace Anababi.ModelClasses
         internal string RemoveReference(Reference reference)
         {
             string confirmationMessage;
-            if(this.isAdmin)
+            if(this.IsAdmin)
             {
-                // Code for adding a reference.
+                // Code for adding a Reference.
                 confirmationMessage = "Reference removed.";
 
             }

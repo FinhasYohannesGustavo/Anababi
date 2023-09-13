@@ -30,13 +30,13 @@ namespace Anababi
         {
             //Set the text property of the labels for  FullName and Username and center them horizontally.
 
-            LblFullName.Text = currentUser.firstName + " " + currentUser.lastName;
+            LblFullName.Text = currentUser.FirstName + " " + currentUser.LastName;
             LblFullName.CenterHorizontally();
-            LblUsername.Text = $"@{currentUser.username}";
+            LblUsername.Text = $"@{currentUser.Username}";
             LblUsername.CenterHorizontally();
 
             //Set the image of the profile picture from the currentUser.
-            Image ProfileImage = byteArrayToImage(currentUser.profilePic);
+            Image ProfileImage = byteArrayToImage(currentUser.ProfilePic);
 
             guna2CirclePictureBoxProfilePic.Image = ProfileImage;
 
@@ -122,7 +122,7 @@ namespace Anababi
             for (int i = 0; i < references.Count(); i++)
             {
                 Button button = new Button();
-                Image buttonImage = byteArrayToImage(references[i].coverImage);
+                Image buttonImage = byteArrayToImage(references[i].CoverImage);
                 button.BackgroundImage = buttonImage;
                 button.BackgroundImageLayout = ImageLayout.Tile;
                 button.Text = "";
@@ -141,7 +141,7 @@ namespace Anababi
             {
                 Button button = new Button();
 
-                Image buttonImage = byteArrayToImage(wirter[i].profilePic);
+                Image buttonImage = byteArrayToImage(wirter[i].ProfilePic);
                 button.BackgroundImage = buttonImage;
                 button.BackgroundImageLayout = ImageLayout.Tile;
                 button.Text = "";
@@ -164,7 +164,7 @@ namespace Anababi
             foreach (Reference r in books)
             {
                 //Add each genre to the genres list.
-                genres.Add(r.referenceGenre.ToString());
+                genres.Add(r.Genre.ToString());
             }
             //Remove duplicate genres.
             genres = genres.Distinct().ToList();
@@ -173,7 +173,7 @@ namespace Anababi
             foreach (String genre in genres)
             {
                 //Create a list of References that are of the specific genre.
-                List<Reference> visualsOfGenre = books.FindAll(book => book.referenceGenre.ToString() == genre);
+                List<Reference> visualsOfGenre = books.FindAll(book => book.Genre.ToString() == genre);
                 //Create a CategoryTemplateDisplay object for this genre based on the selected visuals.
                 CategoryTemplateDisplay categoryTemplateDisplay = new CategoryTemplateDisplay(genre.ToString(), visualsOfGenre);
                 //Add the CategoryTemplateDisplay object to the categories list.
@@ -202,95 +202,95 @@ namespace Anababi
             List<Reference> references= new List<Reference>();
             Reference book1 = new Reference
             {
-                id = 1,
-                title = "1984",
-                referenceGenre = Reference.ReferenceGenre.Fiction,
-                description = "\"1984\" is a classic dystopian novel written by George Orwell. Set in a totalitarian society, it follows the story of Winston Smith as he rebels against the oppressive regime ruled by Big Brother.",
-                publishedOn = new SqlDateTime(1949, 6, 8),
-                coverImage = ImageToByteArray(Resources._1984)
+                Id = 1,
+                Title = "1984",
+                Genre = Reference.ReferenceGenre.Fiction,
+                Description = "\"1984\" is a classic dystopian novel written by George Orwell. Set in a totalitarian society, it follows the story of Winston Smith as he rebels against the oppressive regime ruled by Big Brother.",
+                PublishedOn = new SqlDateTime(1949, 6, 8),
+                CoverImage = ImageToByteArray(Resources._1984)
             };
             
 
             Reference book2 = new Reference
             {
-                id = 2,
-                title = "Pride and Prejudice",
-                referenceGenre = Reference.ReferenceGenre.Romance,
-                description = "\"Pride and Prejudice\" is a beloved romance novel by Jane Austen. Set in 19th-century England, it revolves around the spirited Elizabeth Bennet and her complex relationship with the proud Mr. Darcy.",
-                publishedOn = new SqlDateTime(1813, 1, 28),
-                coverImage = ImageToByteArray(Resources.prideAndPrejudice)
+                Id = 2,
+                Title = "Pride and Prejudice",
+                Genre = Reference.ReferenceGenre.Romance,
+                Description = "\"Pride and Prejudice\" is a beloved romance novel by Jane Austen. Set in 19th-century England, it revolves around the spirited Elizabeth Bennet and her complex relationship with the proud Mr. Darcy.",
+                PublishedOn = new SqlDateTime(1813, 1, 28),
+                CoverImage = ImageToByteArray(Resources.prideAndPrejudice)
             };
 
             Reference book3 = new Reference
             {
-                id = 3,
-                title = "The Hobbit",
-                referenceGenre = Reference.ReferenceGenre.Fantasy,
-                description = "\"The Hobbit\" is a fantasy adventure novel by J.R.R. Tolkien. It follows the journey of Bilbo Baggins, a hobbit who is swept into an epic quest to reclaim the dwarves' homeland from the dragon Smaug.",
-                publishedOn = new SqlDateTime(1937, 9, 21),
-                coverImage = ImageToByteArray(Resources.theHobbit)
+                Id = 3,
+                Title = "The Hobbit",
+                Genre = Reference.ReferenceGenre.Fantasy,
+                Description = "\"The Hobbit\" is a fantasy adventure novel by J.R.R. Tolkien. It follows the journey of Bilbo Baggins, a hobbit who is swept into an epic quest to reclaim the dwarves' homeland from the dragon Smaug.",
+                PublishedOn = new SqlDateTime(1937, 9, 21),
+                CoverImage = ImageToByteArray(Resources.theHobbit)
             };
 
             // Creating objects for the remaining books in a similar manner
 
             Reference book4 = new Reference
             {
-                id = 4,
-                title = "To Kill a Mockingbird",
-                referenceGenre = Reference.ReferenceGenre.Romance,
-                description = "\"To Kill a Mockingbird\" is a poignant coming-of-age novel by Harper Lee. Set in the racially charged atmosphere of 1930s Alabama, it explores themes of racial injustice, morality, and the loss of innocence through the eyes of Scout Finch.",
-                publishedOn = new SqlDateTime(1960, 7, 11),
-                coverImage = ImageToByteArray(Resources.toKillAMockingBird)
+                Id = 4,
+                Title = "To Kill a Mockingbird",
+                Genre = Reference.ReferenceGenre.Romance,
+                Description = "\"To Kill a Mockingbird\" is a poignant coming-of-age novel by Harper Lee. Set in the racially charged atmosphere of 1930s Alabama, it explores themes of racial injustice, morality, and the loss of innocence through the eyes of Scout Finch.",
+                PublishedOn = new SqlDateTime(1960, 7, 11),
+                CoverImage = ImageToByteArray(Resources.toKillAMockingBird)
             };
 
             Reference book5 = new Reference
             {
-                id = 5,
-                title = "The Da Vinci Code",
-                referenceGenre = Reference.ReferenceGenre.Thriller,
-                description = "\"The Da Vinci Code\" is a gripping thriller by Dan Brown. The story follows symbologist Robert Langdon as he unravels a mystery involving religious symbolism, secret societies, and hidden codes.",
-                publishedOn = new SqlDateTime(2003, 3, 18),
-                coverImage = ImageToByteArray(Resources.theDavinciCode)
+                Id = 5,
+                Title = "The Da Vinci Code",
+                Genre = Reference.ReferenceGenre.Thriller,
+                Description = "\"The Da Vinci Code\" is a gripping thriller by Dan Brown. The story follows symbologist Robert Langdon as he unravels a mystery involving religious symbolism, secret societies, and hidden codes.",
+                PublishedOn = new SqlDateTime(2003, 3, 18),
+                CoverImage = ImageToByteArray(Resources.theDavinciCode)
             };
 
             Reference book6 = new Reference
             {
-                id = 6,
-                title = "The Great Gatsby",
-                referenceGenre = Reference.ReferenceGenre.Fiction,
-                description = "\"The Great Gatsby\" is a literary masterpiece by F. Scott Fitzgerald. Set in the Roaring Twenties, it explores the glamorous and decadent lifestyle of the wealthy elite, as seen through the eyes of the enigmatic Jay Gatsby.",
-                publishedOn = new SqlDateTime(1925, 4, 10),
-                coverImage = ImageToByteArray(Resources.theGreatGatsby)
+                Id = 6,
+                Title = "The Great Gatsby",
+                Genre = Reference.ReferenceGenre.Fiction,
+                Description = "\"The Great Gatsby\" is a literary masterpiece by F. Scott Fitzgerald. Set in the Roaring Twenties, it explores the glamorous and decadent lifestyle of the wealthy elite, as seen through the eyes of the enigmatic Jay Gatsby.",
+                PublishedOn = new SqlDateTime(1925, 4, 10),
+                CoverImage = ImageToByteArray(Resources.theGreatGatsby)
             };
 
             Reference book7 = new Reference
             {
-                id = 7,
-                title = "The Hunger Games",
-                referenceGenre = Reference.ReferenceGenre.ScienceFiction,
-                description = "\"The Hunger Games\" is a thrilling young adult science fiction novel by Suzanne Collins. Set in a dystopian future, it follows the story of Katniss Everdeen as she participates in a brutal televised competition where teenagers fight to the death.",
-                publishedOn = new SqlDateTime(2008, 9, 14),
-                coverImage = ImageToByteArray(Resources.theHungerGames)
+                Id = 7,
+                Title = "The Hunger Games",
+                Genre = Reference.ReferenceGenre.ScienceFiction,
+                Description = "\"The Hunger Games\" is a thrilling young adult science fiction novel by Suzanne Collins. Set in a dystopian future, it follows the story of Katniss Everdeen as she participates in a brutal televised competition where teenagers fight to the death.",
+                PublishedOn = new SqlDateTime(2008, 9, 14),
+                CoverImage = ImageToByteArray(Resources.theHungerGames)
             };
 
             Reference book8 = new Reference
             {
-                id = 8,
-                title = "Gone Girl",
-                referenceGenre = Reference.ReferenceGenre.Thriller,
-                description = "\"Gone Girl\" is a gripping psychological thriller by Gillian Flynn. It revolves around the disappearance of Amy Dunne and the suspicion that falls on her husband, Nick.",
-                publishedOn = new SqlDateTime(2012, 6, 5),
-                coverImage = ImageToByteArray(Resources.goneGirl)
+                Id = 8,
+                Title = "Gone Girl",
+                Genre = Reference.ReferenceGenre.Thriller,
+                Description = "\"Gone Girl\" is a gripping psychological thriller by Gillian Flynn. It revolves around the disappearance of Amy Dunne and the suspicion that falls on her husband, Nick.",
+                PublishedOn = new SqlDateTime(2012, 6, 5),
+                CoverImage = ImageToByteArray(Resources.goneGirl)
             };
 
             Reference book9 = new Reference
             {
-                id = 9,
-                title = "Sapiens: A Brief History of Humankind",
-                referenceGenre = Reference.ReferenceGenre.NonFiction,
-                description = "\"Sapiens: A Brief History of Humankind\" is a thought-provoking non-fiction book by Yuval Noah Harari. It provides an overview of human history, from the emergence of Homo sapiMy apologies, it seems the code got cut off. Here's the continuation:",
-                publishedOn = new SqlDateTime(2011, 2, 10),
-                coverImage = ImageToByteArray(Resources.sapiens)
+                Id = 9,
+                Title = "Sapiens: A Brief History of Humankind",
+                Genre = Reference.ReferenceGenre.NonFiction,
+                Description = "\"Sapiens: A Brief History of Humankind\" is a thought-provoking non-fiction book by Yuval Noah Harari. It provides an overview of human history, from the emergence of Homo sapiMy apologies, it seems the code got cut off. Here's the continuation:",
+                PublishedOn = new SqlDateTime(2011, 2, 10),
+                CoverImage = ImageToByteArray(Resources.sapiens)
             };
             references.Add(book9);
             references.Add(book8);

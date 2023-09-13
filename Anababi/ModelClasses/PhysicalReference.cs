@@ -5,21 +5,21 @@ namespace Anababi.ModelClasses
     {
         internal class ReferenceLocation
         {
-            int floor;
-            int section;
-            int shelf;
+            int Floor;
+            int Section;
+            int Shelf;
 
             ReferenceLocation(int floor, int section, int shelf)
             {
-                this.floor = floor;
-                this.section = section;
-                this.shelf = shelf;
+                Floor = floor;
+                Section = section;
+                Shelf = shelf;
             }
         }
 
-        ReferenceLocation location { get; set; } = null!;
-        int numOfCopies { get; set; }
-        bool available { get; set; }
+        ReferenceLocation Location { get; set; } = null!;
+        int NumOfCopies { get; set; }
+        bool Available { get; set; }
 
     }
 }

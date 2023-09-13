@@ -22,37 +22,37 @@ namespace Anababi.ModelClasses
             }
         internal class ISBN
         {
-            int prefix;
-            int registrationGroup;
-            int registrant;
-            int publication;
-            int checkDigit;
+            int Prefix;
+            int RegistrationGroup;
+            int Registrant;
+            int Publication;
+            int CheckDigit;
 
             ISBN(int prefix, int registrationGroup, int registrant, int publication, int checkDigit)
             {
-                this.prefix = prefix;
-                this.registrationGroup = registrationGroup;
-                this.registrant = registrant;
-                this.publication = publication;
-                this.checkDigit = checkDigit;
+                Prefix = prefix;
+                RegistrationGroup = registrationGroup;
+                Registrant = registrant;
+                Publication = publication;
+                CheckDigit = checkDigit;
             }
 
-            public string getISBN()
+            public string GetISBN()
             {
-                string fullISBN = $"{prefix}-{registrationGroup}-{registrant}-{publication}-{checkDigit}";
+                string fullISBN = $"{Prefix}-{RegistrationGroup}-{Registrant}-{Publication}-{CheckDigit}";
                 return fullISBN;
             }
         }
 
         [Key]
-        internal int id {  get; set; }
-        internal string title { get; set; } = null!;
-        internal SqlDateTime publishedOn { get; set; }
+        internal int Id {  get; set; }
+        internal string Title { get; set; } = null!;
+        internal SqlDateTime PublishedOn { get; set; }
         internal ISBN ISBNValue { get; set; } = null!;
-        internal ReferenceType referenceType { get; set; }
-        internal ReferenceGenre referenceGenre { get; set; }
-        internal Creator creator { get; set; } = null!;
-        internal byte[]? coverImage { get; set; }
-        internal string description { get; set; } = null!;
+        internal ReferenceType Type { get; set; }
+        internal ReferenceGenre Genre { get; set; }
+        internal Creator Creator { get; set; } = null!;
+        internal byte[]? CoverImage { get; set; }
+        internal string Description { get; set; } = null!;
     }
 }

@@ -17,7 +17,7 @@ namespace Anababi.UserControls
         {
             InitializeComponent();
 
-            //Set the text of the label representing the category name.
+            //Set the text of the label representing the category Name.
             LblCategoryName.Text = categoryName;
 
             //Create a new ResultsGrid object from the list of VisualArt objects.

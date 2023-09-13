@@ -14,7 +14,7 @@ namespace Anababi.UserControls
 {
     public partial class ConsumerNavigationPanel : UserControl
     {
-        UserExperience currentExperience = null!;
+        UserExperience CurrentExperience = null!;
         public ConsumerNavigationPanel()
         {
             InitializeComponent();
@@ -24,25 +24,25 @@ namespace Anababi.UserControls
             //database fetch for the specific feed of this user
             List<Reference> arts = UserExperience.GetDummyReferences();
 
-            currentExperience.AddToPanelContent(new MyFeedPage(arts));
+            CurrentExperience.AddToPanelContent(new MyFeedPage(arts));
         }
         //private void BtnTopArtists_Click(object sender, EventArgs e)
         //{
-        //    currentExperience.AddToPanelContent(new TopArtistsPage());
+        //    CurrentExperience.AddToPanelContent(new TopArtistsPage());
         //}
         private void BtnTopArtworks_Click(object sender, EventArgs e)
         {
-            currentExperience.AddToPanelContent(new TopBooksPage());
+            CurrentExperience.AddToPanelContent(new TopBooksPage());
         }
      
         //private void BtnSettings_Click(object sender, EventArgs e)
         //{
-        //    currentExperience.AddToPanelContent(new SettingsPage());
+        //    CurrentExperience.AddToPanelContent(new SettingsPage());
         //}
         private void ConsumerExperienceNavButtons_Load(object sender, EventArgs e)
         {
             //Get the current UserExperience.
-            currentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
+            CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
         }
     
     }

@@ -13,27 +13,27 @@ namespace Anababi.UserControls
 {
     internal partial class ReferenceCenterDisplay : UserControl
     {
-        Reference reference;
+        Reference Reference;
         public ReferenceCenterDisplay(Reference reference)
 
         {
             InitializeComponent();
-            this.reference = reference;
+            this.Reference = reference;
         }
 
     private void CenterDisplay_Load(object sender, EventArgs e)
     {
-        //Set the label representing the title of the artwork.
+        //Set the label representing the Title of the artwork.
         //LblArtworkTitle.Text = Art.Title;
 
 
         //Set the background image of the artPage (tab in the TabControl) to the image of the VisualArt.
-        Image artPageImage = UserExperience.byteArrayToImage(reference.coverImage);
+        Image artPageImage = UserExperience.byteArrayToImage(Reference.CoverImage);
         //artPage.BackgroundImage = artPageImage;
         //Set the layout of the background image of the artPage.
         //artPage.BackgroundImageLayout = ImageLayout.Zoom;
-        //Set the text of the TextBox representing the description of the art.
-        //textBoxDescription.Text = reference.description;
+        //Set the text of the TextBox representing the Description of the art.
+        //textBoxDescription.Text = Reference.Description;
 
     }
 

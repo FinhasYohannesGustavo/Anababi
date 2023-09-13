@@ -10,7 +10,7 @@
         /// <summary>
         ///  Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -159,7 +159,7 @@
             this.LblUsername.Name = "LblUsername";
             this.LblUsername.Size = new System.Drawing.Size(74, 16);
             this.LblUsername.TabIndex = 17;
-            this.LblUsername.Text = "@username";
+            this.LblUsername.Text = "@Username";
             this.LblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblFullName

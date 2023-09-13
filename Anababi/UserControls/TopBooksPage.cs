@@ -13,7 +13,7 @@ namespace Anababi.UserControls
 {
     internal partial class TopBooksPage : UserControl
     { 
-    List<Reference>? references;
+    List<Reference>? References;
     public TopBooksPage()
     {
         InitializeComponent();
@@ -22,14 +22,14 @@ namespace Anababi.UserControls
     private void TopBooksPage_Load(object sender, EventArgs e)
     {
         //This will be replaced by a database fetch for the arts that are specific to the user
-        references = UserExperience.GetDummyReferences();
+        References = UserExperience.GetDummyReferences();
 
 
         //Possible algorithm for picking the top ranking artworks
         //ConsumerExperience.GetDummyArts().FindAll(top => top.Analytics[0] > 500);
 
         //Get a list of categories based on the visual arts sent
-        List<CategoryTemplateDisplay> categories = UserExperience.GetCategoriesFromReferences(references);
+        List<CategoryTemplateDisplay> categories = UserExperience.GetCategoriesFromReferences(References);
 
         //Add each category to the table layout panel
         foreach (CategoryTemplateDisplay c in categories)
