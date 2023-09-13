@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Anababi.ModelClasses
 {
@@ -13,7 +9,6 @@ namespace Anababi.ModelClasses
         public string lastName { get; set; } = null!;
         public string username { get; set; } = null!;
         private string _password { get; set; } = null!;
-
         public byte[]? profilePic { get; set; }
 
         public void Login() { }
