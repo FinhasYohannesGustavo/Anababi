@@ -56,7 +56,7 @@ namespace Anababi.ModelClasses
         ReferenceType referenceType { get; set; }
         internal ReferenceGenre referenceGenre { get; set; }
         Creator creator { get; set; }
-        public byte[]? coverImage { get; set; }
+        internal byte[]? coverImage { get; set; }
 
         internal string description { get; set; }
     }

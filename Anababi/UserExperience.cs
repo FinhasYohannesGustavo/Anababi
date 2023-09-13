@@ -23,6 +23,30 @@ namespace Anababi
             InitializeComponent();
             currentUser = ekele;
         }
+
+        private void LoadUserExperience()
+        {
+            //Set the text property of the labels for  FullName and Username and center them horizontally.
+
+            LblFullName.Text = currentUser.firstName + " " + currentUser.lastName;
+
+            LblUsername.Text = $"@{currentUser.username}";
+            //LblUsername.CenterHorizontally();
+
+            //Set the image of the profile picture from the currentUser.
+            Image ProfileImage = byteArrayToImage(currentUser.profilePic);
+
+
+            guna2CirclePictureBoxProfilePic.Image = ProfileImage;
+
+
+            //Create a new ConsumerExperienceNavButtons object and add it to the navigation panel.
+            AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
+
+            AddToPanelContent(new MyFeedPage(GetDummyReferences()));
+
+
+        }
         public static byte[] ImageToByteArray(System.Drawing.Image imageIn)
         {
             using (var ms = new MemoryStream())
@@ -53,27 +77,7 @@ namespace Anababi
             c.BringToFront();
         }
 
-        private void LoadUserExperience()
-        {
-            //Set the text property of the labels for  FullName and Username and center them horizontally.
-            
-            LblFullName.Text = currentUser.firstName + " " + currentUser.lastName;
-            
-            LblUsername.Text = $"@{currentUser.username}";
-            //LblUsername.CenterHorizontally();
-
-            //Set the image of the profile picture from the currentUser.
-            Image ProfileImage = byteArrayToImage(currentUser.profilePic);
-
-
-            guna2CirclePictureBoxProfilePic.Image = ProfileImage;
-
-           
-                //Create a new ConsumerExperienceNavButtons object and add it to the navigation panel.
-                AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
-
-              
-            }
+       
 
         public static void CreateCenterDisplayForArt(Reference reference, Panel panelContent)
         {
@@ -89,7 +93,7 @@ namespace Anababi
             centerDisplay.Dock = DockStyle.Fill;
 
             //Add the CenterDisplay to the panel and bring it to the front.
-            panelContent.Controls.Add(centerDisplay);
+            panelContent.Controls.Add(centerDisplay);   
             centerDisplay.BringToFront();
         }
 
@@ -204,7 +208,7 @@ namespace Anababi
                 referenceGenre = Reference.ReferenceGenre.Fiction,
                 description = "\"1984\" is a classic dystopian novel written by George Orwell. Set in a totalitarian society, it follows the story of Winston Smith as he rebels against the oppressive regime ruled by Big Brother.",
                 publishedOn = new SqlDateTime(1949, 6, 8),
-                coverImage = ImageToByteArray(Resources.Afewerk_Tekle)
+                coverImage = ImageToByteArray(Resources._1984)
             };
             
 
@@ -215,7 +219,7 @@ namespace Anababi
                 referenceGenre = Reference.ReferenceGenre.Romance,
                 description = "\"Pride and Prejudice\" is a beloved romance novel by Jane Austen. Set in 19th-century England, it revolves around the spirited Elizabeth Bennet and her complex relationship with the proud Mr. Darcy.",
                 publishedOn = new SqlDateTime(1813, 1, 28),
-                coverImage = ImageToByteArray(Resources.Afewerk_Tekle)
+                coverImage = ImageToByteArray(Resources.prideAndPrejudice)
             };
 
             Reference book3 = new Reference
@@ -225,7 +229,7 @@ namespace Anababi
                 referenceGenre = Reference.ReferenceGenre.Fantasy,
                 description = "\"The Hobbit\" is a fantasy adventure novel by J.R.R. Tolkien. It follows the journey of Bilbo Baggins, a hobbit who is swept into an epic quest to reclaim the dwarves' homeland from the dragon Smaug.",
                 publishedOn = new SqlDateTime(1937, 9, 21),
-                coverImage = ImageToByteArray(Resources.Afewerk_Tekle)
+                coverImage = ImageToByteArray(Resources.theHobbit)
             };
 
             // Creating objects for the remaining books in a similar manner
@@ -237,7 +241,7 @@ namespace Anababi
                 referenceGenre = Reference.ReferenceGenre.Romance,
                 description = "\"To Kill a Mockingbird\" is a poignant coming-of-age novel by Harper Lee. Set in the racially charged atmosphere of 1930s Alabama, it explores themes of racial injustice, morality, and the loss of innocence through the eyes of Scout Finch.",
                 publishedOn = new SqlDateTime(1960, 7, 11),
-                coverImage = ImageToByteArray(Resources.Afewerk_Tekle)
+                coverImage = ImageToByteArray(Resources.toKillAMockingBird)
             };
 
             Reference book5 = new Reference
@@ -247,7 +251,7 @@ namespace Anababi
                 referenceGenre = Reference.ReferenceGenre.Thriller,
                 description = "\"The Da Vinci Code\" is a gripping thriller by Dan Brown. The story follows symbologist Robert Langdon as he unravels a mystery involving religious symbolism, secret societies, and hidden codes.",
                 publishedOn = new SqlDateTime(2003, 3, 18),
-                coverImage = ImageToByteArray(Resources.Afewerk_Tekle)
+                coverImage = ImageToByteArray(Resources.theDavinciCode)
             };
 
             Reference book6 = new Reference
@@ -257,7 +261,7 @@ namespace Anababi
                 referenceGenre = Reference.ReferenceGenre.Fiction,
                 description = "\"The Great Gatsby\" is a literary masterpiece by F. Scott Fitzgerald. Set in the Roaring Twenties, it explores the glamorous and decadent lifestyle of the wealthy elite, as seen through the eyes of the enigmatic Jay Gatsby.",
                 publishedOn = new SqlDateTime(1925, 4, 10),
-                coverImage = ImageToByteArray(Resources.Afewerk_Tekle)
+                coverImage = ImageToByteArray(Resources.theGreatGatsby)
             };
 
             Reference book7 = new Reference
@@ -267,7 +271,7 @@ namespace Anababi
                 referenceGenre = Reference.ReferenceGenre.ScienceFiction,
                 description = "\"The Hunger Games\" is a thrilling young adult science fiction novel by Suzanne Collins. Set in a dystopian future, it follows the story of Katniss Everdeen as she participates in a brutal televised competition where teenagers fight to the death.",
                 publishedOn = new SqlDateTime(2008, 9, 14),
-                coverImage = ImageToByteArray(Resources.Afewerk_Tekle)
+                coverImage = ImageToByteArray(Resources.theHungerGames)
             };
 
             Reference book8 = new Reference
@@ -277,7 +281,7 @@ namespace Anababi
                 referenceGenre = Reference.ReferenceGenre.Thriller,
                 description = "\"Gone Girl\" is a gripping psychological thriller by Gillian Flynn. It revolves around the disappearance of Amy Dunne and the suspicion that falls on her husband, Nick.",
                 publishedOn = new SqlDateTime(2012, 6, 5),
-                coverImage = ImageToByteArray(Resources.Afewerk_Tekle)
+                coverImage = ImageToByteArray(Resources.goneGirl)
             };
 
             Reference book9 = new Reference
@@ -287,7 +291,7 @@ namespace Anababi
                 referenceGenre = Reference.ReferenceGenre.NonFiction,
                 description = "\"Sapiens: A Brief History of Humankind\" is a thought-provoking non-fiction book by Yuval Noah Harari. It provides an overview of human history, from the emergence of Homo sapiMy apologies, it seems the code got cut off. Here's the continuation:",
                 publishedOn = new SqlDateTime(2011, 2, 10),
-                coverImage = ImageToByteArray(Resources.Afewerk_Tekle)
+                coverImage = ImageToByteArray(Resources.sapiens)
             };
             references.Add(book9);
             references.Add(book8);

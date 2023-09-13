@@ -260,6 +260,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserExperience";
             this.Size = new System.Drawing.Size(1050, 536);
+            this.Load += new System.EventHandler(this.UserExperience_Load);
             this.SplitContainerAll.Panel1.ResumeLayout(false);
             this.SplitContainerAll.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainerAll)).EndInit();
@@ -271,7 +272,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBoxProfilePic)).EndInit();
             this.PanelHeader.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.Load += new System.EventHandler(this.UserExperience_Load);
 
         }
 

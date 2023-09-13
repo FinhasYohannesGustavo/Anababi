@@ -19,13 +19,13 @@ namespace Anababi.UserControls
         {
             InitializeComponent();
         }
-        //private void BtnMyFeed_Click(object sender, EventArgs e)
-        //{
-        //    //Database fetch for the specific feed of this user
-        //    List<Reference> arts = UserExperience.GetDummyReferences();
+        private void BtnMyFeed_Click(object sender, EventArgs e)
+        {
+            //database fetch for the specific feed of this user
+            List<Reference> arts = UserExperience.GetDummyReferences();
 
-        //    currentExperience.AddToPanelContent(new MyFeedPage(arts));
-        //}
+            currentExperience.AddToPanelContent(new MyFeedPage(arts));
+        }
         //private void BtnTopArtists_Click(object sender, EventArgs e)
         //{
         //    currentExperience.AddToPanelContent(new TopArtistsPage());

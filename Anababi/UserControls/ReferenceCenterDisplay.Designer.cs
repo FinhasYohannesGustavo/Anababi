@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ReferenceCenterDisplay
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "ReferenceCenterDisplay";
+            this.Size = new System.Drawing.Size(471, 326);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
