@@ -22,17 +22,18 @@ namespace Anababi
             user.username = "yelielew";
             user.profilePic = UserExperience.ImageToByteArray(Properties.Resources.Afewerk_Tekle);
 
-            Administrator administrator = new Administrator();
+            User administrator = new User();
             administrator.id = 2;
             administrator.firstName = "Aytal";
             administrator.lastName = "Esuga";
             administrator.username = "aytal_esuga";
+            administrator.isAdmin = true;
             administrator.profilePic = UserExperience.ImageToByteArray(Properties.Resources.goneGirl);
 
             //Create a library object with all users, administrators and references.
             List<User> users = new List<User> { user};
             List<Reference> references = UserExperience.GetDummyReferences();
-            List<Administrator> administrators = new List<Administrator> { administrator};
+            List<User> administrators = new List<User> { administrator};
             library = new Library(users, administrators, references);
             
 
