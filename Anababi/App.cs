@@ -31,10 +31,9 @@ namespace Anababi
             administrator.ProfilePic = UserExperience.ImageToByteArray(Properties.Resources.goneGirl);
 
             //Create a library object with all users, Administrators and References.
-            List<User> users = new List<User> { user};
+            List<User> members = new List<User> { user, administrator};
             List<Reference> references = UserExperience.GetDummyReferences();
-            List<User> administrators = new List<User> { administrator};
-            Library = new Library(users, administrators, references);
+            Library = new Library(members, references);
             
 
             //Everything below will be inside the button-click event of the user authentication UserControl.
