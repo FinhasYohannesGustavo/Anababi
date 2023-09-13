@@ -70,6 +70,7 @@
             this.BtnTopBooks.Size = new System.Drawing.Size(240, 47);
             this.BtnTopBooks.TabIndex = 9;
             this.BtnTopBooks.Text = "Top Books";
+            this.BtnTopBooks.Click += new System.EventHandler(this.BtnTopArtworks_Click);
             // 
             // BtnTopWriters
             // 
@@ -173,6 +174,7 @@
             this.Name = "ConsumerNavigationPanel";
             this.Size = new System.Drawing.Size(240, 284);
             this.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.ConsumerExperienceNavButtons_Load);
 
         }
 

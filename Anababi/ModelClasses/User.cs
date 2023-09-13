@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Anababi.ModelClasses
 {
-    public class User
+    internal class User
     {
         public int id { get; set; }
         public string firstName { get; set; }

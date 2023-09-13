@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace Anababi.ModelClasses
 {
 
-    public class Reference
+    internal class Reference
     {
         public enum ReferenceType
         {
@@ -18,8 +19,12 @@ namespace Anababi.ModelClasses
         public enum ReferenceGenre
         {
             Fiction,
-            NonFiction
-        }
+            NonFiction,
+            ScienceFiction,
+            Thriller,
+            Fantasy,
+            Romance
+            }
         internal class ISBN
         {
             int prefixElement;
@@ -44,12 +49,15 @@ namespace Anababi.ModelClasses
             }
         }
 
-        int id {  get; set; }
-        string title { get; set; }
-        SqlDateTime publishedOn { get; set; }
+        internal int id {  get; set; }
+        internal string title { get; set; }
+        internal SqlDateTime publishedOn { get; set; }
         ISBN ISBNValue { get; set; }
         ReferenceType referenceType { get; set; }
-        ReferenceGenre referenceGenre { get; set; }
+        internal ReferenceGenre referenceGenre { get; set; }
         Creator creator { get; set; }
+        public byte[]? coverImage { get; set; }
+
+        internal string description { get; set; }
     }
 }

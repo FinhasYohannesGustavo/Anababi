@@ -12,6 +12,8 @@ namespace Anababi.ModelClasses
         public string lastName { get; set; }
         public Reference [] referencesCreated { get; set; }
 
+        public byte[]? profilePic { get; set; }
+
         Creator(string firstName, string lastName)
         {
             this.firstName = firstName;
