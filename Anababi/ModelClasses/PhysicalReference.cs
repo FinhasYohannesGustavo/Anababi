@@ -1,13 +1,17 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
+
 namespace Anababi.ModelClasses
 {
     public class PhysicalReference : Reference
     {
         public class ReferenceLocation
         {
-            int Floor;
-            int Section;
-            int Shelf;
+            [Key]
+            public int Id { get; set; }
+            public int Floor { get; set; }
+            public int Section { get; set; }
+            public int Shelf { get; set; }
 
             ReferenceLocation(int floor, int section, int shelf)
             {
@@ -17,9 +21,9 @@ namespace Anababi.ModelClasses
             }
         }
 
-        ReferenceLocation Location { get; set; } = null!;
-        int NumOfCopies { get; set; }
-        bool Available { get; set; }
+        public ReferenceLocation Location { get; set; } = null!;
+        public int NumOfCopies { get; set; }
+        public bool Available { get; set; }
 
     }
 }

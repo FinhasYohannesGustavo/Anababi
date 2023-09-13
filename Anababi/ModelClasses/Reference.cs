@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.Data.SqlTypes;
 
 namespace Anababi.ModelClasses
@@ -19,14 +20,17 @@ namespace Anababi.ModelClasses
             Thriller,
             Fantasy,
             Romance
-            }
+        }
+
         public class ISBN
         {
-            public int Prefix;
-            public int RegistrationGroup;
-            public int Registrant;
-            public int Publication;
-            public int CheckDigit;
+            [Key]
+            public int Id { get; set; }
+            public int Prefix { get; set; }
+            public int RegistrationGroup { get; set; }
+            public int Registrant { get; set; }
+            public int Publication { get; set; }
+            public int CheckDigit { get; set; }
 
             ISBN() { }
             ISBN(int prefix, int registrationGroup, int registrant, int publication, int checkDigit)
@@ -48,7 +52,7 @@ namespace Anababi.ModelClasses
         [Key]
         public int Id {  get; set; }
         public string Title { get; set; } = null!;
-        public SqlDateTime PublishedOn { get; set; }
+        public DateTime PublishedOn { get; set; }
         public ISBN ISBNValue { get; set; } = null!;
         public ReferenceType Type { get; set; }
         public ReferenceGenre Genre { get; set; }
