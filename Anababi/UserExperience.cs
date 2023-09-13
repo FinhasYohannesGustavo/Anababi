@@ -24,21 +24,21 @@ namespace Anababi
             currentUser = ekele;
         }
 
+        #region Custom Methods
+
         private void LoadUserExperience()
         {
             //Set the text property of the labels for  FullName and Username and center them horizontally.
 
             LblFullName.Text = currentUser.firstName + " " + currentUser.lastName;
-
+            LblFullName.CenterHorizontally();
             LblUsername.Text = $"@{currentUser.username}";
-            //LblUsername.CenterHorizontally();
+            LblUsername.CenterHorizontally();
 
             //Set the image of the profile picture from the currentUser.
             Image ProfileImage = byteArrayToImage(currentUser.profilePic);
 
-
             guna2CirclePictureBoxProfilePic.Image = ProfileImage;
-
 
             //Create a new ConsumerExperienceNavButtons object and add it to the navigation panel.
             AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
@@ -76,8 +76,6 @@ namespace Anababi
             //Bring the control to the front.
             c.BringToFront();
         }
-
-       
 
         public static void CreateCenterDisplayForArt(Reference reference, Panel panelContent)
         {
@@ -184,6 +182,7 @@ namespace Anababi
 
             return categories;
         }
+        
         private void BtnNavigation_Click(object sender, EventArgs e)
         {
             if (SplitContainerAll.Panel1.Visible == true)
@@ -316,10 +315,16 @@ namespace Anababi
             //Bring the UserControl to the front.
             userControl.BringToFront();
         }
+
+        #endregion
+
+        #region Events
         private void UserExperience_Load(object sender, EventArgs e)
         {
             LoadUserExperience();
         }
+
+        #endregion
 
     }
 
