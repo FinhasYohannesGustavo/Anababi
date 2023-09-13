@@ -8,15 +8,15 @@ namespace Anababi.ModelClasses
 {
     internal class Library
     {
-        User[] users { get; set; }
-        Administrator[] administrators { get; set; }
-        Reference[] references { get; set; }
+        List<User> users { get; set; }
+        List<Administrator> administrators { get; set; }
+        internal List<Reference> references { get; set; }
 
-        public Library()
+        public Library(List<User> users, List<Administrator> administrators, List<Reference> references)
         {
-            users = new User[] { };
-            administrators = new Administrator[] { };
-            references = new Reference[] { };
+            this.users = users;
+            this.administrators = administrators;
+            this.references = references;
         }
 
     }

@@ -27,24 +27,24 @@ namespace Anababi.ModelClasses
             }
         internal class ISBN
         {
-            int prefixElement;
-            int registrationGroupElement;
-            int registrantElement;
-            int publicationElement;
+            int prefix;
+            int registrationGroup;
+            int registrant;
+            int publication;
             int checkDigit;
 
-            ISBN(int prefixElement, int registrationGroupElement, int registrantElement, int publicationElement, int checkDigit)
+            ISBN(int prefix, int registrationGroup, int registrant, int publication, int checkDigit)
             {
-                this.prefixElement = prefixElement;
-                this.registrationGroupElement = registrationGroupElement;
-                this.registrantElement = registrantElement;
-                this.publicationElement = publicationElement;
+                this.prefix = prefix;
+                this.registrationGroup = registrationGroup;
+                this.registrant = registrant;
+                this.publication = publication;
                 this.checkDigit = checkDigit;
             }
 
             public string getISBN()
             {
-                string fullISBN = $"{prefixElement}-{registrationGroupElement}-{registrantElement}-{publicationElement}-{checkDigit}";
+                string fullISBN = $"{prefix}-{registrationGroup}-{registrant}-{publication}-{checkDigit}";
                 return fullISBN;
             }
         }
@@ -52,12 +52,11 @@ namespace Anababi.ModelClasses
         internal int id {  get; set; }
         internal string title { get; set; }
         internal SqlDateTime publishedOn { get; set; }
-        ISBN ISBNValue { get; set; }
-        ReferenceType referenceType { get; set; }
+        internal ISBN ISBNValue { get; set; }
+        internal ReferenceType referenceType { get; set; }
         internal ReferenceGenre referenceGenre { get; set; }
-        Creator creator { get; set; }
+        internal Creator creator { get; set; }
         internal byte[]? coverImage { get; set; }
-
         internal string description { get; set; }
     }
 }

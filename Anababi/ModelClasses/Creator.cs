@@ -10,7 +10,7 @@ namespace Anababi.ModelClasses
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
-        public Reference [] referencesCreated { get; set; }
+        public List<Reference> referencesCreated { get; set; }
 
         public byte[]? profilePic { get; set; }
 
