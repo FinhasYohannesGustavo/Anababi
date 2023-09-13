@@ -13,27 +13,25 @@ namespace Anababi.UserControls
 {
     internal partial class ReferenceCenterDisplay : UserControl
     {
-        Reference Reference;
+        Reference Reference { get; set; }
         public ReferenceCenterDisplay(Reference reference)
 
         {
             InitializeComponent();
-            this.Reference = reference;
+            Reference = reference;
         }
 
     private void CenterDisplay_Load(object sender, EventArgs e)
     {
-        //Set the label representing the Title of the artwork.
-        //LblArtworkTitle.Text = Art.Title;
+            //Set the label representing the title of the book.
+            titleLabel.Text = Reference.Title;
 
 
         //Set the background image of the artPage (tab in the TabControl) to the image of the VisualArt.
-        Image artPageImage = UserExperience.byteArrayToImage(Reference.CoverImage);
-        //artPage.BackgroundImage = artPageImage;
-        //Set the layout of the background image of the artPage.
-        //artPage.BackgroundImageLayout = ImageLayout.Zoom;
-        //Set the text of the TextBox representing the Description of the art.
-        //textBoxDescription.Text = Reference.Description;
+        splitContainer1.Panel1.BackgroundImage = UserExperience.byteArrayToImage(Reference.CoverImage);
+       
+        //Set the text of the TextBox representing the description of the art.
+        descriptionLabel.Text= Reference.Description;
 
     }
 
@@ -44,5 +42,7 @@ namespace Anababi.UserControls
         //to the page he/she was before clicking on the artwork to be viewed.
         this.Hide();
     }
-}
+
+      
+    }
 }
