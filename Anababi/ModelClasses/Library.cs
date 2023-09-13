@@ -3,13 +3,14 @@ namespace Anababi.ModelClasses
 {
     internal class Library
     {
-        List<User> users { get; set; }
-        List<Administrator> administrators { get; set; }
+        internal string name { get; set; } = null!;
+        List<User> members { get; set; }
+        List<User> administrators { get; set; }
         internal List<Reference> references { get; set; }
 
-        public Library(List<User> users, List<Administrator> administrators, List<Reference> references)
+        public Library(List<User> members, List<User> administrators, List<Reference> references)
         {
-            this.users = users;
+            this.members = members;
             this.administrators = administrators;
             this.references = references;
         }

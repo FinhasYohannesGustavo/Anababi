@@ -1,4 +1,5 @@
-﻿using System.Data.SqlTypes;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Data.SqlTypes;
 
 namespace Anababi.ModelClasses
 {
@@ -43,6 +44,7 @@ namespace Anababi.ModelClasses
             }
         }
 
+        [Key]
         internal int id {  get; set; }
         internal string title { get; set; } = null!;
         internal SqlDateTime publishedOn { get; set; }

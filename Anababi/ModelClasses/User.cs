@@ -4,6 +4,7 @@ namespace Anababi.ModelClasses
 {
     internal class User
     {
+        [Key]
         public int id { get; set; }
         public string firstName { get; set; } = null!;
         public string lastName { get; set; } = null!;
@@ -17,7 +18,7 @@ namespace Anababi.ModelClasses
         public void Search(string searchKey, Reference[] references) { }
         public void Sort(Reference[] referenes) { }
 
-        // Administrator privileges
+        // User privileges
         internal string AddReference(Reference reference)
         {
             string confirmationMessage;
