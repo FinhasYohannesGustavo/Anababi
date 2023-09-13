@@ -4,7 +4,7 @@ namespace Anababi.ModelClasses
 {
     public class DigitalReference : Reference
     {
-        public SqlFileStream File { get; set; } = null!;
+        public byte[] File { get; set; } = null!;
         public string getFileType()
         {
             string fileType = "";

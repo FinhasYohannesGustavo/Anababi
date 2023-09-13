@@ -1,5 +1,8 @@
 ﻿using Anababi.ModelClasses;
 using Microsoft.EntityFrameworkCore;
+using System.Data.SqlTypes;
+using System.Reflection.Metadata;
+using System.Xml;
 
 namespace Anababi.Data
 {
@@ -21,6 +24,15 @@ namespace Anababi.Data
                 encrypt = false"
             );
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.Property("_password")
+                    .HasColumnName("Password") // Specify the column name
+                    .IsRequired(); // Add other configurations as needed
 
+            });
+        }
     }
 }
