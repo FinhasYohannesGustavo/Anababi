@@ -11,7 +11,7 @@ using Anababi.ModelClasses;
 
 namespace Anababi.UserControls
 {
-    internal partial class ReferenceCenterDisplay : UserControl
+    public partial class ReferenceCenterDisplay : UserControl
     {
         Reference Reference { get; set; }
         public ReferenceCenterDisplay(Reference reference)

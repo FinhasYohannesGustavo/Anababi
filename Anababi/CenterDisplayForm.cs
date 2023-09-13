@@ -14,7 +14,7 @@ using Bunifu.Framework.UI;
 
 namespace Anababi
 {
-    internal partial class CenterDisplayForm : Form
+    public partial class CenterDisplayForm : Form
     {
         Reference currentReference;
         Form blurForm;

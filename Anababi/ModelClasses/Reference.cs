@@ -4,7 +4,7 @@ using System.Data.SqlTypes;
 namespace Anababi.ModelClasses
 {
 
-    internal class Reference
+    public class Reference
     {
         public enum ReferenceType
         {
@@ -20,14 +20,15 @@ namespace Anababi.ModelClasses
             Fantasy,
             Romance
             }
-        internal class ISBN
+        public class ISBN
         {
-            int Prefix;
-            int RegistrationGroup;
-            int Registrant;
-            int Publication;
-            int CheckDigit;
+            public int Prefix;
+            public int RegistrationGroup;
+            public int Registrant;
+            public int Publication;
+            public int CheckDigit;
 
+            ISBN() { }
             ISBN(int prefix, int registrationGroup, int registrant, int publication, int checkDigit)
             {
                 Prefix = prefix;
@@ -45,14 +46,14 @@ namespace Anababi.ModelClasses
         }
 
         [Key]
-        internal int Id {  get; set; }
-        internal string Title { get; set; } = null!;
-        internal SqlDateTime PublishedOn { get; set; }
-        internal ISBN ISBNValue { get; set; } = null!;
-        internal ReferenceType Type { get; set; }
-        internal ReferenceGenre Genre { get; set; }
-        internal Creator Creator { get; set; } = null!;
-        internal byte[]? CoverImage { get; set; }
-        internal string Description { get; set; } = null!;
+        public int Id {  get; set; }
+        public string Title { get; set; } = null!;
+        public SqlDateTime PublishedOn { get; set; }
+        public ISBN ISBNValue { get; set; } = null!;
+        public ReferenceType Type { get; set; }
+        public ReferenceGenre Genre { get; set; }
+        public Creator Creator { get; set; } = null!;
+        public byte[]? CoverImage { get; set; }
+        public string Description { get; set; } = null!;
     }
 }

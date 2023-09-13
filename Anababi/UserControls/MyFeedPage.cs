@@ -11,7 +11,7 @@ using Anababi.ModelClasses;
 
 namespace Anababi.UserControls
 {
-    internal partial class MyFeedPage : UserControl
+    public partial class MyFeedPage : UserControl
     {
         List<Reference> References;
         public MyFeedPage(List<Reference> references)

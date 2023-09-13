@@ -1,12 +1,17 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+
 namespace Anababi.ModelClasses
 {
-    internal class Library
+    [Keyless]
+    public class Library
     {
-        internal string Name { get; set; } = null!;
-        List<User> Members { get; set; }
-        List<User> Administrators { get; set; }
-        internal List<Reference> References { get; set; }
+        public string Name { get; set; } = null!;
+        List<User> Members { get; set; } = null!;
+        List<User> Administrators { get; set; } = null!;
+        public List<Reference> References { get; set; } = null!;
+
+        public Library() { }
 
         public Library(List<User> members, List<User> administrators, List<Reference> references)
         {

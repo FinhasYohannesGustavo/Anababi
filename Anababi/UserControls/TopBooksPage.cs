@@ -11,7 +11,7 @@ using Anababi.ModelClasses;
 
 namespace Anababi.UserControls
 {
-    internal partial class TopBooksPage : UserControl
+    public partial class TopBooksPage : UserControl
     { 
     List<Reference>? References;
     public TopBooksPage()

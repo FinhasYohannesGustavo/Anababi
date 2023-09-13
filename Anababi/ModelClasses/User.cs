@@ -2,7 +2,7 @@
 
 namespace Anababi.ModelClasses
 {
-    internal class User
+    public class User
     {
         [Key]
         public int Id { get; set; }
@@ -11,7 +11,7 @@ namespace Anababi.ModelClasses
         public string Username { get; set; } = null!;
         private string _password { get; set; } = null!;
         public byte[]? ProfilePic { get; set; }
-        internal bool IsAdmin { get; set; } = false;
+        public bool IsAdmin { get; set; } = false;
 
         public void Login() { }
         public void Logout() { }
@@ -19,7 +19,7 @@ namespace Anababi.ModelClasses
         public void Sort(Reference[] referenes) { }
 
         // User privileges
-        internal string AddReference(Reference reference)
+        public string AddReference(Reference reference)
         {
             string confirmationMessage;
             if(this.IsAdmin)
@@ -33,7 +33,7 @@ namespace Anababi.ModelClasses
             return confirmationMessage;
             
         }
-        internal string ModifyReference(Reference reference)
+        public string ModifyReference(Reference reference)
         {
             string confirmationMessage;
             if(this.IsAdmin)
@@ -47,7 +47,7 @@ namespace Anababi.ModelClasses
             return confirmationMessage;
             
         }
-        internal string RemoveReference(Reference reference)
+        public string RemoveReference(Reference reference)
         {
             string confirmationMessage;
             if(this.IsAdmin)

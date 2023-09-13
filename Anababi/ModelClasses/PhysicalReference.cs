@@ -1,9 +1,9 @@
 ﻿
 namespace Anababi.ModelClasses
 {
-    internal class PhysicalReference : Reference
+    public class PhysicalReference : Reference
     {
-        internal class ReferenceLocation
+        public class ReferenceLocation
         {
             int Floor;
             int Section;

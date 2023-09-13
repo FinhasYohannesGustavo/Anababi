@@ -18,7 +18,7 @@ namespace Anababi.UserControls
         Reference,
         Creator
     }
-    internal partial class ResultsGrid : UserControl
+    public partial class ResultsGrid : UserControl
     {
         private List<Button>? buttonList;
         private List<Creator>? writers;

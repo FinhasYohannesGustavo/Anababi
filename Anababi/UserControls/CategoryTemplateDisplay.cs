@@ -11,7 +11,7 @@ using Anababi.ModelClasses;
 
 namespace Anababi.UserControls
 {
-    internal partial class CategoryTemplateDisplay : UserControl
+    public partial class CategoryTemplateDisplay : UserControl
     {
         public CategoryTemplateDisplay(string categoryName, List<Reference> refrences)
         {

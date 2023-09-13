@@ -11,7 +11,7 @@ using Anababi.ModelClasses;
 
 namespace Anababi.UserControls
 {
-    internal partial class WriterCenterDisplay : UserControl
+    public partial class WriterCenterDisplay : UserControl
     {
         public WriterCenterDisplay(Creator writer)
         {

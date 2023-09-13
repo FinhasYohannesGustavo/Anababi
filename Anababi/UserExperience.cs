@@ -14,7 +14,7 @@ using Anababi.UserControls;
 
 namespace Anababi
 {
-    internal partial class UserExperience : UserControl
+    public partial class UserExperience : UserControl
     {
         public static User currentUser = null!;
 

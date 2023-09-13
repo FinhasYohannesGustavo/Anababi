@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Anababi.ModelClasses
 {
-    internal class Creator
+    public class Creator
     {
         [Key]
         public int Id { get; set; }
