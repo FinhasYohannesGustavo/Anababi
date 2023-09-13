@@ -50,13 +50,13 @@ namespace Anababi.ModelClasses
         }
 
         internal int id {  get; set; }
-        internal string title { get; set; }
+        internal string title { get; set; } = null!;
         internal SqlDateTime publishedOn { get; set; }
-        internal ISBN ISBNValue { get; set; }
+        internal ISBN ISBNValue { get; set; } = null!;
         internal ReferenceType referenceType { get; set; }
         internal ReferenceGenre referenceGenre { get; set; }
-        internal Creator creator { get; set; }
+        internal Creator creator { get; set; } = null!;
         internal byte[]? coverImage { get; set; }
-        internal string description { get; set; }
+        internal string description { get; set; } = null!;
     }
 }

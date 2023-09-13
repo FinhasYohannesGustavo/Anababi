@@ -22,7 +22,7 @@ namespace Anababi.ModelClasses
             }
         }
 
-        ReferenceLocation location { get; set; }
+        ReferenceLocation location { get; set; } = null!;
         int numOfCopies { get; set; }
         bool available { get; set; }
 

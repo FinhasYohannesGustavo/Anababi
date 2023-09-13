@@ -3,7 +3,7 @@ namespace Anababi
 {
     public partial class App : Form
     {
-        static Library library;
+        static Library library = null!;
         public App()
         {
             InitializeComponent();

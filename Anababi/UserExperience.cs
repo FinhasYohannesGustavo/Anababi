@@ -16,7 +16,7 @@ namespace Anababi
 {
     internal partial class UserExperience : UserControl
     {
-        public static User currentUser;
+        public static User currentUser = null!;
 
         public UserExperience(User ekele)
         {

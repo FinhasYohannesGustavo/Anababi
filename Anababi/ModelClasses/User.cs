@@ -9,16 +9,12 @@ namespace Anababi.ModelClasses
     internal class User
     {
         public int id { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string username { get; set; }
-        private string _password { get; set; }
+        public string firstName { get; set; } = null!;
+        public string lastName { get; set; } = null!;
+        public string username { get; set; } = null!;
+        private string _password { get; set; } = null!;
 
         public byte[]? profilePic { get; set; }
-
-        public User()
-        {
-        }
 
         public void Login() { }
         public void Logout() { }

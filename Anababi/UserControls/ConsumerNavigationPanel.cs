@@ -14,7 +14,7 @@ namespace Anababi.UserControls
 {
     public partial class ConsumerNavigationPanel : UserControl
     {
-        UserExperience currentExperience;
+        UserExperience currentExperience = null!;
         public ConsumerNavigationPanel()
         {
             InitializeComponent();

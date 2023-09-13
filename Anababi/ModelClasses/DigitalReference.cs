@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlTypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,7 @@ namespace Anababi.ModelClasses
 {
     internal class DigitalReference : Reference
     {
-        FileInfo file;
-
+        SqlFileStream file = null!;
         public string getFileType()
         {
             string fileType = "";
