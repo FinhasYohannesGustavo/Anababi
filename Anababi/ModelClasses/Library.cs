@@ -10,13 +10,13 @@ namespace Anababi.ModelClasses
     {
         User[] users { get; set; }
         Administrator[] administrators { get; set; }
-        Reference[] references { get; set; }
+        internal Reference[] references { get; set; }
 
-        public Library()
+        public Library(User[] users, Administrator[] administrators, Reference[] references)
         {
-            users = new User[] { };
-            administrators = new Administrator[] { };
-            references = new Reference[] { };
+            this.users = users;
+            this.administrators = administrators;
+            this.references = references;
         }
 
     }
