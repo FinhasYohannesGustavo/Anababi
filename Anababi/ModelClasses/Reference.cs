@@ -59,5 +59,20 @@ namespace Anababi.ModelClasses
         public Creator Creator { get; set; } = null!;
         public byte[]? CoverImage { get; set; }
         public string Description { get; set; } = null!;
+
+        public Reference() { }
+
+        public Reference(Reference reference)
+        {
+            Id = reference.Id;
+            Title = reference.Title;
+            PublishedOn = reference.PublishedOn;
+            Creator = reference.Creator;
+            ISBNValue = reference.ISBNValue;
+            Type = reference.Type;
+            Genre = reference.Genre;
+            CoverImage = reference.CoverImage;
+            Description = reference.Description;
+        }
     }
 }

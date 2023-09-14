@@ -25,5 +25,15 @@ namespace Anababi.ModelClasses
         public int NumOfCopies { get; set; }
         public bool Available { get; set; }
 
+        public PhysicalReference() { }
+
+        public PhysicalReference(PhysicalReference physicalReference)
+            :base(physicalReference)
+        {
+            Location = physicalReference.Location;
+            NumOfCopies = physicalReference.NumOfCopies;
+            Available = physicalReference.Available;
+        }
+
     }
 }

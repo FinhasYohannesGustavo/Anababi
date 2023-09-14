@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Anababi.Data;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace Anababi.ModelClasses
 {
@@ -37,8 +39,12 @@ namespace Anababi.ModelClasses
             if(this.IsAdmin)
             {
                 // Code for adding a Reference.
-                confirmationMessage = "Reference added.";
+                using AnababiContext context = new AnababiContext();
 
+                context.References.Add(reference);
+                context.SaveChanges();
+
+                confirmationMessage = "Reference added.";
             }
             else
                 confirmationMessage = "This feature is only for admins.";
@@ -51,8 +57,26 @@ namespace Anababi.ModelClasses
             if(this.IsAdmin)
             {
                 // Code for adding a Reference.
-                confirmationMessage = "Reference modified.";
+                using AnababiContext context = new AnababiContext();
+                var toBeModified = context.References
+                        .Where(r => r.Id == reference.Id)
+                        .FirstOrDefault();
 
+                if (toBeModified is Reference)
+                {
+                    if(toBeModified is DigitalReference)
+                    {
+                        toBeModified = new DigitalReference(reference as DigitalReference);
+                    }
+                    else
+                    {
+                        toBeModified = new PhysicalReference(reference as PhysicalReference);
+
+                    }
+                } 
+                context.SaveChanges();
+
+                confirmationMessage = "Reference modified.";
             }
             else
                 confirmationMessage = "This feature is only for admins.";
@@ -65,6 +89,18 @@ namespace Anababi.ModelClasses
             if(this.IsAdmin)
             {
                 // Code for adding a Reference.
+                using AnababiContext context = new AnababiContext();
+
+                var toBeRemoved = context.References
+                            .Where(r => r.Id == reference.Id) 
+                            .FirstOrDefault();
+
+                if(toBeRemoved is Reference)
+                {
+                    context.Remove(toBeRemoved);
+                }
+
+
                 confirmationMessage = "Reference removed.";
 
             }
