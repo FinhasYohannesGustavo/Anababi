@@ -26,19 +26,19 @@ namespace Anababi.UserControls
 
             CurrentExperience.AddToPanelContent(new MyFeedPage(arts));
         }
-        //private void BtnTopArtists_Click(object sender, EventArgs e)
-        //{
-        //    CurrentExperience.AddToPanelContent(new TopArtistsPage());
-        //}
-        private void BtnTopArtworks_Click(object sender, EventArgs e)
+        private void BtnTopCreators_Click(object sender, EventArgs e)
         {
-            CurrentExperience.AddToPanelContent(new TopBooksPage());
+            CurrentExperience.AddToPanelContent(new TopCreatorsPage());
         }
-     
-        //private void BtnSettings_Click(object sender, EventArgs e)
-        //{
-        //    CurrentExperience.AddToPanelContent(new SettingsPage());
-        //}
+        private void BtnTopReferences_Click(object sender, EventArgs e)
+        {
+            CurrentExperience.AddToPanelContent(new TopReferencesPage());
+        }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            CurrentExperience.AddToPanelContent(new SettingsPage());
+        }
         private void ConsumerExperienceNavButtons_Load(object sender, EventArgs e)
         {
             //Get the current UserExperience.

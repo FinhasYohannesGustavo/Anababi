@@ -13,6 +13,18 @@ namespace Anababi.ModelClasses
         public byte[]? ProfilePic { get; set; }
         public bool IsAdmin { get; set; } = false;
 
+        public string Password
+        {
+            get
+            {
+                return _password;
+            }
+            set
+            {
+                this._password = value;
+            }
+        }
+
         public void Login() { }
         public void Logout() { }
         public void Search(string searchKey, Reference[] references) { }

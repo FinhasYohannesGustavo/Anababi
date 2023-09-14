@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Anababi.ModelClasses;
 using Anababi.Properties;
 using Anababi.UserControls;
+using Anababi.Data;
 
 namespace Anababi
 {
@@ -61,6 +62,12 @@ namespace Anababi
             MemoryStream ms = new MemoryStream(byteArrayIn);
             Image returnImage = Image.FromStream(ms);
             return returnImage;
+        }
+
+          public static User GetUserByUserName() 
+        {
+            AnababiContext anababiContext = new AnababiContext();
+            return anababiContext.Users.SingleOrDefault(username => username.Username == currentUser.Username);
         }
 
         public static void AddToPanel(Control c, Panel panel)
@@ -304,7 +311,14 @@ namespace Anababi
 
             return references;
         }
-        public void AddToPanelContent(UserControl userControl)
+        public static List<Creator> GetCreators()
+        {
+            List<Creator> creators = new List<Creator>();
+            //populate the creators list from database fetch using Anababi Context
+            return creators;
+        }
+        
+            public void AddToPanelContent(UserControl userControl)
         {
             //Remove all the controls from PanelContent.
             PanelContent.Controls.Clear();
@@ -322,6 +336,11 @@ namespace Anababi
         private void UserExperience_Load(object sender, EventArgs e)
         {
             LoadUserExperience();
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            AddToPanelContent(new SearchDisplay());
         }
 
         #endregion
