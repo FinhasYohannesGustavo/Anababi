@@ -32,7 +32,6 @@ namespace Anababi.Data
                     .HasColumnName("Password") // Specify the column name
                     .IsRequired(); // Add other configurations as needed
 
-                // Other entity configuration, like primary key and other properties
             });
         }
     }
