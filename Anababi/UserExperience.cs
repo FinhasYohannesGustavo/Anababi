@@ -12,6 +12,7 @@ using Anababi.ModelClasses;
 using Anababi.Properties;
 using Anababi.UserControls;
 using Anababi.Data;
+using Anababi.UserControls.AdminControls;
 
 namespace Anababi
 {
@@ -41,10 +42,23 @@ namespace Anababi
 
             guna2CirclePictureBoxProfilePic.Image = ProfileImage;
 
-            //Create a new ConsumerExperienceNavButtons object and add it to the navigation panel.
-            AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
+            currentUser.IsAdmin= true;
+            //Create a new navigation panel depending on whether or not the use is an admin.
+            if (currentUser.IsAdmin)
+            {
+                AddToPanel(new AdminNavigationalPanel(), SplitContainerAll.Panel1);
 
-            AddToPanelContent(new MyFeedPage(GetDummyReferences()));
+                AddToPanelContent(new MyFeedPage(GetDummyReferences()));
+
+            }
+            else
+            {
+                AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
+
+                AddToPanelContent(new MyFeedPage(GetDummyReferences()));
+
+            }
+            
 
 
         }
@@ -106,7 +120,7 @@ namespace Anababi
         public static void CreateCenterDisplayForWriter(Creator writer, Panel panelContent)
         {
             //Create CenterDisplay object.
-            WriterCenterDisplay centerDisplay = new WriterCenterDisplay(writer);
+            PhysicalReferenceCenterDisplay centerDisplay = new PhysicalReferenceCenterDisplay(writer);
 
             //Set the padding to 10% of the panel's dimensions
             int xPadding = (int)(panelContent.Width * 0.1);

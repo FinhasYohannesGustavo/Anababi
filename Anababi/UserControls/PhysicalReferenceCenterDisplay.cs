@@ -11,9 +11,9 @@ using Anababi.ModelClasses;
 
 namespace Anababi.UserControls
 {
-    public partial class WriterCenterDisplay : UserControl
+    public partial class PhysicalReferenceCenterDisplay : UserControl
     {
-        public WriterCenterDisplay(Creator writer)
+        public PhysicalReferenceCenterDisplay(Creator writer)
         {
             InitializeComponent();
         }

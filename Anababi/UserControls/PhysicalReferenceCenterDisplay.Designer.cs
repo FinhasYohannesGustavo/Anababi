@@ -1,6 +1,6 @@
 ﻿namespace Anababi.UserControls
 {
-    partial class WriterCenterDisplay
+    partial class PhysicalReferenceCenterDisplay
     {
         /// <summary> 
         /// Required designer variable.

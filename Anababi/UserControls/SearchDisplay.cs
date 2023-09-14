@@ -46,10 +46,10 @@ namespace Anababi.UserControls
                 //Call the search algorithm with the user's input here...
 
                 AnababiContext searchedReferencesContext = new AnababiContext();
-                List<Reference> searchedArts = (from artworks in searchedReferencesContext.References
-                                                where artworks.Description.Contains(TextBoxSearchBar.Text.ToString())
-                                                || artworks.Title.Contains(TextBoxSearchBar.Text.ToString())
-                                                select artworks).ToList();
+                List<Reference> searchedArts = (from references in searchedReferencesContext.References
+                                                where references.Description.Contains(TextBoxSearchBar.Text.ToString())
+                                                || references.Title.Contains(TextBoxSearchBar.Text.ToString())
+                                                select references).ToList();
 
                 List<Creator> searchedArtists = (from creators in searchedReferencesContext.Creators
                                               where creators.FirstName.Contains(TextBoxSearchBar.Text.ToString())

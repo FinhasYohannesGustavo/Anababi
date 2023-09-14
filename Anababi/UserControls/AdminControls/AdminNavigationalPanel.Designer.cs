@@ -1,6 +1,6 @@
-﻿namespace Anababi.UserControls
+﻿namespace Anababi.UserControls.AdminControls
 {
-    partial class ConsumerNavigationPanel
+    partial class AdminNavigationalPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,10 +36,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.BtnTopReferences = new Guna.UI2.WinForms.Guna2Button();
             this.BtnTopCreators = new Guna.UI2.WinForms.Guna2Button();
             this.BtnMyFeed = new Guna.UI2.WinForms.Guna2Button();
             this.BtnSettings = new Guna.UI2.WinForms.Guna2Button();
+            this.lblAdminLabel = new DrakeUI.Framework.DrakeUILabel();
+            this.btnAddReference = new Guna.UI2.WinForms.Guna2Button();
+            this.btnModifyReference = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteReference = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // BtnTopReferences
@@ -151,7 +161,7 @@
             this.BtnSettings.ForeColor = System.Drawing.Color.Black;
             this.BtnSettings.HoverState.FillColor = System.Drawing.Color.Gray;
             this.BtnSettings.HoverState.ForeColor = System.Drawing.Color.White;
-            this.BtnSettings.Location = new System.Drawing.Point(0, 237);
+            this.BtnSettings.Location = new System.Drawing.Point(0, 329);
             this.BtnSettings.Margin = new System.Windows.Forms.Padding(0);
             this.BtnSettings.Name = "BtnSettings";
             this.BtnSettings.Padding = new System.Windows.Forms.Padding(4);
@@ -162,20 +172,124 @@
             this.BtnSettings.Text = "Settings";
             this.BtnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
-            // ConsumerNavigationPanel
+            // lblAdminLabel
+            // 
+            this.lblAdminLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblAdminLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblAdminLabel.ForeColor = System.Drawing.Color.Black;
+            this.lblAdminLabel.Location = new System.Drawing.Point(0, 141);
+            this.lblAdminLabel.Name = "lblAdminLabel";
+            this.lblAdminLabel.Padding = new System.Windows.Forms.Padding(4);
+            this.lblAdminLabel.Size = new System.Drawing.Size(240, 47);
+            this.lblAdminLabel.TabIndex = 11;
+            this.lblAdminLabel.Text = "Admin Controls";
+            this.lblAdminLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnAddReference
+            // 
+            this.btnAddReference.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddReference.BorderColor = System.Drawing.Color.Gray;
+            this.btnAddReference.CheckedState.FillColor = System.Drawing.Color.Gray;
+            this.btnAddReference.CustomBorderColor = System.Drawing.Color.Gray;
+            this.btnAddReference.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnAddReference.CustomizableEdges = customizableEdges9;
+            this.btnAddReference.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddReference.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddReference.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddReference.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddReference.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddReference.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddReference.FocusedColor = System.Drawing.Color.Gray;
+            this.btnAddReference.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddReference.ForeColor = System.Drawing.Color.Black;
+            this.btnAddReference.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnAddReference.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAddReference.Location = new System.Drawing.Point(0, 188);
+            this.btnAddReference.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddReference.Name = "btnAddReference";
+            this.btnAddReference.Padding = new System.Windows.Forms.Padding(4);
+            this.btnAddReference.PressedColor = System.Drawing.Color.Gray;
+            this.btnAddReference.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            this.btnAddReference.Size = new System.Drawing.Size(240, 47);
+            this.btnAddReference.TabIndex = 12;
+            this.btnAddReference.Text = "Add Reference";
+            // 
+            // btnModifyReference
+            // 
+            this.btnModifyReference.BackColor = System.Drawing.Color.Transparent;
+            this.btnModifyReference.BorderColor = System.Drawing.Color.Gray;
+            this.btnModifyReference.CheckedState.FillColor = System.Drawing.Color.Gray;
+            this.btnModifyReference.CustomBorderColor = System.Drawing.Color.Gray;
+            this.btnModifyReference.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnModifyReference.CustomizableEdges = customizableEdges11;
+            this.btnModifyReference.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModifyReference.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModifyReference.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModifyReference.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModifyReference.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnModifyReference.FillColor = System.Drawing.Color.Transparent;
+            this.btnModifyReference.FocusedColor = System.Drawing.Color.Gray;
+            this.btnModifyReference.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnModifyReference.ForeColor = System.Drawing.Color.Black;
+            this.btnModifyReference.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnModifyReference.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnModifyReference.Location = new System.Drawing.Point(0, 235);
+            this.btnModifyReference.Margin = new System.Windows.Forms.Padding(0);
+            this.btnModifyReference.Name = "btnModifyReference";
+            this.btnModifyReference.Padding = new System.Windows.Forms.Padding(4);
+            this.btnModifyReference.PressedColor = System.Drawing.Color.Gray;
+            this.btnModifyReference.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            this.btnModifyReference.Size = new System.Drawing.Size(240, 47);
+            this.btnModifyReference.TabIndex = 13;
+            this.btnModifyReference.Text = "Modify Reference";
+            // 
+            // btnDeleteReference
+            // 
+            this.btnDeleteReference.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteReference.BorderColor = System.Drawing.Color.Gray;
+            this.btnDeleteReference.CheckedState.FillColor = System.Drawing.Color.Gray;
+            this.btnDeleteReference.CustomBorderColor = System.Drawing.Color.Gray;
+            this.btnDeleteReference.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnDeleteReference.CustomizableEdges = customizableEdges13;
+            this.btnDeleteReference.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteReference.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteReference.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteReference.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteReference.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeleteReference.FillColor = System.Drawing.Color.Transparent;
+            this.btnDeleteReference.FocusedColor = System.Drawing.Color.Gray;
+            this.btnDeleteReference.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteReference.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteReference.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnDeleteReference.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteReference.Location = new System.Drawing.Point(0, 282);
+            this.btnDeleteReference.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteReference.Name = "btnDeleteReference";
+            this.btnDeleteReference.Padding = new System.Windows.Forms.Padding(4);
+            this.btnDeleteReference.PressedColor = System.Drawing.Color.Gray;
+            this.btnDeleteReference.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            this.btnDeleteReference.Size = new System.Drawing.Size(240, 47);
+            this.btnDeleteReference.TabIndex = 14;
+            this.btnDeleteReference.Text = "Delete Reference";
+            // 
+            // AdminNavigationalPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.btnDeleteReference);
+            this.Controls.Add(this.btnModifyReference);
+            this.Controls.Add(this.btnAddReference);
+            this.Controls.Add(this.lblAdminLabel);
             this.Controls.Add(this.BtnTopReferences);
             this.Controls.Add(this.BtnTopCreators);
             this.Controls.Add(this.BtnMyFeed);
             this.Controls.Add(this.BtnSettings);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ConsumerNavigationPanel";
-            this.Size = new System.Drawing.Size(240, 284);
+            this.Name = "AdminNavigationalPanel";
+            this.Size = new System.Drawing.Size(240, 376);
             this.Load += new System.EventHandler(this.ConsumerExperienceNavButtons_Load);
             this.ResumeLayout(false);
 
@@ -186,6 +300,9 @@
         private Guna.UI2.WinForms.Guna2Button BtnTopCreators;
         private Guna.UI2.WinForms.Guna2Button BtnMyFeed;
         private Guna.UI2.WinForms.Guna2Button BtnSettings;
+        private DrakeUI.Framework.DrakeUILabel lblAdminLabel;
+        private Guna.UI2.WinForms.Guna2Button btnAddReference;
+        private Guna.UI2.WinForms.Guna2Button btnModifyReference;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteReference;
     }
 }
-
