@@ -1,6 +1,6 @@
 ﻿namespace Anababi.UserControls
 {
-        partial class TopBooksPage
+        partial class TopReferencesPage
         {
             /// <summary> 
             /// Required designer variable.
@@ -54,7 +54,7 @@
                 this.LblPageTitle.Name = "LblPageTitle";
                 this.LblPageTitle.Size = new System.Drawing.Size(201, 37);
                 this.LblPageTitle.TabIndex = 1;
-                this.LblPageTitle.Text = "Top Artworks";
+                this.LblPageTitle.Text = "Top References";
                 // 
                 // tableLayoutPanelAllArtworks
                 // 

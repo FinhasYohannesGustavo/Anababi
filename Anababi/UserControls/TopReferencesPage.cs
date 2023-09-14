@@ -11,17 +11,17 @@ using Anababi.ModelClasses;
 
 namespace Anababi.UserControls
 {
-    public partial class TopBooksPage : UserControl
+    public partial class TopReferencesPage : UserControl
     { 
     List<Reference>? References;
-    public TopBooksPage()
+    public TopReferencesPage()
     {
         InitializeComponent();
     }
 
     private void TopBooksPage_Load(object sender, EventArgs e)
     {
-        //This will be replaced by a database fetch for the arts that are specific to the user
+        //This will be replaced by a database fetch for the books that are considered the top books.
         References = UserExperience.GetDummyReferences();
 
 
