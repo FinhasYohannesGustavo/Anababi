@@ -43,7 +43,7 @@ namespace Anababi
             {
                 FormBorderStyle = FormBorderStyle.None,
                 WindowState = FormWindowState.Maximized,
-                Opacity = 0.85,
+                Opacity = 0.89,
                 BackColor = Color.Black,
                 ShowInTaskbar = false,
                 StartPosition = FormStartPosition.Manual,

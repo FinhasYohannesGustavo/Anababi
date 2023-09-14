@@ -64,7 +64,7 @@
             this.BtnTopReferences.Location = new System.Drawing.Point(0, 94);
             this.BtnTopReferences.Margin = new System.Windows.Forms.Padding(0);
             this.BtnTopReferences.Name = "BtnTopReferences";
-            this.BtnTopReferences.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnTopReferences.Padding = new System.Windows.Forms.Padding(4);
             this.BtnTopReferences.PressedColor = System.Drawing.Color.Gray;
             this.BtnTopReferences.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.BtnTopReferences.Size = new System.Drawing.Size(240, 47);
@@ -94,7 +94,7 @@
             this.BtnTopCreators.Location = new System.Drawing.Point(0, 47);
             this.BtnTopCreators.Margin = new System.Windows.Forms.Padding(0);
             this.BtnTopCreators.Name = "BtnTopCreators";
-            this.BtnTopCreators.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnTopCreators.Padding = new System.Windows.Forms.Padding(4);
             this.BtnTopCreators.PressedColor = System.Drawing.Color.Gray;
             this.BtnTopCreators.ShadowDecoration.CustomizableEdges = customizableEdges4;
             this.BtnTopCreators.Size = new System.Drawing.Size(240, 47);
@@ -124,7 +124,7 @@
             this.BtnMyFeed.Location = new System.Drawing.Point(0, 0);
             this.BtnMyFeed.Margin = new System.Windows.Forms.Padding(0);
             this.BtnMyFeed.Name = "BtnMyFeed";
-            this.BtnMyFeed.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnMyFeed.Padding = new System.Windows.Forms.Padding(4);
             this.BtnMyFeed.PressedColor = System.Drawing.Color.Gray;
             this.BtnMyFeed.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.BtnMyFeed.Size = new System.Drawing.Size(240, 47);
@@ -154,7 +154,7 @@
             this.BtnSettings.Location = new System.Drawing.Point(0, 237);
             this.BtnSettings.Margin = new System.Windows.Forms.Padding(0);
             this.BtnSettings.Name = "BtnSettings";
-            this.BtnSettings.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSettings.Padding = new System.Windows.Forms.Padding(4);
             this.BtnSettings.PressedColor = System.Drawing.Color.Gray;
             this.BtnSettings.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.BtnSettings.Size = new System.Drawing.Size(240, 47);
@@ -176,8 +176,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ConsumerNavigationPanel";
             this.Size = new System.Drawing.Size(240, 284);
-            this.ResumeLayout(false);
             this.Load += new System.EventHandler(this.ConsumerExperienceNavButtons_Load);
+            this.ResumeLayout(false);
 
         }
 

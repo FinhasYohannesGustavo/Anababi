@@ -120,7 +120,7 @@ namespace Anababi
         public static void CreateCenterDisplayForWriter(Creator writer, Panel panelContent)
         {
             //Create CenterDisplay object.
-            WriterCenterDisplay centerDisplay = new WriterCenterDisplay(writer);
+            PhysicalReferenceCenterDisplay centerDisplay = new PhysicalReferenceCenterDisplay(writer);
 
             //Set the padding to 10% of the panel's dimensions
             int xPadding = (int)(panelContent.Width * 0.1);
