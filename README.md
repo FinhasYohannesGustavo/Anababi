@@ -64,8 +64,7 @@ This Library Management System is a versatile solution designed to cater to the 
     Update-Database
     ```
     
-7. Run the [`INSERT_Queries.sql`](https://github.com/FinhasYohannesGustavo/Anababi/blob/master/Anababi/Data/INSERT_Queries.sql) database script to populate it with dummy data.
-8. Open the project with Visual Studio and `Debug` >> `Start Debugging` (F5).
+6. Open the project with Visual Studio and `Debug` >> `Start Debugging` (F5).
    ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/9013ae6e-5bcb-4a4b-a370-5fd4b0b3b115)
 
 
