@@ -32,13 +32,13 @@ namespace Anababi
         {
             //Set the text property of the labels for  FullName and Username and center them horizontally.
 
-            LblFullName.Text = currentUser.FirstName + " " + currentUser.LastName;
+            LblFullName.Text = $"{currentUser.FirstName} {currentUser.LastName}";
             LblFullName.CenterHorizontally();
             LblUsername.Text = $"@{currentUser.Username}";
             LblUsername.CenterHorizontally();
 
             //Set the image of the profile picture from the currentUser.
-            Image ProfileImage = byteArrayToImage(currentUser.ProfilePic);
+            Image ProfileImage = ByteArrayToImage(currentUser.ProfilePic);
 
             guna2CirclePictureBoxProfilePic.Image = ProfileImage;
 
@@ -71,17 +71,17 @@ namespace Anababi
             }
         }
 
-        public static Image byteArrayToImage(byte[] byteArrayIn)
+        public static Image ByteArrayToImage(byte[] byteArrayIn)
         {
             MemoryStream ms = new MemoryStream(byteArrayIn);
             Image returnImage = Image.FromStream(ms);
             return returnImage;
         }
 
-          public static User GetUserByUserName() 
+        public static User GetUserByUserName(string username) 
         {
             AnababiContext anababiContext = new AnababiContext();
-            return anababiContext.Users.SingleOrDefault(username => username.Username == currentUser.Username);
+            return anababiContext.Users.SingleOrDefault(user => user.Username == username);
         }
 
         public static void AddToPanel(Control c, Panel panel)
@@ -98,7 +98,7 @@ namespace Anababi
             c.BringToFront();
         }
 
-        public static void CreateCenterDisplayForArt(Reference reference, Panel panelContent)
+        public static void CreateCenterDisplayForReference(Reference reference, Panel panelContent)
         {
             //Create CenterDisplay object.
             ReferenceCenterDisplay centerDisplay = new ReferenceCenterDisplay(reference);
@@ -117,10 +117,10 @@ namespace Anababi
         }
 
         //Create a center display for an Artist.
-        public static void CreateCenterDisplayForWriter(Creator writer, Panel panelContent)
+        public static void CreateCenterDisplayForCreator(Creator creator, Panel panelContent)
         {
             //Create CenterDisplay object.
-            PhysicalReferenceCenterDisplay centerDisplay = new PhysicalReferenceCenterDisplay(writer);
+            PhysicalReferenceCenterDisplay centerDisplay = new PhysicalReferenceCenterDisplay(creator);
 
             //Set the padding to 10% of the panel's dimensions
             int xPadding = (int)(panelContent.Width * 0.1);
@@ -137,13 +137,13 @@ namespace Anababi
         }
 
         //Get a list of Buttons from a list of VisualArts.
-        public static List<Button> CreateButtonsFromVisualArtworks(List<Reference> references)
+        public static List<Button> CreateButtonsFromReferences(List<Reference> references)
         {
             List<Button> buttonList = new List<Button>();
             for (int i = 0; i < references.Count(); i++)
             {
                 Button button = new Button();
-                Image buttonImage = byteArrayToImage(references[i].CoverImage);
+                Image buttonImage = ByteArrayToImage(references[i].CoverImage);
                 button.BackgroundImage = buttonImage;
                 button.BackgroundImageLayout = ImageLayout.Tile;
                 button.Text = "";
@@ -155,25 +155,25 @@ namespace Anababi
         }
 
         //Get a list of Buttons from a list of Users(Artists).
-        public static List<Button> CreateButtonsFromCreators(List<Creator> wirter)
+        public static List<Button> CreateButtonsFromCreators(List<Creator> creators)
         {
             List<Button> buttonList = new List<Button>();
-            for (int i = 0; i < wirter.Count(); i++)
+            for (int i = 0; i < creators.Count(); i++)
             {
                 Button button = new Button();
 
-                Image buttonImage = byteArrayToImage(wirter[i].ProfilePic);
+                Image buttonImage = ByteArrayToImage(creators[i].ProfilePic);
                 button.BackgroundImage = buttonImage;
                 button.BackgroundImageLayout = ImageLayout.Tile;
                 button.Text = "";
-                button.Tag = wirter[i];
+                button.Tag = creators[i];
                 buttonList.Add(button);
             }
 
             return buttonList;
         }
 
-        public static List<CategoryTemplateDisplay> GetCategoriesFromReferences(List<Reference> books)
+        public static List<CategoryTemplateDisplay> GetCategoriesFromReferences(List<Reference> references)
         {
             //Create a empty list of CategoryTemplateDisplay objects.
             List<CategoryTemplateDisplay> categories = new List<CategoryTemplateDisplay>();
@@ -182,7 +182,7 @@ namespace Anababi
             List<String> genres = new List<String>();
 
             //Identify all the genres in the list
-            foreach (Reference r in books)
+            foreach (Reference r in references)
             {
                 //Add each genre to the genres list.
                 genres.Add(r.Genre.ToString());
@@ -194,7 +194,7 @@ namespace Anababi
             foreach (String genre in genres)
             {
                 //Create a list of References that are of the specific genre.
-                List<Reference> visualsOfGenre = books.FindAll(book => book.Genre.ToString() == genre);
+                List<Reference> visualsOfGenre = references.FindAll(book => book.Genre.ToString() == genre);
                 //Create a CategoryTemplateDisplay object for this genre based on the selected visuals.
                 CategoryTemplateDisplay categoryTemplateDisplay = new CategoryTemplateDisplay(genre.ToString(), visualsOfGenre);
                 //Add the CategoryTemplateDisplay object to the categories list.
@@ -252,7 +252,7 @@ namespace Anababi
                 CoverImage = ImageToByteArray(Resources.theHobbit)
             };
 
-            // Creating objects for the remaining books in a similar manner
+            // Creating objects for the remaining references in a similar manner
 
             Reference book4 = new Reference
             {
@@ -332,7 +332,7 @@ namespace Anababi
             return creators;
         }
         
-            public void AddToPanelContent(UserControl userControl)
+        public void AddToPanelContent(UserControl userControl)
         {
             //Remove all the controls from PanelContent.
             PanelContent.Controls.Clear();
