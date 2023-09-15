@@ -217,7 +217,37 @@
   <data name="War and Peace book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\War and Peace book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Charles Dickens HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Charles Dickens HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F. Scott Fitzgerald HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F. Scott Fitzgerald HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gabriel García Márquez HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gabriel García Márquez HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="George Orwell HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\George Orwell HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Go Set a Watchman book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Go Set a Watchman book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Harper Lee HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Harper Lee HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="J.K. Rowling HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\J.K. Rowling HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jane Austen HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jane Austen HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Leo Tolstoy HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Leo Tolstoy HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mark Twain HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mark Twain HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="William Shakespeare HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\William Shakespeare HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -226,16 +226,56 @@ namespace Anababi
                 // Insert creators
                 var creators = new List<Creator>
                 {
-                    new Creator { FirstName = "William", LastName = "Shakespeare" },
-                    new Creator { FirstName = "Jane", LastName = "Austen" },
-                    new Creator { FirstName = "Charles", LastName = "Dickens" },
-                    new Creator { FirstName = "Leo", LastName = "Tolstoy" },
-                    new Creator { FirstName = "George", LastName = "Orwell" },
-                    new Creator { FirstName = "J.K.", LastName = "Rowling" },
-                    new Creator { FirstName = "Mark", LastName = "Twain" },
-                    new Creator { FirstName = "F. Scott", LastName = "Fitzgerald" },
-                    new Creator { FirstName = "Gabriel García", LastName = "Márquez" },
-                    new Creator { FirstName = "Harper", LastName = "Lee" }
+                    new Creator { 
+                        FirstName = "William", 
+                        LastName = "Shakespeare",
+                        ProfilePic = ImageToByteArray(Resources.William_Shakespeare_HD_pic)
+                    },
+                    new Creator { 
+                        FirstName = "Jane", 
+                        LastName = "Austen",
+                        ProfilePic = ImageToByteArray(Resources.Jane_Austen_HD_pic)
+                    },
+                    new Creator { 
+                        FirstName = "Charles", 
+                        LastName = "Dickens",
+                        ProfilePic = ImageToByteArray(Resources.Charles_Dickens_HD_pic)
+                    },
+                    new Creator { 
+                        FirstName = "Leo", 
+                        LastName = "Tolstoy",
+                        ProfilePic = ImageToByteArray(Resources.Leo_Tolstoy_HD_pic)
+                    },
+                    new Creator { 
+                        FirstName = "George", 
+                        LastName = "Orwell",
+                        ProfilePic = ImageToByteArray(Resources.George_Orwell_HD_pic)
+                    },
+                    new Creator { 
+                        FirstName = "J.K.", 
+                        LastName = "Rowling",
+                        ProfilePic = ImageToByteArray(Resources.J_K__Rowling_HD_pic)
+                    },
+                    new Creator { 
+                        FirstName = "Mark", 
+                        LastName = "Twain",
+                        ProfilePic = ImageToByteArray(Resources.Mark_Twain_HD_pic)
+                    },
+                    new Creator { 
+                        FirstName = "F. Scott", 
+                        LastName = "Fitzgerald",
+                        ProfilePic = ImageToByteArray(Resources.F__Scott_Fitzgerald_HD_pic)
+                    },
+                    new Creator { 
+                        FirstName = "Gabriel García", 
+                        LastName = "Márquez",
+                        ProfilePic = ImageToByteArray(Resources.Gabriel_García_Márquez_HD_pic)
+                    },
+                    new Creator { 
+                        FirstName = "Harper", 
+                        LastName = "Lee",
+                        ProfilePic = ImageToByteArray(Resources.Harper_Lee_HD_pic)
+                    }
                 };
                 context.Creators.AddRange(creators);
 
