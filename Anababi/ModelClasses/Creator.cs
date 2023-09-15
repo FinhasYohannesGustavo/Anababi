@@ -1,4 +1,5 @@
 ﻿
+using Anababi.Data;
 using System.ComponentModel.DataAnnotations;
 
 namespace Anababi.ModelClasses
@@ -9,8 +10,13 @@ namespace Anababi.ModelClasses
         public int Id { get; set; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
-        public List<Reference> ReferencesCreated { get; set; } = null!;
         public byte[]? ProfilePic { get; set; } = null!;
+
+        public List<Reference> GetReferencesCreated()
+        {
+            using AnababiContext context = new AnababiContext();
+            return context.References.Where(r => r.Creator == this).ToList();
+        }
 
     }
 }
