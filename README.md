@@ -25,3 +25,47 @@ Welcome to Anababi Library Management System. This application is designed to st
 - **Digital File Viewing:** Seamlessly view digital files directly from the application.
 
 This Library Management System is a versatile solution designed to cater to the needs of both librarians and readers, simplifying the management and accessibility of your library's resources. Dive into the documentation to get started, and feel free to contribute or customize the app according to your requirements.
+
+## What you need to install first
+
+1. [Visual Studio](https://visualstudio.microsoft.com/downloads/) (2019 or greater).
+2. [Microsoft SQL Server Management Studio](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (19 or greater).
+
+## Steps for running it
+
+1. Clone this repository with Visual Studio.
+    
+   ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/544d398b-4445-4205-930e-05f256a1322d)
+
+    
+3. Navigate to the repository’s directory on your machine and run this command on your preferred CLI:
+    
+    ```bash
+    dotnet restore
+    ```
+    
+4. Go to `Tools` >> `NuGet Package Manager` >> `Manage NuGet Packages for Solution` and check to see if the following packages are installed on your solution.
+    1. `Bunifu.UI.WinForms`
+    2. `DrakeUI.Framework`
+    3. `Guna.Charts.WinForms`
+    4. `Guna.UI2.WinForms`
+    5. `Microsoft.EntityFrameworkCore.Design`
+    6. `Microsoft.EntityFrameworkCore.SqlServer`
+    7. `Microsoft.EntityFrameworkCore.Tools`
+5. Go to `Tools` >> `NuGet Package Manager` >> `Package Manager Console` and run the following commands to initialize the database with Entity Framework Core.
+
+    _This creates a migration file for initializing the database structure and all the relationships between the entities._
+    ```bash
+    Add-Migration InitialCreate
+    ```
+
+    _This actually creates the database on your localhost._
+    ```bash
+    Update-Database
+    ```
+    
+7. Run the `Data/INSERT_Queries.sql` database script to populate it with dummy data.
+8. Open the project with Visual Studio and `Debug` >> `Start Debugging` (F5).
+   ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/9013ae6e-5bcb-4a4b-a370-5fd4b0b3b115)
+
+
