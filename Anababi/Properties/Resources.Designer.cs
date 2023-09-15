@@ -73,9 +73,59 @@ namespace Anababi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1984_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("1984 book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_Tale_of_Two_Cities_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("A Tale of Two Cities book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Afewerk_Tekle {
             get {
                 object obj = ResourceManager.GetObject("Afewerk_Tekle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Animal_Farm_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Animal Farm book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Anna_Karenina_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Anna Karenina book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Go_Set_a_Watchman_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Go Set a Watchman book cover HD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +143,59 @@ namespace Anababi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Great_Expectations_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Great Expectations book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hamlet_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Hamlet book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Harry_Potter_and_the_Deathly_Hallows_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Harry Potter and the Deathly Hallows book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Harry_Potter_and_the_Sorcerer_s_Stone_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Harry Potter and the Sorcerer\'s Stone book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loupe {
             get {
                 object obj = ResourceManager.GetObject("loupe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Love_in_the_Time_of_Cholera_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Love in the Time of Cholera book cover HD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +213,26 @@ namespace Anababi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap One_Hundred_Years_of_Solitude_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("One Hundred Years of Solitude book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pride_and_Prejudice_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Pride and Prejudice book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap prideAndPrejudice {
             get {
                 object obj = ResourceManager.GetObject("prideAndPrejudice", resourceCulture);
@@ -123,9 +243,79 @@ namespace Anababi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap profile {
+            get {
+                object obj = ResourceManager.GetObject("profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Romeo_and_Juliet_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Romeo and Juliet book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sapiens {
             get {
                 object obj = ResourceManager.GetObject("sapiens", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sense_and_Sensibility_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Sense and Sensibility book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tender_Is_the_Night_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("Tender Is the Night book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_Adventures_of_Huckleberry_Finn_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("The Adventures of Huckleberry Finn book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_Adventures_of_Tom_Sawyer_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("The Adventures of Tom Sawyer book cover HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_Great_Gatsby_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("The Great Gatsby book cover HD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +386,16 @@ namespace Anababi.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap War_and_Peace_book_cover_HD {
+            get {
+                object obj = ResourceManager.GetObject("War and Peace book cover HD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
