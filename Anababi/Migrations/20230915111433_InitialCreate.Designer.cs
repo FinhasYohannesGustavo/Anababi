@@ -254,7 +254,7 @@ namespace Anababi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Anababi.ModelClasses.Reference+ISBN", "ISBNValue")
+                    b.HasOne("Anababi.ModelClasses.Reference+ISBN", "ISBN")
                         .WithMany()
                         .HasForeignKey("ISBNValueId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -266,7 +266,7 @@ namespace Anababi.Migrations
 
                     b.Navigation("Creator");
 
-                    b.Navigation("ISBNValue");
+                    b.Navigation("ISBN");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.User", b =>
