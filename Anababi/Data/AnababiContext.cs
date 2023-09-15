@@ -29,9 +29,8 @@ namespace Anababi.Data
             modelBuilder.Entity<User>(entity =>
             {
                 entity.Property("Password")
-                    .HasColumnName("Password") // Specify the column name
-                    .IsRequired(); // Add other configurations as needed
-
+                    .HasColumnName("Password")
+                    .IsRequired(); 
             });
         }
     }

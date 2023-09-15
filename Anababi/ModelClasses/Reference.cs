@@ -42,10 +42,11 @@ namespace Anababi.ModelClasses
                 CheckDigit = checkDigit;
             }
 
-            public string GetISBN()
+            public int GetISBN()
             {
-                string fullISBN = $"{Prefix}-{RegistrationGroup}-{Registrant}-{Publication}-{CheckDigit}";
-                return fullISBN;
+                string fullISBN = $"{Prefix}{RegistrationGroup}{Registrant}{Publication}{CheckDigit}";
+                
+                return int.Parse(fullISBN);
             }
         }
 
