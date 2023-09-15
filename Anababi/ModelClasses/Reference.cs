@@ -19,7 +19,12 @@ namespace Anababi.ModelClasses
             ScienceFiction,
             Thriller,
             Fantasy,
-            Romance
+            Romance,
+            Adventure,
+            Drama,
+            Historical,
+            Dystopian,
+            Satire
         }
 
         [Key]
