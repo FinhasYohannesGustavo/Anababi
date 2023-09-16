@@ -42,11 +42,11 @@
             this.LblArtworks = new System.Windows.Forms.Label();
             this.PanelSearchTypeToggle = new System.Windows.Forms.Panel();
             this.ToggleSearchType = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.PanelLabelsForSearch = new System.Windows.Forms.Panel();
+            this.LabelBinarySearch = new System.Windows.Forms.Label();
+            this.LabelLinearSearch = new System.Windows.Forms.Label();
             this.PanelContent = new System.Windows.Forms.Panel();
             this.tableLayoutPanelArtistResults = new System.Windows.Forms.TableLayoutPanel();
-            this.PanelLabelsForSearch = new System.Windows.Forms.Panel();
-            this.LabelLinearSearch = new System.Windows.Forms.Label();
-            this.LabelBinarySearch = new System.Windows.Forms.Label();
             this.PanelSearchBar.SuspendLayout();
             this.PanelSearchResults.SuspendLayout();
             this.TableLayoutPanelSearchResults.SuspendLayout();
@@ -232,6 +232,40 @@
             this.ToggleSearchType.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.ToggleSearchType.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
+            // PanelLabelsForSearch
+            // 
+            this.PanelLabelsForSearch.Controls.Add(this.LabelBinarySearch);
+            this.PanelLabelsForSearch.Controls.Add(this.LabelLinearSearch);
+            this.PanelLabelsForSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelLabelsForSearch.Location = new System.Drawing.Point(35, 0);
+            this.PanelLabelsForSearch.Name = "PanelLabelsForSearch";
+            this.PanelLabelsForSearch.Size = new System.Drawing.Size(280, 30);
+            this.PanelLabelsForSearch.TabIndex = 2;
+            // 
+            // LabelBinarySearch
+            // 
+            this.LabelBinarySearch.AutoSize = true;
+            this.LabelBinarySearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LabelBinarySearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LabelBinarySearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LabelBinarySearch.Location = new System.Drawing.Point(165, 0);
+            this.LabelBinarySearch.Name = "LabelBinarySearch";
+            this.LabelBinarySearch.Size = new System.Drawing.Size(115, 19);
+            this.LabelBinarySearch.TabIndex = 1;
+            this.LabelBinarySearch.Text = "Binary Search";
+            // 
+            // LabelLinearSearch
+            // 
+            this.LabelLinearSearch.AutoSize = true;
+            this.LabelLinearSearch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LabelLinearSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LabelLinearSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LabelLinearSearch.Location = new System.Drawing.Point(0, 0);
+            this.LabelLinearSearch.Name = "LabelLinearSearch";
+            this.LabelLinearSearch.Size = new System.Drawing.Size(114, 19);
+            this.LabelLinearSearch.TabIndex = 0;
+            this.LabelLinearSearch.Text = "Linear Search";
+            // 
             // PanelContent
             // 
             this.PanelContent.Location = new System.Drawing.Point(0, 0);
@@ -253,40 +287,6 @@
             this.tableLayoutPanelArtistResults.RowCount = 3;
             this.tableLayoutPanelArtistResults.Size = new System.Drawing.Size(400, 400);
             this.tableLayoutPanelArtistResults.TabIndex = 0;
-            // 
-            // PanelLabelsForSearch
-            // 
-            this.PanelLabelsForSearch.Controls.Add(this.LabelBinarySearch);
-            this.PanelLabelsForSearch.Controls.Add(this.LabelLinearSearch);
-            this.PanelLabelsForSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelLabelsForSearch.Location = new System.Drawing.Point(35, 0);
-            this.PanelLabelsForSearch.Name = "PanelLabelsForSearch";
-            this.PanelLabelsForSearch.Size = new System.Drawing.Size(280, 30);
-            this.PanelLabelsForSearch.TabIndex = 2;
-            // 
-            // LabelLinearSearch
-            // 
-            this.LabelLinearSearch.AutoSize = true;
-            this.LabelLinearSearch.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LabelLinearSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LabelLinearSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LabelLinearSearch.Location = new System.Drawing.Point(0, 0);
-            this.LabelLinearSearch.Name = "LabelLinearSearch";
-            this.LabelLinearSearch.Size = new System.Drawing.Size(114, 19);
-            this.LabelLinearSearch.TabIndex = 0;
-            this.LabelLinearSearch.Text = "Linear Search";
-            // 
-            // LabelBinarySearch
-            // 
-            this.LabelBinarySearch.AutoSize = true;
-            this.LabelBinarySearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LabelBinarySearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LabelBinarySearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LabelBinarySearch.Location = new System.Drawing.Point(166, 0);
-            this.LabelBinarySearch.Name = "LabelBinarySearch";
-            this.LabelBinarySearch.Size = new System.Drawing.Size(114, 19);
-            this.LabelBinarySearch.TabIndex = 1;
-            this.LabelBinarySearch.Text = "Linear Search";
             // 
             // SearchDisplay
             // 
