@@ -143,7 +143,10 @@ namespace Anababi
         //Get a list of Buttons from a list of VisualArts.
         public static List<Button> CreateButtonsFromReferences(List<Reference> references)
         {
+
             List<Button> buttonList = new List<Button>();
+            if (references != null&& references[0]==null)
+                return buttonList;
             for (int i = 0; i < references.Count(); i++)
             {
                 Button button = new Button();
@@ -658,8 +661,12 @@ namespace Anababi
         }
         public static List<Creator> GetCreators()
         {
-            List<Creator> creators = new List<Creator>();
-            //populate the creators list from database fetch using Anababi Context
+  
+            //creating the context object to get a session with the database.
+            AnababiContext AnababiContext = new AnababiContext();
+
+            List<Creator> creators = (from creator in AnababiContext.Creators
+                                                 select creator).ToList();
             return creators;
         }
         
