@@ -31,6 +31,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.SplitContainerAll = new System.Windows.Forms.SplitContainer();
             this.PanelNavButtons = new System.Windows.Forms.Panel();
             this.PanelNavAppInfo = new System.Windows.Forms.Panel();
@@ -43,6 +46,8 @@
             this.guna2CirclePictureBoxProfilePic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.PanelContent = new System.Windows.Forms.Panel();
             this.PanelHeader = new System.Windows.Forms.Panel();
+            this.sortIcon = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.cmbSort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.BtnNavigation = new Guna.UI2.WinForms.Guna2ImageButton();
             this.BtnSearch = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainerAll)).BeginInit();
@@ -53,6 +58,7 @@
             this.PanelNavUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBoxProfilePic)).BeginInit();
             this.PanelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sortIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // SplitContainerAll
@@ -157,7 +163,7 @@
             this.LblUsername.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LblUsername.Location = new System.Drawing.Point(81, 94);
             this.LblUsername.Name = "LblUsername";
-            this.LblUsername.Size = new System.Drawing.Size(74, 16);
+            this.LblUsername.Size = new System.Drawing.Size(75, 16);
             this.LblUsername.TabIndex = 17;
             this.LblUsername.Text = "@Username";
             this.LblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,6 +208,8 @@
             // 
             // PanelHeader
             // 
+            this.PanelHeader.Controls.Add(this.sortIcon);
+            this.PanelHeader.Controls.Add(this.cmbSort);
             this.PanelHeader.Controls.Add(this.BtnNavigation);
             this.PanelHeader.Controls.Add(this.BtnSearch);
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -211,6 +219,47 @@
             this.PanelHeader.Padding = new System.Windows.Forms.Padding(18, 15, 18, 15);
             this.PanelHeader.Size = new System.Drawing.Size(802, 64);
             this.PanelHeader.TabIndex = 9;
+            // 
+            // sortIcon
+            // 
+            this.sortIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.sortIcon.Image = global::Anababi.Properties.Resources.sortingIcon1;
+            this.sortIcon.ImageRotate = 0F;
+            this.sortIcon.Location = new System.Drawing.Point(573, 15);
+            this.sortIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sortIcon.Name = "sortIcon";
+            this.sortIcon.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            this.sortIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.sortIcon.Size = new System.Drawing.Size(48, 34);
+            this.sortIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.sortIcon.TabIndex = 17;
+            this.sortIcon.TabStop = false;
+            // 
+            // cmbSort
+            // 
+            this.cmbSort.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSort.BorderColor = System.Drawing.Color.Transparent;
+            this.cmbSort.CustomizableEdges = customizableEdges3;
+            this.cmbSort.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cmbSort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSort.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSort.ItemHeight = 30;
+            this.cmbSort.Items.AddRange(new object[] {
+            "Author",
+            "ISBN",
+            "Title"});
+            this.cmbSort.Location = new System.Drawing.Point(621, 15);
+            this.cmbSort.Name = "cmbSort";
+            this.cmbSort.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.cmbSort.Size = new System.Drawing.Size(113, 36);
+            this.cmbSort.Sorted = true;
+            this.cmbSort.TabIndex = 10;
+            this.cmbSort.Tag = "Sort By";
+            this.cmbSort.SelectedValueChanged += new System.EventHandler(this.UserExperience_Load);
             // 
             // BtnNavigation
             // 
@@ -226,7 +275,7 @@
             this.BtnNavigation.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.BtnNavigation.Name = "BtnNavigation";
             this.BtnNavigation.PressedState.ImageSize = new System.Drawing.Size(40, 40);
-            this.BtnNavigation.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            this.BtnNavigation.ShadowDecoration.CustomizableEdges = customizableEdges5;
             this.BtnNavigation.Size = new System.Drawing.Size(50, 34);
             this.BtnNavigation.TabIndex = 9;
             this.BtnNavigation.Click += new System.EventHandler(this.BtnNavigation_Click);
@@ -246,7 +295,7 @@
             this.BtnSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.PressedState.ImageSize = new System.Drawing.Size(40, 40);
-            this.BtnSearch.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            this.BtnSearch.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.BtnSearch.Size = new System.Drawing.Size(50, 34);
             this.BtnSearch.TabIndex = 9;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
@@ -261,7 +310,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserExperience";
             this.Size = new System.Drawing.Size(1050, 536);
-            this.Load += new System.EventHandler(this.UserExperience_Load);
             this.SplitContainerAll.Panel1.ResumeLayout(false);
             this.SplitContainerAll.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainerAll)).EndInit();
@@ -272,6 +320,7 @@
             this.PanelNavUserInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBoxProfilePic)).EndInit();
             this.PanelHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sortIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -291,5 +340,7 @@
         private Label LblUsername;
         private LinkLabel linkLabelAboutPage;
         private Panel PanelNavButtons;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbSort;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox sortIcon;
     }
 }

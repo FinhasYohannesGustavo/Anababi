@@ -12,10 +12,12 @@ using Anababi.ModelClasses;
 namespace Anababi.UserControls
 {
     public partial class TopReferencesPage : UserControl
-    { 
-    List<Reference>? References;
-    public TopReferencesPage()
     {
+    String SortBy;
+    List<Reference>? References;
+    public TopReferencesPage(String SortBy)
+    {
+        this.SortBy = SortBy;
         InitializeComponent();
     }
 
@@ -29,7 +31,7 @@ namespace Anababi.UserControls
         //ConsumerExperience.GetDummyArts().FindAll(top => top.Analytics[0] > 500);
 
         //Get a list of categories based on the visual arts sent
-        List<CategoryTemplateDisplay> categories = UserExperience.GetCategoriesFromReferences(References);
+        List<CategoryTemplateDisplay> categories = UserExperience.GetCategoriesFromReferences(References,SortBy);
 
         //Add each category to the table layout panel
         foreach (CategoryTemplateDisplay c in categories)

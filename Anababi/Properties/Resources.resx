@@ -121,6 +121,9 @@
   <data name="theHungerGames" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theHungerGames.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="transparentbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transparentbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="theDavinciCode" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theDavinciCode.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sortingIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sortingIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Afewerk_Tekle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Afewerk_Tekle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,7 +163,7 @@
   <data name="theGreatGatsby" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theGreatGatsby.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="transparentbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\transparentbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sortingIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sortingIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

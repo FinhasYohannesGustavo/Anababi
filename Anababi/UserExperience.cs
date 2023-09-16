@@ -13,12 +13,14 @@ using Anababi.Properties;
 using Anababi.UserControls;
 using Anababi.Data;
 using Anababi.UserControls.AdminControls;
+using Anababi.SortingAlgorithms;
 
 namespace Anababi
 {
     public partial class UserExperience : UserControl
     {
         public static User currentUser = null!;
+        public String SortBy;
 
         public UserExperience(User ekele)
         {
@@ -28,10 +30,10 @@ namespace Anababi
 
         #region Custom Methods
 
-        private void LoadUserExperience()
+        private void LoadUserExperience(String SortBy)
         {
             //Set the text property of the labels for  FullName and Username and center them horizontally.
-
+            this.SortBy = SortBy;
             LblFullName.Text = currentUser.FirstName + " " + currentUser.LastName;
             LblFullName.CenterHorizontally();
             LblUsername.Text = $"@{currentUser.Username}";
@@ -41,21 +43,21 @@ namespace Anababi
             Image ProfileImage = byteArrayToImage(currentUser.ProfilePic);
 
             guna2CirclePictureBoxProfilePic.Image = ProfileImage;
-
+            
             currentUser.IsAdmin= true;
-            //Create a new navigation panel depending on whether or not the use is an admin.
+            //Create a new navigation panel depending on whether or not the user is an admin.
             if (currentUser.IsAdmin)
             {
                 AddToPanel(new AdminNavigationalPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(GetDummyReferences()));
+                AddToPanelContent(new MyFeedPage(GetDummyReferences(),SortBy));
 
             }
             else
             {
                 AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(GetDummyReferences()));
+                AddToPanelContent(new MyFeedPage(GetDummyReferences(),SortBy));
 
             }
             
@@ -173,7 +175,7 @@ namespace Anababi
             return buttonList;
         }
 
-        public static List<CategoryTemplateDisplay> GetCategoriesFromReferences(List<Reference> books)
+        public static List<CategoryTemplateDisplay> GetCategoriesFromReferences(List<Reference> books,String SortBy)
         {
             //Create a empty list of CategoryTemplateDisplay objects.
             List<CategoryTemplateDisplay> categories = new List<CategoryTemplateDisplay>();
@@ -195,6 +197,21 @@ namespace Anababi
             {
                 //Create a list of References that are of the specific genre.
                 List<Reference> visualsOfGenre = books.FindAll(book => book.Genre.ToString() == genre);
+
+                //sort each category using the sorter that was given in the combo box
+                if (SortBy.Equals("Title"))
+                {
+                    visualsOfGenre = BubbleSorter.BubbleSort(visualsOfGenre);
+                }
+                else if (SortBy.Equals("Author")){
+                    visualsOfGenre = SelectionSorter.SelectionSort(visualsOfGenre);
+                }
+                else
+                {
+                    visualsOfGenre = InsertionSorter.InsertionSort(visualsOfGenre);
+                }
+                
+
                 //Create a CategoryTemplateDisplay object for this genre based on the selected visuals.
                 CategoryTemplateDisplay categoryTemplateDisplay = new CategoryTemplateDisplay(genre.ToString(), visualsOfGenre);
                 //Add the CategoryTemplateDisplay object to the categories list.
@@ -272,6 +289,7 @@ namespace Anababi
                 Description = "\"The Da Vinci Code\" is a gripping thriller by Dan Brown. The story follows symbologist Robert Langdon as he unravels a mystery involving religious symbolism, secret societies, and hidden codes.",
                 PublishedOn = new DateTime(2003, 3, 18),
                 CoverImage = ImageToByteArray(Resources.theDavinciCode)
+              
             };
 
             Reference book6 = new Reference
@@ -313,6 +331,100 @@ namespace Anababi
                 PublishedOn = new DateTime(2011, 2, 10),
                 CoverImage = ImageToByteArray(Resources.sapiens)
             };
+
+            Creator creator1 = new Creator
+            {
+                Id = 1,
+                FirstName = "George",
+                LastName = "Orwell",
+                ReferencesCreated = new List<Reference> { book1 } // Assuming book1 is the reference created by George Orwell
+               
+            };
+
+            Creator creator2 = new Creator
+            {
+                Id = 2,
+                FirstName = "Jane",
+                LastName = "Austen",
+                ReferencesCreated = new List<Reference> { book2 } // Assuming book2 is the reference created by Jane Austen
+               
+            };
+
+            Creator creator3 = new Creator
+            {
+                Id = 3,
+                FirstName = "J.R.R.",
+                LastName = "Tolkien",
+                ReferencesCreated = new List<Reference> { book3 } // Assuming book3 is the reference created by J.R.R. Tolkien
+              
+            };
+
+            // Creating objects for the remaining creators in a similar manner
+
+            Creator creator4 = new Creator
+            {
+                Id = 4,
+                FirstName = "Harper",
+                LastName = "Lee",
+                ReferencesCreated = new List<Reference> { book4 } // Assuming book4 is the reference created by Harper Lee
+               
+            };
+
+            Creator creator5 = new Creator
+            {
+                Id = 5,
+                FirstName = "Dan",
+                LastName = "Brown",
+                ReferencesCreated = new List<Reference> { book5 } // Assuming book5 is the reference created by Dan Brown
+               
+            };
+
+            Creator creator6 = new Creator
+            {
+                Id = 6,
+                FirstName = "F. Scott",
+                LastName = "Fitzgerald",
+                ReferencesCreated = new List<Reference> { book6 } // Assuming book6 is the reference created by F. Scott Fitzgerald
+               
+            };
+
+            Creator creator7 = new Creator
+            {
+                Id = 7,
+                FirstName = "Suzanne",
+                LastName = "Collins",
+                ReferencesCreated = new List<Reference> { book7 } // Assuming book7 is the reference created by Suzanne Collins
+               
+            };
+
+            Creator creator8 = new Creator
+            {
+                Id = 8,
+                FirstName = "Gillian",
+                LastName = "Flynn",
+                ReferencesCreated = new List<Reference> { book8 } // Assuming book8 is the reference created by Gillian Flynn
+                
+            };
+
+            Creator creator9 = new Creator
+            {
+                Id = 9,
+                FirstName = "Yuval",
+                LastName = "Noah Harari",
+                ReferencesCreated = new List<Reference> { book9 } // Assuming book9 is the reference created by Yuval Noah Harari
+              
+            };
+
+            book1.Creator= creator1;
+            book2.Creator= creator2;
+            book3.Creator= creator3;
+            book4.Creator= creator4;
+            book5.Creator= creator5;
+            book6.Creator= creator6;
+            book7.Creator= creator7;
+            book8.Creator= creator8;
+            book9.Creator= creator9;
+
             references.Add(book9);
             references.Add(book8);
             references.Add(book7);
@@ -349,7 +461,7 @@ namespace Anababi
         #region Events
         private void UserExperience_Load(object sender, EventArgs e)
         {
-            LoadUserExperience();
+            LoadUserExperience(this.cmbSort.Text);
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
