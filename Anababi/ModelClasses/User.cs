@@ -33,6 +33,11 @@ namespace Anababi.ModelClasses
         public void Search(string searchKey, Reference[] references) { }
         public void Sort(Reference[] referenes) { }
 
+        public string GetFullName()
+        {
+            return $"{FirstName} {LastName}";
+        }
+
         public static List<User> GetAllUsersFromDB()
         {
             using AnababiContext context = new AnababiContext();
