@@ -217,7 +217,7 @@ namespace Anababi.Migrations
             modelBuilder.Entity("Anababi.ModelClasses.Reference", b =>
                 {
                     b.HasOne("Anababi.ModelClasses.Creator", "Creator")
-                        .WithMany("ReferencesCreated")
+                        .WithMany()
                         .HasForeignKey("CreatorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -245,11 +245,6 @@ namespace Anababi.Migrations
                         .IsRequired();
 
                     b.Navigation("Location");
-                });
-
-            modelBuilder.Entity("Anababi.ModelClasses.Creator", b =>
-                {
-                    b.Navigation("ReferencesCreated");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.Library", b =>

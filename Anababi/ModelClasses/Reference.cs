@@ -84,6 +84,11 @@ namespace Anababi.ModelClasses
         {
             using AnababiContext context = new AnababiContext();
             List<Reference> references = context.References.ToList();
+            
+            foreach(var reference in references)
+            {
+                reference.Creator = GetCreator(reference);
+            }
             return references;
         }
     }
