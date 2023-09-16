@@ -373,6 +373,16 @@ namespace Anababi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sortingIcon {
+            get {
+                object obj = ResourceManager.GetObject("sortingIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tender_Is_the_Night_book_cover_HD {
             get {
                 object obj = ResourceManager.GetObject("Tender Is the Night book cover HD", resourceCulture);

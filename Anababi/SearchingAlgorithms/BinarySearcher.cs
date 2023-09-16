@@ -29,7 +29,7 @@ namespace Anababi.SearchingAlgorithms
                 }
                 else
                 {
-                    comparisonResult = CompareReferencesISBN(sortedList[mid], searchKey);
+                    comparisonResult = CompareReferencesPublishedOn(sortedList[mid], searchKey);
                 }
 
 
@@ -75,10 +75,10 @@ namespace Anababi.SearchingAlgorithms
             return titleComparison;
         }
 
-        private int CompareReferencesISBN(Reference reference1, Reference reference2)
+        private int CompareReferencesPublishedOn(Reference reference1, Reference reference2)
         {
 
-            int ISBN_Comparison = String.Compare(reference1.ISBNValue.ToString(), reference2.ISBNValue.ToString());
+            int ISBN_Comparison = String.Compare(reference1.PublishedOn.ToString(), reference2.PublishedOn.ToString());
 
 
             return ISBN_Comparison;

@@ -87,13 +87,23 @@ namespace Anababi.UserControls
                 if (userToBeUpdated != null)
                 {
                     userToBeUpdated.ProfilePic = UserExperience.ImageToByteArray(guna2PictureBox1.Image);
+                    currentUser.ProfilePic = UserExperience.ImageToByteArray(guna2PictureBox1.Image);
                     AnababiContext.SaveChanges();
-
+                    //currentUser = UserExperience.GetUserByUserName(currentUser.Username);
+                    UserExperience CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
+                    //CurrentExperience.Invalidate();
+                    //CurrentExperience = new UserExperience(currentUser);
+                    CurrentExperience.LoadUserExperience("Title");
+                    
                 }
+
 
             }
 
         }
+
+
+
 
         private void btnEditProfileDetails_Click(object sender, EventArgs e)
         {
@@ -149,5 +159,6 @@ namespace Anababi.UserControls
             }
 
         }
+
     }
 }

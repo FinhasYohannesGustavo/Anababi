@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Anababi.ModelClasses;
 using Anababi.Data;
+using Anababi.SortingAlgorithms;
 
 namespace Anababi.UserControls
 {
@@ -50,6 +51,10 @@ namespace Anababi.UserControls
                                                 where references.Description.Contains(TextBoxSearchBar.Text.ToString())
                                                 || references.Title.Contains(TextBoxSearchBar.Text.ToString())
                                                 select references).ToList();
+                if (UserExperience.SortBy == "Title")
+                {
+                    searchedArts = SortingAlgorithms.BubbleSorter.BubbleSort(searchedArts);
+                }
 
                 List<Creator> searchedArtists = (from creators in searchedReferencesContext.Creators
                                               where creators.FirstName.Contains(TextBoxSearchBar.Text.ToString())

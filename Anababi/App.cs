@@ -1,6 +1,7 @@
 using Anababi.ModelClasses;
 using Anababi.Data;
 using Microsoft.IdentityModel.Tokens;
+using Anababi.Properties;
 
 namespace Anababi
 {
@@ -26,6 +27,10 @@ namespace Anababi
             }
 
             var user = context.Users.Where(u => !u.IsAdmin).FirstOrDefault() as User;
+            if(user.ProfilePic==null) {
+
+                user.ProfilePic = UserExperience.ImageToByteArray(Resources.user);
+            }
             var administrator = context.Users.Where(u => u.IsAdmin).FirstOrDefault() as User;
 
             Library = context.Libraries.FirstOrDefault() as Library;

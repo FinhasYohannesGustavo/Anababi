@@ -14,13 +14,14 @@ using Anababi.Data;
 using Anababi.UserControls.AdminControls;
 using static Anababi.ModelClasses.PhysicalReference;
 using Anababi.ModelClasses;
+using Anababi.SortingAlgorithms;
 
 namespace Anababi
 {
     public partial class UserExperience : UserControl
     {
         public static User currentUser = null!;
-        public String SortBy;
+        public static String SortBy;
 
         public UserExperience(User ekele)
         {
@@ -30,7 +31,7 @@ namespace Anababi
 
         #region Custom Methods
 
-        private void LoadUserExperience(String SortBy)
+        internal void LoadUserExperience(String sortBy)
         {
             //Set the text property of the labels for  FullName and Username and center them horizontally.
 
@@ -38,6 +39,7 @@ namespace Anababi
             LblFullName.CenterHorizontally();
             LblUsername.Text = $"@{currentUser.Username}";
             LblUsername.CenterHorizontally();
+            sortBy = sortBy;
 
             //Set the image of the profile picture from the currentUser.
             Image ProfileImage = ByteArrayToImage(currentUser.ProfilePic);
@@ -50,14 +52,14 @@ namespace Anababi
             {
                 AddToPanel(new AdminNavigationalPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(GetDummyReferences(),SortBy));
+                AddToPanelContent(new MyFeedPage(GetDummyReferences(),sortBy));
 
             }
             else
             {
                 AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(GetDummyReferences(),SortBy));
+                AddToPanelContent(new MyFeedPage(GetDummyReferences(),sortBy));
 
             }
             
@@ -175,7 +177,7 @@ namespace Anababi
             return buttonList;
         }
 
-        public static List<CategoryTemplateDisplay> GetCategoriesFromReferences(List<Reference> books,String SortBy)
+        public static List<CategoryTemplateDisplay> GetCategoriesFromReferences(List<Reference> references,String SortBy)
         {
             //Create a empty list of CategoryTemplateDisplay objects.
             List<CategoryTemplateDisplay> categories = new List<CategoryTemplateDisplay>();
@@ -196,7 +198,7 @@ namespace Anababi
             foreach (String genre in genres)
             {
                 //Create a list of References that are of the specific genre.
-                List<Reference> visualsOfGenre = books.FindAll(book => book.Genre.ToString() == genre);
+                List<Reference> visualsOfGenre = references.FindAll(book => book.Genre.ToString() == genre);
 
                 //sort each category using the sorter that was given in the combo box
                 if (SortBy.Equals("Title"))
@@ -736,8 +738,8 @@ namespace Anababi
             {
                 Id = 1,
                 FirstName = "George",
-                LastName = "Orwell",
-                ReferencesCreated = new List<Reference> { book1 } // Assuming book1 is the reference created by George Orwell
+                LastName = "Orwell"
+              
                
             };
 
@@ -745,8 +747,7 @@ namespace Anababi
             {
                 Id = 2,
                 FirstName = "Jane",
-                LastName = "Austen",
-                ReferencesCreated = new List<Reference> { book2 } // Assuming book2 is the reference created by Jane Austen
+                LastName = "Austen"
                
             };
 
@@ -754,8 +755,7 @@ namespace Anababi
             {
                 Id = 3,
                 FirstName = "J.R.R.",
-                LastName = "Tolkien",
-                ReferencesCreated = new List<Reference> { book3 } // Assuming book3 is the reference created by J.R.R. Tolkien
+                LastName = "Tolkien"
               
             };
 
@@ -765,8 +765,7 @@ namespace Anababi
             {
                 Id = 4,
                 FirstName = "Harper",
-                LastName = "Lee",
-                ReferencesCreated = new List<Reference> { book4 } // Assuming book4 is the reference created by Harper Lee
+                LastName = "Lee"
                
             };
 
@@ -774,8 +773,7 @@ namespace Anababi
             {
                 Id = 5,
                 FirstName = "Dan",
-                LastName = "Brown",
-                ReferencesCreated = new List<Reference> { book5 } // Assuming book5 is the reference created by Dan Brown
+                LastName = "Brown"
                
             };
 
@@ -783,8 +781,7 @@ namespace Anababi
             {
                 Id = 6,
                 FirstName = "F. Scott",
-                LastName = "Fitzgerald",
-                ReferencesCreated = new List<Reference> { book6 } // Assuming book6 is the reference created by F. Scott Fitzgerald
+                LastName = "Fitzgerald"
                
             };
 
@@ -792,8 +789,7 @@ namespace Anababi
             {
                 Id = 7,
                 FirstName = "Suzanne",
-                LastName = "Collins",
-                ReferencesCreated = new List<Reference> { book7 } // Assuming book7 is the reference created by Suzanne Collins
+                LastName = "Collins"
                
             };
 
@@ -801,8 +797,7 @@ namespace Anababi
             {
                 Id = 8,
                 FirstName = "Gillian",
-                LastName = "Flynn",
-                ReferencesCreated = new List<Reference> { book8 } // Assuming book8 is the reference created by Gillian Flynn
+                LastName = "Flynn"
                 
             };
 
@@ -810,8 +805,7 @@ namespace Anababi
             {
                 Id = 9,
                 FirstName = "Yuval",
-                LastName = "Noah Harari",
-                ReferencesCreated = new List<Reference> { book9 } // Assuming book9 is the reference created by Yuval Noah Harari
+                LastName = "Noah Harari"
               
             };
 

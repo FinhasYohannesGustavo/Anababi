@@ -223,7 +223,7 @@
             // sortIcon
             // 
             this.sortIcon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sortIcon.Image = global::Anababi.Properties.Resources.sortingIcon1;
+            this.sortIcon.Image = global::Anababi.Properties.Resources.sortingIcon;
             this.sortIcon.ImageRotate = 0F;
             this.sortIcon.Location = new System.Drawing.Point(573, 15);
             this.sortIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -250,8 +250,10 @@
             this.cmbSort.ItemHeight = 30;
             this.cmbSort.Items.AddRange(new object[] {
             "Author",
-            "ISBN",
+            "Published Date",
             "Title"});
+            this.cmbSort.ItemsAppearance.Font = new System.Drawing.Font("Maiandra GD", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbSort.ItemsAppearance.SelectedBackColor = System.Drawing.Color.LightSkyBlue;
             this.cmbSort.Location = new System.Drawing.Point(621, 15);
             this.cmbSort.Name = "cmbSort";
             this.cmbSort.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -310,6 +312,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserExperience";
             this.Size = new System.Drawing.Size(1050, 536);
+            this.Load += new System.EventHandler(this.UserExperience_Load);
             this.SplitContainerAll.Panel1.ResumeLayout(false);
             this.SplitContainerAll.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainerAll)).EndInit();
