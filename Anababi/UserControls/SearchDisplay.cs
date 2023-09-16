@@ -31,8 +31,27 @@ namespace Anababi.UserControls
             //Add the ResultsGrid object to PanelArtistsSection.
             UserExperience.AddToPanel(resultsGridArtists, PanelArtistsSection);
 
-            //This will be replaced by a database fetch of a list of the recent searches the user made.
-            List<Reference> references = UserExperience.GetDummyReferences();
+           
+            List<Reference> references = UserExperience.GetReferences();
+            UserExperience CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
+            if (CurrentExperience.SortBy == "Title")
+            {
+                references = SortingAlgorithms.BubbleSorter.BubbleSort(references);
+            }
+            else if (CurrentExperience.SortBy == "Author")
+            {
+                foreach (Reference reference in references)
+                {
+                    reference.Creator = Reference.GetCreator(reference);
+
+                }
+                references = SortingAlgorithms.SelectionSorter.SelectionSort(references);
+
+            }
+            else
+            {
+                references = SortingAlgorithms.InsertionSorter.InsertionSort(references);
+            }
             //Create a ResultsGrid object from the list of VisualArts.
             resultsGridArtworks = new ResultsGrid(references);
             //Add the ResultsGrid object to PanelArtworksSection.
@@ -47,13 +66,28 @@ namespace Anababi.UserControls
                 //Call the search algorithm with the user's input here...
 
                 AnababiContext searchedReferencesContext = new AnababiContext();
-                List<Reference> searchedArts = (from references in searchedReferencesContext.References
+                List<Reference> searchedReferences = (from references in searchedReferencesContext.References
                                                 where references.Description.Contains(TextBoxSearchBar.Text.ToString())
                                                 || references.Title.Contains(TextBoxSearchBar.Text.ToString())
                                                 select references).ToList();
-                if (UserExperience.SortBy == "Title")
+                UserExperience CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
+                if (CurrentExperience.SortBy == "Title")
                 {
-                    searchedArts = SortingAlgorithms.BubbleSorter.BubbleSort(searchedArts);
+                    searchedReferences = SortingAlgorithms.BubbleSorter.BubbleSort(searchedReferences);
+                }
+                else if(CurrentExperience.SortBy == "Author")
+                {
+                    foreach (Reference reference in searchedReferences)
+                    {
+                        reference.Creator = Reference.GetCreator(reference);
+
+                    }
+                    searchedReferences = SortingAlgorithms.SelectionSorter.SelectionSort(searchedReferences);
+
+                }
+                else
+                {
+                    searchedReferences = SortingAlgorithms.InsertionSorter.InsertionSort(searchedReferences);
                 }
 
                 List<Creator> searchedArtists = (from creators in searchedReferencesContext.Creators
@@ -71,7 +105,7 @@ namespace Anababi.UserControls
                 //UserExperience.AddToPanel(resultsGridArtists, PanelArtistsSection);
 
                 //Create a ResultsGrid object from the list of VisualArts.
-                resultsGridArtworks = new ResultsGrid(searchedArts);
+                resultsGridArtworks = new ResultsGrid(searchedReferences);
                 //Add the ResultsGrid object to PanelArtworksSection.
                 UserExperience.AddToPanel(resultsGridArtworks, PanelArtworksSection);
 

@@ -27,11 +27,11 @@ namespace Anababi.UserControls
         private void MyFeedPage_Load(object sender, EventArgs e)
         {
             //This will be replaced by a database fetch for the References that are specific to the user
-            References = UserExperience.GetDummyReferences();
+            References = UserExperience.GetReferences();
 
            
             //Get a list of categories based on the visual References sent
-            List<CategoryTemplateDisplay> categories = UserExperience.GetCategoriesFromReferences(References,SortBy);
+            List<CategoryTemplateDisplay> categories = UserExperience.GetCategoriesFromReferences(References,this.SortBy);
 
             //Add each category to the table layout panel
             foreach (CategoryTemplateDisplay c in categories)

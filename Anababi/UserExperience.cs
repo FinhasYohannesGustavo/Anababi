@@ -21,7 +21,7 @@ namespace Anababi
     public partial class UserExperience : UserControl
     {
         public static User currentUser = null!;
-        public static String SortBy;
+        public String SortBy;
 
         public UserExperience(User ekele)
         {
@@ -39,7 +39,7 @@ namespace Anababi
             LblFullName.CenterHorizontally();
             LblUsername.Text = $"@{currentUser.Username}";
             LblUsername.CenterHorizontally();
-            sortBy = sortBy;
+            this.SortBy = sortBy;
 
             //Set the image of the profile picture from the currentUser.
             Image ProfileImage = ByteArrayToImage(currentUser.ProfilePic);
@@ -52,14 +52,14 @@ namespace Anababi
             {
                 AddToPanel(new AdminNavigationalPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(GetDummyReferences(),sortBy));
+                AddToPanelContent(new MyFeedPage(GetReferences(),sortBy));
 
             }
             else
             {
                 AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(GetDummyReferences(),sortBy));
+                AddToPanelContent(new MyFeedPage(GetReferences(),sortBy));
 
             }
             
@@ -199,6 +199,11 @@ namespace Anababi
             {
                 //Create a list of References that are of the specific genre.
                 List<Reference> visualsOfGenre = references.FindAll(book => book.Genre.ToString() == genre);
+                foreach(Reference reference in visualsOfGenre)
+                {
+                    reference.Creator = Reference.GetCreator(reference);
+
+                }
 
                 //sort each category using the sorter that was given in the combo box
                 if (SortBy.Equals("Title"))
@@ -637,199 +642,19 @@ namespace Anababi
 
 
         }
-        public static List<Reference> GetDummyReferences()
+        public static List<Reference> GetReferences()
         {
             List<Reference> references= new List<Reference>();
-            Reference book1 = new Reference
-            {
-                Id = 1,
-                Title = "1984",
-                Genre = Reference.ReferenceGenre.Fiction,
-                Description = "\"1984\" is a classic dystopian novel written by George Orwell. Set in a totalitarian society, it follows the story of Winston Smith as he rebels against the oppressive regime ruled by Big Brother.",
-                PublishedOn = new DateTime(1949, 6, 8),
-                CoverImage = ImageToByteArray(Resources._1984)
-            };
-            
 
-            Reference book2 = new Reference
-            {
-                Id = 2,
-                Title = "Pride and Prejudice",
-                Genre = Reference.ReferenceGenre.Romance,
-                Description = "\"Pride and Prejudice\" is a beloved romance novel by Jane Austen. Set in 19th-century England, it revolves around the spirited Elizabeth Bennet and her complex relationship with the proud Mr. Darcy.",
-                PublishedOn = new DateTime(1813, 1, 28),
-                CoverImage = ImageToByteArray(Resources.prideAndPrejudice)
-            };
+            //creating the context object to get a session with the database.
+            AnababiContext AnababiContext = new AnababiContext();
 
-            Reference book3 = new Reference
-            {
-                Id = 3,
-                Title = "The Hobbit",
-                Genre = Reference.ReferenceGenre.Fantasy,
-                Description = "\"The Hobbit\" is a fantasy adventure novel by J.R.R. Tolkien. It follows the journey of Bilbo Baggins, a hobbit who is swept into an epic quest to reclaim the dwarves' homeland from the dragon Smaug.",
-                PublishedOn = new DateTime(1937, 9, 21),
-                CoverImage = ImageToByteArray(Resources.theHobbit)
-            };
+            List<Reference> contextReferences = (from reference in AnababiContext.References
+                                           select reference).ToList();
 
-            // Creating objects for the remaining references in a similar manner
 
-            Reference book4 = new Reference
-            {
-                Id = 4,
-                Title = "To Kill a Mockingbird",
-                Genre = Reference.ReferenceGenre.Romance,
-                Description = "\"To Kill a Mockingbird\" is a poignant coming-of-age novel by Harper Lee. Set in the racially charged atmosphere of 1930s Alabama, it explores themes of racial injustice, morality, and the loss of innocence through the eyes of Scout Finch.",
-                PublishedOn = new DateTime(1960, 7, 11),
-                CoverImage = ImageToByteArray(Resources.toKillAMockingBird)
-            };
+            return contextReferences;
 
-            Reference book5 = new Reference
-            {
-                Id = 5,
-                Title = "The Da Vinci Code",
-                Genre = Reference.ReferenceGenre.Thriller,
-                Description = "\"The Da Vinci Code\" is a gripping thriller by Dan Brown. The story follows symbologist Robert Langdon as he unravels a mystery involving religious symbolism, secret societies, and hidden codes.",
-                PublishedOn = new DateTime(2003, 3, 18),
-                CoverImage = ImageToByteArray(Resources.theDavinciCode)
-              
-            };
-
-            Reference book6 = new Reference
-            {
-                Id = 6,
-                Title = "The Great Gatsby",
-                Genre = Reference.ReferenceGenre.Fiction,
-                Description = "\"The Great Gatsby\" is a literary masterpiece by F. Scott Fitzgerald. Set in the Roaring Twenties, it explores the glamorous and decadent lifestyle of the wealthy elite, as seen through the eyes of the enigmatic Jay Gatsby.",
-                PublishedOn = new DateTime(1925, 4, 10),
-                CoverImage = ImageToByteArray(Resources.theGreatGatsby)
-            };
-
-            Reference book7 = new Reference
-            {
-                Id = 7,
-                Title = "The Hunger Games",
-                Genre = Reference.ReferenceGenre.ScienceFiction,
-                Description = "\"The Hunger Games\" is a thrilling young adult science fiction novel by Suzanne Collins. Set in a dystopian future, it follows the story of Katniss Everdeen as she participates in a brutal televised competition where teenagers fight to the death.",
-                PublishedOn = new DateTime(2008, 9, 14),
-                CoverImage = ImageToByteArray(Resources.theHungerGames)
-            };
-
-            Reference book8 = new Reference
-            {
-                Id = 8,
-                Title = "Gone Girl",
-                Genre = Reference.ReferenceGenre.Thriller,
-                Description = "\"Gone Girl\" is a gripping psychological thriller by Gillian Flynn. It revolves around the disappearance of Amy Dunne and the suspicion that falls on her husband, Nick.",
-                PublishedOn = new DateTime(2012, 6, 5),
-                CoverImage = ImageToByteArray(Resources.goneGirl)
-            };
-
-            Reference book9 = new Reference
-            {
-                Id = 9,
-                Title = "Sapiens: A Brief History of Humankind",
-                Genre = Reference.ReferenceGenre.NonFiction,
-                Description = "\"Sapiens: A Brief History of Humankind\" is a thought-provoking non-fiction book by Yuval Noah Harari. It provides an overview of human history, from the emergence of Homo sapiMy apologies, it seems the code got cut off. Here's the continuation:",
-                PublishedOn = new DateTime(2011, 2, 10),
-                CoverImage = ImageToByteArray(Resources.sapiens)
-            };
-
-            Creator creator1 = new Creator
-            {
-                Id = 1,
-                FirstName = "George",
-                LastName = "Orwell"
-              
-               
-            };
-
-            Creator creator2 = new Creator
-            {
-                Id = 2,
-                FirstName = "Jane",
-                LastName = "Austen"
-               
-            };
-
-            Creator creator3 = new Creator
-            {
-                Id = 3,
-                FirstName = "J.R.R.",
-                LastName = "Tolkien"
-              
-            };
-
-            // Creating objects for the remaining creators in a similar manner
-
-            Creator creator4 = new Creator
-            {
-                Id = 4,
-                FirstName = "Harper",
-                LastName = "Lee"
-               
-            };
-
-            Creator creator5 = new Creator
-            {
-                Id = 5,
-                FirstName = "Dan",
-                LastName = "Brown"
-               
-            };
-
-            Creator creator6 = new Creator
-            {
-                Id = 6,
-                FirstName = "F. Scott",
-                LastName = "Fitzgerald"
-               
-            };
-
-            Creator creator7 = new Creator
-            {
-                Id = 7,
-                FirstName = "Suzanne",
-                LastName = "Collins"
-               
-            };
-
-            Creator creator8 = new Creator
-            {
-                Id = 8,
-                FirstName = "Gillian",
-                LastName = "Flynn"
-                
-            };
-
-            Creator creator9 = new Creator
-            {
-                Id = 9,
-                FirstName = "Yuval",
-                LastName = "Noah Harari"
-              
-            };
-
-            book1.Creator= creator1;
-            book2.Creator= creator2;
-            book3.Creator= creator3;
-            book4.Creator= creator4;
-            book5.Creator= creator5;
-            book6.Creator= creator6;
-            book7.Creator= creator7;
-            book8.Creator= creator8;
-            book9.Creator= creator9;
-
-            references.Add(book9);
-            references.Add(book8);
-            references.Add(book7);
-            references.Add(book6);
-            references.Add(book5);
-            references.Add(book4);
-            references.Add(book3);
-            references.Add(book2);
-            references.Add(book1);
-
-            return references;
         }
         public static List<Creator> GetCreators()
         {

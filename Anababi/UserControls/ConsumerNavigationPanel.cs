@@ -22,9 +22,9 @@ namespace Anababi.UserControls
         private void BtnMyFeed_Click(object sender, EventArgs e)
         {
             //database fetch for the specific feed of this user
-            List<Reference> arts = UserExperience.GetDummyReferences();
+            List<Reference> arts = UserExperience.GetReferences();
 
-            CurrentExperience.AddToPanelContent(new MyFeedPage(arts,UserExperience.SortBy));
+            CurrentExperience.AddToPanelContent(new MyFeedPage(arts,CurrentExperience.SortBy));
         }
         private void BtnTopCreators_Click(object sender, EventArgs e)
         {
@@ -32,7 +32,7 @@ namespace Anababi.UserControls
         }
         private void BtnTopReferences_Click(object sender, EventArgs e)
         {
-            CurrentExperience.AddToPanelContent(new TopReferencesPage(UserExperience.SortBy));
+            CurrentExperience.AddToPanelContent(new TopReferencesPage(CurrentExperience.SortBy));
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)

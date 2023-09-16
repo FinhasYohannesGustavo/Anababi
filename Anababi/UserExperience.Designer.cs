@@ -261,6 +261,7 @@
             this.cmbSort.Sorted = true;
             this.cmbSort.TabIndex = 10;
             this.cmbSort.Tag = "Sort By";
+            this.cmbSort.SelectedItem = "Title";
             this.cmbSort.SelectedValueChanged += new System.EventHandler(this.UserExperience_Load);
             // 
             // BtnNavigation
