@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Anababi.Migrations
 {
     [DbContext(typeof(AnababiContext))]
-    [Migration("20230915143704_Removed_ISBN_Class")]
-    partial class Removed_ISBN_Class
+    [Migration("20230916131422_Added_Subtype_DbSets")]
+    partial class Added_Subtype_DbSets
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -85,7 +85,7 @@ namespace Anababi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ReferenceLocation");
+                    b.ToTable("ReferenceLocations");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.Reference", b =>
@@ -113,8 +113,9 @@ namespace Anababi.Migrations
                     b.Property<int>("Genre")
                         .HasColumnType("int");
 
-                    b.Property<int>("ISBN")
-                        .HasColumnType("int");
+                    b.Property<string>("ISBN")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("LibraryId")
                         .HasColumnType("int");
@@ -219,7 +220,7 @@ namespace Anababi.Migrations
             modelBuilder.Entity("Anababi.ModelClasses.Reference", b =>
                 {
                     b.HasOne("Anababi.ModelClasses.Creator", "Creator")
-                        .WithMany("ReferencesCreated")
+                        .WithMany()
                         .HasForeignKey("CreatorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -247,11 +248,6 @@ namespace Anababi.Migrations
                         .IsRequired();
 
                     b.Navigation("Location");
-                });
-
-            modelBuilder.Entity("Anababi.ModelClasses.Creator", b =>
-                {
-                    b.Navigation("ReferencesCreated");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.Library", b =>

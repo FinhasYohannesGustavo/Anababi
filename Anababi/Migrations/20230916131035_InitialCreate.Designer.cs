@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Anababi.Migrations
 {
     [DbContext(typeof(AnababiContext))]
-    [Migration("20230915144534_Changed_ISBN_Property_Type")]
-    partial class Changed_ISBN_Property_Type
+    [Migration("20230916131035_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -85,7 +85,7 @@ namespace Anababi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ReferenceLocation");
+                    b.ToTable("ReferenceLocations");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.Reference", b =>
@@ -103,10 +103,6 @@ namespace Anababi.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Discriminator")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -137,10 +133,6 @@ namespace Anababi.Migrations
                     b.HasIndex("LibraryId");
 
                     b.ToTable("References");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Reference");
-
-                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.User", b =>
@@ -188,39 +180,10 @@ namespace Anababi.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Anababi.ModelClasses.DigitalReference", b =>
-                {
-                    b.HasBaseType("Anababi.ModelClasses.Reference");
-
-                    b.Property<byte[]>("File")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.HasDiscriminator().HasValue("DigitalReference");
-                });
-
-            modelBuilder.Entity("Anababi.ModelClasses.PhysicalReference", b =>
-                {
-                    b.HasBaseType("Anababi.ModelClasses.Reference");
-
-                    b.Property<bool>("Available")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("LocationId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NumOfCopies")
-                        .HasColumnType("int");
-
-                    b.HasIndex("LocationId");
-
-                    b.HasDiscriminator().HasValue("PhysicalReference");
-                });
-
             modelBuilder.Entity("Anababi.ModelClasses.Reference", b =>
                 {
                     b.HasOne("Anababi.ModelClasses.Creator", "Creator")
-                        .WithMany("ReferencesCreated")
+                        .WithMany()
                         .HasForeignKey("CreatorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -237,22 +200,6 @@ namespace Anababi.Migrations
                     b.HasOne("Anababi.ModelClasses.Library", null)
                         .WithMany("Members")
                         .HasForeignKey("LibraryId");
-                });
-
-            modelBuilder.Entity("Anababi.ModelClasses.PhysicalReference", b =>
-                {
-                    b.HasOne("Anababi.ModelClasses.PhysicalReference+ReferenceLocation", "Location")
-                        .WithMany()
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Location");
-                });
-
-            modelBuilder.Entity("Anababi.ModelClasses.Creator", b =>
-                {
-                    b.Navigation("ReferencesCreated");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.Library", b =>

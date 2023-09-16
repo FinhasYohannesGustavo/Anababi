@@ -79,5 +79,17 @@ namespace Anababi.ModelClasses
             CoverImage = reference.CoverImage;
             Description = reference.Description;
         }
+
+        public static List<Reference> GetAllReferencesFromDB()
+        {
+            using AnababiContext context = new AnababiContext();
+            List<Reference> references = context.References.ToList();
+            
+            foreach(var reference in references)
+            {
+                reference.Creator = GetCreator(reference);
+            }
+            return references;
+        }
     }
 }
