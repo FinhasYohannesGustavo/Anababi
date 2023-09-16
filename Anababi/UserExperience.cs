@@ -45,21 +45,21 @@ namespace Anababi
             Image ProfileImage = ByteArrayToImage(currentUser.ProfilePic);
 
             guna2CirclePictureBoxProfilePic.Image = ProfileImage;
-
-            currentUser.IsAdmin = true;
+            
+            
             //Create a new navigation panel depending on whether or not the user is an admin.
             if (currentUser.IsAdmin)
             {
-                AddToPanel(new AdminNavigationalPanel(), SplitContainerAll.Panel1);
+                AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(), sortBy));
+                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(),sortBy));
 
             }
             else
             {
                 AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(), sortBy));
+                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(),sortBy));
 
             }
 
@@ -141,7 +141,10 @@ namespace Anababi
         //Get a list of Buttons from a list of VisualArts.
         public static List<Button> CreateButtonsFromReferences(List<Reference> references)
         {
+
             List<Button> buttonList = new List<Button>();
+            if (references != null&& references[0]==null)
+                return buttonList;
             for (int i = 0; i < references.Count(); i++)
             {
                 Button button = new Button();
@@ -641,6 +644,19 @@ namespace Anababi
 
 
 
+
+            return contextReferences;
+
+        }
+        public static List<Creator> GetCreators()
+        {
+  
+            //creating the context object to get a session with the database.
+            AnababiContext AnababiContext = new AnababiContext();
+
+            List<Creator> creators = (from creator in AnababiContext.Creators
+                                                 select creator).ToList();
+            return creators;
         }
 
         public void AddToPanelContent(UserControl userControl)

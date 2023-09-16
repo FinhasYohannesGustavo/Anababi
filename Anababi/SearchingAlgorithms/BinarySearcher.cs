@@ -9,7 +9,7 @@ namespace Anababi.SearchingAlgorithms
 {
     internal class BinarySearcher
     {
-        public int BinarySearch(List<Reference> sortedList, Reference searchKey,String compareBy)
+        public static Reference  BinarySearch(List<Reference> sortedList, String searchKey,String compareBy)
         {
             int low = 0;
             int high = sortedList.Count - 1;
@@ -36,7 +36,7 @@ namespace Anababi.SearchingAlgorithms
                 if (comparisonResult == 0)
                 {
                     // Found the search key at index mid
-                    return mid;
+                    return sortedList[mid];
                 }
                 else if (comparisonResult < 0)
                 {
@@ -51,34 +51,34 @@ namespace Anababi.SearchingAlgorithms
             }
 
             // Search key was not found
-            return -1;
+            return null;
         }
 
         // Compare two Reference objects based on FirstName and LastName properties
-        private int CompareReferencesAuthor(Reference reference1, Reference reference2)
+        private static int CompareReferencesAuthor(Reference reference1, String searchKey)
         {
-            int firstNameComparison = String.Compare(reference1.Creator.FirstName, reference2.Creator.FirstName);
-            int lastNameComparison = String.Compare(reference1.Creator.LastName, reference2.Creator.LastName);
+            int firstNameComparison = String.Compare(reference1.Creator.FirstName, searchKey);
+            int lastNameComparison = String.Compare(reference1.Creator.LastName, searchKey);
 
-            if (firstNameComparison != 0)
+            if (firstNameComparison == 0)
                 return firstNameComparison;
             else
                 return lastNameComparison;
         }
 
-        private int CompareReferencesTitle(Reference reference1, Reference reference2)
+        private static int CompareReferencesTitle(Reference reference1, String searchKey)
         {
           
-            int titleComparison= String.Compare(reference1.Title, reference2.Title);
+            int titleComparison= String.Compare(reference1.Title, searchKey);
 
            
             return titleComparison;
         }
 
-        private int CompareReferencesPublishedOn(Reference reference1, Reference reference2)
+        private static int CompareReferencesPublishedOn(Reference reference1, String searchKey)
         {
 
-            int ISBN_Comparison = String.Compare(reference1.PublishedOn.ToString(), reference2.PublishedOn.ToString());
+            int ISBN_Comparison = String.Compare(reference1.PublishedOn.ToString(), searchKey);
 
 
             return ISBN_Comparison;
