@@ -24,7 +24,7 @@ namespace Anababi.UserControls
     private void TopBooksPage_Load(object sender, EventArgs e)
     {
         //This will be replaced by a database fetch for the books that are considered the top books.
-        References = UserExperience.GetReferences();
+        References = Reference.GetAllReferencesFromDB();
 
 
         //Possible algorithm for picking the top ranking artworks

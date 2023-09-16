@@ -27,7 +27,7 @@ namespace Anababi.UserControls
         private void MyFeedPage_Load(object sender, EventArgs e)
         {
             //This will be replaced by a database fetch for the References that are specific to the user
-            References = UserExperience.GetReferences();
+            References = Reference.GetAllReferencesFromDB();
 
            
             //Get a list of categories based on the visual References sent
