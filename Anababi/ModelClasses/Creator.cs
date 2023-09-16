@@ -18,5 +18,12 @@ namespace Anababi.ModelClasses
             return context.References.Where(r => r.Creator == this).ToList();
         }
 
+        public static List<Creator> GetAllCreatorsFromDB()
+        {
+            using AnababiContext context = new AnababiContext();
+            List<Creator> creators = context.Creators.ToList();
+            return creators;
+        }
+
     }
 }

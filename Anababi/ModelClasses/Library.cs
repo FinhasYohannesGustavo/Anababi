@@ -1,4 +1,5 @@
 ﻿
+using Anababi.Data;
 using System.ComponentModel.DataAnnotations;
 
 namespace Anababi.ModelClasses
@@ -17,6 +18,13 @@ namespace Anababi.ModelClasses
         {
             Members = members;
             References = references;
+        }
+
+        public static List<Library> GetAllLibrariesFromDB()
+        {
+            using AnababiContext context = new AnababiContext();
+            List<Library> libraries = context.Libraries.ToList();
+            return libraries;
         }
 
     }
