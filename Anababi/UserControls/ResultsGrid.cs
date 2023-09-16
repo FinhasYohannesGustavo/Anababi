@@ -52,8 +52,8 @@ namespace Anababi.UserControls
                 if (typeOfDataToBeDisplayed == TypeOfDataToBeDisplayed.Reference)
                 {
                     //VisualArts were sent
-                    //Use the ConsumerExperience.CreateButtonsFromVisualArtworks() function to create Buttons from Reference objects.
-                    buttonList = UserExperience.CreateButtonsFromVisualArtworks(visuals);
+                    //Use the ConsumerExperience.CreateButtonsFromReferences() function to create Buttons from Reference objects.
+                    buttonList = UserExperience.CreateButtonsFromReferences(visuals);
                     for (int i = 0; i < buttonList.Count(); i++)
                     {
                         //Associate the specific visual art with the button to make the Artist accessible in the event
@@ -63,7 +63,7 @@ namespace Anababi.UserControls
                 else
                 {
                     //Users were sent
-                    //Use the ConsumerExperience.CreateButtonsFromVisualArtworks() function to create Buttons from Creator objects.
+                    //Use the ConsumerExperience.CreateButtonsFromReferences() function to create Buttons from Creator objects.
                     buttonList = UserExperience.CreateButtonsFromCreators(writers);
                     for (int i = 0; i < buttonList.Count(); i++)
                     {
@@ -115,7 +115,7 @@ namespace Anababi.UserControls
                 Creator writer = (Creator)btn.Tag;
 
                 //Create a center display for the writer
-                UserExperience.CreateCenterDisplayForWriter(writer, requiredPanel);
+                UserExperience.CreateCenterDisplayForCreator(writer, requiredPanel);
             }
 
         }

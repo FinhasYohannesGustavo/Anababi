@@ -28,7 +28,7 @@ namespace Anababi.UserControls
 
 
         //Set the background image of the artPage (tab in the TabControl) to the image of the VisualArt.
-        splitContainer1.Panel1.BackgroundImage = UserExperience.byteArrayToImage(Reference.CoverImage);
+        splitContainer1.Panel1.BackgroundImage = UserExperience.ByteArrayToImage(Reference.CoverImage);
        
         //Set the text of the TextBox representing the description of the art.
         descriptionLabel.Text= Reference.Description;

@@ -10,6 +10,7 @@ namespace Anababi.ModelClasses
         public int Id { get; set; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
+        public string Email { get; set; } = null!;
         public string Username { get; set; } = null!;
         private string _password { get; set; } = null!;
         public byte[]? ProfilePic { get; set; }
@@ -32,7 +33,7 @@ namespace Anababi.ModelClasses
         public void Search(string searchKey, Reference[] references) { }
         public void Sort(Reference[] referenes) { }
 
-        // User privileges
+        // Admin privileges
         public string AddReference(Reference reference)
         {
             string confirmationMessage;
@@ -65,14 +66,9 @@ namespace Anababi.ModelClasses
                 if (toBeModified is Reference)
                 {
                     if(toBeModified is DigitalReference)
-                    {
                         toBeModified = new DigitalReference(reference as DigitalReference);
-                    }
                     else
-                    {
                         toBeModified = new PhysicalReference(reference as PhysicalReference);
-
-                    }
                 } 
                 context.SaveChanges();
 
@@ -80,8 +76,8 @@ namespace Anababi.ModelClasses
             }
             else
                 confirmationMessage = "This feature is only for admins.";
-            return confirmationMessage;
             
+            return confirmationMessage;
         }
         public string RemoveReference(Reference reference)
         {
@@ -100,14 +96,12 @@ namespace Anababi.ModelClasses
                     context.Remove(toBeRemoved);
                 }
 
-
                 confirmationMessage = "Reference removed.";
-
             }
             else
                 confirmationMessage = "This feature is only for admins.";
-            return confirmationMessage;
             
+            return confirmationMessage;
         }
         
     }

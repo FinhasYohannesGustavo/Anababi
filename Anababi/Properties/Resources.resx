@@ -118,52 +118,136 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="theHungerGames" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\theHungerGames.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="transparentbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\transparentbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="theDavinciCode" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\theDavinciCode.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="menu-bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu-bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1984" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1984.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="prideAndPrejudice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\prideAndPrejudice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sortingIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sortingIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Afewerk_Tekle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Afewerk_Tekle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="theHobbit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\theHobbit.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="toKillAMockingBird" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\toKillAMockingBird.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loupe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loupe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="transparentbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transparentbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1984" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1984.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1984 book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1984 book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A Tale of Two Cities book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A Tale of Two Cities book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Animal Farm book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Animal Farm book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Anna Karenina book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Anna Karenina book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="goneGirl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goneGirl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Great Expectations book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Great Expectations book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hamlet book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hamlet book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Harry Potter and the Deathly Hallows book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Harry Potter and the Deathly Hallows book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Harry Potter and the Sorcerer's Stone book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Harry Potter and the Sorcerer's Stone book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Love in the Time of Cholera book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Love in the Time of Cholera book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="One Hundred Years of Solitude book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\One Hundred Years of Solitude book cover HD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pride and Prejudice book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pride and Prejudice book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prideAndPrejudice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prideAndPrejudice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Romeo and Juliet book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Romeo and Juliet book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sapiens" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sapiens.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sense and Sensibility book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sense and Sensibility book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tender Is the Night book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tender Is the Night book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The Adventures of Huckleberry Finn book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Adventures of Huckleberry Finn book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The Adventures of Tom Sawyer book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Adventures of Tom Sawyer book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The Great Gatsby book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Great Gatsby book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="theDavinciCode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\theDavinciCode.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="theGreatGatsby" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theGreatGatsby.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sortingIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sortingIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="theHobbit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\theHobbit.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="theHungerGames" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\theHungerGames.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toKillAMockingBird" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toKillAMockingBird.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="War and Peace book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\War and Peace book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Charles Dickens HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Charles Dickens HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F. Scott Fitzgerald HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F. Scott Fitzgerald HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gabriel García Márquez HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gabriel García Márquez HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="George Orwell HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\George Orwell HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Go Set a Watchman book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Go Set a Watchman book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Harper Lee HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Harper Lee HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="J.K. Rowling HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\J.K. Rowling HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jane Austen HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jane Austen HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Leo Tolstoy HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Leo Tolstoy HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mark Twain HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mark Twain HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="William Shakespeare HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\William Shakespeare HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Anababi.Migrations
 {
     [DbContext(typeof(AnababiContext))]
-    [Migration("20230913194729_InitialCreation")]
-    partial class InitialCreation
+    [Migration("20230915143704_Removed_ISBN_Class")]
+    partial class Removed_ISBN_Class
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -113,7 +113,7 @@ namespace Anababi.Migrations
                     b.Property<int>("Genre")
                         .HasColumnType("int");
 
-                    b.Property<int>("ISBNValueId")
+                    b.Property<int>("ISBN")
                         .HasColumnType("int");
 
                     b.Property<int?>("LibraryId")
@@ -133,8 +133,6 @@ namespace Anababi.Migrations
 
                     b.HasIndex("CreatorId");
 
-                    b.HasIndex("ISBNValueId");
-
                     b.HasIndex("LibraryId");
 
                     b.ToTable("References");
@@ -144,34 +142,6 @@ namespace Anababi.Migrations
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("Anababi.ModelClasses.Reference+ISBN", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CheckDigit")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Prefix")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Publication")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Registrant")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RegistrationGroup")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ISBN");
-                });
-
             modelBuilder.Entity("Anababi.ModelClasses.User", b =>
                 {
                     b.Property<int>("Id")
@@ -179,6 +149,10 @@ namespace Anababi.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -194,17 +168,17 @@ namespace Anababi.Migrations
                     b.Property<int?>("LibraryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Password");
+
                     b.Property<byte[]>("ProfilePic")
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("_password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Password");
 
                     b.HasKey("Id");
 
@@ -250,19 +224,11 @@ namespace Anababi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Anababi.ModelClasses.Reference+ISBN", "ISBNValue")
-                        .WithMany()
-                        .HasForeignKey("ISBNValueId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Anababi.ModelClasses.Library", null)
                         .WithMany("References")
                         .HasForeignKey("LibraryId");
 
                     b.Navigation("Creator");
-
-                    b.Navigation("ISBNValue");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.User", b =>

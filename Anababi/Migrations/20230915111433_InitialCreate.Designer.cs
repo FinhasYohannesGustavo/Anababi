@@ -4,6 +4,7 @@ using Anababi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Anababi.Migrations
 {
     [DbContext(typeof(AnababiContext))]
-    partial class AnababiContextModelSnapshot : ModelSnapshot
+    [Migration("20230915111433_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,7 +85,7 @@ namespace Anababi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ReferenceLocations");
+                    b.ToTable("ReferenceLocation");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.Reference", b =>
@@ -110,9 +113,8 @@ namespace Anababi.Migrations
                     b.Property<int>("Genre")
                         .HasColumnType("int");
 
-                    b.Property<string>("ISBN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ISBNValueId")
+                        .HasColumnType("int");
 
                     b.Property<int?>("LibraryId")
                         .HasColumnType("int");
@@ -131,6 +133,8 @@ namespace Anababi.Migrations
 
                     b.HasIndex("CreatorId");
 
+                    b.HasIndex("ISBNValueId");
+
                     b.HasIndex("LibraryId");
 
                     b.ToTable("References");
@@ -138,6 +142,34 @@ namespace Anababi.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Reference");
 
                     b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("Anababi.ModelClasses.Reference+ISBN", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CheckDigit")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Prefix")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Publication")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Registrant")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RegistrationGroup")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ISBN");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.User", b =>
@@ -222,11 +254,19 @@ namespace Anababi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Anababi.ModelClasses.Reference+ISBN", "ISBN")
+                        .WithMany()
+                        .HasForeignKey("ISBNValueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Anababi.ModelClasses.Library", null)
                         .WithMany("References")
                         .HasForeignKey("LibraryId");
 
                     b.Navigation("Creator");
+
+                    b.Navigation("ISBN");
                 });
 
             modelBuilder.Entity("Anababi.ModelClasses.User", b =>

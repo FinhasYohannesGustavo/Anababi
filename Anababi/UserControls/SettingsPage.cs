@@ -15,7 +15,7 @@ namespace Anababi.UserControls
 {
     internal partial class SettingsPage : UserControl
     {
-        User currentUser = UserExperience.GetUserByUserName();
+        User currentUser = UserExperience.currentUser;
         public SettingsPage()
         {
             InitializeComponent();

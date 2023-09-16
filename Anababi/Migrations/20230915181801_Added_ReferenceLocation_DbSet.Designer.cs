@@ -4,6 +4,7 @@ using Anababi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Anababi.Migrations
 {
     [DbContext(typeof(AnababiContext))]
-    partial class AnababiContextModelSnapshot : ModelSnapshot
+    [Migration("20230915181801_Added_ReferenceLocation_DbSet")]
+    partial class Added_ReferenceLocation_DbSet
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

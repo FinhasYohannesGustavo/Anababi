@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Anababi.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreation : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -79,10 +79,11 @@ namespace Anababi.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProfilePic = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     IsAdmin = table.Column<bool>(type: "bit", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LibraryId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

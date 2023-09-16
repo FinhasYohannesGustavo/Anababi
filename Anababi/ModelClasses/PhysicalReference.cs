@@ -13,7 +13,9 @@ namespace Anababi.ModelClasses
             public int Section { get; set; }
             public int Shelf { get; set; }
 
-            ReferenceLocation(int floor, int section, int shelf)
+            public ReferenceLocation() { }
+
+            public ReferenceLocation(int floor, int section, int shelf)
             {
                 Floor = floor;
                 Section = section;

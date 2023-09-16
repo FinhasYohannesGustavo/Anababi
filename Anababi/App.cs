@@ -1,4 +1,7 @@
 using Anababi.ModelClasses;
+using Anababi.Data;
+using Microsoft.IdentityModel.Tokens;
+
 namespace Anababi
 {
     public partial class App : Form
@@ -14,26 +17,18 @@ namespace Anababi
             //Create a user authentication UserControl object and add it to the control of the form.
             //...
 
-            //This is dummy data and will be replaced by the verified User object from the Login page.
-            User user = new User();
-            user.Id = 1;
-            user.FirstName = "Yelielew";
-            user.LastName = "Aymertim";
-            user.Username = "yelielew";
-            user.ProfilePic = UserExperience.ImageToByteArray(Properties.Resources.Afewerk_Tekle);
+            using AnababiContext context = new AnababiContext();
+            
+            //Populate the database with dummy objects only if it is empty
+            if(context.Libraries.IsNullOrEmpty())
+            {
+                UserExperience.PopulateDatabaseWithDummyData();
+            }
 
-            User administrator = new User();
-            administrator.Id = 2;
-            administrator.FirstName = "Aytal";
-            administrator.LastName = "Esuga";
-            administrator.Username = "aytal_esuga";
-            administrator.IsAdmin = true;
-            administrator.ProfilePic = UserExperience.ImageToByteArray(Properties.Resources.goneGirl);
+            var user = context.Users.Where(u => !u.IsAdmin).FirstOrDefault() as User;
+            var administrator = context.Users.Where(u => u.IsAdmin).FirstOrDefault() as User;
 
-            //Create a library object with all users, Administrators and References.
-            List<User> members = new List<User> { user, administrator};
-            List<Reference> references = UserExperience.GetDummyReferences();
-            Library = new Library(members, references);
+            Library = context.Libraries.FirstOrDefault() as Library;
             
 
             //Everything below will be inside the button-click event of the user authentication UserControl.

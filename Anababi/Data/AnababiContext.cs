@@ -11,6 +11,7 @@ namespace Anababi.Data
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Reference> References { get; set; } = null!;
         public DbSet<PhysicalReference> PhysicalReferences { get; set; } = null!;
+        public DbSet<PhysicalReference.ReferenceLocation> ReferenceLocations { get; set; }
         public DbSet<DigitalReference> DigitalReferences { get; set; } = null!;
         public DbSet<Library> Libraries { get; set; } = null!;
         public DbSet<Creator> Creators { get; set; } = null!;
@@ -29,9 +30,8 @@ namespace Anababi.Data
             modelBuilder.Entity<User>(entity =>
             {
                 entity.Property("Password")
-                    .HasColumnName("Password") // Specify the column name
-                    .IsRequired(); // Add other configurations as needed
-
+                    .HasColumnName("Password")
+                    .IsRequired(); 
             });
         }
     }
