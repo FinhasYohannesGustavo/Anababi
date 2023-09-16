@@ -21,7 +21,7 @@ namespace Anababi.UserControls.AdminControls
         private void BtnMyFeed_Click(object sender, EventArgs e)
         {
             //database fetch for the specific feed of this user
-            List<Reference> arts = UserExperience.GetReferences();
+            List<Reference> arts = Reference.GetAllReferencesFromDB();
 
             CurrentExperience.AddToPanelContent(new MyFeedPage(arts, CurrentExperience.SortBy));
         }

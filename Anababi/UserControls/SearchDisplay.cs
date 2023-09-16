@@ -33,7 +33,7 @@ namespace Anababi.UserControls
             UserExperience.AddToPanel(resultsGridArtists, PanelArtistsSection);
 
            
-            List<Reference> references = UserExperience.GetReferences();
+            List<Reference> references = Reference.GetAllReferencesFromDB();
             UserExperience CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
             if (CurrentExperience.SortBy == "Title")
             {
@@ -41,11 +41,7 @@ namespace Anababi.UserControls
             }
             else if (CurrentExperience.SortBy == "Author")
             {
-                foreach (Reference reference in references)
-                {
-                    reference.Creator = Reference.GetCreator(reference);
-
-                }
+               
                 references = SortingAlgorithms.SelectionSorter.SelectionSort(references);
 
             }
@@ -67,7 +63,7 @@ namespace Anababi.UserControls
                 //Call the search algorithm with the user's input here...
                 string searchText = TextBoxSearchBar.Text.ToString();
                 AnababiContext searchedReferencesContext = new AnababiContext();
-                List<Reference> searchedReferences = UserExperience.GetReferences();
+                List<Reference> searchedReferences = Reference.GetAllReferencesFromDB();
                 List<Reference> foundReference = new List<Reference>();
 
                 List<Creator> searchedCreators = (from creators in searchedReferencesContext.Creators
@@ -89,11 +85,7 @@ namespace Anababi.UserControls
                     else if (CurrentExperience.SortBy == "Author")
                     {
                       
-                        foreach (Reference reference in searchedReferences)
-                        {
-                            reference.Creator = Reference.GetCreator(reference);
-
-                        }
+                      
                         searchedReferences = SortingAlgorithms.SelectionSorter.SelectionSort(searchedReferences);
                         foundReference.Add(BinarySearcher.BinarySearch(searchedReferences, searchText, CurrentExperience.SortBy));
 

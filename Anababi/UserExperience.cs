@@ -46,20 +46,20 @@ namespace Anababi
 
             guna2CirclePictureBoxProfilePic.Image = ProfileImage;
             
-            currentUser.IsAdmin= true;
+            
             //Create a new navigation panel depending on whether or not the user is an admin.
             if (currentUser.IsAdmin)
             {
-                AddToPanel(new AdminNavigationalPanel(), SplitContainerAll.Panel1);
+                AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(GetReferences(),sortBy));
+                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(),sortBy));
 
             }
             else
             {
                 AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(GetReferences(),sortBy));
+                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(),sortBy));
 
             }
             
