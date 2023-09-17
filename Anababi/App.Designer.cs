@@ -32,12 +32,13 @@
             // 
             // App
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(928, 595);
+            this.ClientSize = new System.Drawing.Size(812, 446);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "App";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.ShowInTaskbar = false;
             this.Text = "Anababi";
             this.Load += new System.EventHandler(this.App_Load);

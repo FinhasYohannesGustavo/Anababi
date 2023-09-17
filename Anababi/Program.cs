@@ -1,4 +1,4 @@
-using Anababi.RegistrationItems;
+using Anababi.AuthenticationItems;
 namespace Anababi
 {
     public static class Program
@@ -13,7 +13,7 @@ namespace Anababi
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new App());
-            Application.Run(new UserRegistrationForm());
+            Application.Run(new LoginForm());
         }
     }
 }
