@@ -87,6 +87,8 @@ namespace Anababi.AuthenticationItems
             }
 
         }
+        
+        //this function simply closes the login form when the app is closed
         private void NewForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Close the old form (LoginForm) when the new form (App) is closed
