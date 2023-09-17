@@ -18,13 +18,14 @@ namespace Anababi.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(
+            string connectionString = 
                 @"server = .; 
                 database = AnababiLMS; 
                 integrated security = true; 
-                encrypt = false"
-            );
+                encrypt = false";
+            optionsBuilder.UseSqlServer(connectionString);
         }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>(entity =>

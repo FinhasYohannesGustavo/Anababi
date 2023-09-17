@@ -1,5 +1,6 @@
 ﻿
 using Anababi.Data;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace Anababi.ModelClasses
@@ -23,7 +24,10 @@ namespace Anababi.ModelClasses
         public static List<Library> GetAllLibrariesFromDB()
         {
             using AnababiContext context = new AnababiContext();
-            List<Library> libraries = context.Libraries.ToList();
+            List<Library> libraries = context.Libraries
+                .Include(l => l.Members) 
+                .Include(l => l.References)
+                .ToList();
             return libraries;
         }
 

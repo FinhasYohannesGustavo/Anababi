@@ -71,9 +71,9 @@ namespace Anababi.UserControls
                 PhysicalReference physicalReference = (PhysicalReference)Reference;
                 // Set the discriminator, location and num of copies values.
                 textBoxDiscriminator.Text = "Physical Reference";
-                //textBoxFloor.Text = physicalReference.Location.Floor.ToString();
-                //textBoxSection.Text = physicalReference.Location.Section.ToString();
-                //textBoxShelf.Text = physicalReference.Location.Shelf.ToString();
+                textBoxFloor.Text = physicalReference.Location.Floor.ToString();
+                textBoxSection.Text = physicalReference.Location.Section.ToString();
+                textBoxShelf.Text = physicalReference.Location.Shelf.ToString();
                 textBoxNumOfCopies.Text = physicalReference.NumOfCopies.ToString();
 
                 // Fill the combo box representing the availability of the reference

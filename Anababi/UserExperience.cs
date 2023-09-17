@@ -200,11 +200,11 @@ namespace Anababi
             {
                 //Create a list of References that are of the specific genre.
                 List<Reference> visualsOfGenre = references.FindAll(book => book.Genre.ToString() == genre);
-                foreach (Reference reference in visualsOfGenre)
-                {
-                    reference.Creator = Reference.GetCreator(reference);
+                //foreach (Reference reference in visualsOfGenre)
+                //{
+                //    reference.Creator = Reference.GetCreator(reference);
 
-                }
+                //}
 
                 //sort each category using the sorter that was given in the combo box
                 if (SortBy.Equals("Title"))

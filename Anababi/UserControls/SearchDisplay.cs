@@ -104,17 +104,7 @@ namespace Anababi.UserControls
                 {
                     //Do linear Searching only search for what the user has chosen to sort with, no sorting is required here
 
-
-
-                    foreach (Reference reference in searchedReferences)
-                    {
-                        reference.Creator = Reference.GetCreator(reference);
-
-                    }
                     foundReference.Add(LinearSearcher.LinearSearch(searchedReferences, searchText, CurrentExperience.SortBy));
-
-
-
 
                 }
 

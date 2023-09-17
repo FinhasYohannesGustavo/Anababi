@@ -83,12 +83,15 @@ namespace Anababi.ModelClasses
         public static List<Reference> GetAllReferencesFromDB()
         {
             using AnababiContext context = new AnababiContext();
-            List<Reference> references = context.References.ToList();
+            List<Reference> references = context.References
+                .Include(r => r.Creator)
+                .Include(r => (r as PhysicalReference).Location)
+                .ToList();
             
-            foreach(var reference in references)
-            {
-                reference.Creator = GetCreator(reference);
-            }
+            //foreach(var reference in references)
+            //{
+            //    reference.Creator = GetCreator(reference);
+            //}
             return references;
         }
     }
