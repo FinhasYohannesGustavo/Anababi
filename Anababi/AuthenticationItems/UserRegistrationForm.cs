@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Anababi.Data;
+using Anababi.ModelClasses;
 
 namespace Anababi.RegistrationItems
 {
@@ -33,25 +35,43 @@ namespace Anababi.RegistrationItems
 
         private void signupbtn_Click(object sender, EventArgs e)
         {
-            if (userNameTextBox.Text == "" && confirmPwdTextBox.Text == "" && pwdTextBox.Text == "")
+            if (userNameTextBox.Text == "" || confirmPwdTextBox.Text == "" || pwdTextBox.Text == "" || TextBoxEmail.Text == "")
             {
-                MessageBox.Show("Username and Password fields are empty", "Sign up Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You have left some fields empty", "Sign up Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (confirmPwdTextBox.Text == pwdTextBox.Text)
             {
-                con.Open();
-                string register = "Insert into tbl_users values ('" + userNameTextBox.Text + "','" + confirmPwdTextBox.Text + "')";
-                cmd = new OleDbCommand(register, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                userNameTextBox.Text = "";
-                confirmPwdTextBox.Text = "";
-                pwdTextBox.Text = "";
-                MessageBox.Show("Your account has been created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                User userToBeCreated = new User();
+                userToBeCreated.FirstName = fnameTextBox.Text;
+                userToBeCreated.LastName = lnameTextBox.Text;
+                userToBeCreated.Username = userNameTextBox.Text;
+                userToBeCreated.Password = pwdTextBox.Text;
+                userToBeCreated.Email = pwdTextBox.Text;
+                using (AnababiContext anababiContext = new AnababiContext())
+                {
+                    User userDuplicateUsername = anababiContext.Users.FirstOrDefault(u => u.Username == userNameTextBox.Text);
+                    if (userDuplicateUsername == null)
+                    {
+                        anababiContext.Users.Add(userToBeCreated);
+                        anababiContext.SaveChanges();
+                        App app = new App(userToBeCreated);
+                        this.Hide();
+                        app.FormClosed += NewForm_FormClosed;
+                        app.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("There is already a user with the username '"+userNameTextBox.Text+"' please choose a differnt one");
+                    }
+
+                }
+
+
             }
             else
             {
-                MessageBox.Show("Incorrect Password, Please try again", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Passwords do not match, Please try again", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 confirmPwdTextBox.Text = "";
                 pwdTextBox.Text = "";
                 confirmPwdTextBox.Focus();
@@ -71,10 +91,6 @@ namespace Anababi.RegistrationItems
             }
         }
 
-        private void OPATlabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void fnameTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -97,13 +113,7 @@ namespace Anababi.RegistrationItems
             }
         }
 
-        private void phoneNumTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
+       
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -145,13 +155,20 @@ namespace Anababi.RegistrationItems
             userNameTextBox.Text = "";
             fnameTextBox.Text = "";
             lnameTextBox.Text = "";
-            eailTextBox.Text = "";
-            genderComboBox1.Text = "";
-            countryComboBox.Text = "";
-            phoneNumComboBox.Text = "";
-            phoneNumTextBox.Text = "";
+            //eailTextBox.Text = "";
+           
+            //countryComboBox.Text = "";
+            //phoneNumComboBox.Text = "";
+            //phoneNumTextBox.Text = "";
             confirmPwdTextBox.Text = "";
             //UserRegistrationForm.Text = "";
         }
+        private void NewForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Close the old form (LoginForm) when the new form (App) is closed
+            this.Close();
+        }
+
+
     }
 }

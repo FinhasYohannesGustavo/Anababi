@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Anababi.ModelClasses;
 using Anababi.Data;
+using Anababi.RegistrationItems;
 
 namespace Anababi.AuthenticationItems
 {
@@ -93,6 +94,14 @@ namespace Anababi.AuthenticationItems
         {
             // Close the old form (LoginForm) when the new form (App) is closed
             this.Close();
+        }
+
+        private void LabelDonthaveAccLinkLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UserRegistrationForm userRegistrationForm = new UserRegistrationForm();
+            this.Hide();
+            userRegistrationForm.FormClosed += NewForm_FormClosed;
+            userRegistrationForm.Show();
         }
     }
 }

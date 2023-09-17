@@ -31,7 +31,7 @@
             this.btnPnl = new System.Windows.Forms.Panel();
             this.loginClearBtn = new System.Windows.Forms.Button();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.haveAccLinkLbl = new System.Windows.Forms.LinkLabel();
+            this.LabelDonthaveAccLinkLbl = new System.Windows.Forms.LinkLabel();
             this.loginUserNameTextBox = new System.Windows.Forms.TextBox();
             this.loginLabelPnl = new System.Windows.Forms.Panel();
             this.loginShowPwdCheckBox = new System.Windows.Forms.CheckBox();
@@ -46,7 +46,7 @@
             // 
             this.btnPnl.Controls.Add(this.loginClearBtn);
             this.btnPnl.Controls.Add(this.loginBtn);
-            this.btnPnl.Controls.Add(this.haveAccLinkLbl);
+            this.btnPnl.Controls.Add(this.LabelDonthaveAccLinkLbl);
             this.btnPnl.Location = new System.Drawing.Point(126, 249);
             this.btnPnl.Name = "btnPnl";
             this.btnPnl.Size = new System.Drawing.Size(347, 168);
@@ -84,20 +84,21 @@
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // haveAccLinkLbl
+            // LabelDonthaveAccLinkLbl
             // 
-            this.haveAccLinkLbl.AutoSize = true;
-            this.haveAccLinkLbl.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.haveAccLinkLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.haveAccLinkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.haveAccLinkLbl.LinkColor = System.Drawing.Color.Black;
-            this.haveAccLinkLbl.Location = new System.Drawing.Point(114, 99);
-            this.haveAccLinkLbl.Name = "haveAccLinkLbl";
-            this.haveAccLinkLbl.Size = new System.Drawing.Size(122, 13);
-            this.haveAccLinkLbl.TabIndex = 27;
-            this.haveAccLinkLbl.TabStop = true;
-            this.haveAccLinkLbl.Text = "Don\'t have an account";
-            this.haveAccLinkLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDonthaveAccLinkLbl.AutoSize = true;
+            this.LabelDonthaveAccLinkLbl.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelDonthaveAccLinkLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.LabelDonthaveAccLinkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.LabelDonthaveAccLinkLbl.LinkColor = System.Drawing.Color.Black;
+            this.LabelDonthaveAccLinkLbl.Location = new System.Drawing.Point(114, 99);
+            this.LabelDonthaveAccLinkLbl.Name = "LabelDonthaveAccLinkLbl";
+            this.LabelDonthaveAccLinkLbl.Size = new System.Drawing.Size(122, 13);
+            this.LabelDonthaveAccLinkLbl.TabIndex = 27;
+            this.LabelDonthaveAccLinkLbl.TabStop = true;
+            this.LabelDonthaveAccLinkLbl.Text = "Don\'t have an account";
+            this.LabelDonthaveAccLinkLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelDonthaveAccLinkLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LabelDonthaveAccLinkLbl_LinkClicked);
             // 
             // loginUserNameTextBox
             // 
@@ -201,7 +202,7 @@
 
         private System.Windows.Forms.Panel btnPnl;
         private System.Windows.Forms.Button loginBtn;
-        private System.Windows.Forms.LinkLabel haveAccLinkLbl;
+        private System.Windows.Forms.LinkLabel LabelDonthaveAccLinkLbl;
         private System.Windows.Forms.TextBox loginUserNameTextBox;
         private System.Windows.Forms.Panel loginLabelPnl;
         private System.Windows.Forms.Label loginUserNameLbl;
