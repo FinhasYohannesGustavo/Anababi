@@ -26,14 +26,14 @@ namespace Anababi.UserControls
         private void SearchDisplay_Load(object sender, EventArgs e)
         {
             //This will be replaced by a database fetch of a list of the recent searches the user made.
-            List<Creator> creators = UserExperience.GetCreators();
+            List<Creator> creators = Creator.GetAllCreatorsFromDB();
             //Create a ResultsGrid object from the list of Users.
             resultsGridArtists = new ResultsGrid(creators);
             //Add the ResultsGrid object to PanelArtistsSection.
             UserExperience.AddToPanel(resultsGridArtists, PanelArtistsSection);
 
            
-            List<Reference> references = Reference.GetAllReferencesFromDB();
+            List<Reference> references = UserExperience.GetReferences();
             UserExperience CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
             if (CurrentExperience.SortBy == "Title")
             {
@@ -63,26 +63,18 @@ namespace Anababi.UserControls
                 //Call the search algorithm with the user's input here...
                 string searchText = TextBoxSearchBar.Text.ToString();
                 AnababiContext searchedReferencesContext = new AnababiContext();
-                List<Reference> searchedReferences = Reference.GetAllReferencesFromDB();
-                List<Reference> foundReference = new List<Reference>();
-
-                List<Creator> searchedCreators = (from creators in searchedReferencesContext.Creators
-                                    where creators.FirstName.Contains(TextBoxSearchBar.Text.ToString())
-                                    || creators.LastName.Contains(TextBoxSearchBar.Text.ToString())
-                                    select creators).ToList();
+                List<Reference> searchedReferences = (from references in searchedReferencesContext.References
+                                                where references.Description.Contains(TextBoxSearchBar.Text.ToString())
+                                                || references.Title.Contains(TextBoxSearchBar.Text.ToString())
+                                                select references).ToList();
                 UserExperience CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
-
-                if (ToggleSearchType.Checked)
+                if (CurrentExperience.SortBy == "Title")
                 {
-                    //Do binary Searching only search for what the user has chosen to sort with.
-                    if (CurrentExperience.SortBy == "Title")
-                    {
-                        searchedReferences = SortingAlgorithms.BubbleSorter.BubbleSort(searchedReferences);
-                        foundReference.Add(BinarySearcher.BinarySearch(searchedReferences, searchText, CurrentExperience.SortBy));
-                       
-
-                    }
-                    else if (CurrentExperience.SortBy == "Author")
+                    searchedReferences = SortingAlgorithms.BubbleSorter.BubbleSort(searchedReferences);
+                }
+                else if(CurrentExperience.SortBy == "Author")
+                {
+                    foreach (Reference reference in searchedReferences)
                     {
                       
                       
@@ -113,13 +105,10 @@ namespace Anababi.UserControls
                         }
                         foundReference.Add(LinearSearcher.LinearSearch(searchedReferences, searchText, CurrentExperience.SortBy));
 
-                  
-
-
-                }
-
-
-
+                List<Creator> searchedArtists = (from creators in searchedReferencesContext.Creators
+                                              where creators.FirstName.Contains(TextBoxSearchBar.Text.ToString())
+                                              || creators.LastName.Contains(TextBoxSearchBar.Text.ToString())
+                                              select creators).ToList();
 
                 //Clear the contents of the default search display
                 PanelArtistsSection.Controls.Remove(resultsGridArtists);

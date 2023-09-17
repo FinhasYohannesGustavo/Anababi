@@ -21,7 +21,7 @@ namespace Anababi.UserControls
         private void TopArtistsPage_Load(object sender, EventArgs e)
         {
             //Will be replaced by a databse fetch of the top writers
-            List<Creator> writers = UserExperience.GetCreators();
+            List<Creator> writers = Creator.GetAllCreatorsFromDB();
 
             //Create results grid of the top writers
             ResultsGrid resultsGrid = new ResultsGrid(writers);

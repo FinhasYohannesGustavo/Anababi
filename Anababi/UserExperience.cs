@@ -62,8 +62,6 @@ namespace Anababi
                 AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(),sortBy));
 
             }
-            
-
 
         }
         public static byte[] ImageToByteArray(System.Drawing.Image imageIn)
@@ -82,7 +80,7 @@ namespace Anababi
             return returnImage;
         }
 
-        public static User GetUserByUserName(string username) 
+        public static User GetUserByUserName(string username)
         {
             AnababiContext anababiContext = new AnababiContext();
             return anababiContext.Users.SingleOrDefault(user => user.Username == username);
@@ -116,7 +114,7 @@ namespace Anababi
             centerDisplay.Dock = DockStyle.Fill;
 
             //Add the CenterDisplay to the panel and bring it to the front.
-            panelContent.Controls.Add(centerDisplay);   
+            panelContent.Controls.Add(centerDisplay);
             centerDisplay.BringToFront();
         }
 
@@ -180,7 +178,7 @@ namespace Anababi
             return buttonList;
         }
 
-        public static List<CategoryTemplateDisplay> GetCategoriesFromReferences(List<Reference> references,String SortBy)
+        public static List<CategoryTemplateDisplay> GetCategoriesFromReferences(List<Reference> references, String SortBy)
         {
             //Create a empty list of CategoryTemplateDisplay objects.
             List<CategoryTemplateDisplay> categories = new List<CategoryTemplateDisplay>();
@@ -202,7 +200,7 @@ namespace Anababi
             {
                 //Create a list of References that are of the specific genre.
                 List<Reference> visualsOfGenre = references.FindAll(book => book.Genre.ToString() == genre);
-                foreach(Reference reference in visualsOfGenre)
+                foreach (Reference reference in visualsOfGenre)
                 {
                     reference.Creator = Reference.GetCreator(reference);
 
@@ -213,14 +211,15 @@ namespace Anababi
                 {
                     visualsOfGenre = BubbleSorter.BubbleSort(visualsOfGenre);
                 }
-                else if (SortBy.Equals("Author")){
+                else if (SortBy.Equals("Author"))
+                {
                     visualsOfGenre = SelectionSorter.SelectionSort(visualsOfGenre);
                 }
                 else
                 {
                     visualsOfGenre = InsertionSorter.InsertionSort(visualsOfGenre);
                 }
-                
+
 
                 //Create a CategoryTemplateDisplay object for this genre based on the selected visuals.
                 CategoryTemplateDisplay categoryTemplateDisplay = new CategoryTemplateDisplay(genre.ToString(), visualsOfGenre);
@@ -230,7 +229,7 @@ namespace Anababi
 
             return categories;
         }
-        
+
         private void BtnNavigation_Click(object sender, EventArgs e)
         {
             if (SplitContainerAll.Panel1.Visible == true)
@@ -252,53 +251,53 @@ namespace Anababi
                 // Insert creators
                 var creators = new List<Creator>
                 {
-                    new Creator { 
-                        FirstName = "William", 
+                    new Creator {
+                        FirstName = "William",
                         LastName = "Shakespeare",
                         ProfilePic = ImageToByteArray(Resources.William_Shakespeare_HD_pic)
                     },
-                    new Creator { 
-                        FirstName = "Jane", 
+                    new Creator {
+                        FirstName = "Jane",
                         LastName = "Austen",
                         ProfilePic = ImageToByteArray(Resources.Jane_Austen_HD_pic)
                     },
-                    new Creator { 
-                        FirstName = "Charles", 
+                    new Creator {
+                        FirstName = "Charles",
                         LastName = "Dickens",
                         ProfilePic = ImageToByteArray(Resources.Charles_Dickens_HD_pic)
                     },
-                    new Creator { 
-                        FirstName = "Leo", 
+                    new Creator {
+                        FirstName = "Leo",
                         LastName = "Tolstoy",
                         ProfilePic = ImageToByteArray(Resources.Leo_Tolstoy_HD_pic)
                     },
-                    new Creator { 
-                        FirstName = "George", 
+                    new Creator {
+                        FirstName = "George",
                         LastName = "Orwell",
                         ProfilePic = ImageToByteArray(Resources.George_Orwell_HD_pic)
                     },
-                    new Creator { 
-                        FirstName = "J.K.", 
+                    new Creator {
+                        FirstName = "J.K.",
                         LastName = "Rowling",
                         ProfilePic = ImageToByteArray(Resources.J_K__Rowling_HD_pic)
                     },
-                    new Creator { 
-                        FirstName = "Mark", 
+                    new Creator {
+                        FirstName = "Mark",
                         LastName = "Twain",
                         ProfilePic = ImageToByteArray(Resources.Mark_Twain_HD_pic)
                     },
-                    new Creator { 
-                        FirstName = "F. Scott", 
+                    new Creator {
+                        FirstName = "F. Scott",
                         LastName = "Fitzgerald",
                         ProfilePic = ImageToByteArray(Resources.F__Scott_Fitzgerald_HD_pic)
                     },
-                    new Creator { 
-                        FirstName = "Gabriel García", 
+                    new Creator {
+                        FirstName = "Gabriel García",
                         LastName = "Márquez",
                         ProfilePic = ImageToByteArray(Resources.Gabriel_García_Márquez_HD_pic)
                     },
-                    new Creator { 
-                        FirstName = "Harper", 
+                    new Creator {
+                        FirstName = "Harper",
                         LastName = "Lee",
                         ProfilePic = ImageToByteArray(Resources.Harper_Lee_HD_pic)
                     }
@@ -632,28 +631,18 @@ namespace Anababi
                 allReferences.AddRange(digitalReferences);
 
                 // Insert the library
-                var library = new Library { 
+                var library = new Library
+                {
                     Name = "Anababi",
                     Members = users,
                     References = allReferences
                 };
                 context.Libraries.Add(library);
-                
+
                 context.SaveChanges();
             }
 
 
-
-        }
-        public static List<Reference> GetReferences()
-        {
-            List<Reference> references= new List<Reference>();
-
-            //creating the context object to get a session with the database.
-            AnababiContext AnababiContext = new AnababiContext();
-
-            List<Reference> contextReferences = (from reference in AnababiContext.References
-                                           select reference).ToList();
 
 
             return contextReferences;
@@ -669,7 +658,7 @@ namespace Anababi
                                                  select creator).ToList();
             return creators;
         }
-        
+
         public void AddToPanelContent(UserControl userControl)
         {
             //Remove all the controls from PanelContent.
@@ -701,5 +690,5 @@ namespace Anababi
 
 
 
-    }
+}
 

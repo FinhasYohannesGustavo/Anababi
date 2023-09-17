@@ -28,108 +28,461 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnDownload = new DrakeUI.Framework.DrakeUIButton();
-            this.descriptionLabel = new DrakeUI.Framework.DrakeUILabel();
-            this.titleLabel = new DrakeUI.Framework.DrakeUILabel();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.SuspendLayout();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            LblCreator = new Label();
+            LblType = new Label();
+            LblGenre = new Label();
+            LblPublishedOn = new Label();
+            LblISBN = new Label();
+            LblDescription = new Label();
+            LblCoverImage = new Label();
+            LblDiscriminator = new Label();
+            LblFloor = new Label();
+            LblSection = new Label();
+            LblShelf = new Label();
+            LblAvailable = new Label();
+            LblNumOfCopies = new Label();
+            LblFile = new Label();
+            textBoxCreator = new TextBox();
+            textBoxType = new TextBox();
+            textBoxGenre = new TextBox();
+            textBoxISBN = new TextBox();
+            textBoxDescription = new TextBox();
+            textBoxDiscriminator = new TextBox();
+            textBoxFloor = new TextBox();
+            textBoxSection = new TextBox();
+            textBoxShelf = new TextBox();
+            textBoxNumOfCopies = new TextBox();
+            dateTimePickerPublishedOn = new DateTimePicker();
+            comboBoxAvailable = new ComboBox();
+            pictureBoxCoverImage = new PictureBox();
+            pdfViewerFile = new PdfiumViewer.PdfViewer();
+            PanelSearchResults = new Panel();
+            PanelSearchBar = new Panel();
+            LblReferenceTitle = new Label();
+            tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).BeginInit();
+            PanelSearchResults.SuspendLayout();
+            PanelSearchBar.SuspendLayout();
+            SuspendLayout();
             // 
-            // splitContainer1
+            // tableLayoutPanel2
             // 
-            this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            tableLayoutPanel2.AutoSize = true;
+            tableLayoutPanel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 37.5F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 62.5F));
+            tableLayoutPanel2.Controls.Add(LblCreator, 0, 0);
+            tableLayoutPanel2.Controls.Add(LblType, 0, 1);
+            tableLayoutPanel2.Controls.Add(LblGenre, 0, 2);
+            tableLayoutPanel2.Controls.Add(LblPublishedOn, 0, 3);
+            tableLayoutPanel2.Controls.Add(LblISBN, 0, 4);
+            tableLayoutPanel2.Controls.Add(LblDescription, 0, 5);
+            tableLayoutPanel2.Controls.Add(LblCoverImage, 0, 6);
+            tableLayoutPanel2.Controls.Add(LblDiscriminator, 0, 7);
+            tableLayoutPanel2.Controls.Add(LblFloor, 0, 8);
+            tableLayoutPanel2.Controls.Add(LblSection, 0, 9);
+            tableLayoutPanel2.Controls.Add(LblShelf, 0, 10);
+            tableLayoutPanel2.Controls.Add(LblAvailable, 0, 11);
+            tableLayoutPanel2.Controls.Add(LblNumOfCopies, 0, 12);
+            tableLayoutPanel2.Controls.Add(LblFile, 0, 13);
+            tableLayoutPanel2.Controls.Add(textBoxCreator, 1, 0);
+            tableLayoutPanel2.Controls.Add(textBoxType, 1, 1);
+            tableLayoutPanel2.Controls.Add(textBoxGenre, 1, 2);
+            tableLayoutPanel2.Controls.Add(textBoxISBN, 1, 4);
+            tableLayoutPanel2.Controls.Add(textBoxDescription, 1, 5);
+            tableLayoutPanel2.Controls.Add(textBoxDiscriminator, 1, 7);
+            tableLayoutPanel2.Controls.Add(textBoxFloor, 1, 8);
+            tableLayoutPanel2.Controls.Add(textBoxSection, 1, 9);
+            tableLayoutPanel2.Controls.Add(textBoxShelf, 1, 10);
+            tableLayoutPanel2.Controls.Add(textBoxNumOfCopies, 1, 12);
+            tableLayoutPanel2.Controls.Add(dateTimePickerPublishedOn, 1, 3);
+            tableLayoutPanel2.Controls.Add(comboBoxAvailable, 1, 11);
+            tableLayoutPanel2.Controls.Add(pictureBoxCoverImage, 1, 6);
+            tableLayoutPanel2.Controls.Add(pdfViewerFile, 1, 13);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(40, 0);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 14;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.Size = new Size(942, 1516);
+            tableLayoutPanel2.TabIndex = 0;
             // 
-            // splitContainer1.Panel1
+            // LblCreator
             // 
-            this.splitContainer1.Panel1.AccessibleName = "imagePanel";
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Panel1.BackgroundImage = global::Anababi.Properties.Resources._1984;
-            this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer1.Panel1.ForeColor = System.Drawing.Color.Transparent;
+            LblCreator.AutoSize = true;
+            LblCreator.Dock = DockStyle.Right;
+            LblCreator.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblCreator.Location = new Point(273, 0);
+            LblCreator.Name = "LblCreator";
+            LblCreator.Size = new Size(77, 33);
+            LblCreator.TabIndex = 2;
+            LblCreator.Text = "Creator";
             // 
-            // splitContainer1.Panel2
+            // LblType
             // 
-            this.splitContainer1.Panel2.AccessibleName = "informationPanel";
-            this.splitContainer1.Panel2.AutoScroll = true;
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Panel2.BackgroundImage = global::Anababi.Properties.Resources.transparentbackground;
-            this.splitContainer1.Panel2.Controls.Add(this.btnDownload);
-            this.splitContainer1.Panel2.Controls.Add(this.descriptionLabel);
-            this.splitContainer1.Panel2.Controls.Add(this.titleLabel);
-            this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Size = new System.Drawing.Size(703, 325);
-            this.splitContainer1.SplitterDistance = 359;
-            this.splitContainer1.TabIndex = 0;
+            LblType.AutoSize = true;
+            LblType.Dock = DockStyle.Right;
+            LblType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblType.Location = new Point(297, 33);
+            LblType.Name = "LblType";
+            LblType.Size = new Size(53, 33);
+            LblType.TabIndex = 1;
+            LblType.Text = "Type";
             // 
-            // btnDownload
+            // LblGenre
             // 
-            this.btnDownload.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDownload.FillColor = System.Drawing.Color.Gray;
-            this.btnDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDownload.Location = new System.Drawing.Point(0, 290);
-            this.btnDownload.Name = "btnDownload";
-            this.btnDownload.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.btnDownload.RectDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
-            this.btnDownload.Size = new System.Drawing.Size(340, 35);
-            this.btnDownload.Style = DrakeUI.Framework.UIStyle.Custom;
-            this.btnDownload.TabIndex = 2;
-            this.btnDownload.Text = "Download";
+            LblGenre.AutoSize = true;
+            LblGenre.Dock = DockStyle.Right;
+            LblGenre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblGenre.Location = new Point(286, 66);
+            LblGenre.Name = "LblGenre";
+            LblGenre.Size = new Size(64, 33);
+            LblGenre.TabIndex = 3;
+            LblGenre.Text = "Genre";
             // 
-            // descriptionLabel
+            // LblPublishedOn
             // 
-            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.descriptionLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.descriptionLabel.Location = new System.Drawing.Point(0, 80);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(340, 245);
-            this.descriptionLabel.Style = DrakeUI.Framework.UIStyle.Custom;
-            this.descriptionLabel.TabIndex = 1;
-            this.descriptionLabel.Text = "\"1984\" is a classic dystopian novel written by George Orwell. Set in a totalitari" +
-    "an society, it follows the story of Winston Smith as he rebels against the oppre" +
-    "ssive regime ruled by Big Brother.";
-            this.descriptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            LblPublishedOn.AutoSize = true;
+            LblPublishedOn.Dock = DockStyle.Right;
+            LblPublishedOn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblPublishedOn.Location = new Point(222, 99);
+            LblPublishedOn.Name = "LblPublishedOn";
+            LblPublishedOn.Size = new Size(128, 33);
+            LblPublishedOn.TabIndex = 4;
+            LblPublishedOn.Text = "Published On";
             // 
-            // titleLabel
+            // LblISBN
             // 
-            this.titleLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titleLabel.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.titleLabel.Location = new System.Drawing.Point(0, 0);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(340, 80);
-            this.titleLabel.Style = DrakeUI.Framework.UIStyle.Custom;
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "1984 George Orwell in the trencehs of the people in the wild";
-            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.titleLabel.UseCompatibleTextRendering = true;
-            this.titleLabel.UseMnemonic = false;
+            LblISBN.AutoSize = true;
+            LblISBN.Dock = DockStyle.Right;
+            LblISBN.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblISBN.Location = new Point(219, 132);
+            LblISBN.Name = "LblISBN";
+            LblISBN.Size = new Size(131, 33);
+            LblISBN.TabIndex = 5;
+            LblISBN.Text = "ISBN Number";
+            // 
+            // LblDescription
+            // 
+            LblDescription.AutoSize = true;
+            LblDescription.Dock = DockStyle.Right;
+            LblDescription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblDescription.Location = new Point(238, 165);
+            LblDescription.Name = "LblDescription";
+            LblDescription.Size = new Size(112, 33);
+            LblDescription.TabIndex = 6;
+            LblDescription.Text = "Description";
+            // 
+            // LblCoverImage
+            // 
+            LblCoverImage.AutoSize = true;
+            LblCoverImage.Dock = DockStyle.Right;
+            LblCoverImage.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblCoverImage.Location = new Point(228, 198);
+            LblCoverImage.Name = "LblCoverImage";
+            LblCoverImage.Size = new Size(122, 267);
+            LblCoverImage.TabIndex = 7;
+            LblCoverImage.Text = "Cover Image";
+            // 
+            // LblDiscriminator
+            // 
+            LblDiscriminator.AutoSize = true;
+            LblDiscriminator.Dock = DockStyle.Right;
+            LblDiscriminator.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblDiscriminator.Location = new Point(221, 465);
+            LblDiscriminator.Name = "LblDiscriminator";
+            LblDiscriminator.Size = new Size(129, 33);
+            LblDiscriminator.TabIndex = 8;
+            LblDiscriminator.Text = "Discriminator";
+            // 
+            // LblFloor
+            // 
+            LblFloor.AutoSize = true;
+            LblFloor.Dock = DockStyle.Right;
+            LblFloor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblFloor.Location = new Point(292, 498);
+            LblFloor.Name = "LblFloor";
+            LblFloor.Size = new Size(58, 33);
+            LblFloor.TabIndex = 10;
+            LblFloor.Text = "Floor";
+            // 
+            // LblSection
+            // 
+            LblSection.AutoSize = true;
+            LblSection.Dock = DockStyle.Right;
+            LblSection.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblSection.Location = new Point(273, 531);
+            LblSection.Name = "LblSection";
+            LblSection.Size = new Size(77, 33);
+            LblSection.TabIndex = 11;
+            LblSection.Text = "Section";
+            // 
+            // LblShelf
+            // 
+            LblShelf.AutoSize = true;
+            LblShelf.Dock = DockStyle.Right;
+            LblShelf.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblShelf.Location = new Point(295, 564);
+            LblShelf.Name = "LblShelf";
+            LblShelf.Size = new Size(55, 33);
+            LblShelf.TabIndex = 9;
+            LblShelf.Text = "Shelf";
+            // 
+            // LblAvailable
+            // 
+            LblAvailable.AutoSize = true;
+            LblAvailable.Dock = DockStyle.Right;
+            LblAvailable.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblAvailable.Location = new Point(258, 597);
+            LblAvailable.Name = "LblAvailable";
+            LblAvailable.Size = new Size(92, 34);
+            LblAvailable.TabIndex = 18;
+            LblAvailable.Text = "Available";
+            // 
+            // LblNumOfCopies
+            // 
+            LblNumOfCopies.AutoSize = true;
+            LblNumOfCopies.Dock = DockStyle.Right;
+            LblNumOfCopies.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblNumOfCopies.Location = new Point(179, 631);
+            LblNumOfCopies.Name = "LblNumOfCopies";
+            LblNumOfCopies.Size = new Size(171, 33);
+            LblNumOfCopies.TabIndex = 16;
+            LblNumOfCopies.Text = "Number of Copies";
+            // 
+            // LblFile
+            // 
+            LblFile.AutoSize = true;
+            LblFile.Dock = DockStyle.Right;
+            LblFile.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblFile.Location = new Point(308, 664);
+            LblFile.Name = "LblFile";
+            LblFile.Size = new Size(42, 852);
+            LblFile.TabIndex = 17;
+            LblFile.Text = "File";
+            // 
+            // textBoxCreator
+            // 
+            textBoxCreator.Dock = DockStyle.Fill;
+            textBoxCreator.Location = new Point(356, 3);
+            textBoxCreator.Name = "textBoxCreator";
+            textBoxCreator.Size = new Size(583, 27);
+            textBoxCreator.TabIndex = 19;
+            // 
+            // textBoxType
+            // 
+            textBoxType.Dock = DockStyle.Fill;
+            textBoxType.Location = new Point(356, 36);
+            textBoxType.Name = "textBoxType";
+            textBoxType.Size = new Size(583, 27);
+            textBoxType.TabIndex = 20;
+            // 
+            // textBoxGenre
+            // 
+            textBoxGenre.Dock = DockStyle.Fill;
+            textBoxGenre.Location = new Point(356, 69);
+            textBoxGenre.Name = "textBoxGenre";
+            textBoxGenre.Size = new Size(583, 27);
+            textBoxGenre.TabIndex = 21;
+            // 
+            // textBoxISBN
+            // 
+            textBoxISBN.Dock = DockStyle.Fill;
+            textBoxISBN.Location = new Point(356, 135);
+            textBoxISBN.Name = "textBoxISBN";
+            textBoxISBN.Size = new Size(583, 27);
+            textBoxISBN.TabIndex = 22;
+            // 
+            // textBoxDescription
+            // 
+            textBoxDescription.Dock = DockStyle.Fill;
+            textBoxDescription.Location = new Point(356, 168);
+            textBoxDescription.Name = "textBoxDescription";
+            textBoxDescription.Size = new Size(583, 27);
+            textBoxDescription.TabIndex = 23;
+            // 
+            // textBoxDiscriminator
+            // 
+            textBoxDiscriminator.Dock = DockStyle.Fill;
+            textBoxDiscriminator.Location = new Point(356, 468);
+            textBoxDiscriminator.Name = "textBoxDiscriminator";
+            textBoxDiscriminator.Size = new Size(583, 27);
+            textBoxDiscriminator.TabIndex = 25;
+            // 
+            // textBoxFloor
+            // 
+            textBoxFloor.Dock = DockStyle.Fill;
+            textBoxFloor.Location = new Point(356, 501);
+            textBoxFloor.Name = "textBoxFloor";
+            textBoxFloor.Size = new Size(583, 27);
+            textBoxFloor.TabIndex = 26;
+            // 
+            // textBoxSection
+            // 
+            textBoxSection.Dock = DockStyle.Fill;
+            textBoxSection.Location = new Point(356, 534);
+            textBoxSection.Name = "textBoxSection";
+            textBoxSection.Size = new Size(583, 27);
+            textBoxSection.TabIndex = 27;
+            // 
+            // textBoxShelf
+            // 
+            textBoxShelf.Dock = DockStyle.Fill;
+            textBoxShelf.Location = new Point(356, 567);
+            textBoxShelf.Name = "textBoxShelf";
+            textBoxShelf.Size = new Size(583, 27);
+            textBoxShelf.TabIndex = 28;
+            // 
+            // textBoxNumOfCopies
+            // 
+            textBoxNumOfCopies.Dock = DockStyle.Fill;
+            textBoxNumOfCopies.Location = new Point(356, 634);
+            textBoxNumOfCopies.Name = "textBoxNumOfCopies";
+            textBoxNumOfCopies.Size = new Size(583, 27);
+            textBoxNumOfCopies.TabIndex = 30;
+            // 
+            // dateTimePickerPublishedOn
+            // 
+            dateTimePickerPublishedOn.Dock = DockStyle.Fill;
+            dateTimePickerPublishedOn.Location = new Point(356, 102);
+            dateTimePickerPublishedOn.Name = "dateTimePickerPublishedOn";
+            dateTimePickerPublishedOn.Size = new Size(583, 27);
+            dateTimePickerPublishedOn.TabIndex = 32;
+            // 
+            // comboBoxAvailable
+            // 
+            comboBoxAvailable.Dock = DockStyle.Fill;
+            comboBoxAvailable.FormattingEnabled = true;
+            comboBoxAvailable.Items.AddRange(new object[] { "Yes", "No" });
+            comboBoxAvailable.Location = new Point(356, 600);
+            comboBoxAvailable.Name = "comboBoxAvailable";
+            comboBoxAvailable.Size = new Size(583, 28);
+            comboBoxAvailable.TabIndex = 33;
+            // 
+            // pictureBoxCoverImage
+            // 
+            pictureBoxCoverImage.Dock = DockStyle.Fill;
+            pictureBoxCoverImage.Location = new Point(356, 201);
+            pictureBoxCoverImage.Name = "pictureBoxCoverImage";
+            pictureBoxCoverImage.Size = new Size(583, 261);
+            pictureBoxCoverImage.TabIndex = 34;
+            pictureBoxCoverImage.TabStop = false;
+            // 
+            // pdfViewerFile
+            // 
+            pdfViewerFile.Location = new Point(357, 669);
+            pdfViewerFile.Margin = new Padding(4, 5, 4, 5);
+            pdfViewerFile.Name = "pdfViewerFile";
+            pdfViewerFile.Size = new Size(580, 842);
+            pdfViewerFile.TabIndex = 35;
+            // 
+            // PanelSearchResults
+            // 
+            PanelSearchResults.AutoScroll = true;
+            PanelSearchResults.AutoSize = true;
+            PanelSearchResults.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            PanelSearchResults.Controls.Add(tableLayoutPanel2);
+            PanelSearchResults.Dock = DockStyle.Fill;
+            PanelSearchResults.Location = new Point(0, 112);
+            PanelSearchResults.MinimumSize = new Size(400, 400);
+            PanelSearchResults.Name = "PanelSearchResults";
+            PanelSearchResults.Padding = new Padding(40, 0, 40, 40);
+            PanelSearchResults.Size = new Size(1022, 1556);
+            PanelSearchResults.TabIndex = 6;
+            // 
+            // PanelSearchBar
+            // 
+            PanelSearchBar.Controls.Add(LblReferenceTitle);
+            PanelSearchBar.Dock = DockStyle.Top;
+            PanelSearchBar.Location = new Point(0, 0);
+            PanelSearchBar.Name = "PanelSearchBar";
+            PanelSearchBar.Padding = new Padding(40);
+            PanelSearchBar.Size = new Size(1022, 112);
+            PanelSearchBar.TabIndex = 5;
+            // 
+            // LblReferenceTitle
+            // 
+            LblReferenceTitle.AutoSize = true;
+            LblReferenceTitle.Dock = DockStyle.Fill;
+            LblReferenceTitle.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            LblReferenceTitle.Location = new Point(40, 40);
+            LblReferenceTitle.Name = "LblReferenceTitle";
+            LblReferenceTitle.Size = new Size(84, 46);
+            LblReferenceTitle.TabIndex = 0;
+            LblReferenceTitle.Text = "Title";
+            LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ReferenceCenterDisplay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.AutoSize = true;
-            this.Controls.Add(this.splitContainer1);
-            this.Name = "ReferenceCenterDisplay";
-            this.Size = new System.Drawing.Size(703, 325);
-            this.Load += new System.EventHandler(this.CenterDisplay_Load);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            AutoSize = true;
+            Controls.Add(PanelSearchResults);
+            Controls.Add(PanelSearchBar);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "ReferenceCenterDisplay";
+            Size = new Size(1022, 1668);
+            Load += CenterDisplay_Load;
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).EndInit();
+            PanelSearchResults.ResumeLayout(false);
+            PanelSearchResults.PerformLayout();
+            PanelSearchBar.ResumeLayout(false);
+            PanelSearchBar.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private SplitContainer splitContainer1;
-        private DrakeUI.Framework.DrakeUIButton btnDownload;
-        private DrakeUI.Framework.DrakeUILabel descriptionLabel;
-        private DrakeUI.Framework.DrakeUILabel titleLabel;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Panel PanelSearchResults;
+        private Panel PanelSearchBar;
+        private Label LblReferenceTitle;
+        private Label LblCreator;
+        private Label LblType;
+        private Label LblGenre;
+        private Label LblPublishedOn;
+        private Label LblISBN;
+        private Label LblDescription;
+        private Label LblCoverImage;
+        private Label LblDiscriminator;
+        private Label LblShelf;
+        private Label LblFloor;
+        private Label LblSection;
+        private Label LblAvailable;
+        private Label LblNumOfCopies;
+        private Label LblFile;
+        private TextBox textBoxCreator;
+        private TextBox textBoxType;
+        private TextBox textBoxGenre;
+        private TextBox textBoxISBN;
+        private TextBox textBoxDescription;
+        private TextBox textBoxDiscriminator;
+        private TextBox textBoxFloor;
+        private TextBox textBoxSection;
+        private TextBox textBoxShelf;
+        private TextBox textBoxNumOfCopies;
+        private DateTimePicker dateTimePickerPublishedOn;
+        private ComboBox comboBoxAvailable;
+        private PictureBox pictureBoxCoverImage;
+        private PdfiumViewer.PdfViewer pdfViewerFile;
     }
 }

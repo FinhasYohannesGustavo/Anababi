@@ -104,9 +104,9 @@ namespace Anababi.UserControls
                 Reference reference = (Reference)btn.Tag;
 
                 //Create a center display for the visual art
-                //UserExperience.CreateCenterDisplayForArt(Reference, requiredPanel);
-                CenterDisplayForm popup = new CenterDisplayForm(reference);
-                popup.Show();
+                UserExperience.CreateCenterDisplayForReference(reference, requiredPanel);
+                //CenterDisplayForm popup = new CenterDisplayForm(reference);
+                //popup.Show();
             }
             else
             {
