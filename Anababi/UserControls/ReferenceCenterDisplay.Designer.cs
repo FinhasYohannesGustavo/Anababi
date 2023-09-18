@@ -126,10 +126,10 @@
             // 
             LblCreator.AutoSize = true;
             LblCreator.Dock = DockStyle.Right;
-            LblCreator.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblCreator.Location = new Point(273, 0);
+            LblCreator.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblCreator.Location = new Point(268, 0);
             LblCreator.Name = "LblCreator";
-            LblCreator.Size = new Size(77, 33);
+            LblCreator.Size = new Size(82, 33);
             LblCreator.TabIndex = 2;
             LblCreator.Text = "Creator";
             // 
@@ -137,10 +137,10 @@
             // 
             LblType.AutoSize = true;
             LblType.Dock = DockStyle.Right;
-            LblType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblType.Location = new Point(297, 33);
+            LblType.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblType.Location = new Point(293, 33);
             LblType.Name = "LblType";
-            LblType.Size = new Size(53, 33);
+            LblType.Size = new Size(57, 33);
             LblType.TabIndex = 1;
             LblType.Text = "Type";
             // 
@@ -148,10 +148,10 @@
             // 
             LblGenre.AutoSize = true;
             LblGenre.Dock = DockStyle.Right;
-            LblGenre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblGenre.Location = new Point(286, 66);
+            LblGenre.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblGenre.Location = new Point(282, 66);
             LblGenre.Name = "LblGenre";
-            LblGenre.Size = new Size(64, 33);
+            LblGenre.Size = new Size(68, 33);
             LblGenre.TabIndex = 3;
             LblGenre.Text = "Genre";
             // 
@@ -159,10 +159,10 @@
             // 
             LblPublishedOn.AutoSize = true;
             LblPublishedOn.Dock = DockStyle.Right;
-            LblPublishedOn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblPublishedOn.Location = new Point(222, 99);
+            LblPublishedOn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblPublishedOn.Location = new Point(213, 99);
             LblPublishedOn.Name = "LblPublishedOn";
-            LblPublishedOn.Size = new Size(128, 33);
+            LblPublishedOn.Size = new Size(137, 33);
             LblPublishedOn.TabIndex = 4;
             LblPublishedOn.Text = "Published On";
             // 
@@ -170,10 +170,10 @@
             // 
             LblISBN.AutoSize = true;
             LblISBN.Dock = DockStyle.Right;
-            LblISBN.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblISBN.Location = new Point(219, 132);
+            LblISBN.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblISBN.Location = new Point(209, 132);
             LblISBN.Name = "LblISBN";
-            LblISBN.Size = new Size(131, 33);
+            LblISBN.Size = new Size(141, 33);
             LblISBN.TabIndex = 5;
             LblISBN.Text = "ISBN Number";
             // 
@@ -181,10 +181,10 @@
             // 
             LblDescription.AutoSize = true;
             LblDescription.Dock = DockStyle.Right;
-            LblDescription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblDescription.Location = new Point(238, 165);
+            LblDescription.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblDescription.Location = new Point(229, 165);
             LblDescription.Name = "LblDescription";
-            LblDescription.Size = new Size(112, 33);
+            LblDescription.Size = new Size(121, 33);
             LblDescription.TabIndex = 6;
             LblDescription.Text = "Description";
             // 
@@ -192,10 +192,10 @@
             // 
             LblCoverImage.AutoSize = true;
             LblCoverImage.Dock = DockStyle.Right;
-            LblCoverImage.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblCoverImage.Location = new Point(228, 198);
+            LblCoverImage.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblCoverImage.Location = new Point(220, 198);
             LblCoverImage.Name = "LblCoverImage";
-            LblCoverImage.Size = new Size(122, 267);
+            LblCoverImage.Size = new Size(130, 267);
             LblCoverImage.TabIndex = 7;
             LblCoverImage.Text = "Cover Image";
             // 
@@ -203,10 +203,10 @@
             // 
             LblDiscriminator.AutoSize = true;
             LblDiscriminator.Dock = DockStyle.Right;
-            LblDiscriminator.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblDiscriminator.Location = new Point(221, 465);
+            LblDiscriminator.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblDiscriminator.Location = new Point(209, 465);
             LblDiscriminator.Name = "LblDiscriminator";
-            LblDiscriminator.Size = new Size(129, 33);
+            LblDiscriminator.Size = new Size(141, 33);
             LblDiscriminator.TabIndex = 8;
             LblDiscriminator.Text = "Discriminator";
             // 
@@ -214,10 +214,10 @@
             // 
             LblFloor.AutoSize = true;
             LblFloor.Dock = DockStyle.Right;
-            LblFloor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblFloor.Location = new Point(292, 498);
+            LblFloor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblFloor.Location = new Point(290, 498);
             LblFloor.Name = "LblFloor";
-            LblFloor.Size = new Size(58, 33);
+            LblFloor.Size = new Size(60, 33);
             LblFloor.TabIndex = 10;
             LblFloor.Text = "Floor";
             // 
@@ -225,10 +225,10 @@
             // 
             LblSection.AutoSize = true;
             LblSection.Dock = DockStyle.Right;
-            LblSection.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblSection.Location = new Point(273, 531);
+            LblSection.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblSection.Location = new Point(268, 531);
             LblSection.Name = "LblSection";
-            LblSection.Size = new Size(77, 33);
+            LblSection.Size = new Size(82, 33);
             LblSection.TabIndex = 11;
             LblSection.Text = "Section";
             // 
@@ -236,10 +236,10 @@
             // 
             LblShelf.AutoSize = true;
             LblShelf.Dock = DockStyle.Right;
-            LblShelf.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblShelf.Location = new Point(295, 564);
+            LblShelf.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblShelf.Location = new Point(290, 564);
             LblShelf.Name = "LblShelf";
-            LblShelf.Size = new Size(55, 33);
+            LblShelf.Size = new Size(60, 33);
             LblShelf.TabIndex = 9;
             LblShelf.Text = "Shelf";
             // 
@@ -247,10 +247,10 @@
             // 
             LblAvailable.AutoSize = true;
             LblAvailable.Dock = DockStyle.Right;
-            LblAvailable.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblAvailable.Location = new Point(258, 597);
+            LblAvailable.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblAvailable.Location = new Point(250, 597);
             LblAvailable.Name = "LblAvailable";
-            LblAvailable.Size = new Size(92, 34);
+            LblAvailable.Size = new Size(100, 34);
             LblAvailable.TabIndex = 18;
             LblAvailable.Text = "Available";
             // 
@@ -258,10 +258,10 @@
             // 
             LblNumOfCopies.AutoSize = true;
             LblNumOfCopies.Dock = DockStyle.Right;
-            LblNumOfCopies.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblNumOfCopies.Location = new Point(179, 631);
+            LblNumOfCopies.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblNumOfCopies.Location = new Point(167, 631);
             LblNumOfCopies.Name = "LblNumOfCopies";
-            LblNumOfCopies.Size = new Size(171, 33);
+            LblNumOfCopies.Size = new Size(183, 33);
             LblNumOfCopies.TabIndex = 16;
             LblNumOfCopies.Text = "Number of Copies";
             // 
@@ -269,10 +269,10 @@
             // 
             LblFile.AutoSize = true;
             LblFile.Dock = DockStyle.Right;
-            LblFile.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LblFile.Location = new Point(308, 664);
+            LblFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblFile.Location = new Point(305, 664);
             LblFile.Name = "LblFile";
-            LblFile.Size = new Size(42, 852);
+            LblFile.Size = new Size(45, 852);
             LblFile.TabIndex = 17;
             LblFile.Text = "File";
             // 
@@ -398,7 +398,7 @@
             PanelSearchResults.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             PanelSearchResults.Controls.Add(tableLayoutPanel2);
             PanelSearchResults.Dock = DockStyle.Fill;
-            PanelSearchResults.Location = new Point(0, 112);
+            PanelSearchResults.Location = new Point(10, 122);
             PanelSearchResults.MinimumSize = new Size(400, 400);
             PanelSearchResults.Name = "PanelSearchResults";
             PanelSearchResults.Padding = new Padding(40, 0, 40, 40);
@@ -407,9 +407,10 @@
             // 
             // PanelSearchBar
             // 
+            PanelSearchBar.BackColor = SystemColors.ButtonShadow;
             PanelSearchBar.Controls.Add(LblReferenceTitle);
             PanelSearchBar.Dock = DockStyle.Top;
-            PanelSearchBar.Location = new Point(0, 0);
+            PanelSearchBar.Location = new Point(10, 10);
             PanelSearchBar.Name = "PanelSearchBar";
             PanelSearchBar.Padding = new Padding(40);
             PanelSearchBar.Size = new Size(1022, 112);
@@ -419,10 +420,10 @@
             // 
             LblReferenceTitle.AutoSize = true;
             LblReferenceTitle.Dock = DockStyle.Fill;
-            LblReferenceTitle.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            LblReferenceTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             LblReferenceTitle.Location = new Point(40, 40);
             LblReferenceTitle.Name = "LblReferenceTitle";
-            LblReferenceTitle.Size = new Size(84, 46);
+            LblReferenceTitle.Size = new Size(91, 46);
             LblReferenceTitle.TabIndex = 0;
             LblReferenceTitle.Text = "Title";
             LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -433,12 +434,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Controls.Add(PanelSearchResults);
             Controls.Add(PanelSearchBar);
             Margin = new Padding(3, 4, 3, 4);
             Name = "ReferenceCenterDisplay";
-            Size = new Size(1022, 1668);
+            Padding = new Padding(10);
+            Size = new Size(1042, 1688);
             Load += CenterDisplay_Load;
+            Click += CenterDisplay_Click;
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).EndInit();

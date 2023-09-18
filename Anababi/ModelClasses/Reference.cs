@@ -88,10 +88,6 @@ namespace Anababi.ModelClasses
                 .Include(r => (r as PhysicalReference).Location)
                 .ToList();
             
-            //foreach(var reference in references)
-            //{
-            //    reference.Creator = GetCreator(reference);
-            //}
             return references;
         }
     }
