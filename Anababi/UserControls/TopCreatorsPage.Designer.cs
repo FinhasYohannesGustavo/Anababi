@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PanelContentTopArtists = new System.Windows.Forms.Panel();
+            this.PanelContentTopCreators = new System.Windows.Forms.Panel();
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.LblPageTitle = new System.Windows.Forms.Label();
             this.PanelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PanelContentTopArtists
+            // PanelContentTopCreators
             // 
-            this.PanelContentTopArtists.AutoScroll = true;
-            this.PanelContentTopArtists.AutoSize = true;
-            this.PanelContentTopArtists.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelContentTopArtists.Location = new System.Drawing.Point(0, 56);
-            this.PanelContentTopArtists.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelContentTopArtists.Name = "PanelContentTopArtists";
-            this.PanelContentTopArtists.Padding = new System.Windows.Forms.Padding(18, 15, 18, 15);
-            this.PanelContentTopArtists.Size = new System.Drawing.Size(915, 30);
-            this.PanelContentTopArtists.TabIndex = 4;
+            this.PanelContentTopCreators.AutoScroll = true;
+            this.PanelContentTopCreators.AutoSize = true;
+            this.PanelContentTopCreators.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelContentTopCreators.Location = new System.Drawing.Point(0, 56);
+            this.PanelContentTopCreators.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelContentTopCreators.Name = "PanelContentTopCreators";
+            this.PanelContentTopCreators.Padding = new System.Windows.Forms.Padding(18, 15, 18, 15);
+            this.PanelContentTopCreators.Size = new System.Drawing.Size(915, 30);
+            this.PanelContentTopCreators.TabIndex = 4;
             // 
             // PanelHeader
             // 
@@ -76,12 +76,12 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.PanelContentTopArtists);
+            this.Controls.Add(this.PanelContentTopCreators);
             this.Controls.Add(this.PanelHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TopWritersPage";
             this.Size = new System.Drawing.Size(915, 462);
-            this.Load += new System.EventHandler(this.TopArtistsPage_Load);
+            this.Load += new System.EventHandler(this.TopCreatorsPage_Load);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             this.ResumeLayout(false);
@@ -91,7 +91,7 @@
 
         #endregion
 
-        private Panel PanelContentTopArtists;
+        private Panel PanelContentTopCreators;
         private Panel PanelHeader;
         private Label LblPageTitle;
     }

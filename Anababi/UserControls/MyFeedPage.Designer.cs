@@ -31,7 +31,7 @@
         {
             this.LblPageTitle = new System.Windows.Forms.Label();
             this.PanelHeader = new System.Windows.Forms.Panel();
-            this.tableLayoutPanelAllArtworks = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelAllReferences = new System.Windows.Forms.TableLayoutPanel();
             this.PanelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,25 +57,25 @@
             this.PanelHeader.Size = new System.Drawing.Size(1129, 84);
             this.PanelHeader.TabIndex = 2;
             // 
-            // tableLayoutPanelAllArtworks
+            // tableLayoutPanelAllReferences
             // 
-            this.tableLayoutPanelAllArtworks.AutoScroll = true;
-            this.tableLayoutPanelAllArtworks.AutoSize = true;
-            this.tableLayoutPanelAllArtworks.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanelAllArtworks.ColumnCount = 1;
-            this.tableLayoutPanelAllArtworks.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelAllArtworks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelAllArtworks.Location = new System.Drawing.Point(0, 84);
-            this.tableLayoutPanelAllArtworks.Margin = new System.Windows.Forms.Padding(10);
-            this.tableLayoutPanelAllArtworks.MinimumSize = new System.Drawing.Size(400, 400);
-            this.tableLayoutPanelAllArtworks.Name = "tableLayoutPanelAllArtworks";
-            this.tableLayoutPanelAllArtworks.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.tableLayoutPanelAllArtworks.RowCount = 3;
-            this.tableLayoutPanelAllArtworks.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelAllArtworks.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelAllArtworks.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelAllArtworks.Size = new System.Drawing.Size(1129, 2200);
-            this.tableLayoutPanelAllArtworks.TabIndex = 2;
+            this.tableLayoutPanelAllReferences.AutoScroll = true;
+            this.tableLayoutPanelAllReferences.AutoSize = true;
+            this.tableLayoutPanelAllReferences.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanelAllReferences.ColumnCount = 1;
+            this.tableLayoutPanelAllReferences.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelAllReferences.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelAllReferences.Location = new System.Drawing.Point(0, 84);
+            this.tableLayoutPanelAllReferences.Margin = new System.Windows.Forms.Padding(10);
+            this.tableLayoutPanelAllReferences.MinimumSize = new System.Drawing.Size(400, 400);
+            this.tableLayoutPanelAllReferences.Name = "tableLayoutPanelAllReferences";
+            this.tableLayoutPanelAllReferences.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.tableLayoutPanelAllReferences.RowCount = 3;
+            this.tableLayoutPanelAllReferences.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanelAllReferences.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanelAllReferences.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanelAllReferences.Size = new System.Drawing.Size(1129, 2200);
+            this.tableLayoutPanelAllReferences.TabIndex = 2;
             // 
             // MyFeedPage
             // 
@@ -83,7 +83,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.tableLayoutPanelAllArtworks);
+            this.Controls.Add(this.tableLayoutPanelAllReferences);
             this.Controls.Add(this.PanelHeader);
             this.Name = "MyFeedPage";
             this.Size = new System.Drawing.Size(1129, 2284);
@@ -98,6 +98,6 @@
 
         private Label LblPageTitle;
         private Panel PanelHeader;
-        private TableLayoutPanel tableLayoutPanelAllArtworks;
+        private TableLayoutPanel tableLayoutPanelAllReferences;
     }
 }

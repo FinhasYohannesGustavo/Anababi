@@ -34,12 +34,12 @@
             PanelSearchBar = new Panel();
             PanelSearchResults = new Panel();
             TableLayoutPanelSearchResults = new TableLayoutPanel();
-            PanelArtistsSection = new Panel();
-            PanelHeaderArtistsSection = new Panel();
-            LblArtists = new Label();
-            PanelArtworksSection = new Panel();
-            PanelHeaderArtworksSection = new Panel();
-            LblArtworks = new Label();
+            PanelCreatorsSection = new Panel();
+            PanelHeaderCreatorsSection = new Panel();
+            LblCreators = new Label();
+            PanelReferencesSection = new Panel();
+            PanelHeaderReferencesSection = new Panel();
+            LblReferences = new Label();
             PanelSearchTypeToggle = new Panel();
             ToggleSearchType = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             PanelLabelsForSearch = new Panel();
@@ -50,10 +50,10 @@
             PanelSearchBar.SuspendLayout();
             PanelSearchResults.SuspendLayout();
             TableLayoutPanelSearchResults.SuspendLayout();
-            PanelArtistsSection.SuspendLayout();
-            PanelHeaderArtistsSection.SuspendLayout();
-            PanelArtworksSection.SuspendLayout();
-            PanelHeaderArtworksSection.SuspendLayout();
+            PanelCreatorsSection.SuspendLayout();
+            PanelHeaderCreatorsSection.SuspendLayout();
+            PanelReferencesSection.SuspendLayout();
+            PanelHeaderReferencesSection.SuspendLayout();
             PanelSearchTypeToggle.SuspendLayout();
             PanelLabelsForSearch.SuspendLayout();
             SuspendLayout();
@@ -105,8 +105,8 @@
             TableLayoutPanelSearchResults.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             TableLayoutPanelSearchResults.ColumnCount = 1;
             TableLayoutPanelSearchResults.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            TableLayoutPanelSearchResults.Controls.Add(PanelArtistsSection, 0, 0);
-            TableLayoutPanelSearchResults.Controls.Add(PanelArtworksSection, 0, 1);
+            TableLayoutPanelSearchResults.Controls.Add(PanelCreatorsSection, 0, 0);
+            TableLayoutPanelSearchResults.Controls.Add(PanelReferencesSection, 0, 1);
             TableLayoutPanelSearchResults.Dock = DockStyle.Top;
             TableLayoutPanelSearchResults.Location = new Point(40, 68);
             TableLayoutPanelSearchResults.Name = "TableLayoutPanelSearchResults";
@@ -125,78 +125,78 @@
             TableLayoutPanelSearchResults.Size = new Size(320, 182);
             TableLayoutPanelSearchResults.TabIndex = 0;
             // 
-            // PanelArtistsSection
+            // PanelCreatorsSection
             // 
-            PanelArtistsSection.AutoScroll = true;
-            PanelArtistsSection.AutoSize = true;
-            PanelArtistsSection.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            PanelArtistsSection.BackColor = Color.Transparent;
-            PanelArtistsSection.Controls.Add(PanelHeaderArtistsSection);
-            PanelArtistsSection.Dock = DockStyle.Top;
-            PanelArtistsSection.Location = new Point(3, 3);
-            PanelArtistsSection.Name = "PanelArtistsSection";
-            PanelArtistsSection.Size = new Size(314, 75);
-            PanelArtistsSection.TabIndex = 0;
+            PanelCreatorsSection.AutoScroll = true;
+            PanelCreatorsSection.AutoSize = true;
+            PanelCreatorsSection.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            PanelCreatorsSection.BackColor = Color.Transparent;
+            PanelCreatorsSection.Controls.Add(PanelHeaderCreatorsSection);
+            PanelCreatorsSection.Dock = DockStyle.Top;
+            PanelCreatorsSection.Location = new Point(3, 3);
+            PanelCreatorsSection.Name = "PanelCreatorsSection";
+            PanelCreatorsSection.Size = new Size(314, 75);
+            PanelCreatorsSection.TabIndex = 0;
             // 
-            // PanelHeaderArtistsSection
+            // PanelHeaderCreatorsSection
             // 
-            PanelHeaderArtistsSection.AutoScroll = true;
-            PanelHeaderArtistsSection.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            PanelHeaderArtistsSection.Controls.Add(LblArtists);
-            PanelHeaderArtistsSection.Dock = DockStyle.Top;
-            PanelHeaderArtistsSection.Location = new Point(0, 0);
-            PanelHeaderArtistsSection.Name = "PanelHeaderArtistsSection";
-            PanelHeaderArtistsSection.Padding = new Padding(0, 20, 21, 20);
-            PanelHeaderArtistsSection.Size = new Size(314, 75);
-            PanelHeaderArtistsSection.TabIndex = 1;
+            PanelHeaderCreatorsSection.AutoScroll = true;
+            PanelHeaderCreatorsSection.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            PanelHeaderCreatorsSection.Controls.Add(LblCreators);
+            PanelHeaderCreatorsSection.Dock = DockStyle.Top;
+            PanelHeaderCreatorsSection.Location = new Point(0, 0);
+            PanelHeaderCreatorsSection.Name = "PanelHeaderCreatorsSection";
+            PanelHeaderCreatorsSection.Padding = new Padding(0, 20, 21, 20);
+            PanelHeaderCreatorsSection.Size = new Size(314, 75);
+            PanelHeaderCreatorsSection.TabIndex = 1;
             // 
-            // LblArtists
+            // LblCreators
             // 
-            LblArtists.AutoSize = true;
-            LblArtists.BackColor = Color.Transparent;
-            LblArtists.Dock = DockStyle.Left;
-            LblArtists.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            LblArtists.Location = new Point(0, 20);
-            LblArtists.Name = "LblArtists";
-            LblArtists.Size = new Size(100, 37);
-            LblArtists.TabIndex = 1;
-            LblArtists.Text = "Artists";
+            LblCreators.AutoSize = true;
+            LblCreators.BackColor = Color.Transparent;
+            LblCreators.Dock = DockStyle.Left;
+            LblCreators.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            LblCreators.Location = new Point(0, 20);
+            LblCreators.Name = "LblCreators";
+            LblCreators.Size = new Size(100, 37);
+            LblCreators.TabIndex = 1;
+            LblCreators.Text = "Creators";
             // 
-            // PanelArtworksSection
+            // PanelReferencesSection
             // 
-            PanelArtworksSection.AutoScroll = true;
-            PanelArtworksSection.AutoSize = true;
-            PanelArtworksSection.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            PanelArtworksSection.Controls.Add(PanelHeaderArtworksSection);
-            PanelArtworksSection.Dock = DockStyle.Top;
-            PanelArtworksSection.Location = new Point(3, 84);
-            PanelArtworksSection.Name = "PanelArtworksSection";
-            PanelArtworksSection.Size = new Size(314, 75);
-            PanelArtworksSection.TabIndex = 1;
+            PanelReferencesSection.AutoScroll = true;
+            PanelReferencesSection.AutoSize = true;
+            PanelReferencesSection.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            PanelReferencesSection.Controls.Add(PanelHeaderReferencesSection);
+            PanelReferencesSection.Dock = DockStyle.Top;
+            PanelReferencesSection.Location = new Point(3, 84);
+            PanelReferencesSection.Name = "PanelReferencesSection";
+            PanelReferencesSection.Size = new Size(314, 75);
+            PanelReferencesSection.TabIndex = 1;
             // 
-            // PanelHeaderArtworksSection
+            // PanelHeaderReferencesSection
             // 
-            PanelHeaderArtworksSection.AutoScroll = true;
-            PanelHeaderArtworksSection.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            PanelHeaderArtworksSection.Controls.Add(LblArtworks);
-            PanelHeaderArtworksSection.Dock = DockStyle.Top;
-            PanelHeaderArtworksSection.Location = new Point(0, 0);
-            PanelHeaderArtworksSection.Name = "PanelHeaderArtworksSection";
-            PanelHeaderArtworksSection.Padding = new Padding(0, 20, 21, 20);
-            PanelHeaderArtworksSection.Size = new Size(314, 75);
-            PanelHeaderArtworksSection.TabIndex = 1;
+            PanelHeaderReferencesSection.AutoScroll = true;
+            PanelHeaderReferencesSection.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            PanelHeaderReferencesSection.Controls.Add(LblReferences);
+            PanelHeaderReferencesSection.Dock = DockStyle.Top;
+            PanelHeaderReferencesSection.Location = new Point(0, 0);
+            PanelHeaderReferencesSection.Name = "PanelHeaderReferencesSection";
+            PanelHeaderReferencesSection.Padding = new Padding(0, 20, 21, 20);
+            PanelHeaderReferencesSection.Size = new Size(314, 75);
+            PanelHeaderReferencesSection.TabIndex = 1;
             // 
-            // LblArtworks
+            // LblReferences
             // 
-            LblArtworks.AutoSize = true;
-            LblArtworks.BackColor = Color.Transparent;
-            LblArtworks.Dock = DockStyle.Left;
-            LblArtworks.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            LblArtworks.Location = new Point(0, 20);
-            LblArtworks.Name = "LblArtworks";
-            LblArtworks.Size = new Size(141, 37);
-            LblArtworks.TabIndex = 1;
-            LblArtworks.Text = "Artworks";
+            LblReferences.AutoSize = true;
+            LblReferences.BackColor = Color.Transparent;
+            LblReferences.Dock = DockStyle.Left;
+            LblReferences.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            LblReferences.Location = new Point(0, 20);
+            LblReferences.Name = "LblReferences";
+            LblReferences.Size = new Size(141, 37);
+            LblReferences.TabIndex = 1;
+            LblReferences.Text = "References";
             // 
             // PanelSearchTypeToggle
             // 
@@ -303,12 +303,12 @@
             PanelSearchResults.PerformLayout();
             TableLayoutPanelSearchResults.ResumeLayout(false);
             TableLayoutPanelSearchResults.PerformLayout();
-            PanelArtistsSection.ResumeLayout(false);
-            PanelHeaderArtistsSection.ResumeLayout(false);
-            PanelHeaderArtistsSection.PerformLayout();
-            PanelArtworksSection.ResumeLayout(false);
-            PanelHeaderArtworksSection.ResumeLayout(false);
-            PanelHeaderArtworksSection.PerformLayout();
+            PanelCreatorsSection.ResumeLayout(false);
+            PanelHeaderCreatorsSection.ResumeLayout(false);
+            PanelHeaderCreatorsSection.PerformLayout();
+            PanelReferencesSection.ResumeLayout(false);
+            PanelHeaderReferencesSection.ResumeLayout(false);
+            PanelHeaderReferencesSection.PerformLayout();
             PanelSearchTypeToggle.ResumeLayout(false);
             PanelLabelsForSearch.ResumeLayout(false);
             PanelLabelsForSearch.PerformLayout();
@@ -324,12 +324,12 @@
         private TableLayoutPanel TableLayoutPanelSearchResults;
         private Panel PanelContent;
         private TableLayoutPanel tableLayoutPanelArtistResults;
-        private Panel PanelArtworksSection;
-        private Panel PanelArtistsSection;
-        private Panel PanelHeaderArtworksSection;
-        private Label LblArtworks;
-        private Panel PanelHeaderArtistsSection;
-        private Label LblArtists;
+        private Panel PanelReferencesSection;
+        private Panel PanelCreatorsSection;
+        private Panel PanelHeaderReferencesSection;
+        private Label LblReferences;
+        private Panel PanelHeaderCreatorsSection;
+        private Label LblCreators;
         private Panel PanelSearchTypeToggle;
         private Guna.UI2.WinForms.Guna2ToggleSwitch ToggleSearchType;
         private Panel PanelLabelsForSearch;

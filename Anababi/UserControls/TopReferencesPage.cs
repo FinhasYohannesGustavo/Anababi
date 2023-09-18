@@ -36,7 +36,7 @@ namespace Anababi.UserControls
         //Add each category to the table layout panel
         foreach (CategoryTemplateDisplay c in categories)
         {
-            UserExperience.AddToPanel(c, tableLayoutPanelAllArtworks);
+            UserExperience.AddToPanel(c, tableLayoutPanelAllReferences);
         }
     }
 }

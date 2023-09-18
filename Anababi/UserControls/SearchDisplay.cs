@@ -16,8 +16,8 @@ namespace Anababi.UserControls
 {
     public partial class SearchDisplay : UserControl
     {
-        ResultsGrid? resultsGridArtists;
-        ResultsGrid? resultsGridArtworks;
+        ResultsGrid? resultsGridCreators;
+        ResultsGrid? resultsGridReferences;
         public SearchDisplay()
         {
             InitializeComponent();
@@ -28,9 +28,9 @@ namespace Anababi.UserControls
             //This will be replaced by a database fetch of a list of the recent searches the user made.
             List<Creator> creators = UserExperience.GetCreators();
             //Create a ResultsGrid object from the list of Users.
-            resultsGridArtists = new ResultsGrid(creators);
-            //Add the ResultsGrid object to PanelArtistsSection.
-            UserExperience.AddToPanel(resultsGridArtists, PanelArtistsSection);
+            resultsGridCreators = new ResultsGrid(creators);
+            //Add the ResultsGrid object to PanelCreatorsSection.
+            UserExperience.AddToPanel(resultsGridCreators, PanelCreatorsSection);
 
 
             List<Reference> references = Reference.GetAllReferencesFromDB();
@@ -50,9 +50,9 @@ namespace Anababi.UserControls
                 references = SortingAlgorithms.InsertionSorter.InsertionSort(references);
             }
             //Create a ResultsGrid object from the list of VisualArts.
-            resultsGridArtworks = new ResultsGrid(references);
-            //Add the ResultsGrid object to PanelArtworksSection.
-            UserExperience.AddToPanel(resultsGridArtworks, PanelArtworksSection);
+            resultsGridReferences = new ResultsGrid(references);
+            //Add the ResultsGrid object to PanelReferencesSection.
+            UserExperience.AddToPanel(resultsGridReferences, PanelReferencesSection);
 
         }
         //Event for hitting "Enter" after typing in a few characters in the text box.
@@ -101,13 +101,13 @@ namespace Anababi.UserControls
                 }
 
                 //Clear the contents of the default search display
-                PanelArtistsSection.Controls.Remove(resultsGridArtists);
-                PanelArtworksSection.Controls.Remove(resultsGridArtworks);
+                PanelCreatorsSection.Controls.Remove(resultsGridCreators);
+                PanelReferencesSection.Controls.Remove(resultsGridReferences);
 
                 //Create a ResultsGrid object from the list of Users.
-                resultsGridArtists = new ResultsGrid(searchedCreators);
-                //Add the ResultsGrid object to PanelArtistsSection.
-                UserExperience.AddToPanel(resultsGridArtists, PanelArtistsSection);
+                resultsGridCreators = new ResultsGrid(searchedCreators);
+                //Add the ResultsGrid object to PanelCreatorsSection.
+                UserExperience.AddToPanel(resultsGridCreators, PanelCreatorsSection);
 
                 //Create a ResultsGrid object from the list of VisualArts.
                 List<Reference> toBeRemoved = new List<Reference>();
@@ -130,9 +130,9 @@ namespace Anababi.UserControls
 
                 }
                
-                resultsGridArtworks = new ResultsGrid(foundReference);
-                //Add the ResultsGrid object to PanelArtworksSection.
-                UserExperience.AddToPanel(resultsGridArtworks, PanelArtworksSection);
+                resultsGridReferences = new ResultsGrid(foundReference);
+                //Add the ResultsGrid object to PanelReferencesSection.
+                UserExperience.AddToPanel(resultsGridReferences, PanelReferencesSection);
 
 
 

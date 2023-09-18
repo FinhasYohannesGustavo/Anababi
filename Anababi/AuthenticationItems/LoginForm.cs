@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Anababi.ModelClasses;
 using Anababi.Data;
 using Anababi.RegistrationItems;
+using Anababi.Properties;
 
 namespace Anababi.AuthenticationItems
 {
@@ -18,8 +19,8 @@ namespace Anababi.AuthenticationItems
         public LoginForm()
         {
             InitializeComponent();
+            this.Icon = Resources.font_symbol_of_letter_a;
         }
-      
 
         private void loginPwdTextBox_TextChanged(object sender, EventArgs e)
         {

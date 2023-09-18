@@ -176,7 +176,7 @@ namespace Anababi
             return buttonList;
         }
 
-        //Get a list of Buttons from a list of Users(Artists).
+        //Get a list of Buttons from a list of Users(Creators).
         public static List<Button> CreateButtonsFromCreators(List<Creator> creators)
         {
             List<Button> buttonList = new List<Button>();

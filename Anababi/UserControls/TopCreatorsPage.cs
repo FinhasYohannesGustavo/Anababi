@@ -18,7 +18,7 @@ namespace Anababi.UserControls
             InitializeComponent();
         }
 
-        private void TopArtistsPage_Load(object sender, EventArgs e)
+        private void TopCreatorsPage_Load(object sender, EventArgs e)
         {
             //Will be replaced by a databse fetch of the top writers
             List<Creator> writers = Creator.GetAllCreatorsFromDB();
@@ -27,7 +27,7 @@ namespace Anababi.UserControls
             ResultsGrid resultsGrid = new ResultsGrid(writers);
 
             //Add the results grid to the content panel
-            UserExperience.AddToPanel(resultsGrid, PanelContentTopArtists);
+            UserExperience.AddToPanel(resultsGrid, PanelContentTopCreators);
         }
     }
 }
