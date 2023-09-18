@@ -52,10 +52,10 @@
             textBoxSection = new TextBox();
             textBoxShelf = new TextBox();
             textBoxNumOfCopies = new TextBox();
-            comboBoxAvailable = new ComboBox();
             pdfViewerFile = new PdfiumViewer.PdfViewer();
             buttonSave = new Button();
             textBoxPublishedOn = new TextBox();
+            checkBoxAvailable = new CheckBox();
             pictureBoxCoverImage = new PictureBox();
             PanelSearchResults = new Panel();
             panelCoverImageHolder = new Panel();
@@ -99,10 +99,10 @@
             tableLayoutPanel2.Controls.Add(textBoxSection, 1, 9);
             tableLayoutPanel2.Controls.Add(textBoxShelf, 1, 10);
             tableLayoutPanel2.Controls.Add(textBoxNumOfCopies, 1, 12);
-            tableLayoutPanel2.Controls.Add(comboBoxAvailable, 1, 11);
             tableLayoutPanel2.Controls.Add(pdfViewerFile, 1, 13);
             tableLayoutPanel2.Controls.Add(buttonSave, 1, 14);
             tableLayoutPanel2.Controls.Add(textBoxPublishedOn, 1, 3);
+            tableLayoutPanel2.Controls.Add(checkBoxAvailable, 1, 11);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(390, 0);
             tableLayoutPanel2.MinimumSize = new Size(600, 400);
@@ -123,7 +123,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(600, 713);
+            tableLayoutPanel2.Size = new Size(600, 707);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // LblCreator
@@ -243,7 +243,7 @@
             LblAvailable.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblAvailable.Location = new Point(86, 330);
             LblAvailable.Name = "LblAvailable";
-            LblAvailable.Size = new Size(100, 34);
+            LblAvailable.Size = new Size(100, 28);
             LblAvailable.TabIndex = 18;
             LblAvailable.Text = "Available";
             // 
@@ -252,7 +252,7 @@
             LblNumOfCopies.AutoSize = true;
             LblNumOfCopies.Dock = DockStyle.Right;
             LblNumOfCopies.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblNumOfCopies.Location = new Point(3, 364);
+            LblNumOfCopies.Location = new Point(3, 358);
             LblNumOfCopies.Name = "LblNumOfCopies";
             LblNumOfCopies.Size = new Size(183, 33);
             LblNumOfCopies.TabIndex = 16;
@@ -263,7 +263,7 @@
             LblFile.AutoSize = true;
             LblFile.Dock = DockStyle.Right;
             LblFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblFile.Location = new Point(141, 397);
+            LblFile.Location = new Point(141, 391);
             LblFile.Name = "LblFile";
             LblFile.Size = new Size(45, 255);
             LblFile.TabIndex = 17;
@@ -346,26 +346,17 @@
             // textBoxNumOfCopies
             // 
             textBoxNumOfCopies.Dock = DockStyle.Fill;
-            textBoxNumOfCopies.Location = new Point(192, 367);
+            textBoxNumOfCopies.Location = new Point(192, 361);
             textBoxNumOfCopies.Name = "textBoxNumOfCopies";
             textBoxNumOfCopies.Size = new Size(405, 27);
             textBoxNumOfCopies.TabIndex = 30;
             // 
-            // comboBoxAvailable
-            // 
-            comboBoxAvailable.Dock = DockStyle.Fill;
-            comboBoxAvailable.FormattingEnabled = true;
-            comboBoxAvailable.Items.AddRange(new object[] { "Yes", "No" });
-            comboBoxAvailable.Location = new Point(192, 333);
-            comboBoxAvailable.Name = "comboBoxAvailable";
-            comboBoxAvailable.Size = new Size(405, 28);
-            comboBoxAvailable.TabIndex = 33;
-            // 
             // pdfViewerFile
             // 
-            pdfViewerFile.Location = new Point(193, 402);
+            pdfViewerFile.Location = new Point(193, 396);
             pdfViewerFile.Margin = new Padding(4, 5, 4, 5);
             pdfViewerFile.Name = "pdfViewerFile";
+            pdfViewerFile.ShowToolbar = false;
             pdfViewerFile.Size = new Size(353, 245);
             pdfViewerFile.TabIndex = 35;
             // 
@@ -373,7 +364,7 @@
             // 
             buttonSave.Dock = DockStyle.Right;
             buttonSave.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSave.Location = new Point(463, 655);
+            buttonSave.Location = new Point(463, 649);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(134, 55);
             buttonSave.TabIndex = 36;
@@ -389,13 +380,23 @@
             textBoxPublishedOn.Size = new Size(405, 27);
             textBoxPublishedOn.TabIndex = 37;
             // 
+            // checkBoxAvailable
+            // 
+            checkBoxAvailable.AutoSize = true;
+            checkBoxAvailable.Dock = DockStyle.Fill;
+            checkBoxAvailable.Location = new Point(192, 333);
+            checkBoxAvailable.Name = "checkBoxAvailable";
+            checkBoxAvailable.Size = new Size(405, 22);
+            checkBoxAvailable.TabIndex = 38;
+            checkBoxAvailable.UseVisualStyleBackColor = true;
+            // 
             // pictureBoxCoverImage
             // 
             pictureBoxCoverImage.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBoxCoverImage.Dock = DockStyle.Fill;
             pictureBoxCoverImage.Location = new Point(0, 0);
             pictureBoxCoverImage.Name = "pictureBoxCoverImage";
-            pictureBoxCoverImage.Size = new Size(350, 713);
+            pictureBoxCoverImage.Size = new Size(350, 707);
             pictureBoxCoverImage.TabIndex = 34;
             pictureBoxCoverImage.TabStop = false;
             // 
@@ -412,7 +413,7 @@
             PanelSearchResults.MinimumSize = new Size(900, 300);
             PanelSearchResults.Name = "PanelSearchResults";
             PanelSearchResults.Padding = new Padding(40, 0, 40, 40);
-            PanelSearchResults.Size = new Size(980, 755);
+            PanelSearchResults.Size = new Size(980, 749);
             PanelSearchResults.TabIndex = 6;
             // 
             // panelCoverImageHolder
@@ -421,7 +422,7 @@
             panelCoverImageHolder.Dock = DockStyle.Left;
             panelCoverImageHolder.Location = new Point(40, 0);
             panelCoverImageHolder.Name = "panelCoverImageHolder";
-            panelCoverImageHolder.Size = new Size(350, 713);
+            panelCoverImageHolder.Size = new Size(350, 707);
             panelCoverImageHolder.TabIndex = 1;
             // 
             // PanelSearchBar
@@ -438,8 +439,8 @@
             // 
             // LblReferenceTitle
             // 
-            LblReferenceTitle.Anchor = AnchorStyles.None;
             LblReferenceTitle.AutoSize = true;
+            LblReferenceTitle.Dock = DockStyle.Fill;
             LblReferenceTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             LblReferenceTitle.Location = new Point(40, 40);
             LblReferenceTitle.Name = "LblReferenceTitle";
@@ -460,7 +461,7 @@
             MinimumSize = new Size(1000, 400);
             Name = "ReferenceCenterDisplay";
             Padding = new Padding(10);
-            Size = new Size(1000, 887);
+            Size = new Size(1000, 881);
             Load += CenterDisplay_Load;
             Click += CenterDisplay_Click;
             tableLayoutPanel2.ResumeLayout(false);
@@ -504,11 +505,11 @@
         private TextBox textBoxSection;
         private TextBox textBoxShelf;
         private TextBox textBoxNumOfCopies;
-        private ComboBox comboBoxAvailable;
         private PictureBox pictureBoxCoverImage;
         private PdfiumViewer.PdfViewer pdfViewerFile;
         private Button buttonSave;
         private Panel panelCoverImageHolder;
         private TextBox textBoxPublishedOn;
+        private CheckBox checkBoxAvailable;
     }
 }

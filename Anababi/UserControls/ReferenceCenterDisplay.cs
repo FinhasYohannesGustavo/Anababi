@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Anababi.Data;
 using Anababi.ModelClasses;
+using Microsoft.EntityFrameworkCore;
 using PdfiumViewer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -31,14 +32,13 @@ namespace Anababi.UserControls
                 textBoxGenre.Enabled = false;
                 textBoxPublishedOn.Enabled = false;
                 textBoxDescription.Enabled = false;
-                textBoxDiscriminator.Enabled = false;
                 textBoxISBN.Enabled = false;
 
                 //Physical reference fields
                 textBoxFloor.Enabled = false;
                 textBoxSection.Enabled = false;
                 textBoxShelf.Enabled = false;
-                comboBoxAvailable.Enabled = false;
+                checkBoxAvailable.Enabled = false;
                 textBoxNumOfCopies.Enabled = false;
 
                 //Digital reference fields
@@ -48,6 +48,8 @@ namespace Anababi.UserControls
                 buttonSave.Enabled = false;
             }
 
+            // The physical or digital nature of a reference is not editable.
+            textBoxDiscriminator.Enabled = false;
         }
 
         #region Custom Methods
@@ -83,14 +85,22 @@ namespace Anababi.UserControls
             //Set the label representing the title of the reference.
             LblReferenceTitle.Text = Reference.Title;
             LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
+            LblReferenceTitle.Dock = DockStyle.Fill;
+            LblReferenceTitle.Anchor = AnchorStyles.None;
             //Set the text box representing the creator of the reference.
             textBoxCreator.Text = Reference.Creator.GetFullName();
+            //Set the text box representing the type of the reference.
             textBoxType.Text = Reference.Type.ToString();
+            //Set the text box representing the genre of the reference.
             textBoxGenre.Text = Reference.Genre.ToString();
+            //Set the text box representing the publishing date of the reference.
             textBoxPublishedOn.Text = Reference.PublishedOn.ToShortDateString();
+            //Set the text box representing the ISBN of the reference.
             textBoxISBN.Text = Reference.ISBN;
+            //Set the text box representing the description of the reference.
             textBoxDescription.Text = Reference.Description;
             textBoxDescription.WordWrap = true;
+            //Set the picture box representing the coverimage of the reference.
             pictureBoxCoverImage.BackgroundImage = UserExperience.ByteArrayToImage(Reference.CoverImage);
             pictureBoxCoverImage.BackgroundImageLayout = ImageLayout.Zoom;
 
@@ -106,9 +116,9 @@ namespace Anababi.UserControls
 
                 // Fill the combo box representing the availability of the reference
                 if (physicalReference.Available)
-                    comboBoxAvailable.SelectedIndex = 0;
+                    checkBoxAvailable.Checked = true;
                 else
-                    comboBoxAvailable.SelectedIndex = 1;
+                    checkBoxAvailable.Checked = false;
 
                 this.ActiveControl = null;
 
@@ -137,7 +147,7 @@ namespace Anababi.UserControls
                 LblNumOfCopies.Visible = false;
                 textBoxNumOfCopies.Visible = false;
                 LblAvailable.Visible = false;
-                comboBoxAvailable.Visible = false;
+                checkBoxAvailable.Visible = false;
 
             }
 
@@ -168,16 +178,32 @@ namespace Anababi.UserControls
                 {
                     // Get the database object from the context class
                     using AnababiContext context = new AnababiContext();
-                    Reference referenceToBeUpdated = context.References.Where(r => r.Id == Reference.Id).FirstOrDefault();
+                    Reference referenceToBeUpdated = context.References.Where(r => r.Id == Reference.Id)
+                        .Include(r => r.Creator)
+                        .Include(r => (r as PhysicalReference).Location)
+                        .FirstOrDefault();
 
-                    // Check if the reference is digital of physical
+                    referenceToBeUpdated.Id = Reference.Id;
+                    referenceToBeUpdated.Title = Reference.Title;
+                    referenceToBeUpdated.PublishedOn = DateTime.Parse(textBoxPublishedOn.Text);
+                    referenceToBeUpdated.ISBN = textBoxISBN.Text;
+                    referenceToBeUpdated.Type = Enum.Parse<Reference.ReferenceType>(textBoxType.Text);
+                    referenceToBeUpdated.Genre = Enum.Parse<Reference.ReferenceGenre>(textBoxGenre.Text);
+                    referenceToBeUpdated.CoverImage = UserExperience.ImageToByteArray(pictureBoxCoverImage.BackgroundImage);
+                    referenceToBeUpdated.Description = textBoxDescription.Text;
+
+                    // Check if the reference is digital or physical
                     if (referenceToBeUpdated is PhysicalReference)
                     {
-                        referenceToBeUpdated = new PhysicalReference(Reference as PhysicalReference);
+                        (referenceToBeUpdated as PhysicalReference).Location.Floor = int.Parse(textBoxFloor.Text);
+                        (referenceToBeUpdated as PhysicalReference).Location.Section = int.Parse(textBoxSection.Text);
+                        (referenceToBeUpdated as PhysicalReference).Location.Shelf = int.Parse(textBoxShelf.Text);
+                        (referenceToBeUpdated as PhysicalReference).Available = checkBoxAvailable.Checked;
+                        (referenceToBeUpdated as PhysicalReference).NumOfCopies = int.Parse(textBoxNumOfCopies.Text);
                     }
                     else
                     {
-                        referenceToBeUpdated = new DigitalReference(Reference as DigitalReference);
+                        // referenceToBeUpdated = new DigitalReference(Reference as DigitalReference);
                     }
 
                     // Save changes
