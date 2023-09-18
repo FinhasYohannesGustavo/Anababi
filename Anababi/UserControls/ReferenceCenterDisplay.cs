@@ -22,6 +22,30 @@ namespace Anababi.UserControls
         {
             InitializeComponent();
             Reference = reference;
+
+            if (!UserExperience.currentUser.IsAdmin)
+            {
+                textBoxCreator.Enabled = false;
+                textBoxType.Enabled = false;
+                textBoxGenre.Enabled = false;
+                dateTimePickerPublishedOn.Enabled = false;
+                textBoxDescription.Enabled = false;
+                textBoxDiscriminator.Enabled = false;
+                textBoxISBN.Enabled = false;
+
+                //Physical reference fields
+                textBoxFloor.Enabled = false;
+                textBoxSection.Enabled = false;
+                textBoxShelf.Enabled = false;
+                comboBoxAvailable.Enabled = false;
+                textBoxNumOfCopies.Enabled = false;
+
+                //Digital reference fields
+                pdfViewerFile.Enabled = false;
+
+                //Save button
+                buttonSave.Enabled = false;
+            }
         }
 
         #region Custom Methods
@@ -56,7 +80,7 @@ namespace Anababi.UserControls
         {
             //Set the label representing the title of the reference.
             LblReferenceTitle.Text = Reference.Title;
-            LblReferenceTitle.CenterHorizontally();
+            LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
             //Set the text box representing the creator of the reference.
             textBoxCreator.Text = Reference.Creator.GetFullName();
             textBoxType.Text = Reference.Type.ToString();
@@ -132,16 +156,16 @@ namespace Anababi.UserControls
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if(UserExperience.currentUser.IsAdmin)
+            if (UserExperience.currentUser.IsAdmin)
             {
                 try
                 {
                     // Get the database object from the context class
                     using AnababiContext context = new AnababiContext();
                     Reference referenceToBeUpdated = context.References.Where(r => r.Id == Reference.Id).FirstOrDefault();
-                
+
                     // Check if the reference is digital of physical
-                    if(referenceToBeUpdated is PhysicalReference)
+                    if (referenceToBeUpdated is PhysicalReference)
                     {
                         referenceToBeUpdated = new PhysicalReference(Reference as PhysicalReference);
                     }
@@ -149,11 +173,12 @@ namespace Anababi.UserControls
                     {
                         referenceToBeUpdated = new DigitalReference(Reference as DigitalReference);
                     }
-                
+
                     // Save changes
                     context.SaveChanges();
 
-                }catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
                 }

@@ -57,10 +57,10 @@
             comboBoxAvailable = new ComboBox();
             pictureBoxCoverImage = new PictureBox();
             pdfViewerFile = new PdfiumViewer.PdfViewer();
+            buttonSave = new Button();
             PanelSearchResults = new Panel();
             PanelSearchBar = new Panel();
             LblReferenceTitle = new Label();
-            buttonSave = new Button();
             tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).BeginInit();
             PanelSearchResults.SuspendLayout();
@@ -396,6 +396,18 @@
             pdfViewerFile.Size = new Size(580, 842);
             pdfViewerFile.TabIndex = 35;
             // 
+            // buttonSave
+            // 
+            buttonSave.Dock = DockStyle.Right;
+            buttonSave.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSave.Location = new Point(734, 1519);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(205, 55);
+            buttonSave.TabIndex = 36;
+            buttonSave.Text = "Save";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSave_Click;
+            // 
             // PanelSearchResults
             // 
             PanelSearchResults.AutoScroll = true;
@@ -432,17 +444,6 @@
             LblReferenceTitle.TabIndex = 0;
             LblReferenceTitle.Text = "Title";
             LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // buttonSave
-            // 
-            buttonSave.Dock = DockStyle.Right;
-            buttonSave.Location = new Point(734, 1519);
-            buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(205, 55);
-            buttonSave.TabIndex = 36;
-            buttonSave.Text = "Save";
-            buttonSave.UseVisualStyleBackColor = true;
-            buttonSave.Click += buttonSave_Click;
             // 
             // ReferenceCenterDisplay
             // 
