@@ -152,10 +152,10 @@
             // 
             // lblLastName
             // 
-            this.lblLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLastName.AutoSize = true;
+            this.lblLastName.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLastName.Location = new System.Drawing.Point(184, 30);
+            this.lblLastName.Location = new System.Drawing.Point(179, 30);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(140, 37);
             this.lblLastName.TabIndex = 1;
@@ -164,10 +164,10 @@
             // 
             // LblFirstName
             // 
-            this.LblFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LblFirstName.AutoSize = true;
+            this.LblFirstName.Dock = System.Windows.Forms.DockStyle.Left;
             this.LblFirstName.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblFirstName.Location = new System.Drawing.Point(34, 30);
+            this.LblFirstName.Location = new System.Drawing.Point(35, 30);
             this.LblFirstName.Name = "LblFirstName";
             this.LblFirstName.Size = new System.Drawing.Size(144, 37);
             this.LblFirstName.TabIndex = 0;
@@ -196,11 +196,16 @@
             this.PanelSearchBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.Load+=CreatorCenterDisplay_Load;
+            this.Load += CreatorCenterDisplay_Load;
 
         }
 
-      
+        private void CreatorCenterDisplay_Load1(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
 
 
 
