@@ -120,6 +120,8 @@ namespace Anababi.UserControls
                 textBoxDiscriminator.Text = "Digital Reference";
                 //PdfDocument? pdfDocument = ByteArrayToPDFDocument(digitalReference.File);
                 //pdfViewerFile.Load(pdfDocument);
+                pdfViewerFile.Visible = false;
+                LblFile.Visible = false;
 
                 // Make all physical components invisible.
                 LblFloor.Visible = false;
