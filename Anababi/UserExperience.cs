@@ -118,6 +118,22 @@ namespace Anababi
             centerDisplay.BringToFront();
         }
 
+        internal void CreateCenterDisplayForSettings(SettingsPage settings, Panel panelContent)
+        {
+
+            //Set the paddding to 10 % of the panel's dimensions (x and y)
+            int xPadding = (int)(panelContent.Width * 0.1);
+            int yPadding = (int)(panelContent.Height * 0.1);
+            settings.Padding = new Padding(xPadding, (yPadding / 2), xPadding, yPadding);
+
+            //Set the Dock property to Fill.
+            settings.Dock = DockStyle.Fill;
+
+            //Add the settings user control to the panel and bring it to the front.
+            panelContent.Controls.Add(settings);
+            settings.BringToFront();
+        }
+
         //Create a center display for an Artist.
         public static void CreateCenterDisplayForCreator(Creator creator, Panel panelContent)
         {

@@ -37,7 +37,10 @@ namespace Anababi.UserControls
 
         private void BtnSettings_Click(object sender, EventArgs e)
         {
+            //Panel requiredPanel = (Panel)(this.FindForm().Controls.Find("PanelContent", true)[0]);
+            //CurrentExperience.CreateCenterDisplayForSettings(new SettingsPage(),requiredPanel);
             CurrentExperience.AddToPanelContent(new SettingsPage());
+
         }
         private void ConsumerExperienceNavButtons_Load(object sender, EventArgs e)
         {

@@ -73,10 +73,6 @@ namespace Anababi.UserControls
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.Change = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -84,12 +80,10 @@ namespace Anababi.UserControls
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.profilepicture = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtBio = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnEditProfileDetails = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -238,12 +232,10 @@ namespace Anababi.UserControls
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.Controls.Add(this.txtBio);
             this.tabPage2.Controls.Add(this.txtLastName);
             this.tabPage2.Controls.Add(this.txtUserName);
             this.tabPage2.Controls.Add(this.txtFirstName);
             this.tabPage2.Controls.Add(this.btnEditProfileDetails);
-            this.tabPage2.Controls.Add(this.guna2TextBox5);
             this.tabPage2.Controls.Add(this.guna2TextBox4);
             this.tabPage2.Controls.Add(this.guna2TextBox3);
             this.tabPage2.Controls.Add(this.guna2TextBox2);
@@ -254,29 +246,9 @@ namespace Anababi.UserControls
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Edit Profile Details";
             // 
-            // txtBio
-            // 
-            this.txtBio.CustomizableEdges = customizableEdges9;
-            this.txtBio.DefaultText = "";
-            this.txtBio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBio.Location = new System.Drawing.Point(268, 231);
-            this.txtBio.Name = "txtBio";
-            this.txtBio.PasswordChar = '\0';
-            this.txtBio.PlaceholderText = "";
-            this.txtBio.SelectedText = "";
-            this.txtBio.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            this.txtBio.Size = new System.Drawing.Size(160, 32);
-            this.txtBio.TabIndex = 9;
-            // 
             // txtLastName
             // 
-            this.txtLastName.CustomizableEdges = customizableEdges11;
+            this.txtLastName.CustomizableEdges = customizableEdges9;
             this.txtLastName.DefaultText = "";
             this.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtLastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -290,13 +262,13 @@ namespace Anababi.UserControls
             this.txtLastName.PasswordChar = '\0';
             this.txtLastName.PlaceholderText = "";
             this.txtLastName.SelectedText = "";
-            this.txtLastName.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            this.txtLastName.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.txtLastName.Size = new System.Drawing.Size(160, 32);
             this.txtLastName.TabIndex = 8;
             // 
             // txtUserName
             // 
-            this.txtUserName.CustomizableEdges = customizableEdges13;
+            this.txtUserName.CustomizableEdges = customizableEdges11;
             this.txtUserName.DefaultText = "";
             this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -310,13 +282,13 @@ namespace Anababi.UserControls
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderText = "";
             this.txtUserName.SelectedText = "";
-            this.txtUserName.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            this.txtUserName.ShadowDecoration.CustomizableEdges = customizableEdges12;
             this.txtUserName.Size = new System.Drawing.Size(160, 32);
             this.txtUserName.TabIndex = 7;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.CustomizableEdges = customizableEdges15;
+            this.txtFirstName.CustomizableEdges = customizableEdges13;
             this.txtFirstName.DefaultText = "";
             this.txtFirstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtFirstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -330,13 +302,13 @@ namespace Anababi.UserControls
             this.txtFirstName.PasswordChar = '\0';
             this.txtFirstName.PlaceholderText = "";
             this.txtFirstName.SelectedText = "";
-            this.txtFirstName.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            this.txtFirstName.ShadowDecoration.CustomizableEdges = customizableEdges14;
             this.txtFirstName.Size = new System.Drawing.Size(160, 32);
             this.txtFirstName.TabIndex = 6;
             // 
             // btnEditProfileDetails
             // 
-            this.btnEditProfileDetails.CustomizableEdges = customizableEdges17;
+            this.btnEditProfileDetails.CustomizableEdges = customizableEdges15;
             this.btnEditProfileDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEditProfileDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnEditProfileDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -344,43 +316,19 @@ namespace Anababi.UserControls
             this.btnEditProfileDetails.FillColor = System.Drawing.Color.SlateGray;
             this.btnEditProfileDetails.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEditProfileDetails.ForeColor = System.Drawing.Color.White;
-            this.btnEditProfileDetails.Location = new System.Drawing.Point(268, 330);
+            this.btnEditProfileDetails.Location = new System.Drawing.Point(268, 223);
             this.btnEditProfileDetails.Name = "btnEditProfileDetails";
-            this.btnEditProfileDetails.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            this.btnEditProfileDetails.ShadowDecoration.CustomizableEdges = customizableEdges16;
             this.btnEditProfileDetails.Size = new System.Drawing.Size(160, 27);
             this.btnEditProfileDetails.TabIndex = 5;
             this.btnEditProfileDetails.Text = "Save";
             this.btnEditProfileDetails.Click += new System.EventHandler(this.btnEditProfileDetails_Click);
             // 
-            // guna2TextBox5
-            // 
-            this.guna2TextBox5.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2TextBox5.BorderThickness = 0;
-            this.guna2TextBox5.CustomizableEdges = customizableEdges19;
-            this.guna2TextBox5.DefaultText = "Bio";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(161, 231);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "";
-            this.guna2TextBox5.ReadOnly = true;
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            this.guna2TextBox5.Size = new System.Drawing.Size(62, 36);
-            this.guna2TextBox5.TabIndex = 3;
-            // 
             // guna2TextBox4
             // 
             this.guna2TextBox4.BorderColor = System.Drawing.Color.Transparent;
             this.guna2TextBox4.BorderThickness = 0;
-            this.guna2TextBox4.CustomizableEdges = customizableEdges21;
+            this.guna2TextBox4.CustomizableEdges = customizableEdges17;
             this.guna2TextBox4.DefaultText = "User name";
             this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -389,13 +337,13 @@ namespace Anababi.UserControls
             this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(161, 167);
+            this.guna2TextBox4.Location = new System.Drawing.Point(161, 163);
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PasswordChar = '\0';
             this.guna2TextBox4.PlaceholderText = "";
             this.guna2TextBox4.ReadOnly = true;
             this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            this.guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges18;
             this.guna2TextBox4.Size = new System.Drawing.Size(101, 36);
             this.guna2TextBox4.TabIndex = 2;
             // 
@@ -403,7 +351,7 @@ namespace Anababi.UserControls
             // 
             this.guna2TextBox3.BorderColor = System.Drawing.Color.Transparent;
             this.guna2TextBox3.BorderThickness = 0;
-            this.guna2TextBox3.CustomizableEdges = customizableEdges23;
+            this.guna2TextBox3.CustomizableEdges = customizableEdges19;
             this.guna2TextBox3.DefaultText = "Last name";
             this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -412,13 +360,13 @@ namespace Anababi.UserControls
             this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(161, 111);
+            this.guna2TextBox3.Location = new System.Drawing.Point(161, 107);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "";
             this.guna2TextBox3.ReadOnly = true;
             this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            this.guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges20;
             this.guna2TextBox3.Size = new System.Drawing.Size(101, 36);
             this.guna2TextBox3.TabIndex = 1;
             // 
@@ -426,7 +374,7 @@ namespace Anababi.UserControls
             // 
             this.guna2TextBox2.BorderColor = System.Drawing.Color.Transparent;
             this.guna2TextBox2.BorderThickness = 0;
-            this.guna2TextBox2.CustomizableEdges = customizableEdges25;
+            this.guna2TextBox2.CustomizableEdges = customizableEdges21;
             this.guna2TextBox2.DefaultText = "First name";
             this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -435,13 +383,13 @@ namespace Anababi.UserControls
             this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(161, 55);
+            this.guna2TextBox2.Location = new System.Drawing.Point(161, 51);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.ReadOnly = true;
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            this.guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             this.guna2TextBox2.Size = new System.Drawing.Size(101, 36);
             this.guna2TextBox2.TabIndex = 0;
             // 
@@ -463,7 +411,7 @@ namespace Anababi.UserControls
             // 
             // guna2Button4
             // 
-            this.guna2Button4.CustomizableEdges = customizableEdges27;
+            this.guna2Button4.CustomizableEdges = customizableEdges23;
             this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -473,7 +421,7 @@ namespace Anababi.UserControls
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.Location = new System.Drawing.Point(276, 283);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            this.guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges24;
             this.guna2Button4.Size = new System.Drawing.Size(159, 33);
             this.guna2Button4.TabIndex = 12;
             this.guna2Button4.Text = "Save";
@@ -481,7 +429,7 @@ namespace Anababi.UserControls
             // 
             // txtCurrentPassword
             // 
-            this.txtCurrentPassword.CustomizableEdges = customizableEdges29;
+            this.txtCurrentPassword.CustomizableEdges = customizableEdges25;
             this.txtCurrentPassword.DefaultText = "";
             this.txtCurrentPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCurrentPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -495,13 +443,13 @@ namespace Anababi.UserControls
             this.txtCurrentPassword.PasswordChar = '\0';
             this.txtCurrentPassword.PlaceholderText = "";
             this.txtCurrentPassword.SelectedText = "";
-            this.txtCurrentPassword.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            this.txtCurrentPassword.ShadowDecoration.CustomizableEdges = customizableEdges26;
             this.txtCurrentPassword.Size = new System.Drawing.Size(192, 32);
             this.txtCurrentPassword.TabIndex = 11;
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.CustomizableEdges = customizableEdges31;
+            this.txtNewPassword.CustomizableEdges = customizableEdges27;
             this.txtNewPassword.DefaultText = "";
             this.txtNewPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtNewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -515,13 +463,13 @@ namespace Anababi.UserControls
             this.txtNewPassword.PasswordChar = '\0';
             this.txtNewPassword.PlaceholderText = "";
             this.txtNewPassword.SelectedText = "";
-            this.txtNewPassword.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            this.txtNewPassword.ShadowDecoration.CustomizableEdges = customizableEdges28;
             this.txtNewPassword.Size = new System.Drawing.Size(192, 32);
             this.txtNewPassword.TabIndex = 10;
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.CustomizableEdges = customizableEdges33;
+            this.txtConfirmPassword.CustomizableEdges = customizableEdges29;
             this.txtConfirmPassword.DefaultText = "";
             this.txtConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -535,7 +483,7 @@ namespace Anababi.UserControls
             this.txtConfirmPassword.PasswordChar = '\0';
             this.txtConfirmPassword.PlaceholderText = "";
             this.txtConfirmPassword.SelectedText = "";
-            this.txtConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            this.txtConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges30;
             this.txtConfirmPassword.Size = new System.Drawing.Size(192, 32);
             this.txtConfirmPassword.TabIndex = 9;
             // 
@@ -543,7 +491,7 @@ namespace Anababi.UserControls
             // 
             this.guna2TextBox12.BorderColor = System.Drawing.Color.White;
             this.guna2TextBox12.BorderThickness = 0;
-            this.guna2TextBox12.CustomizableEdges = customizableEdges35;
+            this.guna2TextBox12.CustomizableEdges = customizableEdges31;
             this.guna2TextBox12.DefaultText = "Current Password";
             this.guna2TextBox12.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -558,7 +506,7 @@ namespace Anababi.UserControls
             this.guna2TextBox12.PlaceholderText = "";
             this.guna2TextBox12.ReadOnly = true;
             this.guna2TextBox12.SelectedText = "";
-            this.guna2TextBox12.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            this.guna2TextBox12.ShadowDecoration.CustomizableEdges = customizableEdges32;
             this.guna2TextBox12.Size = new System.Drawing.Size(145, 36);
             this.guna2TextBox12.TabIndex = 3;
             // 
@@ -566,7 +514,7 @@ namespace Anababi.UserControls
             // 
             this.guna2TextBox11.BorderColor = System.Drawing.Color.White;
             this.guna2TextBox11.BorderThickness = 0;
-            this.guna2TextBox11.CustomizableEdges = customizableEdges37;
+            this.guna2TextBox11.CustomizableEdges = customizableEdges33;
             this.guna2TextBox11.DefaultText = "New Password";
             this.guna2TextBox11.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -581,7 +529,7 @@ namespace Anababi.UserControls
             this.guna2TextBox11.PlaceholderText = "";
             this.guna2TextBox11.ReadOnly = true;
             this.guna2TextBox11.SelectedText = "";
-            this.guna2TextBox11.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            this.guna2TextBox11.ShadowDecoration.CustomizableEdges = customizableEdges34;
             this.guna2TextBox11.Size = new System.Drawing.Size(145, 36);
             this.guna2TextBox11.TabIndex = 2;
             // 
@@ -589,7 +537,7 @@ namespace Anababi.UserControls
             // 
             this.guna2TextBox10.BorderColor = System.Drawing.Color.White;
             this.guna2TextBox10.BorderThickness = 0;
-            this.guna2TextBox10.CustomizableEdges = customizableEdges39;
+            this.guna2TextBox10.CustomizableEdges = customizableEdges35;
             this.guna2TextBox10.DefaultText = "Confirm Password";
             this.guna2TextBox10.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -604,7 +552,7 @@ namespace Anababi.UserControls
             this.guna2TextBox10.PlaceholderText = "";
             this.guna2TextBox10.ReadOnly = true;
             this.guna2TextBox10.SelectedText = "";
-            this.guna2TextBox10.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            this.guna2TextBox10.ShadowDecoration.CustomizableEdges = customizableEdges36;
             this.guna2TextBox10.Size = new System.Drawing.Size(145, 36);
             this.guna2TextBox10.TabIndex = 1;
             // 
@@ -623,7 +571,7 @@ namespace Anababi.UserControls
             // 
             // btnDeleteAccount
             // 
-            this.btnDeleteAccount.CustomizableEdges = customizableEdges41;
+            this.btnDeleteAccount.CustomizableEdges = customizableEdges37;
             this.btnDeleteAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDeleteAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDeleteAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -633,7 +581,7 @@ namespace Anababi.UserControls
             this.btnDeleteAccount.ForeColor = System.Drawing.Color.White;
             this.btnDeleteAccount.Location = new System.Drawing.Point(230, 195);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            this.btnDeleteAccount.ShadowDecoration.CustomizableEdges = customizableEdges38;
             this.btnDeleteAccount.Size = new System.Drawing.Size(192, 35);
             this.btnDeleteAccount.TabIndex = 13;
             this.btnDeleteAccount.Text = "Delete my account forever.";
@@ -641,7 +589,7 @@ namespace Anababi.UserControls
             // 
             // txtPasswordToDelete
             // 
-            this.txtPasswordToDelete.CustomizableEdges = customizableEdges43;
+            this.txtPasswordToDelete.CustomizableEdges = customizableEdges39;
             this.txtPasswordToDelete.DefaultText = "";
             this.txtPasswordToDelete.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPasswordToDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -655,7 +603,7 @@ namespace Anababi.UserControls
             this.txtPasswordToDelete.PasswordChar = '\0';
             this.txtPasswordToDelete.PlaceholderText = "Password";
             this.txtPasswordToDelete.SelectedText = "";
-            this.txtPasswordToDelete.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            this.txtPasswordToDelete.ShadowDecoration.CustomizableEdges = customizableEdges40;
             this.txtPasswordToDelete.Size = new System.Drawing.Size(192, 32);
             this.txtPasswordToDelete.TabIndex = 10;
             // 
@@ -664,7 +612,7 @@ namespace Anababi.UserControls
             this.guna2TextBox17.BackColor = System.Drawing.Color.White;
             this.guna2TextBox17.BorderColor = System.Drawing.Color.White;
             this.guna2TextBox17.BorderThickness = 0;
-            this.guna2TextBox17.CustomizableEdges = customizableEdges45;
+            this.guna2TextBox17.CustomizableEdges = customizableEdges41;
             this.guna2TextBox17.DefaultText = "This action cannot be undone.";
             this.guna2TextBox17.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox17.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -680,7 +628,7 @@ namespace Anababi.UserControls
             this.guna2TextBox17.PlaceholderText = "";
             this.guna2TextBox17.ReadOnly = true;
             this.guna2TextBox17.SelectedText = "";
-            this.guna2TextBox17.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            this.guna2TextBox17.ShadowDecoration.CustomizableEdges = customizableEdges42;
             this.guna2TextBox17.Size = new System.Drawing.Size(325, 43);
             this.guna2TextBox17.TabIndex = 3;
             this.guna2TextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -690,7 +638,7 @@ namespace Anababi.UserControls
             this.guna2TextBox16.BackColor = System.Drawing.Color.WhiteSmoke;
             this.guna2TextBox16.BorderColor = System.Drawing.Color.White;
             this.guna2TextBox16.BorderThickness = 0;
-            this.guna2TextBox16.CustomizableEdges = customizableEdges47;
+            this.guna2TextBox16.CustomizableEdges = customizableEdges43;
             this.guna2TextBox16.DefaultText = "WARNING!";
             this.guna2TextBox16.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox16.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -708,7 +656,7 @@ namespace Anababi.UserControls
             this.guna2TextBox16.PlaceholderText = "";
             this.guna2TextBox16.ReadOnly = true;
             this.guna2TextBox16.SelectedText = "";
-            this.guna2TextBox16.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            this.guna2TextBox16.ShadowDecoration.CustomizableEdges = customizableEdges44;
             this.guna2TextBox16.Size = new System.Drawing.Size(189, 53);
             this.guna2TextBox16.TabIndex = 2;
             this.guna2TextBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -740,11 +688,9 @@ namespace Anababi.UserControls
         private Guna.UI2.WinForms.Guna2Button profilepicture;
         private TabPage tabPage3;
         private Guna.UI2.WinForms.Guna2Button btnEditProfileDetails;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txtBio;
         private Guna.UI2.WinForms.Guna2TextBox txtLastName;
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
