@@ -81,6 +81,18 @@ This Library Management System is a versatile solution designed to cater to the 
    ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/5be2f01e-0c00-4a3a-a022-90cdfad72131)
 
 
+
+8. Login to the app as an admin.
+
+    **Username = "abebe123"**
+    **Password = "password123"**
+
+9. Login to the app as a normal user.
+    
+    **Username = "sara123"**
+    **Password = "letmein"**
+
+
 ### How to test sorting functionality
 
 1. Navigate to the top of the app where you find the search button and click the drop down menu with the sorting icon next to it.
