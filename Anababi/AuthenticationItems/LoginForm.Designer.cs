@@ -36,7 +36,6 @@
             this.loginLabelPnl = new System.Windows.Forms.Panel();
             this.loginShowPwdCheckBox = new System.Windows.Forms.CheckBox();
             this.loginPwdTextBox = new System.Windows.Forms.TextBox();
-            this.loginUserNameLbl = new System.Windows.Forms.Label();
             this.loginLbl = new System.Windows.Forms.Label();
             this.btnPnl.SuspendLayout();
             this.loginLabelPnl.SuspendLayout();
@@ -47,6 +46,7 @@
             this.btnPnl.Controls.Add(this.loginClearBtn);
             this.btnPnl.Controls.Add(this.loginBtn);
             this.btnPnl.Controls.Add(this.LabelDonthaveAccLinkLbl);
+            this.btnPnl.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPnl.Location = new System.Drawing.Point(126, 249);
             this.btnPnl.Name = "btnPnl";
             this.btnPnl.Size = new System.Drawing.Size(347, 168);
@@ -58,7 +58,7 @@
             this.loginClearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginClearBtn.FlatAppearance.BorderSize = 0;
             this.loginClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginClearBtn.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginClearBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.loginClearBtn.ForeColor = System.Drawing.Color.Black;
             this.loginClearBtn.Location = new System.Drawing.Point(62, 59);
             this.loginClearBtn.Name = "loginClearBtn";
@@ -74,7 +74,7 @@
             this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginBtn.FlatAppearance.BorderSize = 0;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.loginBtn.ForeColor = System.Drawing.Color.Transparent;
             this.loginBtn.Location = new System.Drawing.Point(62, 16);
             this.loginBtn.Name = "loginBtn";
@@ -87,13 +87,13 @@
             // LabelDonthaveAccLinkLbl
             // 
             this.LabelDonthaveAccLinkLbl.AutoSize = true;
-            this.LabelDonthaveAccLinkLbl.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelDonthaveAccLinkLbl.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LabelDonthaveAccLinkLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.LabelDonthaveAccLinkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.LabelDonthaveAccLinkLbl.LinkColor = System.Drawing.Color.Black;
             this.LabelDonthaveAccLinkLbl.Location = new System.Drawing.Point(114, 99);
             this.LabelDonthaveAccLinkLbl.Name = "LabelDonthaveAccLinkLbl";
-            this.LabelDonthaveAccLinkLbl.Size = new System.Drawing.Size(122, 13);
+            this.LabelDonthaveAccLinkLbl.Size = new System.Drawing.Size(145, 17);
             this.LabelDonthaveAccLinkLbl.TabIndex = 27;
             this.LabelDonthaveAccLinkLbl.TabStop = true;
             this.LabelDonthaveAccLinkLbl.Text = "Don\'t have an account";
@@ -103,20 +103,22 @@
             // loginUserNameTextBox
             // 
             this.loginUserNameTextBox.BackColor = System.Drawing.Color.White;
-            this.loginUserNameTextBox.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginUserNameTextBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.loginUserNameTextBox.Location = new System.Drawing.Point(16, 25);
             this.loginUserNameTextBox.Multiline = true;
             this.loginUserNameTextBox.Name = "loginUserNameTextBox";
+            this.loginUserNameTextBox.PlaceholderText = "Username";
             this.loginUserNameTextBox.Size = new System.Drawing.Size(295, 34);
             this.loginUserNameTextBox.TabIndex = 8;
+            this.loginUserNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.loginUserNameTextBox_KeyPress);
             // 
             // loginLabelPnl
             // 
             this.loginLabelPnl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.loginLabelPnl.Controls.Add(this.loginShowPwdCheckBox);
             this.loginLabelPnl.Controls.Add(this.loginPwdTextBox);
-            this.loginLabelPnl.Controls.Add(this.loginUserNameLbl);
             this.loginLabelPnl.Controls.Add(this.loginUserNameTextBox);
+            this.loginLabelPnl.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.loginLabelPnl.Location = new System.Drawing.Point(126, 100);
             this.loginLabelPnl.Name = "loginLabelPnl";
             this.loginLabelPnl.Size = new System.Drawing.Size(347, 143);
@@ -127,11 +129,11 @@
             this.loginShowPwdCheckBox.AutoSize = true;
             this.loginShowPwdCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginShowPwdCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginShowPwdCheckBox.Font = new System.Drawing.Font("Trebuchet MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginShowPwdCheckBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.loginShowPwdCheckBox.ForeColor = System.Drawing.Color.Gray;
             this.loginShowPwdCheckBox.Location = new System.Drawing.Point(16, 112);
             this.loginShowPwdCheckBox.Name = "loginShowPwdCheckBox";
-            this.loginShowPwdCheckBox.Size = new System.Drawing.Size(97, 20);
+            this.loginShowPwdCheckBox.Size = new System.Drawing.Size(114, 21);
             this.loginShowPwdCheckBox.TabIndex = 29;
             this.loginShowPwdCheckBox.Text = "Show Password";
             this.loginShowPwdCheckBox.UseVisualStyleBackColor = true;
@@ -140,38 +142,26 @@
             // loginPwdTextBox
             // 
             this.loginPwdTextBox.BackColor = System.Drawing.Color.White;
-            this.loginPwdTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginPwdTextBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.loginPwdTextBox.ForeColor = System.Drawing.Color.Gray;
             this.loginPwdTextBox.Location = new System.Drawing.Point(16, 73);
             this.loginPwdTextBox.Multiline = true;
             this.loginPwdTextBox.Name = "loginPwdTextBox";
+            this.loginPwdTextBox.PlaceholderText = "Password";
             this.loginPwdTextBox.Size = new System.Drawing.Size(295, 33);
             this.loginPwdTextBox.TabIndex = 9;
-            this.loginPwdTextBox.Text = "Password";
             this.loginPwdTextBox.TextChanged += new System.EventHandler(this.loginPwdTextBox_TextChanged);
-            this.loginPwdTextBox.Enter += new System.EventHandler(this.loginPwdTextBox_Enter);
-            // 
-            // loginUserNameLbl
-            // 
-            this.loginUserNameLbl.AutoSize = true;
-            this.loginUserNameLbl.Font = new System.Drawing.Font("Trebuchet MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loginUserNameLbl.ForeColor = System.Drawing.Color.Gray;
-            this.loginUserNameLbl.Location = new System.Drawing.Point(16, 6);
-            this.loginUserNameLbl.Name = "loginUserNameLbl";
-            this.loginUserNameLbl.Size = new System.Drawing.Size(56, 16);
-            this.loginUserNameLbl.TabIndex = 2;
-            this.loginUserNameLbl.Text = "Username";
-            this.loginUserNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.loginPwdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.loginPwdTextBox_KeyPress);
             // 
             // loginLbl
             // 
             this.loginLbl.AutoSize = true;
             this.loginLbl.BackColor = System.Drawing.Color.Transparent;
-            this.loginLbl.Font = new System.Drawing.Font("Sitka Subheading", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.loginLbl.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.loginLbl.ForeColor = System.Drawing.Color.Black;
-            this.loginLbl.Location = new System.Drawing.Point(240, 37);
+            this.loginLbl.Location = new System.Drawing.Point(257, 40);
             this.loginLbl.Name = "loginLbl";
-            this.loginLbl.Size = new System.Drawing.Size(114, 47);
+            this.loginLbl.Size = new System.Drawing.Size(81, 28);
             this.loginLbl.TabIndex = 35;
             this.loginLbl.Text = "Log in";
             this.loginLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,7 +178,7 @@
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserLoginForm";
+            this.Text = "Anababi";
             this.btnPnl.ResumeLayout(false);
             this.btnPnl.PerformLayout();
             this.loginLabelPnl.ResumeLayout(false);
@@ -205,7 +195,6 @@
         private System.Windows.Forms.LinkLabel LabelDonthaveAccLinkLbl;
         private System.Windows.Forms.TextBox loginUserNameTextBox;
         private System.Windows.Forms.Panel loginLabelPnl;
-        private System.Windows.Forms.Label loginUserNameLbl;
         private System.Windows.Forms.Label loginLbl;
         private System.Windows.Forms.TextBox loginPwdTextBox;
         private System.Windows.Forms.CheckBox loginShowPwdCheckBox;

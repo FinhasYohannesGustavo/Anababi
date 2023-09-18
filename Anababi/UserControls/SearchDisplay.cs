@@ -121,6 +121,26 @@ namespace Anababi.UserControls
                 UserExperience.AddToPanel(resultsGridArtists, PanelArtistsSection);
 
                 //Create a ResultsGrid object from the list of VisualArts.
+                List<Reference> toBeRemoved = new List<Reference>();
+                foreach(Reference r in foundReference)
+                {
+                    if(r== null)
+                    {
+                        toBeRemoved.Add(r);
+                    }
+                    else
+                    {
+                        r.Creator = Reference.GetCreator(r);
+
+                    }
+
+                }
+                foreach (Reference r in toBeRemoved)
+                {
+                    foundReference.Remove(r);
+
+                }
+               
                 resultsGridArtworks = new ResultsGrid(foundReference);
                 //Add the ResultsGrid object to PanelArtworksSection.
                 UserExperience.AddToPanel(resultsGridArtworks, PanelArtworksSection);

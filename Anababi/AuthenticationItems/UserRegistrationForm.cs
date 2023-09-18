@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Anababi.AuthenticationItems;
 using Anababi.Data;
 using Anababi.ModelClasses;
 
@@ -155,7 +156,7 @@ namespace Anababi.RegistrationItems
             userNameTextBox.Text = "";
             fnameTextBox.Text = "";
             lnameTextBox.Text = "";
-            //eailTextBox.Text = "";
+            TextBoxEmail.Text = "";
            
             //countryComboBox.Text = "";
             //phoneNumComboBox.Text = "";
@@ -169,6 +170,21 @@ namespace Anababi.RegistrationItems
             this.Close();
         }
 
+        private void fnameTextBox_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // Prevent the new line from being inserted
+                signUpBtn.PerformClick(); // Programmatically click the button
+            }
+        }
 
+        private void haveAccLinkLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginForm loginform = new LoginForm();
+            this.Hide();
+            loginform.FormClosed += NewForm_FormClosed;
+            loginform.Show();
+        }
     }
 }
