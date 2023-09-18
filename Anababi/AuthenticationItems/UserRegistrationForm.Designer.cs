@@ -45,12 +45,12 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.signUpLbl = new System.Windows.Forms.Label();
             this.labelPnl = new System.Windows.Forms.Panel();
+            this.LabelUserEmail = new System.Windows.Forms.Label();
             this.textBoxPnl = new System.Windows.Forms.Panel();
+            this.TextBoxEmail = new System.Windows.Forms.TextBox();
             this.confirmPwdCheckBox = new System.Windows.Forms.CheckBox();
             this.confirmPwdTextBox = new System.Windows.Forms.TextBox();
             this.btnPnl = new System.Windows.Forms.Panel();
-            this.LabelUserEmail = new System.Windows.Forms.Label();
-            this.TextBoxEmail = new System.Windows.Forms.TextBox();
             this.labelPnl.SuspendLayout();
             this.textBoxPnl.SuspendLayout();
             this.btnPnl.SuspendLayout();
@@ -59,11 +59,11 @@
             // userNameLbl
             // 
             this.userNameLbl.AutoSize = true;
-            this.userNameLbl.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userNameLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.userNameLbl.ForeColor = System.Drawing.Color.Gray;
             this.userNameLbl.Location = new System.Drawing.Point(13, 114);
             this.userNameLbl.Name = "userNameLbl";
-            this.userNameLbl.Size = new System.Drawing.Size(70, 18);
+            this.userNameLbl.Size = new System.Drawing.Size(71, 16);
             this.userNameLbl.TabIndex = 2;
             this.userNameLbl.Text = "Username";
             this.userNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -71,23 +71,23 @@
             // fnameTextBox
             // 
             this.fnameTextBox.BackColor = System.Drawing.Color.White;
-            this.fnameTextBox.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fnameTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fnameTextBox.Location = new System.Drawing.Point(24, 33);
             this.fnameTextBox.Multiline = true;
             this.fnameTextBox.Name = "fnameTextBox";
             this.fnameTextBox.Size = new System.Drawing.Size(111, 25);
             this.fnameTextBox.TabIndex = 3;
             this.fnameTextBox.TextChanged += new System.EventHandler(this.fnameTextBox_TextChanged);
-            this.fnameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fnameTextBox_KeyPress);
+            this.fnameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fnameTextBox_KeyPress_1);
             // 
             // firstNamelbl
             // 
             this.firstNamelbl.AutoSize = true;
-            this.firstNamelbl.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.firstNamelbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.firstNamelbl.ForeColor = System.Drawing.Color.Gray;
             this.firstNamelbl.Location = new System.Drawing.Point(13, 37);
             this.firstNamelbl.Name = "firstNamelbl";
-            this.firstNamelbl.Size = new System.Drawing.Size(75, 18);
+            this.firstNamelbl.Size = new System.Drawing.Size(75, 16);
             this.firstNamelbl.TabIndex = 4;
             this.firstNamelbl.Text = "First Name";
             this.firstNamelbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -95,11 +95,11 @@
             // lastNamelbl
             // 
             this.lastNamelbl.AutoSize = true;
-            this.lastNamelbl.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lastNamelbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lastNamelbl.ForeColor = System.Drawing.Color.Gray;
             this.lastNamelbl.Location = new System.Drawing.Point(13, 75);
             this.lastNamelbl.Name = "lastNamelbl";
-            this.lastNamelbl.Size = new System.Drawing.Size(73, 18);
+            this.lastNamelbl.Size = new System.Drawing.Size(75, 16);
             this.lastNamelbl.TabIndex = 5;
             this.lastNamelbl.Text = "Last Name";
             this.lastNamelbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -107,32 +107,33 @@
             // lnameTextBox
             // 
             this.lnameTextBox.BackColor = System.Drawing.Color.White;
-            this.lnameTextBox.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lnameTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lnameTextBox.Location = new System.Drawing.Point(24, 68);
             this.lnameTextBox.Multiline = true;
             this.lnameTextBox.Name = "lnameTextBox";
             this.lnameTextBox.Size = new System.Drawing.Size(111, 25);
             this.lnameTextBox.TabIndex = 6;
-            this.lnameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lnameTextBox_KeyPress);
+            this.lnameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fnameTextBox_KeyPress_1);
             // 
             // userNameTextBox
             // 
             this.userNameTextBox.BackColor = System.Drawing.Color.White;
-            this.userNameTextBox.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userNameTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.userNameTextBox.Location = new System.Drawing.Point(24, 110);
             this.userNameTextBox.Multiline = true;
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(111, 25);
             this.userNameTextBox.TabIndex = 8;
+            this.userNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fnameTextBox_KeyPress_1);
             // 
             // pwdLbl
             // 
             this.pwdLbl.AutoSize = true;
-            this.pwdLbl.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pwdLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pwdLbl.ForeColor = System.Drawing.Color.Gray;
             this.pwdLbl.Location = new System.Drawing.Point(13, 199);
             this.pwdLbl.Name = "pwdLbl";
-            this.pwdLbl.Size = new System.Drawing.Size(66, 18);
+            this.pwdLbl.Size = new System.Drawing.Size(67, 16);
             this.pwdLbl.TabIndex = 22;
             this.pwdLbl.Text = "Password";
             this.pwdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -140,11 +141,11 @@
             // cofirmPwdLbl
             // 
             this.cofirmPwdLbl.AutoSize = true;
-            this.cofirmPwdLbl.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cofirmPwdLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cofirmPwdLbl.ForeColor = System.Drawing.Color.Gray;
             this.cofirmPwdLbl.Location = new System.Drawing.Point(13, 262);
             this.cofirmPwdLbl.Name = "cofirmPwdLbl";
-            this.cofirmPwdLbl.Size = new System.Drawing.Size(119, 18);
+            this.cofirmPwdLbl.Size = new System.Drawing.Size(122, 16);
             this.cofirmPwdLbl.TabIndex = 24;
             this.cofirmPwdLbl.Text = "Confirm Password";
             this.cofirmPwdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -152,13 +153,14 @@
             // pwdTextBox
             // 
             this.pwdTextBox.BackColor = System.Drawing.Color.White;
-            this.pwdTextBox.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pwdTextBox.Location = new System.Drawing.Point(22, 199);
+            this.pwdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pwdTextBox.Location = new System.Drawing.Point(24, 199);
             this.pwdTextBox.Multiline = true;
             this.pwdTextBox.Name = "pwdTextBox";
             this.pwdTextBox.PasswordChar = '*';
             this.pwdTextBox.Size = new System.Drawing.Size(111, 25);
             this.pwdTextBox.TabIndex = 25;
+            this.pwdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fnameTextBox_KeyPress_1);
             // 
             // signUpBtn
             // 
@@ -166,7 +168,7 @@
             this.signUpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signUpBtn.FlatAppearance.BorderSize = 0;
             this.signUpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signUpBtn.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.signUpBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.signUpBtn.ForeColor = System.Drawing.Color.Transparent;
             this.signUpBtn.Location = new System.Drawing.Point(60, 17);
             this.signUpBtn.Name = "signUpBtn";
@@ -179,28 +181,29 @@
             // haveAccLinkLbl
             // 
             this.haveAccLinkLbl.AutoSize = true;
-            this.haveAccLinkLbl.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.haveAccLinkLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.haveAccLinkLbl.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.haveAccLinkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.haveAccLinkLbl.LinkColor = System.Drawing.Color.Black;
-            this.haveAccLinkLbl.Location = new System.Drawing.Point(120, 106);
+            this.haveAccLinkLbl.Location = new System.Drawing.Point(103, 106);
             this.haveAccLinkLbl.Name = "haveAccLinkLbl";
-            this.haveAccLinkLbl.Size = new System.Drawing.Size(132, 13);
+            this.haveAccLinkLbl.Size = new System.Drawing.Size(174, 16);
             this.haveAccLinkLbl.TabIndex = 27;
             this.haveAccLinkLbl.TabStop = true;
             this.haveAccLinkLbl.Text = "Already have an account";
             this.haveAccLinkLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.haveAccLinkLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.haveAccLinkLbl_LinkClicked);
             // 
             // showPwdCheckBox
             // 
             this.showPwdCheckBox.AutoSize = true;
             this.showPwdCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPwdCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPwdCheckBox.Font = new System.Drawing.Font("Trebuchet MS", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.showPwdCheckBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.showPwdCheckBox.ForeColor = System.Drawing.Color.Gray;
-            this.showPwdCheckBox.Location = new System.Drawing.Point(22, 230);
+            this.showPwdCheckBox.Location = new System.Drawing.Point(24, 230);
             this.showPwdCheckBox.Name = "showPwdCheckBox";
-            this.showPwdCheckBox.Size = new System.Drawing.Size(74, 17);
+            this.showPwdCheckBox.Size = new System.Drawing.Size(120, 20);
             this.showPwdCheckBox.TabIndex = 28;
             this.showPwdCheckBox.Text = "Show Password";
             this.showPwdCheckBox.UseVisualStyleBackColor = true;
@@ -212,7 +215,7 @@
             this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearBtn.FlatAppearance.BorderSize = 0;
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearBtn.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clearBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clearBtn.ForeColor = System.Drawing.Color.Black;
             this.clearBtn.Location = new System.Drawing.Point(60, 63);
             this.clearBtn.Name = "clearBtn";
@@ -226,11 +229,11 @@
             // 
             this.signUpLbl.AutoSize = true;
             this.signUpLbl.BackColor = System.Drawing.Color.Transparent;
-            this.signUpLbl.Font = new System.Drawing.Font("Sitka Subheading", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.signUpLbl.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.signUpLbl.ForeColor = System.Drawing.Color.Black;
-            this.signUpLbl.Location = new System.Drawing.Point(199, 20);
+            this.signUpLbl.Location = new System.Drawing.Point(263, 21);
             this.signUpLbl.Name = "signUpLbl";
-            this.signUpLbl.Size = new System.Drawing.Size(133, 47);
+            this.signUpLbl.Size = new System.Drawing.Size(88, 25);
             this.signUpLbl.TabIndex = 30;
             this.signUpLbl.Text = "Sign up";
             this.signUpLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,11 +247,24 @@
             this.labelPnl.Controls.Add(this.firstNamelbl);
             this.labelPnl.Controls.Add(this.lastNamelbl);
             this.labelPnl.Controls.Add(this.pwdLbl);
-            this.labelPnl.Location = new System.Drawing.Point(79, 71);
+            this.labelPnl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelPnl.Location = new System.Drawing.Point(120, 71);
             this.labelPnl.Name = "labelPnl";
             this.labelPnl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelPnl.Size = new System.Drawing.Size(181, 325);
             this.labelPnl.TabIndex = 32;
+            // 
+            // LabelUserEmail
+            // 
+            this.LabelUserEmail.AutoSize = true;
+            this.LabelUserEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LabelUserEmail.ForeColor = System.Drawing.Color.Gray;
+            this.LabelUserEmail.Location = new System.Drawing.Point(13, 157);
+            this.LabelUserEmail.Name = "LabelUserEmail";
+            this.LabelUserEmail.Size = new System.Drawing.Size(43, 16);
+            this.LabelUserEmail.TabIndex = 25;
+            this.LabelUserEmail.Text = "Email";
+            this.LabelUserEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBoxPnl
             // 
@@ -260,21 +276,33 @@
             this.textBoxPnl.Controls.Add(this.showPwdCheckBox);
             this.textBoxPnl.Controls.Add(this.userNameTextBox);
             this.textBoxPnl.Controls.Add(this.pwdTextBox);
-            this.textBoxPnl.Location = new System.Drawing.Point(266, 71);
+            this.textBoxPnl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPnl.Location = new System.Drawing.Point(307, 71);
             this.textBoxPnl.Name = "textBoxPnl";
             this.textBoxPnl.Size = new System.Drawing.Size(200, 325);
             this.textBoxPnl.TabIndex = 33;
+            // 
+            // TextBoxEmail
+            // 
+            this.TextBoxEmail.BackColor = System.Drawing.Color.White;
+            this.TextBoxEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TextBoxEmail.Location = new System.Drawing.Point(24, 153);
+            this.TextBoxEmail.Multiline = true;
+            this.TextBoxEmail.Name = "TextBoxEmail";
+            this.TextBoxEmail.Size = new System.Drawing.Size(111, 25);
+            this.TextBoxEmail.TabIndex = 37;
+            this.TextBoxEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fnameTextBox_KeyPress_1);
             // 
             // confirmPwdCheckBox
             // 
             this.confirmPwdCheckBox.AutoSize = true;
             this.confirmPwdCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confirmPwdCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmPwdCheckBox.Font = new System.Drawing.Font("Trebuchet MS", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.confirmPwdCheckBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.confirmPwdCheckBox.ForeColor = System.Drawing.Color.Gray;
-            this.confirmPwdCheckBox.Location = new System.Drawing.Point(22, 293);
+            this.confirmPwdCheckBox.Location = new System.Drawing.Point(24, 293);
             this.confirmPwdCheckBox.Name = "confirmPwdCheckBox";
-            this.confirmPwdCheckBox.Size = new System.Drawing.Size(74, 17);
+            this.confirmPwdCheckBox.Size = new System.Drawing.Size(120, 20);
             this.confirmPwdCheckBox.TabIndex = 36;
             this.confirmPwdCheckBox.Text = "Show Password";
             this.confirmPwdCheckBox.UseVisualStyleBackColor = true;
@@ -283,52 +311,32 @@
             // confirmPwdTextBox
             // 
             this.confirmPwdTextBox.BackColor = System.Drawing.Color.White;
-            this.confirmPwdTextBox.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.confirmPwdTextBox.Location = new System.Drawing.Point(22, 262);
+            this.confirmPwdTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.confirmPwdTextBox.Location = new System.Drawing.Point(24, 262);
             this.confirmPwdTextBox.Multiline = true;
             this.confirmPwdTextBox.Name = "confirmPwdTextBox";
             this.confirmPwdTextBox.PasswordChar = '*';
             this.confirmPwdTextBox.Size = new System.Drawing.Size(111, 25);
             this.confirmPwdTextBox.TabIndex = 35;
+            this.confirmPwdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fnameTextBox_KeyPress_1);
             // 
             // btnPnl
             // 
             this.btnPnl.Controls.Add(this.signUpBtn);
             this.btnPnl.Controls.Add(this.clearBtn);
             this.btnPnl.Controls.Add(this.haveAccLinkLbl);
-            this.btnPnl.Location = new System.Drawing.Point(79, 402);
+            this.btnPnl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPnl.Location = new System.Drawing.Point(120, 402);
             this.btnPnl.Name = "btnPnl";
             this.btnPnl.Size = new System.Drawing.Size(387, 129);
             this.btnPnl.TabIndex = 34;
-            // 
-            // LabelUserEmail
-            // 
-            this.LabelUserEmail.AutoSize = true;
-            this.LabelUserEmail.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelUserEmail.ForeColor = System.Drawing.Color.Gray;
-            this.LabelUserEmail.Location = new System.Drawing.Point(13, 157);
-            this.LabelUserEmail.Name = "LabelUserEmail";
-            this.LabelUserEmail.Size = new System.Drawing.Size(41, 18);
-            this.LabelUserEmail.TabIndex = 25;
-            this.LabelUserEmail.Text = "Email";
-            this.LabelUserEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // TextBoxEmail
-            // 
-            this.TextBoxEmail.BackColor = System.Drawing.Color.White;
-            this.TextBoxEmail.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TextBoxEmail.Location = new System.Drawing.Point(24, 153);
-            this.TextBoxEmail.Multiline = true;
-            this.TextBoxEmail.Name = "TextBoxEmail";
-            this.TextBoxEmail.Size = new System.Drawing.Size(111, 25);
-            this.TextBoxEmail.TabIndex = 37;
             // 
             // UserRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(548, 556);
+            this.ClientSize = new System.Drawing.Size(623, 556);
             this.Controls.Add(this.btnPnl);
             this.Controls.Add(this.textBoxPnl);
             this.Controls.Add(this.labelPnl);

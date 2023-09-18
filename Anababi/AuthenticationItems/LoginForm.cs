@@ -19,13 +19,7 @@ namespace Anababi.AuthenticationItems
         {
             InitializeComponent();
         }
-        private void loginPwdTextBox_Enter(object sender, EventArgs e)
-        {
-            if (loginPwdTextBox.Text == "Password")
-            {
-                loginPwdTextBox.Text = "";
-            }
-        }
+      
 
         private void loginPwdTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -44,18 +38,7 @@ namespace Anababi.AuthenticationItems
             }
         }
 
-        private void clearBtn_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("yay!");
-            loginPwdTextBox.Text = "";
-            loginUserNameTextBox.Text = "";
-        }
-
-        private void clearBtn_Click1(object sender, EventArgs e)
-        {
-            loginPwdTextBox.Text = "";
-            loginUserNameTextBox.Text = "";
-        }
+    
 
         private void loginClearBtn_Click(object sender, EventArgs e)
         {
@@ -102,6 +85,25 @@ namespace Anababi.AuthenticationItems
             this.Hide();
             userRegistrationForm.FormClosed += NewForm_FormClosed;
             userRegistrationForm.Show();
+        }
+
+        private void loginPwdTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // Prevent the new line from being inserted
+                loginBtn.PerformClick(); // Programmatically click the button
+            }
+        }
+
+        private void loginUserNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // Prevent the new line from being inserted
+                loginBtn.PerformClick(); // Programmatically click the button
+            }
         }
     }
 }

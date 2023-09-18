@@ -143,8 +143,8 @@ namespace Anababi
         {
 
             List<Button> buttonList = new List<Button>();
-            if (references != null&& references[0]==null)
-                return buttonList;
+            //if (references != null&& references[0]==null)
+            //    return buttonList;
             for (int i = 0; i < references.Count(); i++)
             {
                 Button button = new Button();
