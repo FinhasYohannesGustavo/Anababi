@@ -85,11 +85,13 @@ This Library Management System is a versatile solution designed to cater to the 
 8. Login to the app as an admin.
 
     **Username = "abebe123"**
+    
     **Password = "password123"**
 
 9. Login to the app as a normal user.
     
     **Username = "sara123"**
+
     **Password = "letmein"**
 
 
