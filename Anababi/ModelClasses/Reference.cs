@@ -46,25 +46,18 @@ namespace Anababi.ModelClasses
 
         public static Creator GetCreator(Reference reference)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["AnababiContext"].ConnectionString;
-            int creatorId;
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            
+            Creator creator = null!;
+            using (AnababiContext context = new AnababiContext())
             {
-                connection.Open();
-                int id = reference.Id;
-
-                string query = "SELECT CreatorId FROM [AnababiLMS].[dbo].[References] WHERE Id = " + id.ToString();
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    creatorId = (int?)command.ExecuteScalar() ?? 0;
-                }
+                creator = (
+                    context.References.Where(r => r.Id == reference.Id)
+                    .Include(r => r.Creator)
+                    .FirstOrDefault()
+                    ).Creator;
             }
 
-            using (var context = new AnababiContext())
-            {
-                return context.Creators.FirstOrDefault(c => c.Id == creatorId);
-            }
+            return creator;
         }
 
         public Reference(Reference reference)

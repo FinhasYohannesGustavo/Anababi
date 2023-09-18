@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,9 +19,6 @@ namespace Anababi.RegistrationItems
         {
             InitializeComponent();
         }
-        OleDbConnection con = new OleDbConnection();
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
 
 
         private void year_Click(object sender, EventArgs e)

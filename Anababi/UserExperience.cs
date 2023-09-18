@@ -11,11 +11,10 @@ using System.Windows.Forms;
 using Anababi.Properties;
 using Anababi.UserControls;
 using Anababi.Data;
-using Anababi.UserControls.AdminControls;
 using static Anababi.ModelClasses.PhysicalReference;
 using Anababi.ModelClasses;
 using Anababi.SortingAlgorithms;
-using DrakeUI.Framework;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Anababi
 {
@@ -160,7 +159,7 @@ namespace Anababi
         {
 
             List<Button> buttonList = new List<Button>();
-            if (!references.IsEmpty() && references[0] == null)
+            if (!references.IsNullOrEmpty() && references[0] == null)
                 return buttonList;
             for (int i = 0; i < references.Count(); i++)
             {
