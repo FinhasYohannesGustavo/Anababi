@@ -206,7 +206,7 @@
             sortIcon.Dock = DockStyle.Right;
             sortIcon.Image = Properties.Resources.sortingIcon;
             sortIcon.ImageRotate = 0F;
-            sortIcon.Location = new Point(592, 20);
+            sortIcon.Location = new Point(543, 20);
             sortIcon.Name = "sortIcon";
             sortIcon.ShadowDecoration.CustomizableEdges = customizableEdges2;
             sortIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -232,11 +232,11 @@
             cmbSort.Items.AddRange(new object[] { "Author", "Published Date", "Title" });
             cmbSort.ItemsAppearance.Font = new Font("Maiandra GD", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             cmbSort.ItemsAppearance.SelectedBackColor = Color.LightSkyBlue;
-            cmbSort.Location = new Point(685, 20);
+            cmbSort.Location = new Point(636, 20);
             cmbSort.Margin = new Padding(3, 4, 3, 4);
             cmbSort.Name = "cmbSort";
             cmbSort.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            cmbSort.Size = new Size(161, 36);
+            cmbSort.Size = new Size(210, 36);
             cmbSort.Sorted = true;
             cmbSort.TabIndex = 10;
             cmbSort.Tag = "Sort By";

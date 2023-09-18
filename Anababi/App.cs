@@ -17,6 +17,7 @@ namespace Anababi
 
         private void App_Load(object sender, EventArgs e)
         {
+            this.Icon = Resources.font_symbol_of_letter_a;
             using AnababiContext context = new AnababiContext();
             
             //Populate the database with dummy objects only if it is empty
