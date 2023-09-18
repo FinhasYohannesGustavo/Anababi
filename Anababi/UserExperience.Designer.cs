@@ -37,7 +37,6 @@
             SplitContainerAll = new SplitContainer();
             PanelNavButtons = new Panel();
             PanelNavAppInfo = new Panel();
-            linkLabelAboutPage = new LinkLabel();
             label1 = new Label();
             LblAppName = new Label();
             PanelNavUserInfo = new Panel();
@@ -99,7 +98,6 @@
             // PanelNavAppInfo
             // 
             PanelNavAppInfo.BackColor = SystemColors.ControlLight;
-            PanelNavAppInfo.Controls.Add(linkLabelAboutPage);
             PanelNavAppInfo.Controls.Add(label1);
             PanelNavAppInfo.Controls.Add(LblAppName);
             PanelNavAppInfo.Dock = DockStyle.Bottom;
@@ -108,27 +106,15 @@
             PanelNavAppInfo.Size = new Size(244, 99);
             PanelNavAppInfo.TabIndex = 16;
             // 
-            // linkLabelAboutPage
-            // 
-            linkLabelAboutPage.AutoSize = true;
-            linkLabelAboutPage.LinkColor = Color.FromArgb(64, 64, 64);
-            linkLabelAboutPage.Location = new Point(118, 68);
-            linkLabelAboutPage.Name = "linkLabelAboutPage";
-            linkLabelAboutPage.Size = new Size(50, 20);
-            linkLabelAboutPage.TabIndex = 1;
-            linkLabelAboutPage.TabStop = true;
-            linkLabelAboutPage.Text = "About";
-            linkLabelAboutPage.VisitedLinkColor = Color.DarkOrchid;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(6, 69);
             label1.Name = "label1";
-            label1.Size = new Size(115, 17);
+            label1.Size = new Size(106, 17);
             label1.TabIndex = 0;
-            label1.Text = "Version 1.0 x64 -";
+            label1.Text = "Version 1.0 x64";
             // 
             // LblAppName
             // 
@@ -158,7 +144,7 @@
             LblUsername.AutoSize = true;
             LblUsername.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
             LblUsername.ForeColor = SystemColors.ControlDarkDark;
-            LblUsername.Location = new Point(76, 125);
+            LblUsername.Location = new Point(75, 118);
             LblUsername.Name = "LblUsername";
             LblUsername.Size = new Size(93, 18);
             LblUsername.TabIndex = 17;
@@ -220,7 +206,7 @@
             sortIcon.Dock = DockStyle.Right;
             sortIcon.Image = Properties.Resources.sortingIcon;
             sortIcon.ImageRotate = 0F;
-            sortIcon.Location = new Point(619, 20);
+            sortIcon.Location = new Point(592, 20);
             sortIcon.Name = "sortIcon";
             sortIcon.ShadowDecoration.CustomizableEdges = customizableEdges2;
             sortIcon.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -233,19 +219,20 @@
             // 
             cmbSort.BackColor = Color.Transparent;
             cmbSort.BorderColor = Color.Transparent;
+            cmbSort.BorderRadius = 7;
             cmbSort.CustomizableEdges = customizableEdges3;
             cmbSort.Dock = DockStyle.Right;
             cmbSort.DrawMode = DrawMode.OwnerDrawFixed;
             cmbSort.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSort.FocusedColor = Color.FromArgb(94, 148, 255);
             cmbSort.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cmbSort.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbSort.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             cmbSort.ForeColor = Color.FromArgb(68, 88, 112);
             cmbSort.ItemHeight = 30;
             cmbSort.Items.AddRange(new object[] { "Author", "Published Date", "Title" });
             cmbSort.ItemsAppearance.Font = new Font("Maiandra GD", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             cmbSort.ItemsAppearance.SelectedBackColor = Color.LightSkyBlue;
-            cmbSort.Location = new Point(712, 20);
+            cmbSort.Location = new Point(685, 20);
             cmbSort.Margin = new Padding(3, 4, 3, 4);
             cmbSort.Name = "cmbSort";
             cmbSort.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -285,12 +272,12 @@
             BtnSearch.ImageOffset = new Point(0, 0);
             BtnSearch.ImageRotate = 0F;
             BtnSearch.ImageSize = new Size(35, 35);
-            BtnSearch.Location = new Point(873, 20);
+            BtnSearch.Location = new Point(846, 20);
             BtnSearch.Margin = new Padding(6, 5, 6, 5);
             BtnSearch.Name = "BtnSearch";
             BtnSearch.PressedState.ImageSize = new Size(40, 40);
             BtnSearch.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            BtnSearch.Size = new Size(57, 45);
+            BtnSearch.Size = new Size(84, 45);
             BtnSearch.TabIndex = 9;
             BtnSearch.Click += BtnSearch_Click;
             // 
@@ -331,7 +318,6 @@
         private Label label1;
         private Label LblAppName;
         private Label LblUsername;
-        private LinkLabel linkLabelAboutPage;
         private Panel PanelNavButtons;
         private Guna.UI2.WinForms.Guna2ComboBox cmbSort;
         private Guna.UI2.WinForms.Guna2CirclePictureBox sortIcon;
