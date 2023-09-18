@@ -12,8 +12,8 @@ namespace Anababi
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //Application.Run(new App());
-            Application.Run(new LoginForm());
+            //Application.Run(new App(ekele));
+           Application.Run(new LoginForm());
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TheArtOfDevHtmlRenderer.Adapters;
 using Anababi.ModelClasses;
 using Anababi.Data;
+using System.Drawing.Design;
 
 namespace Anababi.UserControls
 {
@@ -68,12 +69,11 @@ namespace Anababi.UserControls
 
                     else
                     {
-                        MessageBox.Show("Make sure the passwords you have entered match and try again.");
+                        MessageBox.Show("Make sure the passwords you have entered match.");
                     }
                 }
 
             }
-
 
 
         }
@@ -89,11 +89,8 @@ namespace Anababi.UserControls
                     userToBeUpdated.ProfilePic = UserExperience.ImageToByteArray(guna2PictureBox1.Image);
                     currentUser.ProfilePic = UserExperience.ImageToByteArray(guna2PictureBox1.Image);
                     AnababiContext.SaveChanges();
-                    //currentUser = UserExperience.GetUserByUserName(currentUser.Username);
                     UserExperience CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
-                    //CurrentExperience.Invalidate();
-                    //CurrentExperience = new UserExperience(currentUser);
-                    CurrentExperience.LoadUserExperience("Title");
+                    CurrentExperience.LoadUserExperience(CurrentExperience.SortBy);
                     
                 }
 
@@ -101,8 +98,6 @@ namespace Anababi.UserControls
             }
 
         }
-
-
 
 
         private void btnEditProfileDetails_Click(object sender, EventArgs e)
@@ -118,22 +113,24 @@ namespace Anababi.UserControls
                     AnababiContext checkUsernameContext = new AnababiContext();
                     List<String> UserNames = (from usernames in checkUsernameContext.Users
                                               select usernames.Username.ToString()).ToList();
-                    if (UserNames.Count > 0)
+                    if (UserNames.Contains(txtUserName.Text))
                     {
                         MessageBox.Show("Username has been taken please choose another username");
                     }
-                    else if (txtUserName != null && UserNames.Count == 0)
+                    else if (txtUserName.Text!="")
                     {
                         userToBeUpdated.Username = txtUserName.Text;
 
                         AnababiContext.SaveChanges();
+                        //update the current user and reload the experience
+                        currentUser.Username = txtUserName.Text;
+                        currentUser.FirstName= txtFirstName.Text;
+                        currentUser.LastName = txtLastName.Text;
+                        UserExperience CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
+                        CurrentExperience.LoadUserExperience(CurrentExperience.SortBy);
 
                     }
-                    else
-                    {
-
-                        AnababiContext.SaveChanges();
-                    }
+                   
 
 
                 }
@@ -154,6 +151,7 @@ namespace Anababi.UserControls
 
                     AnababiContext.SaveChanges();
 
+                    this.FindForm().Close();
                 }
 
             }
