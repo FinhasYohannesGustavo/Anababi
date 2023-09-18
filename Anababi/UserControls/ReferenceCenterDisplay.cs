@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace Anababi.UserControls
                 textBoxCreator.Enabled = false;
                 textBoxType.Enabled = false;
                 textBoxGenre.Enabled = false;
-                dateTimePickerPublishedOn.Enabled = false;
+                textBoxPublishedOn.Enabled = false;
                 textBoxDescription.Enabled = false;
                 textBoxDiscriminator.Enabled = false;
                 textBoxISBN.Enabled = false;
@@ -46,6 +47,7 @@ namespace Anababi.UserControls
                 //Save button
                 buttonSave.Enabled = false;
             }
+
         }
 
         #region Custom Methods
@@ -85,7 +87,7 @@ namespace Anababi.UserControls
             textBoxCreator.Text = Reference.Creator.GetFullName();
             textBoxType.Text = Reference.Type.ToString();
             textBoxGenre.Text = Reference.Genre.ToString();
-            dateTimePickerPublishedOn.Value = Reference.PublishedOn;
+            textBoxPublishedOn.Text = Reference.PublishedOn.ToShortDateString();
             textBoxISBN.Text = Reference.ISBN;
             textBoxDescription.Text = Reference.Description;
             textBoxDescription.WordWrap = true;
@@ -107,6 +109,8 @@ namespace Anababi.UserControls
                     comboBoxAvailable.SelectedIndex = 0;
                 else
                     comboBoxAvailable.SelectedIndex = 1;
+
+                this.ActiveControl = null;
 
                 // Make all digital components invisible.
                 LblFile.Visible = false;
@@ -187,5 +191,6 @@ namespace Anababi.UserControls
 
             }
         }
+
     }
 }
