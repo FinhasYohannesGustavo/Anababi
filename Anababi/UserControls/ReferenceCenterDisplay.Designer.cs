@@ -409,7 +409,7 @@
             PanelSearchResults.Controls.Add(tableLayoutPanel2);
             PanelSearchResults.Controls.Add(panelCoverImageHolder);
             PanelSearchResults.Dock = DockStyle.Top;
-            PanelSearchResults.Location = new Point(10, 122);
+            PanelSearchResults.Location = new Point(10, 153);
             PanelSearchResults.MinimumSize = new Size(900, 300);
             PanelSearchResults.Name = "PanelSearchResults";
             PanelSearchResults.Padding = new Padding(40, 0, 40, 40);
@@ -434,17 +434,16 @@
             PanelSearchBar.Location = new Point(10, 10);
             PanelSearchBar.Name = "PanelSearchBar";
             PanelSearchBar.Padding = new Padding(40);
-            PanelSearchBar.Size = new Size(980, 112);
+            PanelSearchBar.Size = new Size(980, 143);
             PanelSearchBar.TabIndex = 5;
             // 
             // LblReferenceTitle
             // 
-            LblReferenceTitle.AutoSize = true;
             LblReferenceTitle.Dock = DockStyle.Fill;
             LblReferenceTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             LblReferenceTitle.Location = new Point(40, 40);
             LblReferenceTitle.Name = "LblReferenceTitle";
-            LblReferenceTitle.Size = new Size(91, 46);
+            LblReferenceTitle.Size = new Size(898, 61);
             LblReferenceTitle.TabIndex = 0;
             LblReferenceTitle.Text = "Title";
             LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -461,7 +460,7 @@
             MinimumSize = new Size(1000, 400);
             Name = "ReferenceCenterDisplay";
             Padding = new Padding(10);
-            Size = new Size(1000, 881);
+            Size = new Size(1000, 912);
             Load += CenterDisplay_Load;
             Click += CenterDisplay_Click;
             tableLayoutPanel2.ResumeLayout(false);
@@ -471,7 +470,6 @@
             PanelSearchResults.PerformLayout();
             panelCoverImageHolder.ResumeLayout(false);
             PanelSearchBar.ResumeLayout(false);
-            PanelSearchBar.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

@@ -85,8 +85,6 @@ namespace Anababi.UserControls
             //Set the label representing the title of the reference.
             LblReferenceTitle.Text = Reference.Title;
             LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
-            LblReferenceTitle.Dock = DockStyle.Fill;
-            LblReferenceTitle.Anchor = AnchorStyles.None;
             //Set the text box representing the creator of the reference.
             textBoxCreator.Text = Reference.Creator.GetFullName();
             //Set the text box representing the type of the reference.
