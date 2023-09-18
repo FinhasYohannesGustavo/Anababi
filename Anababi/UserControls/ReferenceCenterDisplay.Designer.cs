@@ -104,7 +104,7 @@
             tableLayoutPanel2.Controls.Add(textBoxPublishedOn, 1, 3);
             tableLayoutPanel2.Controls.Add(checkBoxAvailable, 1, 11);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(390, 0);
+            tableLayoutPanel2.Location = new Point(390, 40);
             tableLayoutPanel2.MinimumSize = new Size(600, 400);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 15;
@@ -424,15 +424,15 @@
             PanelSearchResults.Location = new Point(10, 153);
             PanelSearchResults.MinimumSize = new Size(900, 300);
             PanelSearchResults.Name = "PanelSearchResults";
-            PanelSearchResults.Padding = new Padding(40, 0, 40, 40);
-            PanelSearchResults.Size = new Size(980, 706);
+            PanelSearchResults.Padding = new Padding(40);
+            PanelSearchResults.Size = new Size(980, 746);
             PanelSearchResults.TabIndex = 6;
             // 
             // panelCoverImageHolder
             // 
             panelCoverImageHolder.Controls.Add(pictureBoxCoverImage);
             panelCoverImageHolder.Dock = DockStyle.Left;
-            panelCoverImageHolder.Location = new Point(40, 0);
+            panelCoverImageHolder.Location = new Point(40, 40);
             panelCoverImageHolder.Name = "panelCoverImageHolder";
             panelCoverImageHolder.Size = new Size(350, 664);
             panelCoverImageHolder.TabIndex = 1;
@@ -472,7 +472,7 @@
             MinimumSize = new Size(1000, 400);
             Name = "ReferenceCenterDisplay";
             Padding = new Padding(10);
-            Size = new Size(1000, 869);
+            Size = new Size(1000, 909);
             Load += CenterDisplay_Load;
             Click += CenterDisplay_Click;
             tableLayoutPanel2.ResumeLayout(false);

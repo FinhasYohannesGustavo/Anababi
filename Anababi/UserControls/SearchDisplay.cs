@@ -96,13 +96,9 @@ namespace Anababi.UserControls
                 else
                 {
                     //Do linear Searching only search for what the user has chosen to sort with, no sorting is required here
-
                     foundReference.Add(LinearSearcher.LinearSearch(searchedReferences, searchText, CurrentExperience.SortBy));
 
                 }
-
-
-
 
                 //Clear the contents of the default search display
                 PanelArtistsSection.Controls.Remove(resultsGridArtists);
