@@ -45,21 +45,21 @@ namespace Anababi
             Image ProfileImage = ByteArrayToImage(currentUser.ProfilePic);
 
             guna2CirclePictureBoxProfilePic.Image = ProfileImage;
-            
-            
+
+
             //Create a new navigation panel depending on whether or not the user is an admin.
             if (currentUser.IsAdmin)
             {
                 AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(),sortBy));
+                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(), sortBy));
 
             }
             else
             {
                 AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
 
-                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(),sortBy));
+                AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(), sortBy));
 
             }
 
@@ -141,8 +141,8 @@ namespace Anababi
             PhysicalReferenceCenterDisplay centerDisplay = new PhysicalReferenceCenterDisplay(creator);
 
             //Set the padding to 10% of the panel's dimensions
-            int xPadding = (int)(panelContent.Width * 0.1);
-            int yPadding = (int)(panelContent.Height * 0.1);
+            int xPadding = (int)(panelContent.Width * 0.2);
+            int yPadding = (int)(panelContent.Height * 0.2);
             centerDisplay.Padding = new Padding(xPadding, (yPadding / 2), xPadding, yPadding);
 
             //Set the Dock property to Fill.
@@ -159,8 +159,8 @@ namespace Anababi
         {
 
             List<Button> buttonList = new List<Button>();
-            //if (references != null&& references[0]==null)
-            //    return buttonList;
+            if (references != null && references[0] == null)
+                return buttonList;
             for (int i = 0; i < references.Count(); i++)
             {
                 Button button = new Button();
@@ -216,11 +216,6 @@ namespace Anababi
             {
                 //Create a list of References that are of the specific genre.
                 List<Reference> visualsOfGenre = references.FindAll(book => book.Genre.ToString() == genre);
-                //foreach (Reference reference in visualsOfGenre)
-                //{
-                //    reference.Creator = Reference.GetCreator(reference);
-
-                //}
 
                 //sort each category using the sorter that was given in the combo box
                 if (SortBy.Equals("Title"))
@@ -533,7 +528,7 @@ namespace Anababi
                         ISBN = "978-0486406510",
                         Type = Reference.ReferenceType.Book,
                         Genre = Reference.ReferenceGenre.Romance,
-                        Creator = creators[3],
+                        Creator = creators[2],
                         CoverImage = ImageToByteArray(Resources.A_Tale_of_Two_Cities_book_cover_HD),
                         Description = "Charles Dickens's historical novel set during the tumultuous times of the French Revolution, weaving the stories of characters in London and Paris.",
                         Location = referenceLocations[5],
@@ -547,7 +542,7 @@ namespace Anababi
                         ISBN = "978-1400041801",
                         Type = Reference.ReferenceType.Book,
                         Genre = Reference.ReferenceGenre.Historical,
-                        Creator = creators[4],
+                        Creator = creators[3],
                         CoverImage = ImageToByteArray(Resources.War_and_Peace_book_cover_HD),
                         Description = "Leo Tolstoy's epic Russian novel explores the lives of five aristocratic families during the Napoleonic era, delving into themes of history, love, and destiny.",
                         Location = referenceLocations[6],
@@ -561,7 +556,7 @@ namespace Anababi
                         ISBN = "978-1853262715",
                         Type = Reference.ReferenceType.Book,
                         Genre = Reference.ReferenceGenre.Romance,
-                        Creator = creators[4],
+                        Creator = creators[3],
                         CoverImage = ImageToByteArray(Resources.Anna_Karenina_book_cover_HD),
                         Description = "A tragic tale of love and society in Imperial Russia, where Anna Karenina enters a forbidden love affair that leads to personal and societal consequences.",
                         Location = referenceLocations[7],
@@ -575,7 +570,7 @@ namespace Anababi
                         ISBN = "978-0451524935",
                         Type = Reference.ReferenceType.Book,
                         Genre = Reference.ReferenceGenre.Dystopian,
-                        Creator = creators[5],
+                        Creator = creators[4],
                         CoverImage = ImageToByteArray(Resources._1984_book_cover_HD),
                         Description = "George Orwell's dystopian classic set in a totalitarian society where individuality is suppressed, and the government exerts control over every aspect of life.",
                         Location = referenceLocations[8],
@@ -589,7 +584,7 @@ namespace Anababi
                         ISBN = "978-0451526342",
                         Type = Reference.ReferenceType.Book,
                         Genre = Reference.ReferenceGenre.Satire,
-                        Creator = creators[5],
+                        Creator = creators[4],
                         CoverImage = ImageToByteArray(Resources.Animal_Farm_book_cover_HD),
                         Description = "George Orwell's allegorical novella that satirizes the events leading up to the Russian Revolution of 1917 and the early years of the Soviet Union.",
                         Location = referenceLocations[9],
@@ -661,17 +656,17 @@ namespace Anababi
 
 
 
-       
+
 
         }
         public static List<Creator> GetCreators()
         {
-  
+
             //creating the context object to get a session with the database.
             AnababiContext AnababiContext = new AnababiContext();
 
             List<Creator> creators = (from creator in AnababiContext.Creators
-                                                 select creator).ToList();
+                                      select creator).ToList();
             return creators;
         }
 

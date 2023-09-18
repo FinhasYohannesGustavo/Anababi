@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Anababi.Data;
 using Anababi.ModelClasses;
 using PdfiumViewer;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Anababi.UserControls
 {
@@ -20,6 +23,31 @@ namespace Anababi.UserControls
         {
             InitializeComponent();
             Reference = reference;
+
+            if (!UserExperience.currentUser.IsAdmin)
+            {
+                textBoxCreator.Enabled = false;
+                textBoxType.Enabled = false;
+                textBoxGenre.Enabled = false;
+                textBoxPublishedOn.Enabled = false;
+                textBoxDescription.Enabled = false;
+                textBoxDiscriminator.Enabled = false;
+                textBoxISBN.Enabled = false;
+
+                //Physical reference fields
+                textBoxFloor.Enabled = false;
+                textBoxSection.Enabled = false;
+                textBoxShelf.Enabled = false;
+                comboBoxAvailable.Enabled = false;
+                textBoxNumOfCopies.Enabled = false;
+
+                //Digital reference fields
+                pdfViewerFile.Enabled = false;
+
+                //Save button
+                buttonSave.Enabled = false;
+            }
+
         }
 
         #region Custom Methods
@@ -54,12 +82,12 @@ namespace Anababi.UserControls
         {
             //Set the label representing the title of the reference.
             LblReferenceTitle.Text = Reference.Title;
-            LblReferenceTitle.CenterHorizontally();
+            LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
             //Set the text box representing the creator of the reference.
             textBoxCreator.Text = Reference.Creator.GetFullName();
             textBoxType.Text = Reference.Type.ToString();
             textBoxGenre.Text = Reference.Genre.ToString();
-            dateTimePickerPublishedOn.Value = Reference.PublishedOn;
+            textBoxPublishedOn.Text = Reference.PublishedOn.ToShortDateString();
             textBoxISBN.Text = Reference.ISBN;
             textBoxDescription.Text = Reference.Description;
             textBoxDescription.WordWrap = true;
@@ -82,6 +110,8 @@ namespace Anababi.UserControls
                 else
                     comboBoxAvailable.SelectedIndex = 1;
 
+                this.ActiveControl = null;
+
                 // Make all digital components invisible.
                 LblFile.Visible = false;
                 pdfViewerFile.Visible = false;
@@ -94,6 +124,8 @@ namespace Anababi.UserControls
                 textBoxDiscriminator.Text = "Digital Reference";
                 //PdfDocument? pdfDocument = ByteArrayToPDFDocument(digitalReference.File);
                 //pdfViewerFile.Load(pdfDocument);
+                pdfViewerFile.Visible = false;
+                LblFile.Visible = false;
 
                 // Make all physical components invisible.
                 LblFloor.Visible = false;
@@ -119,6 +151,46 @@ namespace Anababi.UserControls
             this.Hide();
         }
 
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+            // Calculate the preferred height based on the content
+            int preferredHeight = TextRenderer.MeasureText(textBoxDescription.Text, textBoxDescription.Font, textBoxDescription.ClientSize, TextFormatFlags.WordBreak).Height;
+
+            // Set the TextBox's height to the preferred height
+            textBoxDescription.Height = preferredHeight;
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            if (UserExperience.currentUser.IsAdmin)
+            {
+                try
+                {
+                    // Get the database object from the context class
+                    using AnababiContext context = new AnababiContext();
+                    Reference referenceToBeUpdated = context.References.Where(r => r.Id == Reference.Id).FirstOrDefault();
+
+                    // Check if the reference is digital of physical
+                    if (referenceToBeUpdated is PhysicalReference)
+                    {
+                        referenceToBeUpdated = new PhysicalReference(Reference as PhysicalReference);
+                    }
+                    else
+                    {
+                        referenceToBeUpdated = new DigitalReference(Reference as DigitalReference);
+                    }
+
+                    // Save changes
+                    context.SaveChanges();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+            }
+        }
 
     }
 }
