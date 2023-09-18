@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Anababi.ModelClasses;
 using PdfiumViewer;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Anababi.UserControls
 {
@@ -119,6 +120,13 @@ namespace Anababi.UserControls
             this.Hide();
         }
 
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+            // Calculate the preferred height based on the content
+            int preferredHeight = TextRenderer.MeasureText(textBoxDescription.Text, textBoxDescription.Font, textBoxDescription.ClientSize, TextFormatFlags.WordBreak).Height;
 
+            // Set the TextBox's height to the preferred height
+            textBoxDescription.Height = preferredHeight;
+        }
     }
 }

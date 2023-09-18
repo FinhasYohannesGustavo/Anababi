@@ -312,9 +312,11 @@
             // 
             textBoxDescription.Dock = DockStyle.Fill;
             textBoxDescription.Location = new Point(356, 168);
+            textBoxDescription.Multiline = true;
             textBoxDescription.Name = "textBoxDescription";
             textBoxDescription.Size = new Size(583, 27);
             textBoxDescription.TabIndex = 23;
+            textBoxDescription.TextChanged += textBoxDescription_TextChanged;
             // 
             // textBoxDiscriminator
             // 
