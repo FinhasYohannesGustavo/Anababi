@@ -60,6 +60,7 @@
             PanelSearchResults = new Panel();
             PanelSearchBar = new Panel();
             LblReferenceTitle = new Label();
+            buttonSave = new Button();
             tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).BeginInit();
             PanelSearchResults.SuspendLayout();
@@ -101,10 +102,11 @@
             tableLayoutPanel2.Controls.Add(comboBoxAvailable, 1, 11);
             tableLayoutPanel2.Controls.Add(pictureBoxCoverImage, 1, 6);
             tableLayoutPanel2.Controls.Add(pdfViewerFile, 1, 13);
+            tableLayoutPanel2.Controls.Add(buttonSave, 1, 14);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(40, 0);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 14;
+            tableLayoutPanel2.RowCount = 15;
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
@@ -119,7 +121,8 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(942, 1516);
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.Size = new Size(942, 1577);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // LblCreator
@@ -404,7 +407,7 @@
             PanelSearchResults.MinimumSize = new Size(400, 400);
             PanelSearchResults.Name = "PanelSearchResults";
             PanelSearchResults.Padding = new Padding(40, 0, 40, 40);
-            PanelSearchResults.Size = new Size(1022, 1556);
+            PanelSearchResults.Size = new Size(1022, 1617);
             PanelSearchResults.TabIndex = 6;
             // 
             // PanelSearchBar
@@ -430,6 +433,17 @@
             LblReferenceTitle.Text = "Title";
             LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // buttonSave
+            // 
+            buttonSave.Dock = DockStyle.Right;
+            buttonSave.Location = new Point(734, 1519);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(205, 55);
+            buttonSave.TabIndex = 36;
+            buttonSave.Text = "Save";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSave_Click;
+            // 
             // ReferenceCenterDisplay
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -442,7 +456,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "ReferenceCenterDisplay";
             Padding = new Padding(10);
-            Size = new Size(1042, 1688);
+            Size = new Size(1042, 1749);
             Load += CenterDisplay_Load;
             Click += CenterDisplay_Click;
             tableLayoutPanel2.ResumeLayout(false);
@@ -490,5 +504,6 @@
         private ComboBox comboBoxAvailable;
         private PictureBox pictureBoxCoverImage;
         private PdfiumViewer.PdfViewer pdfViewerFile;
+        private Button buttonSave;
     }
 }

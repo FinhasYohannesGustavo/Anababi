@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Anababi.Data;
 using Anababi.ModelClasses;
 using PdfiumViewer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -127,6 +128,37 @@ namespace Anababi.UserControls
 
             // Set the TextBox's height to the preferred height
             textBoxDescription.Height = preferredHeight;
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            if(UserExperience.currentUser.IsAdmin)
+            {
+                try
+                {
+                    // Get the database object from the context class
+                    using AnababiContext context = new AnababiContext();
+                    Reference referenceToBeUpdated = context.References.Where(r => r.Id == Reference.Id).FirstOrDefault();
+                
+                    // Check if the reference is digital of physical
+                    if(referenceToBeUpdated is PhysicalReference)
+                    {
+                        referenceToBeUpdated = new PhysicalReference(Reference as PhysicalReference);
+                    }
+                    else
+                    {
+                        referenceToBeUpdated = new DigitalReference(Reference as DigitalReference);
+                    }
+                
+                    // Save changes
+                    context.SaveChanges();
+
+                }catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+            }
         }
     }
 }
