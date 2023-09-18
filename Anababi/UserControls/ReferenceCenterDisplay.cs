@@ -207,6 +207,9 @@ namespace Anababi.UserControls
                     // Save changes
                     context.SaveChanges();
 
+                    //Refresh the user experience
+                    ((this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience).LoadUserExperience("Title");
+
                 }
                 catch (Exception ex)
                 {
