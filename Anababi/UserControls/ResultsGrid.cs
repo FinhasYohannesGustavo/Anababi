@@ -89,8 +89,8 @@ namespace Anababi.UserControls
             }
 
         }
-        //Event that is associated with all artwork or writer buttons.
-        //It displays the writer or the artwork in the center of the screen.
+        //Event that is associated with all artwork or creator buttons.
+        //It displays the creator or the artwork in the center of the screen.
         private void buttonResult_Click(object sender, EventArgs e)
         {
             //Get the PanelContent that is found in ConsumerExperience
@@ -99,23 +99,23 @@ namespace Anababi.UserControls
             Button btn = (Button)sender;
             if (typeOfDataToBeDisplayed == TypeOfDataToBeDisplayed.Reference)
             {
-                //VisualArts were sent
+                //References were sent
                 //Code for extracting a Reference object from a button
                 Reference reference = (Reference)btn.Tag;
 
-                //Create a center display for the visual art
+                //Create a center display for references
                 UserExperience.CreateCenterDisplayForReference(reference, requiredPanel);
                 //CenterDisplayForm popup = new CenterDisplayForm(reference);
                 //popup.Show();
             }
             else
             {
-                //Users were sent
+                //Creators were sent
                 //Code for extracting a Creator object from a button
-                Creator writer = (Creator)btn.Tag;
+                Creator creator = (Creator)btn.Tag;
 
-                //Create a center display for the writer
-                UserExperience.CreateCenterDisplayForCreator(writer, requiredPanel);
+                //Create a center display for the creator
+                UserExperience.CreateCenterDisplayForCreator(creator, requiredPanel);
             }
 
         }
