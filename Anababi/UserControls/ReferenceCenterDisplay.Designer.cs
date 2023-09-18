@@ -105,6 +105,7 @@
             tableLayoutPanel2.Controls.Add(buttonSave, 1, 14);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(390, 0);
+            tableLayoutPanel2.MinimumSize = new Size(600, 400);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 15;
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
@@ -122,7 +123,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(329, 1310);
+            tableLayoutPanel2.Size = new Size(600, 1310);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // LblCreator
@@ -273,7 +274,7 @@
             textBoxCreator.Dock = DockStyle.Fill;
             textBoxCreator.Location = new Point(192, 3);
             textBoxCreator.Name = "textBoxCreator";
-            textBoxCreator.Size = new Size(134, 27);
+            textBoxCreator.Size = new Size(405, 27);
             textBoxCreator.TabIndex = 19;
             // 
             // textBoxType
@@ -281,7 +282,7 @@
             textBoxType.Dock = DockStyle.Fill;
             textBoxType.Location = new Point(192, 36);
             textBoxType.Name = "textBoxType";
-            textBoxType.Size = new Size(134, 27);
+            textBoxType.Size = new Size(405, 27);
             textBoxType.TabIndex = 20;
             // 
             // textBoxGenre
@@ -289,7 +290,7 @@
             textBoxGenre.Dock = DockStyle.Fill;
             textBoxGenre.Location = new Point(192, 69);
             textBoxGenre.Name = "textBoxGenre";
-            textBoxGenre.Size = new Size(134, 27);
+            textBoxGenre.Size = new Size(405, 27);
             textBoxGenre.TabIndex = 21;
             // 
             // textBoxISBN
@@ -297,7 +298,7 @@
             textBoxISBN.Dock = DockStyle.Fill;
             textBoxISBN.Location = new Point(192, 135);
             textBoxISBN.Name = "textBoxISBN";
-            textBoxISBN.Size = new Size(134, 27);
+            textBoxISBN.Size = new Size(405, 27);
             textBoxISBN.TabIndex = 22;
             // 
             // textBoxDescription
@@ -306,7 +307,7 @@
             textBoxDescription.Location = new Point(192, 168);
             textBoxDescription.Multiline = true;
             textBoxDescription.Name = "textBoxDescription";
-            textBoxDescription.Size = new Size(134, 27);
+            textBoxDescription.Size = new Size(405, 27);
             textBoxDescription.TabIndex = 23;
             textBoxDescription.TextChanged += textBoxDescription_TextChanged;
             // 
@@ -315,7 +316,7 @@
             textBoxDiscriminator.Dock = DockStyle.Fill;
             textBoxDiscriminator.Location = new Point(192, 201);
             textBoxDiscriminator.Name = "textBoxDiscriminator";
-            textBoxDiscriminator.Size = new Size(134, 27);
+            textBoxDiscriminator.Size = new Size(405, 27);
             textBoxDiscriminator.TabIndex = 25;
             // 
             // textBoxFloor
@@ -323,7 +324,7 @@
             textBoxFloor.Dock = DockStyle.Fill;
             textBoxFloor.Location = new Point(192, 234);
             textBoxFloor.Name = "textBoxFloor";
-            textBoxFloor.Size = new Size(134, 27);
+            textBoxFloor.Size = new Size(405, 27);
             textBoxFloor.TabIndex = 26;
             // 
             // textBoxSection
@@ -331,7 +332,7 @@
             textBoxSection.Dock = DockStyle.Fill;
             textBoxSection.Location = new Point(192, 267);
             textBoxSection.Name = "textBoxSection";
-            textBoxSection.Size = new Size(134, 27);
+            textBoxSection.Size = new Size(405, 27);
             textBoxSection.TabIndex = 27;
             // 
             // textBoxShelf
@@ -339,7 +340,7 @@
             textBoxShelf.Dock = DockStyle.Fill;
             textBoxShelf.Location = new Point(192, 300);
             textBoxShelf.Name = "textBoxShelf";
-            textBoxShelf.Size = new Size(134, 27);
+            textBoxShelf.Size = new Size(405, 27);
             textBoxShelf.TabIndex = 28;
             // 
             // textBoxNumOfCopies
@@ -347,7 +348,7 @@
             textBoxNumOfCopies.Dock = DockStyle.Fill;
             textBoxNumOfCopies.Location = new Point(192, 367);
             textBoxNumOfCopies.Name = "textBoxNumOfCopies";
-            textBoxNumOfCopies.Size = new Size(134, 27);
+            textBoxNumOfCopies.Size = new Size(405, 27);
             textBoxNumOfCopies.TabIndex = 30;
             // 
             // dateTimePickerPublishedOn
@@ -355,7 +356,7 @@
             dateTimePickerPublishedOn.Dock = DockStyle.Fill;
             dateTimePickerPublishedOn.Location = new Point(192, 102);
             dateTimePickerPublishedOn.Name = "dateTimePickerPublishedOn";
-            dateTimePickerPublishedOn.Size = new Size(134, 27);
+            dateTimePickerPublishedOn.Size = new Size(405, 27);
             dateTimePickerPublishedOn.TabIndex = 32;
             // 
             // comboBoxAvailable
@@ -365,7 +366,7 @@
             comboBoxAvailable.Items.AddRange(new object[] { "Yes", "No" });
             comboBoxAvailable.Location = new Point(192, 333);
             comboBoxAvailable.Name = "comboBoxAvailable";
-            comboBoxAvailable.Size = new Size(134, 28);
+            comboBoxAvailable.Size = new Size(405, 28);
             comboBoxAvailable.TabIndex = 33;
             // 
             // pdfViewerFile
@@ -380,7 +381,7 @@
             // 
             buttonSave.Dock = DockStyle.Right;
             buttonSave.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSave.Location = new Point(192, 1252);
+            buttonSave.Location = new Point(463, 1252);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(134, 55);
             buttonSave.TabIndex = 36;
@@ -405,12 +406,12 @@
             PanelSearchResults.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             PanelSearchResults.Controls.Add(tableLayoutPanel2);
             PanelSearchResults.Controls.Add(panelCoverImageHolder);
-            PanelSearchResults.Dock = DockStyle.Fill;
+            PanelSearchResults.Dock = DockStyle.Top;
             PanelSearchResults.Location = new Point(10, 122);
-            PanelSearchResults.MinimumSize = new Size(400, 400);
+            PanelSearchResults.MinimumSize = new Size(900, 300);
             PanelSearchResults.Name = "PanelSearchResults";
             PanelSearchResults.Padding = new Padding(40, 0, 40, 40);
-            PanelSearchResults.Size = new Size(759, 1350);
+            PanelSearchResults.Size = new Size(980, 1350);
             PanelSearchResults.TabIndex = 6;
             // 
             // panelCoverImageHolder
@@ -430,7 +431,7 @@
             PanelSearchBar.Location = new Point(10, 10);
             PanelSearchBar.Name = "PanelSearchBar";
             PanelSearchBar.Padding = new Padding(40);
-            PanelSearchBar.Size = new Size(759, 112);
+            PanelSearchBar.Size = new Size(980, 112);
             PanelSearchBar.TabIndex = 5;
             // 
             // LblReferenceTitle
@@ -454,9 +455,10 @@
             Controls.Add(PanelSearchResults);
             Controls.Add(PanelSearchBar);
             Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(1000, 400);
             Name = "ReferenceCenterDisplay";
             Padding = new Padding(10);
-            Size = new Size(779, 1482);
+            Size = new Size(1000, 1482);
             Load += CenterDisplay_Load;
             Click += CenterDisplay_Click;
             tableLayoutPanel2.ResumeLayout(false);

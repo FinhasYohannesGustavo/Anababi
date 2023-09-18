@@ -110,8 +110,8 @@ namespace Anababi
             int yPadding = (int)(panelContent.Height * 0.1);
             centerDisplay.Padding = new Padding(xPadding, (yPadding / 2), xPadding, yPadding);
 
-            //Set the Dock property to Top to allow scrollability.
-            centerDisplay.Dock = DockStyle.Top;
+            //Set the Dock property to Fill.
+            centerDisplay.Dock = DockStyle.Fill;
 
             //Add the CenterDisplay to the panel and bring it to the front.
             panelContent.Controls.Add(centerDisplay);
@@ -129,8 +129,8 @@ namespace Anababi
             int yPadding = (int)(panelContent.Height * 0.2);
             centerDisplay.Padding = new Padding(xPadding, (yPadding / 2), xPadding, yPadding);
 
-            //Set the Dock property to Top to allow scrollability.
-            centerDisplay.Dock = DockStyle.Top;
+            //Set the Dock property to Fill.
+            centerDisplay.Dock = DockStyle.Fill;
 
             //Add the CenterDisplay to the panel and bring it to the front.
             panelContent.Controls.Add(centerDisplay);
