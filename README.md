@@ -26,6 +26,18 @@ Welcome to Anababi Library Management System. This application is designed to st
 
 This Library Management System is a versatile solution designed to cater to the needs of both librarians and readers, simplifying the management and accessibility of your library's resources. Dive into the documentation to get started, and feel free to contribute or customize the app according to your requirements.
 
+## Limitations of this software
+
+- The actual files of the digital references are not included. It was surprisingly difficult to store PDF files on a database and display them on the app. We intend to resolve it soon enough.
+- The form window is not resizable. Certain UI components would ruin the user experience if the window was resizable. We intend to resolve it soon enough.
+- Adding and removing references from the database through the UI is not yet functional.
+
+## Collaborators
+
+1. **Finhas Yohannes, ZD0728**
+2. **Yanet Abrham, PM9785**
+3. **Zelalem Amare, NV3369**
+
 ## What you need to install first
 
 1. [Visual Studio](https://visualstudio.microsoft.com/downloads/) (2019 or greater).
@@ -45,14 +57,12 @@ This Library Management System is a versatile solution designed to cater to the 
     ```
     
 4. Go to `Tools` >> `NuGet Package Manager` >> `Manage NuGet Packages for Solution` and check to see if the following packages are installed on your solution.
-    1. `Bunifu.UI.WinForms`
-    2. `DrakeUI.Framework`
-    3. `Guna.Charts.WinForms`
-    4. `Guna.UI2.WinForms`
-    5. `Microsoft.EntityFrameworkCore.Design`
-    6. `Microsoft.EntityFrameworkCore.SqlServer`
-    7. `Microsoft.EntityFrameworkCore.Tools`
-    8. `PdfiumViewer`
+
+    1. `Guna.UI2.WinForms`
+    2. `Microsoft.EntityFrameworkCore.Design`
+    3. `Microsoft.EntityFrameworkCore.SqlServer`
+    4. `Microsoft.EntityFrameworkCore.Tools`
+    5. `PdfiumViewer`
 6. Go to `Tools` >> `NuGet Package Manager` >> `Package Manager Console` and run the following commands to initialize the database with Entity Framework Core.
 
     _This creates a migration file for initializing the database structure and all the relationships between the entities._
