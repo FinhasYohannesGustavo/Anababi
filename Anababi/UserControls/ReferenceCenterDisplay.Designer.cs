@@ -28,104 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.LblCreator = new System.Windows.Forms.Label();
-            this.LblType = new System.Windows.Forms.Label();
-            this.LblGenre = new System.Windows.Forms.Label();
-            this.LblPublishedOn = new System.Windows.Forms.Label();
-            this.LblISBN = new System.Windows.Forms.Label();
-            this.LblDescription = new System.Windows.Forms.Label();
-            this.LblDiscriminator = new System.Windows.Forms.Label();
-            this.LblFloor = new System.Windows.Forms.Label();
-            this.LblSection = new System.Windows.Forms.Label();
-            this.LblShelf = new System.Windows.Forms.Label();
-            this.LblAvailable = new System.Windows.Forms.Label();
-            this.LblNumOfCopies = new System.Windows.Forms.Label();
-            this.LblFile = new System.Windows.Forms.Label();
-            this.textBoxCreator = new System.Windows.Forms.TextBox();
-            this.textBoxType = new System.Windows.Forms.TextBox();
-            this.textBoxGenre = new System.Windows.Forms.TextBox();
-            this.textBoxISBN = new System.Windows.Forms.TextBox();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.textBoxDiscriminator = new System.Windows.Forms.TextBox();
-            this.textBoxFloor = new System.Windows.Forms.TextBox();
-            this.textBoxSection = new System.Windows.Forms.TextBox();
-            this.textBoxShelf = new System.Windows.Forms.TextBox();
-            this.textBoxNumOfCopies = new System.Windows.Forms.TextBox();
-            this.comboBoxAvailable = new System.Windows.Forms.ComboBox();
-            this.pdfViewerFile = new PdfiumViewer.PdfViewer();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.textBoxPublishedOn = new System.Windows.Forms.TextBox();
-            this.pictureBoxCoverImage = new System.Windows.Forms.PictureBox();
-            this.PanelSearchResults = new System.Windows.Forms.Panel();
-            this.panelCoverImageHolder = new System.Windows.Forms.Panel();
-            this.PanelSearchBar = new System.Windows.Forms.Panel();
-            this.LblReferenceTitle = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverImage)).BeginInit();
-            this.PanelSearchResults.SuspendLayout();
-            this.panelCoverImageHolder.SuspendLayout();
-            this.PanelSearchBar.SuspendLayout();
-            this.SuspendLayout();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            LblCreator = new Label();
+            LblType = new Label();
+            LblGenre = new Label();
+            LblPublishedOn = new Label();
+            LblISBN = new Label();
+            LblDescription = new Label();
+            LblDiscriminator = new Label();
+            LblFloor = new Label();
+            LblSection = new Label();
+            LblShelf = new Label();
+            LblAvailable = new Label();
+            LblNumOfCopies = new Label();
+            LblFile = new Label();
+            textBoxCreator = new TextBox();
+            textBoxType = new TextBox();
+            textBoxGenre = new TextBox();
+            textBoxISBN = new TextBox();
+            textBoxDescription = new TextBox();
+            textBoxDiscriminator = new TextBox();
+            textBoxFloor = new TextBox();
+            textBoxSection = new TextBox();
+            textBoxShelf = new TextBox();
+            textBoxNumOfCopies = new TextBox();
+            pdfViewerFile = new PdfiumViewer.PdfViewer();
+            buttonSave = new Button();
+            textBoxPublishedOn = new TextBox();
+            checkBoxAvailable = new CheckBox();
+            pictureBoxCoverImage = new PictureBox();
+            PanelSearchResults = new Panel();
+            panelCoverImageHolder = new Panel();
+            PanelSearchBar = new Panel();
+            LblReferenceTitle = new Label();
+            tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).BeginInit();
+            PanelSearchResults.SuspendLayout();
+            panelCoverImageHolder.SuspendLayout();
+            PanelSearchBar.SuspendLayout();
+            SuspendLayout();
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.AutoSize = true;
-            this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel2.Controls.Add(this.LblCreator, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.LblType, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.LblGenre, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.LblPublishedOn, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.LblISBN, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.LblDescription, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.LblDiscriminator, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.LblFloor, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.LblSection, 0, 9);
-            this.tableLayoutPanel2.Controls.Add(this.LblShelf, 0, 10);
-            this.tableLayoutPanel2.Controls.Add(this.LblAvailable, 0, 11);
-            this.tableLayoutPanel2.Controls.Add(this.LblNumOfCopies, 0, 12);
-            this.tableLayoutPanel2.Controls.Add(this.LblFile, 0, 13);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxCreator, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxType, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxGenre, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxISBN, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxDescription, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxDiscriminator, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxFloor, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxSection, 1, 9);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxShelf, 1, 10);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxNumOfCopies, 1, 12);
-            this.tableLayoutPanel2.Controls.Add(this.comboBoxAvailable, 1, 11);
-            this.tableLayoutPanel2.Controls.Add(this.pdfViewerFile, 1, 13);
-            this.tableLayoutPanel2.Controls.Add(this.buttonSave, 1, 14);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxPublishedOn, 1, 3);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(341, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(525, 300);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 15;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(525, 593);
-            this.tableLayoutPanel2.TabIndex = 0;
+            tableLayoutPanel2.AutoSize = true;
+            tableLayoutPanel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Controls.Add(LblCreator, 0, 0);
+            tableLayoutPanel2.Controls.Add(LblType, 0, 1);
+            tableLayoutPanel2.Controls.Add(LblGenre, 0, 2);
+            tableLayoutPanel2.Controls.Add(LblPublishedOn, 0, 3);
+            tableLayoutPanel2.Controls.Add(LblISBN, 0, 4);
+            tableLayoutPanel2.Controls.Add(LblDescription, 0, 5);
+            tableLayoutPanel2.Controls.Add(LblDiscriminator, 0, 7);
+            tableLayoutPanel2.Controls.Add(LblFloor, 0, 8);
+            tableLayoutPanel2.Controls.Add(LblSection, 0, 9);
+            tableLayoutPanel2.Controls.Add(LblShelf, 0, 10);
+            tableLayoutPanel2.Controls.Add(LblAvailable, 0, 11);
+            tableLayoutPanel2.Controls.Add(LblNumOfCopies, 0, 12);
+            tableLayoutPanel2.Controls.Add(LblFile, 0, 13);
+            tableLayoutPanel2.Controls.Add(textBoxCreator, 1, 0);
+            tableLayoutPanel2.Controls.Add(textBoxType, 1, 1);
+            tableLayoutPanel2.Controls.Add(textBoxGenre, 1, 2);
+            tableLayoutPanel2.Controls.Add(textBoxISBN, 1, 4);
+            tableLayoutPanel2.Controls.Add(textBoxDescription, 1, 5);
+            tableLayoutPanel2.Controls.Add(textBoxDiscriminator, 1, 7);
+            tableLayoutPanel2.Controls.Add(textBoxFloor, 1, 8);
+            tableLayoutPanel2.Controls.Add(textBoxSection, 1, 9);
+            tableLayoutPanel2.Controls.Add(textBoxShelf, 1, 10);
+            tableLayoutPanel2.Controls.Add(textBoxNumOfCopies, 1, 12);
+            tableLayoutPanel2.Controls.Add(pdfViewerFile, 1, 13);
+            tableLayoutPanel2.Controls.Add(buttonSave, 1, 14);
+            tableLayoutPanel2.Controls.Add(textBoxPublishedOn, 1, 3);
+            tableLayoutPanel2.Controls.Add(checkBoxAvailable, 1, 11);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(390, 0);
+            tableLayoutPanel2.MinimumSize = new Size(600, 400);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 15;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.Size = new Size(600, 707);
+            tableLayoutPanel2.TabIndex = 0;
             // 
             // LblCreator
             // 
@@ -239,36 +238,36 @@
             // 
             // LblAvailable
             // 
-            this.LblAvailable.AutoSize = true;
-            this.LblAvailable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblAvailable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblAvailable.Location = new System.Drawing.Point(69, 268);
-            this.LblAvailable.Name = "LblAvailable";
-            this.LblAvailable.Size = new System.Drawing.Size(82, 27);
-            this.LblAvailable.TabIndex = 18;
-            this.LblAvailable.Text = "Available";
+            LblAvailable.AutoSize = true;
+            LblAvailable.Dock = DockStyle.Right;
+            LblAvailable.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblAvailable.Location = new Point(86, 330);
+            LblAvailable.Name = "LblAvailable";
+            LblAvailable.Size = new Size(100, 28);
+            LblAvailable.TabIndex = 18;
+            LblAvailable.Text = "Available";
             // 
             // LblNumOfCopies
             // 
-            this.LblNumOfCopies.AutoSize = true;
-            this.LblNumOfCopies.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblNumOfCopies.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblNumOfCopies.Location = new System.Drawing.Point(3, 295);
-            this.LblNumOfCopies.Name = "LblNumOfCopies";
-            this.LblNumOfCopies.Size = new System.Drawing.Size(148, 27);
-            this.LblNumOfCopies.TabIndex = 16;
-            this.LblNumOfCopies.Text = "Number of Copies";
+            LblNumOfCopies.AutoSize = true;
+            LblNumOfCopies.Dock = DockStyle.Right;
+            LblNumOfCopies.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblNumOfCopies.Location = new Point(3, 358);
+            LblNumOfCopies.Name = "LblNumOfCopies";
+            LblNumOfCopies.Size = new Size(183, 33);
+            LblNumOfCopies.TabIndex = 16;
+            LblNumOfCopies.Text = "Number of Copies";
             // 
             // LblFile
             // 
-            this.LblFile.AutoSize = true;
-            this.LblFile.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblFile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblFile.Location = new System.Drawing.Point(114, 322);
-            this.LblFile.Name = "LblFile";
-            this.LblFile.Size = new System.Drawing.Size(37, 192);
-            this.LblFile.TabIndex = 17;
-            this.LblFile.Text = "File";
+            LblFile.AutoSize = true;
+            LblFile.Dock = DockStyle.Right;
+            LblFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblFile.Location = new Point(141, 391);
+            LblFile.Name = "LblFile";
+            LblFile.Size = new Size(45, 255);
+            LblFile.TabIndex = 17;
+            LblFile.Text = "File";
             // 
             // textBoxCreator
             // 
@@ -354,45 +353,32 @@
             // 
             // textBoxNumOfCopies
             // 
-            this.textBoxNumOfCopies.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxNumOfCopies.Location = new System.Drawing.Point(157, 297);
-            this.textBoxNumOfCopies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxNumOfCopies.Name = "textBoxNumOfCopies";
-            this.textBoxNumOfCopies.Size = new System.Drawing.Size(386, 23);
-            this.textBoxNumOfCopies.TabIndex = 30;
-            // 
-            // comboBoxAvailable
-            // 
-            this.comboBoxAvailable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxAvailable.FormattingEnabled = true;
-            this.comboBoxAvailable.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.comboBoxAvailable.Location = new System.Drawing.Point(157, 270);
-            this.comboBoxAvailable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxAvailable.Name = "comboBoxAvailable";
-            this.comboBoxAvailable.Size = new System.Drawing.Size(386, 23);
-            this.comboBoxAvailable.TabIndex = 33;
+            textBoxNumOfCopies.Dock = DockStyle.Fill;
+            textBoxNumOfCopies.Location = new Point(192, 361);
+            textBoxNumOfCopies.Name = "textBoxNumOfCopies";
+            textBoxNumOfCopies.Size = new Size(405, 27);
+            textBoxNumOfCopies.TabIndex = 30;
             // 
             // pdfViewerFile
             // 
-            this.pdfViewerFile.Location = new System.Drawing.Point(158, 326);
-            this.pdfViewerFile.Margin = new System.Windows.Forms.Padding(4);
-            this.pdfViewerFile.Name = "pdfViewerFile";
-            this.pdfViewerFile.Size = new System.Drawing.Size(309, 184);
-            this.pdfViewerFile.TabIndex = 35;
+            pdfViewerFile.Location = new Point(193, 396);
+            pdfViewerFile.Margin = new Padding(4, 5, 4, 5);
+            pdfViewerFile.Name = "pdfViewerFile";
+            pdfViewerFile.ShowToolbar = false;
+            pdfViewerFile.Size = new Size(353, 245);
+            pdfViewerFile.TabIndex = 35;
             // 
             // buttonSave
             // 
-            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSave.Location = new System.Drawing.Point(426, 516);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(117, 75);
-            this.buttonSave.TabIndex = 36;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Dock = DockStyle.Right;
+            buttonSave.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSave.Location = new Point(463, 649);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(134, 55);
+            buttonSave.TabIndex = 36;
+            buttonSave.Text = "Save";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSave_Click;
             // 
             // textBoxPublishedOn
             // 
@@ -403,92 +389,98 @@
             this.textBoxPublishedOn.Size = new System.Drawing.Size(386, 23);
             this.textBoxPublishedOn.TabIndex = 37;
             // 
+            // checkBoxAvailable
+            // 
+            checkBoxAvailable.AutoSize = true;
+            checkBoxAvailable.Dock = DockStyle.Fill;
+            checkBoxAvailable.Location = new Point(192, 333);
+            checkBoxAvailable.Name = "checkBoxAvailable";
+            checkBoxAvailable.Size = new Size(405, 22);
+            checkBoxAvailable.TabIndex = 38;
+            checkBoxAvailable.UseVisualStyleBackColor = true;
+            // 
             // pictureBoxCoverImage
             // 
-            this.pictureBoxCoverImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxCoverImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxCoverImage.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxCoverImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxCoverImage.Name = "pictureBoxCoverImage";
-            this.pictureBoxCoverImage.Size = new System.Drawing.Size(306, 593);
-            this.pictureBoxCoverImage.TabIndex = 34;
-            this.pictureBoxCoverImage.TabStop = false;
+            pictureBoxCoverImage.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBoxCoverImage.Dock = DockStyle.Fill;
+            pictureBoxCoverImage.Location = new Point(0, 0);
+            pictureBoxCoverImage.Name = "pictureBoxCoverImage";
+            pictureBoxCoverImage.Size = new Size(350, 707);
+            pictureBoxCoverImage.TabIndex = 34;
+            pictureBoxCoverImage.TabStop = false;
             // 
             // PanelSearchResults
             // 
-            this.PanelSearchResults.AutoScroll = true;
-            this.PanelSearchResults.AutoSize = true;
-            this.PanelSearchResults.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PanelSearchResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelSearchResults.Controls.Add(this.tableLayoutPanel2);
-            this.PanelSearchResults.Controls.Add(this.panelCoverImageHolder);
-            this.PanelSearchResults.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSearchResults.Location = new System.Drawing.Point(9, 92);
-            this.PanelSearchResults.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelSearchResults.MinimumSize = new System.Drawing.Size(788, 226);
-            this.PanelSearchResults.Name = "PanelSearchResults";
-            this.PanelSearchResults.Padding = new System.Windows.Forms.Padding(35, 0, 35, 30);
-            this.PanelSearchResults.Size = new System.Drawing.Size(857, 625);
-            this.PanelSearchResults.TabIndex = 6;
+            PanelSearchResults.AutoScroll = true;
+            PanelSearchResults.AutoSize = true;
+            PanelSearchResults.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            PanelSearchResults.BorderStyle = BorderStyle.FixedSingle;
+            PanelSearchResults.Controls.Add(tableLayoutPanel2);
+            PanelSearchResults.Controls.Add(panelCoverImageHolder);
+            PanelSearchResults.Dock = DockStyle.Top;
+            PanelSearchResults.Location = new Point(10, 153);
+            PanelSearchResults.MinimumSize = new Size(900, 300);
+            PanelSearchResults.Name = "PanelSearchResults";
+            PanelSearchResults.Padding = new Padding(40, 0, 40, 40);
+            PanelSearchResults.Size = new Size(980, 749);
+            PanelSearchResults.TabIndex = 6;
             // 
             // panelCoverImageHolder
             // 
-            this.panelCoverImageHolder.Controls.Add(this.pictureBoxCoverImage);
-            this.panelCoverImageHolder.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelCoverImageHolder.Location = new System.Drawing.Point(35, 0);
-            this.panelCoverImageHolder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelCoverImageHolder.Name = "panelCoverImageHolder";
-            this.panelCoverImageHolder.Size = new System.Drawing.Size(306, 593);
-            this.panelCoverImageHolder.TabIndex = 1;
+            panelCoverImageHolder.Controls.Add(pictureBoxCoverImage);
+            panelCoverImageHolder.Dock = DockStyle.Left;
+            panelCoverImageHolder.Location = new Point(40, 0);
+            panelCoverImageHolder.Name = "panelCoverImageHolder";
+            panelCoverImageHolder.Size = new Size(350, 707);
+            panelCoverImageHolder.TabIndex = 1;
             // 
             // PanelSearchBar
             // 
-            this.PanelSearchBar.BackColor = System.Drawing.SystemColors.Control;
-            this.PanelSearchBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelSearchBar.Controls.Add(this.LblReferenceTitle);
-            this.PanelSearchBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSearchBar.Location = new System.Drawing.Point(9, 8);
-            this.PanelSearchBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelSearchBar.Name = "PanelSearchBar";
-            this.PanelSearchBar.Padding = new System.Windows.Forms.Padding(35, 30, 35, 30);
-            this.PanelSearchBar.Size = new System.Drawing.Size(857, 84);
-            this.PanelSearchBar.TabIndex = 5;
+            PanelSearchBar.BackColor = SystemColors.Control;
+            PanelSearchBar.BorderStyle = BorderStyle.FixedSingle;
+            PanelSearchBar.Controls.Add(LblReferenceTitle);
+            PanelSearchBar.Dock = DockStyle.Top;
+            PanelSearchBar.Location = new Point(10, 10);
+            PanelSearchBar.Name = "PanelSearchBar";
+            PanelSearchBar.Padding = new Padding(40);
+            PanelSearchBar.Size = new Size(980, 143);
+            PanelSearchBar.TabIndex = 5;
             // 
             // LblReferenceTitle
             // 
-            this.LblReferenceTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblReferenceTitle.AutoSize = true;
-            this.LblReferenceTitle.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblReferenceTitle.Location = new System.Drawing.Point(34, 30);
-            this.LblReferenceTitle.Name = "LblReferenceTitle";
-            this.LblReferenceTitle.Size = new System.Drawing.Size(75, 37);
-            this.LblReferenceTitle.TabIndex = 0;
-            this.LblReferenceTitle.Text = "Title";
-            this.LblReferenceTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            LblReferenceTitle.Dock = DockStyle.Fill;
+            LblReferenceTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            LblReferenceTitle.Location = new Point(40, 40);
+            LblReferenceTitle.Name = "LblReferenceTitle";
+            LblReferenceTitle.Size = new Size(898, 61);
+            LblReferenceTitle.TabIndex = 0;
+            LblReferenceTitle.Text = "Title";
+            LblReferenceTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ReferenceCenterDisplay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.PanelSearchResults);
-            this.Controls.Add(this.PanelSearchBar);
-            this.MinimumSize = new System.Drawing.Size(875, 300);
-            this.Name = "ReferenceCenterDisplay";
-            this.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.Size = new System.Drawing.Size(875, 725);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverImage)).EndInit();
-            this.PanelSearchResults.ResumeLayout(false);
-            this.PanelSearchResults.PerformLayout();
-            this.panelCoverImageHolder.ResumeLayout(false);
-            this.PanelSearchBar.ResumeLayout(false);
-            this.PanelSearchBar.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            Controls.Add(PanelSearchResults);
+            Controls.Add(PanelSearchBar);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(1000, 400);
+            Name = "ReferenceCenterDisplay";
+            Padding = new Padding(10);
+            Size = new Size(1000, 912);
+            Load += CenterDisplay_Load;
+            Click += CenterDisplay_Click;
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).EndInit();
+            PanelSearchResults.ResumeLayout(false);
+            PanelSearchResults.PerformLayout();
+            panelCoverImageHolder.ResumeLayout(false);
+            PanelSearchBar.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -520,11 +512,11 @@
         private TextBox textBoxSection;
         private TextBox textBoxShelf;
         private TextBox textBoxNumOfCopies;
-        private ComboBox comboBoxAvailable;
         private PictureBox pictureBoxCoverImage;
         private PdfiumViewer.PdfViewer pdfViewerFile;
         private Button buttonSave;
         private Panel panelCoverImageHolder;
         private TextBox textBoxPublishedOn;
+        private CheckBox checkBoxAvailable;
     }
 }

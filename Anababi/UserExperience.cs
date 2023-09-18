@@ -39,7 +39,7 @@ namespace Anababi
             LblFullName.CenterHorizontally();
             LblUsername.Text = $"@{currentUser.Username}";
             LblUsername.CenterHorizontally();
-            this.SortBy = sortBy;
+            SortBy = sortBy;
 
             //Set the image of the profile picture from the currentUser.
             Image ProfileImage = ByteArrayToImage(currentUser.ProfilePic);
