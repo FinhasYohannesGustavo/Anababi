@@ -15,6 +15,7 @@ using Anababi.UserControls.AdminControls;
 using static Anababi.ModelClasses.PhysicalReference;
 using Anababi.ModelClasses;
 using Anababi.SortingAlgorithms;
+using DrakeUI.Framework;
 
 namespace Anababi
 {
@@ -159,7 +160,7 @@ namespace Anababi
         {
 
             List<Button> buttonList = new List<Button>();
-            if (references != null && references[0] == null)
+            if (!references.IsEmpty() && references[0] == null)
                 return buttonList;
             for (int i = 0; i < references.Count(); i++)
             {

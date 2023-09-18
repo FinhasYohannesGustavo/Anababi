@@ -79,18 +79,11 @@ namespace Anababi.UserControls
                     {
                         searchedReferences = SortingAlgorithms.BubbleSorter.BubbleSort(searchedReferences);
                         foundReference.Add(BinarySearcher.BinarySearch(searchedReferences, searchText, CurrentExperience.SortBy));
-
-
                     }
                     else if (CurrentExperience.SortBy == "Author")
                     {
-
-
                         searchedReferences = SortingAlgorithms.SelectionSorter.SelectionSort(searchedReferences);
                         foundReference.Add(BinarySearcher.BinarySearch(searchedReferences, searchText, CurrentExperience.SortBy));
-
-
-
                     }
 
                     else

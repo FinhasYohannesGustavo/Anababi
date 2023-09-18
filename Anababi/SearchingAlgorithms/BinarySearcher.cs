@@ -78,10 +78,10 @@ namespace Anababi.SearchingAlgorithms
         private static int CompareReferencesPublishedOn(Reference reference1, String searchKey)
         {
 
-            int ISBN_Comparison = String.Compare(reference1.PublishedOn.ToString(), searchKey);
+            int publishedOnComparison = String.Compare(reference1.PublishedOn.ToShortDateString(), searchKey);
 
 
-            return ISBN_Comparison;
+            return publishedOnComparison;
         }
     }
 }

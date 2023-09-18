@@ -23,9 +23,9 @@ namespace Anababi.SearchingAlgorithms
                         if (CompareReferencesTitle(reference, searchKey) == 0)
                             return reference;
                     }
-                    else if (compareBy.Equals("PublishedOn"))
+                    else if (compareBy.Equals("Published Date"))
                     {
-                        if (CompareReferencesISBN(reference, searchKey) == 0)
+                        if (CompareReferencesPublishedOn(reference, searchKey) == 0)
                             return reference;
                     }
                 }
@@ -51,9 +51,9 @@ namespace Anababi.SearchingAlgorithms
                 return string.Compare(reference.Title, searchKey);
             }
 
-            private static int CompareReferencesISBN(Reference reference, string searchKey)
+            private static int CompareReferencesPublishedOn(Reference reference, string searchKey)
             {
-                return string.Compare(reference.ISBN.ToString(), searchKey);
+                return string.Compare(reference.PublishedOn.ToShortDateString(), searchKey);
             }
         }
 
