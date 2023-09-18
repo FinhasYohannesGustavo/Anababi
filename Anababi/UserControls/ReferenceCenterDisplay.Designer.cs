@@ -123,125 +123,125 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(600, 707);
+            tableLayoutPanel2.Size = new Size(600, 664);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // LblCreator
             // 
-            this.LblCreator.AutoSize = true;
-            this.LblCreator.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblCreator.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblCreator.Location = new System.Drawing.Point(85, 0);
-            this.LblCreator.Name = "LblCreator";
-            this.LblCreator.Size = new System.Drawing.Size(66, 27);
-            this.LblCreator.TabIndex = 2;
-            this.LblCreator.Text = "Creator";
+            LblCreator.AutoSize = true;
+            LblCreator.Dock = DockStyle.Right;
+            LblCreator.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblCreator.Location = new Point(104, 0);
+            LblCreator.Name = "LblCreator";
+            LblCreator.Size = new Size(82, 31);
+            LblCreator.TabIndex = 2;
+            LblCreator.Text = "Creator";
             // 
             // LblType
             // 
-            this.LblType.AutoSize = true;
-            this.LblType.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblType.Location = new System.Drawing.Point(105, 27);
-            this.LblType.Name = "LblType";
-            this.LblType.Size = new System.Drawing.Size(46, 27);
-            this.LblType.TabIndex = 1;
-            this.LblType.Text = "Type";
+            LblType.AutoSize = true;
+            LblType.Dock = DockStyle.Right;
+            LblType.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblType.Location = new Point(129, 31);
+            LblType.Name = "LblType";
+            LblType.Size = new Size(57, 31);
+            LblType.TabIndex = 1;
+            LblType.Text = "Type";
             // 
             // LblGenre
             // 
-            this.LblGenre.AutoSize = true;
-            this.LblGenre.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblGenre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblGenre.Location = new System.Drawing.Point(96, 54);
-            this.LblGenre.Name = "LblGenre";
-            this.LblGenre.Size = new System.Drawing.Size(55, 27);
-            this.LblGenre.TabIndex = 3;
-            this.LblGenre.Text = "Genre";
+            LblGenre.AutoSize = true;
+            LblGenre.Dock = DockStyle.Right;
+            LblGenre.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblGenre.Location = new Point(118, 62);
+            LblGenre.Name = "LblGenre";
+            LblGenre.Size = new Size(68, 31);
+            LblGenre.TabIndex = 3;
+            LblGenre.Text = "Genre";
             // 
             // LblPublishedOn
             // 
-            this.LblPublishedOn.AutoSize = true;
-            this.LblPublishedOn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblPublishedOn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblPublishedOn.Location = new System.Drawing.Point(39, 81);
-            this.LblPublishedOn.Name = "LblPublishedOn";
-            this.LblPublishedOn.Size = new System.Drawing.Size(112, 27);
-            this.LblPublishedOn.TabIndex = 4;
-            this.LblPublishedOn.Text = "Published On";
+            LblPublishedOn.AutoSize = true;
+            LblPublishedOn.Dock = DockStyle.Right;
+            LblPublishedOn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblPublishedOn.Location = new Point(49, 93);
+            LblPublishedOn.Name = "LblPublishedOn";
+            LblPublishedOn.Size = new Size(137, 31);
+            LblPublishedOn.TabIndex = 4;
+            LblPublishedOn.Text = "Published On";
             // 
             // LblISBN
             // 
-            this.LblISBN.AutoSize = true;
-            this.LblISBN.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblISBN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblISBN.Location = new System.Drawing.Point(37, 108);
-            this.LblISBN.Name = "LblISBN";
-            this.LblISBN.Size = new System.Drawing.Size(114, 27);
-            this.LblISBN.TabIndex = 5;
-            this.LblISBN.Text = "ISBN Number";
+            LblISBN.AutoSize = true;
+            LblISBN.Dock = DockStyle.Right;
+            LblISBN.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblISBN.Location = new Point(45, 124);
+            LblISBN.Name = "LblISBN";
+            LblISBN.Size = new Size(141, 31);
+            LblISBN.TabIndex = 5;
+            LblISBN.Text = "ISBN Number";
             // 
             // LblDescription
             // 
-            this.LblDescription.AutoSize = true;
-            this.LblDescription.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblDescription.Location = new System.Drawing.Point(53, 135);
-            this.LblDescription.Name = "LblDescription";
-            this.LblDescription.Size = new System.Drawing.Size(98, 25);
-            this.LblDescription.TabIndex = 6;
-            this.LblDescription.Text = "Description";
+            LblDescription.AutoSize = true;
+            LblDescription.Dock = DockStyle.Right;
+            LblDescription.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblDescription.Location = new Point(65, 155);
+            LblDescription.Name = "LblDescription";
+            LblDescription.Size = new Size(121, 28);
+            LblDescription.TabIndex = 6;
+            LblDescription.Text = "Description";
             // 
             // LblDiscriminator
             // 
-            this.LblDiscriminator.AutoSize = true;
-            this.LblDiscriminator.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblDiscriminator.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblDiscriminator.Location = new System.Drawing.Point(37, 160);
-            this.LblDiscriminator.Name = "LblDiscriminator";
-            this.LblDiscriminator.Size = new System.Drawing.Size(114, 27);
-            this.LblDiscriminator.TabIndex = 8;
-            this.LblDiscriminator.Text = "Discriminator";
+            LblDiscriminator.AutoSize = true;
+            LblDiscriminator.Dock = DockStyle.Right;
+            LblDiscriminator.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblDiscriminator.Location = new Point(45, 183);
+            LblDiscriminator.Name = "LblDiscriminator";
+            LblDiscriminator.Size = new Size(141, 31);
+            LblDiscriminator.TabIndex = 8;
+            LblDiscriminator.Text = "Discriminator";
             // 
             // LblFloor
             // 
-            this.LblFloor.AutoSize = true;
-            this.LblFloor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblFloor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblFloor.Location = new System.Drawing.Point(102, 187);
-            this.LblFloor.Name = "LblFloor";
-            this.LblFloor.Size = new System.Drawing.Size(49, 27);
-            this.LblFloor.TabIndex = 10;
-            this.LblFloor.Text = "Floor";
+            LblFloor.AutoSize = true;
+            LblFloor.Dock = DockStyle.Right;
+            LblFloor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblFloor.Location = new Point(126, 214);
+            LblFloor.Name = "LblFloor";
+            LblFloor.Size = new Size(60, 31);
+            LblFloor.TabIndex = 10;
+            LblFloor.Text = "Floor";
             // 
             // LblSection
             // 
-            this.LblSection.AutoSize = true;
-            this.LblSection.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblSection.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblSection.Location = new System.Drawing.Point(84, 214);
-            this.LblSection.Name = "LblSection";
-            this.LblSection.Size = new System.Drawing.Size(67, 27);
-            this.LblSection.TabIndex = 11;
-            this.LblSection.Text = "Section";
+            LblSection.AutoSize = true;
+            LblSection.Dock = DockStyle.Right;
+            LblSection.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblSection.Location = new Point(104, 245);
+            LblSection.Name = "LblSection";
+            LblSection.Size = new Size(82, 31);
+            LblSection.TabIndex = 11;
+            LblSection.Text = "Section";
             // 
             // LblShelf
             // 
-            this.LblShelf.AutoSize = true;
-            this.LblShelf.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblShelf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblShelf.Location = new System.Drawing.Point(102, 241);
-            this.LblShelf.Name = "LblShelf";
-            this.LblShelf.Size = new System.Drawing.Size(49, 27);
-            this.LblShelf.TabIndex = 9;
-            this.LblShelf.Text = "Shelf";
+            LblShelf.AutoSize = true;
+            LblShelf.Dock = DockStyle.Right;
+            LblShelf.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblShelf.Location = new Point(126, 276);
+            LblShelf.Name = "LblShelf";
+            LblShelf.Size = new Size(60, 31);
+            LblShelf.TabIndex = 9;
+            LblShelf.Text = "Shelf";
             // 
             // LblAvailable
             // 
             LblAvailable.AutoSize = true;
             LblAvailable.Dock = DockStyle.Right;
             LblAvailable.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblAvailable.Location = new Point(86, 330);
+            LblAvailable.Location = new Point(86, 307);
             LblAvailable.Name = "LblAvailable";
             LblAvailable.Size = new Size(100, 28);
             LblAvailable.TabIndex = 18;
@@ -252,7 +252,7 @@
             LblNumOfCopies.AutoSize = true;
             LblNumOfCopies.Dock = DockStyle.Right;
             LblNumOfCopies.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblNumOfCopies.Location = new Point(3, 358);
+            LblNumOfCopies.Location = new Point(3, 335);
             LblNumOfCopies.Name = "LblNumOfCopies";
             LblNumOfCopies.Size = new Size(183, 33);
             LblNumOfCopies.TabIndex = 16;
@@ -263,7 +263,7 @@
             LblFile.AutoSize = true;
             LblFile.Dock = DockStyle.Right;
             LblFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblFile.Location = new Point(141, 391);
+            LblFile.Location = new Point(141, 368);
             LblFile.Name = "LblFile";
             LblFile.Size = new Size(45, 255);
             LblFile.TabIndex = 17;
@@ -271,97 +271,98 @@
             // 
             // textBoxCreator
             // 
-            this.textBoxCreator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxCreator.Location = new System.Drawing.Point(157, 2);
-            this.textBoxCreator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxCreator.Name = "textBoxCreator";
-            this.textBoxCreator.Size = new System.Drawing.Size(386, 23);
-            this.textBoxCreator.TabIndex = 19;
+            textBoxCreator.Dock = DockStyle.Fill;
+            textBoxCreator.Location = new Point(192, 2);
+            textBoxCreator.Margin = new Padding(3, 2, 3, 2);
+            textBoxCreator.Name = "textBoxCreator";
+            textBoxCreator.Size = new Size(405, 27);
+            textBoxCreator.TabIndex = 19;
             // 
             // textBoxType
             // 
-            this.textBoxType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxType.Location = new System.Drawing.Point(157, 29);
-            this.textBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(386, 23);
-            this.textBoxType.TabIndex = 20;
+            textBoxType.Dock = DockStyle.Fill;
+            textBoxType.Location = new Point(192, 33);
+            textBoxType.Margin = new Padding(3, 2, 3, 2);
+            textBoxType.Name = "textBoxType";
+            textBoxType.Size = new Size(405, 27);
+            textBoxType.TabIndex = 20;
             // 
             // textBoxGenre
             // 
-            this.textBoxGenre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxGenre.Location = new System.Drawing.Point(157, 56);
-            this.textBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxGenre.Name = "textBoxGenre";
-            this.textBoxGenre.Size = new System.Drawing.Size(386, 23);
-            this.textBoxGenre.TabIndex = 21;
+            textBoxGenre.Dock = DockStyle.Fill;
+            textBoxGenre.Location = new Point(192, 64);
+            textBoxGenre.Margin = new Padding(3, 2, 3, 2);
+            textBoxGenre.Name = "textBoxGenre";
+            textBoxGenre.Size = new Size(405, 27);
+            textBoxGenre.TabIndex = 21;
             // 
             // textBoxISBN
             // 
-            this.textBoxISBN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxISBN.Location = new System.Drawing.Point(157, 110);
-            this.textBoxISBN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxISBN.Name = "textBoxISBN";
-            this.textBoxISBN.Size = new System.Drawing.Size(386, 23);
-            this.textBoxISBN.TabIndex = 22;
+            textBoxISBN.Dock = DockStyle.Fill;
+            textBoxISBN.Location = new Point(192, 126);
+            textBoxISBN.Margin = new Padding(3, 2, 3, 2);
+            textBoxISBN.Name = "textBoxISBN";
+            textBoxISBN.Size = new Size(405, 27);
+            textBoxISBN.TabIndex = 22;
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDescription.Location = new System.Drawing.Point(157, 137);
-            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxDescription.Multiline = true;
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(386, 21);
-            this.textBoxDescription.TabIndex = 23;
+            textBoxDescription.Dock = DockStyle.Fill;
+            textBoxDescription.Location = new Point(192, 157);
+            textBoxDescription.Margin = new Padding(3, 2, 3, 2);
+            textBoxDescription.Multiline = true;
+            textBoxDescription.Name = "textBoxDescription";
+            textBoxDescription.Size = new Size(405, 24);
+            textBoxDescription.TabIndex = 23;
+            textBoxDescription.TextChanged += textBoxDescription_TextChanged;
             // 
             // textBoxDiscriminator
             // 
-            this.textBoxDiscriminator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDiscriminator.Location = new System.Drawing.Point(157, 162);
-            this.textBoxDiscriminator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxDiscriminator.Name = "textBoxDiscriminator";
-            this.textBoxDiscriminator.Size = new System.Drawing.Size(386, 23);
-            this.textBoxDiscriminator.TabIndex = 25;
+            textBoxDiscriminator.Dock = DockStyle.Fill;
+            textBoxDiscriminator.Location = new Point(192, 185);
+            textBoxDiscriminator.Margin = new Padding(3, 2, 3, 2);
+            textBoxDiscriminator.Name = "textBoxDiscriminator";
+            textBoxDiscriminator.Size = new Size(405, 27);
+            textBoxDiscriminator.TabIndex = 25;
             // 
             // textBoxFloor
             // 
-            this.textBoxFloor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxFloor.Location = new System.Drawing.Point(157, 189);
-            this.textBoxFloor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxFloor.Name = "textBoxFloor";
-            this.textBoxFloor.Size = new System.Drawing.Size(386, 23);
-            this.textBoxFloor.TabIndex = 26;
+            textBoxFloor.Dock = DockStyle.Fill;
+            textBoxFloor.Location = new Point(192, 216);
+            textBoxFloor.Margin = new Padding(3, 2, 3, 2);
+            textBoxFloor.Name = "textBoxFloor";
+            textBoxFloor.Size = new Size(405, 27);
+            textBoxFloor.TabIndex = 26;
             // 
             // textBoxSection
             // 
-            this.textBoxSection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxSection.Location = new System.Drawing.Point(157, 216);
-            this.textBoxSection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxSection.Name = "textBoxSection";
-            this.textBoxSection.Size = new System.Drawing.Size(386, 23);
-            this.textBoxSection.TabIndex = 27;
+            textBoxSection.Dock = DockStyle.Fill;
+            textBoxSection.Location = new Point(192, 247);
+            textBoxSection.Margin = new Padding(3, 2, 3, 2);
+            textBoxSection.Name = "textBoxSection";
+            textBoxSection.Size = new Size(405, 27);
+            textBoxSection.TabIndex = 27;
             // 
             // textBoxShelf
             // 
-            this.textBoxShelf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxShelf.Location = new System.Drawing.Point(157, 243);
-            this.textBoxShelf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxShelf.Name = "textBoxShelf";
-            this.textBoxShelf.Size = new System.Drawing.Size(386, 23);
-            this.textBoxShelf.TabIndex = 28;
+            textBoxShelf.Dock = DockStyle.Fill;
+            textBoxShelf.Location = new Point(192, 278);
+            textBoxShelf.Margin = new Padding(3, 2, 3, 2);
+            textBoxShelf.Name = "textBoxShelf";
+            textBoxShelf.Size = new Size(405, 27);
+            textBoxShelf.TabIndex = 28;
             // 
             // textBoxNumOfCopies
             // 
             textBoxNumOfCopies.Dock = DockStyle.Fill;
-            textBoxNumOfCopies.Location = new Point(192, 361);
+            textBoxNumOfCopies.Location = new Point(192, 338);
             textBoxNumOfCopies.Name = "textBoxNumOfCopies";
             textBoxNumOfCopies.Size = new Size(405, 27);
             textBoxNumOfCopies.TabIndex = 30;
             // 
             // pdfViewerFile
             // 
-            pdfViewerFile.Location = new Point(193, 396);
+            pdfViewerFile.Location = new Point(193, 373);
             pdfViewerFile.Margin = new Padding(4, 5, 4, 5);
             pdfViewerFile.Name = "pdfViewerFile";
             pdfViewerFile.ShowToolbar = false;
@@ -372,9 +373,11 @@
             // 
             buttonSave.Dock = DockStyle.Right;
             buttonSave.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSave.Location = new Point(463, 649);
+            buttonSave.Location = new Point(428, 626);
+            buttonSave.MaximumSize = new Size(169, 35);
+            buttonSave.MinimumSize = new Size(169, 35);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(134, 55);
+            buttonSave.Size = new Size(169, 35);
             buttonSave.TabIndex = 36;
             buttonSave.Text = "Save";
             buttonSave.UseVisualStyleBackColor = true;
@@ -382,18 +385,18 @@
             // 
             // textBoxPublishedOn
             // 
-            this.textBoxPublishedOn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxPublishedOn.Location = new System.Drawing.Point(157, 83);
-            this.textBoxPublishedOn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxPublishedOn.Name = "textBoxPublishedOn";
-            this.textBoxPublishedOn.Size = new System.Drawing.Size(386, 23);
-            this.textBoxPublishedOn.TabIndex = 37;
+            textBoxPublishedOn.Dock = DockStyle.Fill;
+            textBoxPublishedOn.Location = new Point(192, 95);
+            textBoxPublishedOn.Margin = new Padding(3, 2, 3, 2);
+            textBoxPublishedOn.Name = "textBoxPublishedOn";
+            textBoxPublishedOn.Size = new Size(405, 27);
+            textBoxPublishedOn.TabIndex = 37;
             // 
             // checkBoxAvailable
             // 
             checkBoxAvailable.AutoSize = true;
             checkBoxAvailable.Dock = DockStyle.Fill;
-            checkBoxAvailable.Location = new Point(192, 333);
+            checkBoxAvailable.Location = new Point(192, 310);
             checkBoxAvailable.Name = "checkBoxAvailable";
             checkBoxAvailable.Size = new Size(405, 22);
             checkBoxAvailable.TabIndex = 38;
@@ -405,7 +408,7 @@
             pictureBoxCoverImage.Dock = DockStyle.Fill;
             pictureBoxCoverImage.Location = new Point(0, 0);
             pictureBoxCoverImage.Name = "pictureBoxCoverImage";
-            pictureBoxCoverImage.Size = new Size(350, 707);
+            pictureBoxCoverImage.Size = new Size(350, 664);
             pictureBoxCoverImage.TabIndex = 34;
             pictureBoxCoverImage.TabStop = false;
             // 
@@ -422,7 +425,7 @@
             PanelSearchResults.MinimumSize = new Size(900, 300);
             PanelSearchResults.Name = "PanelSearchResults";
             PanelSearchResults.Padding = new Padding(40, 0, 40, 40);
-            PanelSearchResults.Size = new Size(980, 749);
+            PanelSearchResults.Size = new Size(980, 706);
             PanelSearchResults.TabIndex = 6;
             // 
             // panelCoverImageHolder
@@ -431,7 +434,7 @@
             panelCoverImageHolder.Dock = DockStyle.Left;
             panelCoverImageHolder.Location = new Point(40, 0);
             panelCoverImageHolder.Name = "panelCoverImageHolder";
-            panelCoverImageHolder.Size = new Size(350, 707);
+            panelCoverImageHolder.Size = new Size(350, 664);
             panelCoverImageHolder.TabIndex = 1;
             // 
             // PanelSearchBar
@@ -469,7 +472,7 @@
             MinimumSize = new Size(1000, 400);
             Name = "ReferenceCenterDisplay";
             Padding = new Padding(10);
-            Size = new Size(1000, 912);
+            Size = new Size(1000, 869);
             Load += CenterDisplay_Load;
             Click += CenterDisplay_Click;
             tableLayoutPanel2.ResumeLayout(false);
