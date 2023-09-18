@@ -53,7 +53,7 @@ This Library Management System is a versatile solution designed to cater to the 
     6. `Microsoft.EntityFrameworkCore.SqlServer`
     7. `Microsoft.EntityFrameworkCore.Tools`
     8. `PdfiumViewer`
-5. Go to `Tools` >> `NuGet Package Manager` >> `Package Manager Console` and run the following commands to initialize the database with Entity Framework Core.
+6. Go to `Tools` >> `NuGet Package Manager` >> `Package Manager Console` and run the following commands to initialize the database with Entity Framework Core.
 
     _This creates a migration file for initializing the database structure and all the relationships between the entities._
     ```bash
@@ -65,8 +65,47 @@ This Library Management System is a versatile solution designed to cater to the 
     Update-Database
     ```
     
-6. Open the project with Visual Studio and `Debug` >> `Start Debugging` (F5).
+7. Open the project with Visual Studio and `Debug` >> `Start Debugging` (F5).
    
    ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/9013ae6e-5bcb-4a4b-a370-5fd4b0b3b115)
 
+### How to test sorting functionality
 
+1. Navigate to the top of the app where you find the search button and click the drop down menu with the sorting icon next to it.
+
+    ![Untitled](https://github.com/FinhasYohannesGustavo/Anababi/assets/89961977/a072bab8-1f3d-4552-ac18-65bb69e1b75f)
+    
+2. Choose either `Published Date`, `Author`, `Title` to tell the App on which property of the references it should sort the references with.
+3. Navigate to each category to view the sorted references with the criteria that you have set.
+4. The pages, which include `My Feed` and `Top References` will now be sorted with the sorting criteria that you have selected.
+
+### How to test searching functionality
+
+1. Navigate to the top of the app click the search button on the top right corner.
+2. After Clicking on the search button you will have the option to search using binary or linear search.
+
+    ![Untitled](https://github.com/FinhasYohannesGustavo/Anababi/assets/89961977/9d0dc310-f4d1-41b0-8289-99890fd4c6f8)
+
+    
+3. Click on the toggle switch to choose searching algorithm you want.
+    
+    ![Untitled](https://github.com/FinhasYohannesGustavo/Anababi/assets/89961977/c77ce072-b756-41aa-bff6-9e4751023674)
+
+    
+4. The only difference between the two types of searching is that `binary searching` only works on already `sorted data`.
+5. To search by title you have to first sort by Title.
+6. To search by Author you have to first sort by Author.
+
+    1. Note if you do search by Author make sure to either search the first name only or the last name only.
+    2. This is because a reference only has a first name or last name property and not a full name property.
+        
+       ![Untitled](https://github.com/FinhasYohannesGustavo/Anababi/assets/89961977/2dd59134-a93a-4a3d-9d9a-0dca281c5066)
+
+        
+7. Lastly to search by published data you have to first sort by Published date.
+
+<aside>
+📌 The searches must be exactly what is found on the references properties to be found as a result of the search.
+
+</aside>
+     
