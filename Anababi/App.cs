@@ -18,19 +18,6 @@ namespace Anababi
         private void App_Load(object sender, EventArgs e)
         {
             this.Icon = Resources.font_symbol_of_letter_a;
-            using AnababiContext context = new AnababiContext();
-            
-            //Populate the database with dummy objects only if it is empty
-            if(context.Libraries.IsNullOrEmpty())
-            {
-                UserExperience.PopulateDatabaseWithDummyData();
-            }
-
-            if(this.user.ProfilePic==null) {
-                this.user.ProfilePic = UserExperience.ImageToByteArray(Resources.user);
-            }
-
-            Library = context.Libraries.FirstOrDefault() as Library;
 
             //Maximize the window
             this.WindowState = FormWindowState.Maximized;

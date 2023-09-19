@@ -11,6 +11,7 @@ using Anababi.ModelClasses;
 using Anababi.Data;
 using Anababi.RegistrationItems;
 using Anababi.Properties;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Anababi.AuthenticationItems
 {
@@ -52,10 +53,21 @@ namespace Anababi.AuthenticationItems
             User userToBeLoggedIn = new User();
             using (var context = new AnababiContext())
             {
-               userToBeLoggedIn = context.Users.FirstOrDefault(c => c.Username.Equals(loginUserNameTextBox.Text));
+                //Populate the database with dummy objects only if it is empty
+                if (context.Libraries.IsNullOrEmpty())
+                {
+                    UserExperience.PopulateDatabaseWithDummyData();
+                }
+
+                userToBeLoggedIn = context.Users.FirstOrDefault(c => c.Username.Equals(loginUserNameTextBox.Text));
             }
 
-            if (userToBeLoggedIn!=null&&userToBeLoggedIn.Password.Equals(loginPwdTextBox.Text)){
+            if (userToBeLoggedIn.ProfilePic == null)
+            {
+                userToBeLoggedIn.ProfilePic = UserExperience.ImageToByteArray(Resources.user);
+            }
+
+            if (userToBeLoggedIn != null && userToBeLoggedIn.Password.Equals(loginPwdTextBox.Text)){
                 App app = new App(userToBeLoggedIn);
                 this.Hide();
                 app.FormClosed += NewForm_FormClosed;
