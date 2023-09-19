@@ -109,13 +109,13 @@ This Library Management System is a versatile solution designed to cater to the 
 ### How to test searching functionality
 
 1. Navigate to the top of the app click the search button on the top right corner.
-2. After Clicking on the search button you will have the option to search using binary or linear search.
+2. After clicking on the search button you will have the option to search using binary or linear search.
 
     ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/d136868e-a4c0-4308-8dc8-b38ee6a4522f)
 
 
     
-3. Click on the toggle switch to choose searching algorithm you want.
+3. Click on the toggle switch to choose the searching algorithm you want.
     
     ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/48d0c1fa-14a7-41af-8f43-3b479c4737f4)
 
@@ -123,7 +123,7 @@ This Library Management System is a versatile solution designed to cater to the 
     
 4. The only difference between the two types of searching is that `binary searching` only works on already `sorted data`. Also the `search key` must be exactly what is found on the references properties to be found as a result of the search.
 5. To search by title you have to first sort by Title.
-6. To search by Author you have to first sort by Author.
+6. To search by author you have to first sort by Author.
 
     1. Note if you do search by Author make sure to either search the first name only or the last name only.
     2. This is because a reference only has a first name or last name property and not a full name property.
@@ -132,9 +132,10 @@ This Library Management System is a versatile solution designed to cater to the 
 
 
         
-7. Lastly to search by published data you have to first sort by Published date.
+7. Lastly to search by published date you have to first sort by Published Date.
 
 
 > Bye... for now.
+> 
 > -Collaborators
      
