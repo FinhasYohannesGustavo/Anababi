@@ -1,4 +1,8 @@
 using Anababi.AuthenticationItems;
+using Anababi.Data;
+using Anababi.ModelClasses;
+using Anababi.Properties;
+
 namespace Anababi
 {
     public static class Program
@@ -10,7 +14,12 @@ namespace Anababi
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm());
+            //Application.Run(new LoginForm());
+
+            //For testing only
+            User trial = new AnababiContext().Users.Where(u => u.IsAdmin).FirstOrDefault();
+            trial.ProfilePic = UserExperience.ImageToByteArray(Resources.user);
+            Application.Run(new App(trial));
         }
     }
 }

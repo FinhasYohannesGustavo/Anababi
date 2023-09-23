@@ -72,20 +72,17 @@ namespace Anababi
                 return ms.ToArray();
             }
         }
-
         public static Image ByteArrayToImage(byte[] byteArrayIn)
         {
             MemoryStream ms = new MemoryStream(byteArrayIn);
             Image returnImage = Image.FromStream(ms);
             return returnImage;
         }
-
         public static User GetUserByUserName(string username)
         {
             AnababiContext anababiContext = new AnababiContext();
             return anababiContext.Users.SingleOrDefault(user => user.Username == username);
         }
-
         public static void AddToPanel(Control c, Panel panel)
         {
             //Add control to panel.

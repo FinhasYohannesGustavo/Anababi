@@ -24,7 +24,7 @@ namespace Anababi.UserControls
             //database fetch for the specific feed of this user
             List<Reference> arts = Reference.GetAllReferencesFromDB();
 
-            CurrentExperience.AddToPanelContent(new MyFeedPage(arts,CurrentExperience.SortBy));
+            CurrentExperience.AddToPanelContent(new MyFeedPage(arts, CurrentExperience.SortBy));
         }
         private void BtnTopCreators_Click(object sender, EventArgs e)
         {
@@ -47,6 +47,11 @@ namespace Anababi.UserControls
             //Get the current UserExperience.
             CurrentExperience = (this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience;
         }
-    
+
+        private void BtnLinkedReferences_Click(object sender, EventArgs e)
+        {
+            LinkedList<Reference> linkedReferences = new LinkedList<Reference>(Reference.GetAllReferencesFromDB());
+            CurrentExperience.AddToPanelContent(new LinkedReferencesPage(linkedReferences));
+        }
     }
 }
