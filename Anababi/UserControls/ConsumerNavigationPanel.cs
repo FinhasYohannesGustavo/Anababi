@@ -53,5 +53,10 @@ namespace Anababi.UserControls
             LinkedList<Reference> linkedReferences = new LinkedList<Reference>(Reference.GetAllReferencesFromDB());
             CurrentExperience.AddToPanelContent(new LinkedReferencesPage(linkedReferences));
         }
+
+        private void ButtonAddReference_Click(object sender, EventArgs e)
+        {
+            CurrentExperience.AddToPanelContent(new AddReferenceCenterDisplay());
+        }
     }
 }

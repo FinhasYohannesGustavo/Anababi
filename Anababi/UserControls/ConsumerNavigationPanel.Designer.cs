@@ -226,6 +226,8 @@
             this.ButtonAddReference.Size = new System.Drawing.Size(240, 47);
             this.ButtonAddReference.TabIndex = 12;
             this.ButtonAddReference.Text = "Add a Reference";
+            ButtonAddReference.Click += ButtonAddReference_Click;
+            // 
             // 
             // ConsumerNavigationPanel
             // 
