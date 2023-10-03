@@ -43,7 +43,6 @@ namespace Anababi.UserControls
             this.LblShelf = new System.Windows.Forms.Label();
             this.LblAvailable = new System.Windows.Forms.Label();
             this.LblNumOfCopies = new System.Windows.Forms.Label();
-            this.LblFile = new System.Windows.Forms.Label();
             this.textBoxCreator = new System.Windows.Forms.TextBox();
             this.textBoxType = new System.Windows.Forms.TextBox();
             this.textBoxGenre = new System.Windows.Forms.TextBox();
@@ -54,7 +53,6 @@ namespace Anababi.UserControls
             this.textBoxSection = new System.Windows.Forms.TextBox();
             this.textBoxShelf = new System.Windows.Forms.TextBox();
             this.textBoxNumOfCopies = new System.Windows.Forms.TextBox();
-            this.pdfViewerFile = new PdfiumViewer.PdfViewer();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxPublishedOn = new System.Windows.Forms.TextBox();
             this.checkBoxAvailable = new System.Windows.Forms.CheckBox();
@@ -90,7 +88,6 @@ namespace Anababi.UserControls
             this.tableLayoutPanel2.Controls.Add(this.LblShelf, 0, 10);
             this.tableLayoutPanel2.Controls.Add(this.LblAvailable, 0, 11);
             this.tableLayoutPanel2.Controls.Add(this.LblNumOfCopies, 0, 12);
-            this.tableLayoutPanel2.Controls.Add(this.LblFile, 0, 13);
             this.tableLayoutPanel2.Controls.Add(this.textBoxCreator, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBoxType, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.textBoxGenre, 1, 2);
@@ -101,7 +98,6 @@ namespace Anababi.UserControls
             this.tableLayoutPanel2.Controls.Add(this.textBoxSection, 1, 9);
             this.tableLayoutPanel2.Controls.Add(this.textBoxShelf, 1, 10);
             this.tableLayoutPanel2.Controls.Add(this.textBoxNumOfCopies, 1, 12);
-            this.tableLayoutPanel2.Controls.Add(this.pdfViewerFile, 1, 13);
             this.tableLayoutPanel2.Controls.Add(this.buttonAdd, 1, 14);
             this.tableLayoutPanel2.Controls.Add(this.textBoxPublishedOn, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.checkBoxAvailable, 1, 11);
@@ -126,7 +122,7 @@ namespace Anababi.UserControls
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(525, 536);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(525, 344);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // LblCreator
@@ -261,17 +257,6 @@ namespace Anababi.UserControls
             this.LblNumOfCopies.TabIndex = 16;
             this.LblNumOfCopies.Text = "Number of Copies";
             // 
-            // LblFile
-            // 
-            this.LblFile.AutoSize = true;
-            this.LblFile.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblFile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblFile.Location = new System.Drawing.Point(114, 314);
-            this.LblFile.Name = "LblFile";
-            this.LblFile.Size = new System.Drawing.Size(37, 192);
-            this.LblFile.TabIndex = 17;
-            this.LblFile.Text = "File";
-            // 
             // textBoxCreator
             // 
             this.textBoxCreator.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -367,20 +352,11 @@ namespace Anababi.UserControls
             this.textBoxNumOfCopies.Size = new System.Drawing.Size(386, 23);
             this.textBoxNumOfCopies.TabIndex = 30;
             // 
-            // pdfViewerFile
-            // 
-            this.pdfViewerFile.Location = new System.Drawing.Point(158, 318);
-            this.pdfViewerFile.Margin = new System.Windows.Forms.Padding(4);
-            this.pdfViewerFile.Name = "pdfViewerFile";
-            this.pdfViewerFile.ShowToolbar = false;
-            this.pdfViewerFile.Size = new System.Drawing.Size(309, 184);
-            this.pdfViewerFile.TabIndex = 35;
-            // 
             // buttonAdd
             // 
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonAdd.Location = new System.Drawing.Point(395, 508);
+            this.buttonAdd.Location = new System.Drawing.Point(395, 316);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdd.MaximumSize = new System.Drawing.Size(148, 26);
             this.buttonAdd.MinimumSize = new System.Drawing.Size(148, 26);
@@ -419,7 +395,7 @@ namespace Anababi.UserControls
             this.pictureBoxCoverImage.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCoverImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxCoverImage.Name = "pictureBoxCoverImage";
-            this.pictureBoxCoverImage.Size = new System.Drawing.Size(306, 536);
+            this.pictureBoxCoverImage.Size = new System.Drawing.Size(306, 344);
             this.pictureBoxCoverImage.TabIndex = 34;
             this.pictureBoxCoverImage.TabStop = false;
             this.pictureBoxCoverImage.Click += new System.EventHandler(this.pictureBoxCoverImage_Click);
@@ -438,7 +414,7 @@ namespace Anababi.UserControls
             this.PanelSearchResults.MinimumSize = new System.Drawing.Size(788, 226);
             this.PanelSearchResults.Name = "PanelSearchResults";
             this.PanelSearchResults.Padding = new System.Windows.Forms.Padding(35, 30, 35, 30);
-            this.PanelSearchResults.Size = new System.Drawing.Size(857, 598);
+            this.PanelSearchResults.Size = new System.Drawing.Size(857, 406);
             this.PanelSearchResults.TabIndex = 6;
             // 
             // panelCoverImageHolder
@@ -448,7 +424,7 @@ namespace Anababi.UserControls
             this.panelCoverImageHolder.Location = new System.Drawing.Point(35, 30);
             this.panelCoverImageHolder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelCoverImageHolder.Name = "panelCoverImageHolder";
-            this.panelCoverImageHolder.Size = new System.Drawing.Size(306, 536);
+            this.panelCoverImageHolder.Size = new System.Drawing.Size(306, 344);
             this.panelCoverImageHolder.TabIndex = 1;
             // 
             // PanelSearchBar
@@ -486,7 +462,7 @@ namespace Anababi.UserControls
             this.MinimumSize = new System.Drawing.Size(875, 300);
             this.Name = "AddReferenceCenterDisplay";
             this.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.Size = new System.Drawing.Size(875, 722);
+            this.Size = new System.Drawing.Size(875, 530);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverImage)).EndInit();
@@ -517,7 +493,6 @@ namespace Anababi.UserControls
         private Label LblSection;
         private Label LblAvailable;
         private Label LblNumOfCopies;
-        private Label LblFile;
         private TextBox textBoxCreator;
         private TextBox textBoxType;
         private TextBox textBoxGenre;
@@ -529,7 +504,6 @@ namespace Anababi.UserControls
         private TextBox textBoxShelf;
         private TextBox textBoxNumOfCopies;
         private PictureBox pictureBoxCoverImage;
-        private PdfiumViewer.PdfViewer pdfViewerFile;
         private Button buttonAdd;
         private Panel panelCoverImageHolder;
         private TextBox textBoxPublishedOn;
