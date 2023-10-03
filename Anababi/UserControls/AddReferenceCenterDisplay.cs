@@ -105,8 +105,8 @@ namespace Anababi.UserControls
                         referenceToBeAdded.Title = txtTitle.Text;
                         referenceToBeAdded.PublishedOn = DateTime.Parse(textBoxPublishedOn.Text);
                         referenceToBeAdded.ISBN = textBoxISBN.Text;
-                        referenceToBeAdded.Type = Enum.Parse<Reference.ReferenceType>(comboBoxType.Text);
-                        referenceToBeAdded.Genre = Enum.Parse<Reference.ReferenceGenre>(comboBoxGenre.Text);
+                        referenceToBeAdded.Type = Enum.Parse<Reference.ReferenceType>(textBoxType.Text);
+                        referenceToBeAdded.Genre = Enum.Parse<Reference.ReferenceGenre>(textBoxGenre.Text);
                         referenceToBeAdded.CoverImage = UserExperience.ImageToByteArray(pictureBoxCoverImage.Image);
                         referenceToBeAdded.Description = textBoxDescription.Text;
                         referenceToBeAdded.Creator = creatorOfReference;
