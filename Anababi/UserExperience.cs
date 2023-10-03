@@ -42,6 +42,10 @@ namespace Anababi
             SortBy = sortBy;
 
             //Set the image of the profile picture from the currentUser.
+            if(currentUser.ProfilePic==null)
+            {
+                currentUser.ProfilePic=UserExperience.ImageToByteArray(Resources.user);
+            }
             Image ProfileImage = ByteArrayToImage(currentUser.ProfilePic);
 
             guna2CirclePictureBoxProfilePic.Image = ProfileImage;

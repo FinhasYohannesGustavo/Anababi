@@ -17,7 +17,8 @@ namespace Anababi
             //Application.Run(new LoginForm());
 
             //For testing only
-            User trial = new AnababiContext().Users.FirstOrDefault(u => u.Username.Equals("gustavo"));
+            //User trial = new AnababiContext().Users.FirstOrDefault(u => u.Username.Equals("gustavo"));
+            User trial = new AnababiContext().Users.Where(u => (!u.IsAdmin)).FirstOrDefault();
             Application.Run(new App(trial));
         }
     }
