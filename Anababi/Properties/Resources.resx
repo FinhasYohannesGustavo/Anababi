@@ -145,9 +145,6 @@
   <data name="Love in the Time of Cholera book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Love in the Time of Cholera book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DefaultCoverImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DefaultCoverImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Tender Is the Night book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tender Is the Night book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -259,7 +256,7 @@
   <data name="1984" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1984.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DefaultCoverImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="DefaultCoverImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DefaultCoverImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

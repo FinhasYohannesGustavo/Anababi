@@ -64,50 +64,59 @@ namespace Anababi.UserControls
             try
             {
                 // Get the database object from the context class
-                using AnababiContext context = new AnababiContext();
-                Reference referenceToBeUpdated = new Reference();
-                referenceToBeUpdated.Title = txtTitle.Text;
-                referenceToBeUpdated.PublishedOn = DateTime.Parse(textBoxPublishedOn.Text);
-                referenceToBeUpdated.ISBN = textBoxISBN.Text;
-                referenceToBeUpdated.Type = Enum.Parse<Reference.ReferenceType>(textBoxType.Text);
-                referenceToBeUpdated.Genre = Enum.Parse<Reference.ReferenceGenre>(textBoxGenre.Text);
-                referenceToBeUpdated.CoverImage = UserExperience.ImageToByteArray(pictureBoxCoverImage.BackgroundImage);
-                referenceToBeUpdated.Description = textBoxDescription.Text;
-                referenceToBeUpdated.Creator = context.Creators.FirstOrDefault(u=> u.FirstName.Equals(textBoxCreator.Text));
-                if (referenceToBeUpdated.Creator == null)
+                using (AnababiContext context = new AnababiContext())
                 {
-                    referenceToBeUpdated.Creator = context.Creators.FirstOrDefault(u => u.LastName.Equals(textBoxCreator.Text));
-                }
-                if (referenceToBeUpdated.Creator == null)
-                {
-                    MessageBox.Show("There is no creator with that first name or lastname");
-                }
-                else
-                {
-                    // Check if the reference is digital or physical
-                    if (ComboBoxDiscriminator.SelectedItem == "Physical Reference")
+                    Reference referenceToBeAdded = new Reference();
+                    
+                    referenceToBeAdded.Creator = context.Creators.FirstOrDefault(u => u.FirstName.Equals(textBoxCreator.Text));
 
+                    if (referenceToBeAdded.Creator == null)
                     {
-                        (referenceToBeUpdated as PhysicalReference).Location.Floor = int.Parse(textBoxFloor.Text);
-                        (referenceToBeUpdated as PhysicalReference).Location.Section = int.Parse(textBoxSection.Text);
-                        (referenceToBeUpdated as PhysicalReference).Location.Shelf = int.Parse(textBoxShelf.Text);
-                        (referenceToBeUpdated as PhysicalReference).Available = checkBoxAvailable.Checked;
-                        (referenceToBeUpdated as PhysicalReference).NumOfCopies = int.Parse(textBoxNumOfCopies.Text);
+                        referenceToBeAdded.Creator = context.Creators.FirstOrDefault(u => u.LastName.Equals(textBoxCreator.Text));
+                    }
+
+                    if (referenceToBeAdded.Creator == null)
+                    {
+                        MessageBox.Show("There is no creator with that first name or lastname");
                     }
                     else
                     {
-                        //referenceToBeUpdated = new DigitalReference(Reference as DigitalReference);
+                        // Check if the reference is digital or physical
+                        Creator creatorOfReference = referenceToBeAdded.Creator;
+                        if (ComboBoxDiscriminator.SelectedItem == "Physical Reference")
+                        {
+                            PhysicalReference physicalReferenceToBeAdded = new PhysicalReference();
+                            physicalReferenceToBeAdded.Location.Floor = int.Parse(textBoxFloor.Text);
+                            physicalReferenceToBeAdded.Location.Section = int.Parse(textBoxSection.Text);
+                            physicalReferenceToBeAdded.Location.Shelf = int.Parse(textBoxShelf.Text);
+                            physicalReferenceToBeAdded.Available = checkBoxAvailable.Checked;
+                            physicalReferenceToBeAdded.NumOfCopies = int.Parse(textBoxNumOfCopies.Text);
+                            referenceToBeAdded = physicalReferenceToBeAdded;
+                        }
+                        else
+                        {
+                            DigitalReference digitalReferenceToBeAdded = new DigitalReference();
+                            
+                            referenceToBeAdded = digitalReferenceToBeAdded;
+                        }
+                        referenceToBeAdded.Title = txtTitle.Text;
+                        referenceToBeAdded.PublishedOn = DateTime.Parse(textBoxPublishedOn.Text);
+                        referenceToBeAdded.ISBN = textBoxISBN.Text;
+                        referenceToBeAdded.Type = Enum.Parse<Reference.ReferenceType>(textBoxType.Text);
+                        referenceToBeAdded.Genre = Enum.Parse<Reference.ReferenceGenre>(textBoxGenre.Text);
+                        referenceToBeAdded.CoverImage = UserExperience.ImageToByteArray(pictureBoxCoverImage.Image);
+                        referenceToBeAdded.Description = textBoxDescription.Text;
+                        referenceToBeAdded.Creator = creatorOfReference;
+
+                        context.Add(referenceToBeAdded);
+
+                        // Save changes
+                        context.SaveChanges();
                     }
-
-                    // Save changes
-                    context.Add(referenceToBeUpdated);
-                    context.SaveChanges();
                 }
-                
 
-                //Refresh the user experience
-                ((this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience).LoadUserExperience("Title");
-
+     // Refresh the user experience
+     ((this.FindForm().Controls.Find("UserExperience", true)[0]) as UserExperience).LoadUserExperience("Title");
             }
             catch (Exception ex)
             {

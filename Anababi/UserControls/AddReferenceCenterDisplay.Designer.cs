@@ -415,7 +415,7 @@ namespace Anababi.UserControls
             // 
             this.pictureBoxCoverImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxCoverImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxCoverImage.Image = global::Anababi.Properties.Resources.DefaultCoverImage1;
+            this.pictureBoxCoverImage.Image = global::Anababi.Properties.Resources.DefaultCoverImage;
             this.pictureBoxCoverImage.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCoverImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxCoverImage.Name = "pictureBoxCoverImage";
