@@ -23,20 +23,21 @@ namespace Anababi.UserControls
 
         private void ComboBoxDiscriminator_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(ComboBoxDiscriminator!= null&&ComboBoxDiscriminator.SelectedItem=="Digital Reference") { 
-                this.textBoxFloor.Visible= false;
-                this.textBoxShelf.Visible= false;
-                this.textBoxSection.Visible= false;
-                this.textBoxNumOfCopies.Visible= false;
+            if (ComboBoxDiscriminator != null && ComboBoxDiscriminator.SelectedItem == "Digital Reference")
+            {
+                this.textBoxFloor.Visible = false;
+                this.textBoxShelf.Visible = false;
+                this.textBoxSection.Visible = false;
+                this.textBoxNumOfCopies.Visible = false;
 
-                this.LblAvailable.Visible= false;
-                this.LblFloor.Visible= false;
-                this.LblShelf.Visible= false;
-                this.LblSection.Visible= false;
-                this.LblAvailable.Visible= false;
-                this.LblNumOfCopies.Visible= false;
+                this.LblAvailable.Visible = false;
+                this.LblFloor.Visible = false;
+                this.LblShelf.Visible = false;
+                this.LblSection.Visible = false;
+                this.LblAvailable.Visible = false;
+                this.LblNumOfCopies.Visible = false;
 
-                this.checkBoxAvailable.Visible= false;
+                this.checkBoxAvailable.Visible = false;
             }
             else
             {
@@ -68,7 +69,7 @@ namespace Anababi.UserControls
                 using (AnababiContext context = new AnababiContext())
                 {
                     Reference referenceToBeAdded = new Reference();
-                    
+
                     referenceToBeAdded.Creator = context.Creators.FirstOrDefault(u => u.FirstName.Equals(textBoxCreator.Text));
 
                     if (referenceToBeAdded.Creator == null)
@@ -99,7 +100,7 @@ namespace Anababi.UserControls
                         else
                         {
                             DigitalReference digitalReferenceToBeAdded = new DigitalReference();
-                            
+
                             referenceToBeAdded = digitalReferenceToBeAdded;
                         }
                         referenceToBeAdded.Title = txtTitle.Text;

@@ -30,468 +30,434 @@ namespace Anababi.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.LblCreator = new System.Windows.Forms.Label();
-            this.LblType = new System.Windows.Forms.Label();
-            this.LblGenre = new System.Windows.Forms.Label();
-            this.LblPublishedOn = new System.Windows.Forms.Label();
-            this.LblISBN = new System.Windows.Forms.Label();
-            this.LblDescription = new System.Windows.Forms.Label();
-            this.LblDiscriminator = new System.Windows.Forms.Label();
-            this.LblFloor = new System.Windows.Forms.Label();
-            this.LblSection = new System.Windows.Forms.Label();
-            this.LblShelf = new System.Windows.Forms.Label();
-            this.LblAvailable = new System.Windows.Forms.Label();
-            this.LblNumOfCopies = new System.Windows.Forms.Label();
-            this.textBoxCreator = new System.Windows.Forms.TextBox();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
-            this.textBoxISBN = new System.Windows.Forms.TextBox();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.ComboBoxDiscriminator = new System.Windows.Forms.ComboBox();
-            this.textBoxFloor = new System.Windows.Forms.TextBox();
-            this.textBoxSection = new System.Windows.Forms.TextBox();
-            this.textBoxShelf = new System.Windows.Forms.TextBox();
-            this.textBoxNumOfCopies = new System.Windows.Forms.TextBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.textBoxPublishedOn = new System.Windows.Forms.TextBox();
-            this.checkBoxAvailable = new System.Windows.Forms.CheckBox();
-            this.pictureBoxCoverImage = new System.Windows.Forms.PictureBox();
-            this.PanelSearchResults = new System.Windows.Forms.Panel();
-            this.panelCoverImageHolder = new System.Windows.Forms.Panel();
-            this.PanelSearchBar = new System.Windows.Forms.Panel();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverImage)).BeginInit();
-            this.PanelSearchResults.SuspendLayout();
-            this.panelCoverImageHolder.SuspendLayout();
-            this.PanelSearchBar.SuspendLayout();
-            this.SuspendLayout();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            LblCreator = new Label();
+            LblType = new Label();
+            LblGenre = new Label();
+            LblPublishedOn = new Label();
+            LblISBN = new Label();
+            LblDescription = new Label();
+            LblDiscriminator = new Label();
+            LblFloor = new Label();
+            LblSection = new Label();
+            LblShelf = new Label();
+            LblAvailable = new Label();
+            LblNumOfCopies = new Label();
+            textBoxCreator = new TextBox();
+            comboBoxType = new ComboBox();
+            comboBoxGenre = new ComboBox();
+            textBoxISBN = new TextBox();
+            textBoxDescription = new TextBox();
+            ComboBoxDiscriminator = new ComboBox();
+            textBoxFloor = new TextBox();
+            textBoxSection = new TextBox();
+            textBoxShelf = new TextBox();
+            textBoxNumOfCopies = new TextBox();
+            buttonAdd = new Button();
+            textBoxPublishedOn = new TextBox();
+            checkBoxAvailable = new CheckBox();
+            pictureBoxCoverImage = new PictureBox();
+            PanelSearchResults = new Panel();
+            panelCoverImageHolder = new Panel();
+            PanelSearchBar = new Panel();
+            txtTitle = new TextBox();
+            tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).BeginInit();
+            PanelSearchResults.SuspendLayout();
+            panelCoverImageHolder.SuspendLayout();
+            PanelSearchBar.SuspendLayout();
+            SuspendLayout();
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.AutoSize = true;
-            this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel2.Controls.Add(this.LblCreator, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.LblType, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.LblGenre, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.LblPublishedOn, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.LblISBN, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.LblDescription, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.LblDiscriminator, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.LblFloor, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.LblSection, 0, 9);
-            this.tableLayoutPanel2.Controls.Add(this.LblShelf, 0, 10);
-            this.tableLayoutPanel2.Controls.Add(this.LblAvailable, 0, 11);
-            this.tableLayoutPanel2.Controls.Add(this.LblNumOfCopies, 0, 12);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxCreator, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBoxType, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.comboBoxGenre, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxISBN, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxDescription, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.ComboBoxDiscriminator, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxFloor, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxSection, 1, 9);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxShelf, 1, 10);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxNumOfCopies, 1, 12);
-            this.tableLayoutPanel2.Controls.Add(this.buttonAdd, 1, 14);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxPublishedOn, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.checkBoxAvailable, 1, 11);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(341, 30);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(525, 300);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 15;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(525, 344);
-            this.tableLayoutPanel2.TabIndex = 0;
+            tableLayoutPanel2.AutoSize = true;
+            tableLayoutPanel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel2.Controls.Add(LblCreator, 0, 0);
+            tableLayoutPanel2.Controls.Add(LblType, 0, 1);
+            tableLayoutPanel2.Controls.Add(LblGenre, 0, 2);
+            tableLayoutPanel2.Controls.Add(LblPublishedOn, 0, 3);
+            tableLayoutPanel2.Controls.Add(LblISBN, 0, 4);
+            tableLayoutPanel2.Controls.Add(LblDescription, 0, 5);
+            tableLayoutPanel2.Controls.Add(LblDiscriminator, 0, 7);
+            tableLayoutPanel2.Controls.Add(LblFloor, 0, 8);
+            tableLayoutPanel2.Controls.Add(LblSection, 0, 9);
+            tableLayoutPanel2.Controls.Add(LblShelf, 0, 10);
+            tableLayoutPanel2.Controls.Add(LblAvailable, 0, 11);
+            tableLayoutPanel2.Controls.Add(LblNumOfCopies, 0, 12);
+            tableLayoutPanel2.Controls.Add(textBoxCreator, 1, 0);
+            tableLayoutPanel2.Controls.Add(comboBoxType, 1, 1);
+            tableLayoutPanel2.Controls.Add(comboBoxGenre, 1, 2);
+            tableLayoutPanel2.Controls.Add(textBoxISBN, 1, 4);
+            tableLayoutPanel2.Controls.Add(textBoxDescription, 1, 5);
+            tableLayoutPanel2.Controls.Add(ComboBoxDiscriminator, 1, 7);
+            tableLayoutPanel2.Controls.Add(textBoxFloor, 1, 8);
+            tableLayoutPanel2.Controls.Add(textBoxSection, 1, 9);
+            tableLayoutPanel2.Controls.Add(textBoxShelf, 1, 10);
+            tableLayoutPanel2.Controls.Add(textBoxNumOfCopies, 1, 12);
+            tableLayoutPanel2.Controls.Add(buttonAdd, 1, 14);
+            tableLayoutPanel2.Controls.Add(textBoxPublishedOn, 1, 3);
+            tableLayoutPanel2.Controls.Add(checkBoxAvailable, 1, 11);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(390, 40);
+            tableLayoutPanel2.MinimumSize = new Size(600, 400);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 15;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new RowStyle());
+            tableLayoutPanel2.Size = new Size(600, 439);
+            tableLayoutPanel2.TabIndex = 0;
             // 
             // LblCreator
             // 
-            this.LblCreator.AutoSize = true;
-            this.LblCreator.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblCreator.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblCreator.Location = new System.Drawing.Point(85, 0);
-            this.LblCreator.Name = "LblCreator";
-            this.LblCreator.Size = new System.Drawing.Size(66, 27);
-            this.LblCreator.TabIndex = 2;
-            this.LblCreator.Text = "Creator";
+            LblCreator.AutoSize = true;
+            LblCreator.Dock = DockStyle.Right;
+            LblCreator.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblCreator.Location = new Point(104, 0);
+            LblCreator.Name = "LblCreator";
+            LblCreator.Size = new Size(82, 33);
+            LblCreator.TabIndex = 2;
+            LblCreator.Text = "Creator";
             // 
             // LblType
             // 
-            this.LblType.AutoSize = true;
-            this.LblType.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblType.Location = new System.Drawing.Point(105, 27);
-            this.LblType.Name = "LblType";
-            this.LblType.Size = new System.Drawing.Size(46, 27);
-            this.LblType.TabIndex = 1;
-            this.LblType.Text = "Type";
+            LblType.AutoSize = true;
+            LblType.Dock = DockStyle.Right;
+            LblType.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblType.Location = new Point(129, 33);
+            LblType.Name = "LblType";
+            LblType.Size = new Size(57, 34);
+            LblType.TabIndex = 1;
+            LblType.Text = "Type";
             // 
             // LblGenre
             // 
-            this.LblGenre.AutoSize = true;
-            this.LblGenre.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblGenre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblGenre.Location = new System.Drawing.Point(96, 54);
-            this.LblGenre.Name = "LblGenre";
-            this.LblGenre.Size = new System.Drawing.Size(55, 27);
-            this.LblGenre.TabIndex = 3;
-            this.LblGenre.Text = "Genre";
+            LblGenre.AutoSize = true;
+            LblGenre.Dock = DockStyle.Right;
+            LblGenre.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblGenre.Location = new Point(118, 67);
+            LblGenre.Name = "LblGenre";
+            LblGenre.Size = new Size(68, 34);
+            LblGenre.TabIndex = 3;
+            LblGenre.Text = "Genre";
             // 
             // LblPublishedOn
             // 
-            this.LblPublishedOn.AutoSize = true;
-            this.LblPublishedOn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblPublishedOn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblPublishedOn.Location = new System.Drawing.Point(39, 81);
-            this.LblPublishedOn.Name = "LblPublishedOn";
-            this.LblPublishedOn.Size = new System.Drawing.Size(112, 27);
-            this.LblPublishedOn.TabIndex = 4;
-            this.LblPublishedOn.Text = "Published On";
+            LblPublishedOn.AutoSize = true;
+            LblPublishedOn.Dock = DockStyle.Right;
+            LblPublishedOn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblPublishedOn.Location = new Point(49, 101);
+            LblPublishedOn.Name = "LblPublishedOn";
+            LblPublishedOn.Size = new Size(137, 33);
+            LblPublishedOn.TabIndex = 4;
+            LblPublishedOn.Text = "Published On";
             // 
             // LblISBN
             // 
-            this.LblISBN.AutoSize = true;
-            this.LblISBN.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblISBN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblISBN.Location = new System.Drawing.Point(37, 108);
-            this.LblISBN.Name = "LblISBN";
-            this.LblISBN.Size = new System.Drawing.Size(114, 27);
-            this.LblISBN.TabIndex = 5;
-            this.LblISBN.Text = "ISBN Number";
+            LblISBN.AutoSize = true;
+            LblISBN.Dock = DockStyle.Right;
+            LblISBN.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblISBN.Location = new Point(45, 134);
+            LblISBN.Name = "LblISBN";
+            LblISBN.Size = new Size(141, 33);
+            LblISBN.TabIndex = 5;
+            LblISBN.Text = "ISBN Number";
             // 
             // LblDescription
             // 
-            this.LblDescription.AutoSize = true;
-            this.LblDescription.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblDescription.Location = new System.Drawing.Point(53, 135);
-            this.LblDescription.Name = "LblDescription";
-            this.LblDescription.Size = new System.Drawing.Size(98, 23);
-            this.LblDescription.TabIndex = 6;
-            this.LblDescription.Text = "Description";
+            LblDescription.AutoSize = true;
+            LblDescription.Dock = DockStyle.Right;
+            LblDescription.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblDescription.Location = new Point(65, 167);
+            LblDescription.Name = "LblDescription";
+            LblDescription.Size = new Size(121, 37);
+            LblDescription.TabIndex = 6;
+            LblDescription.Text = "Description";
             // 
             // LblDiscriminator
             // 
-            this.LblDiscriminator.AutoSize = true;
-            this.LblDiscriminator.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblDiscriminator.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblDiscriminator.Location = new System.Drawing.Point(37, 158);
-            this.LblDiscriminator.Name = "LblDiscriminator";
-            this.LblDiscriminator.Size = new System.Drawing.Size(114, 27);
-            this.LblDiscriminator.TabIndex = 8;
-            this.LblDiscriminator.Text = "Discriminator";
+            LblDiscriminator.AutoSize = true;
+            LblDiscriminator.Dock = DockStyle.Right;
+            LblDiscriminator.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblDiscriminator.Location = new Point(45, 204);
+            LblDiscriminator.Name = "LblDiscriminator";
+            LblDiscriminator.Size = new Size(141, 34);
+            LblDiscriminator.TabIndex = 8;
+            LblDiscriminator.Text = "Discriminator";
             // 
             // LblFloor
             // 
-            this.LblFloor.AutoSize = true;
-            this.LblFloor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblFloor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblFloor.Location = new System.Drawing.Point(102, 185);
-            this.LblFloor.Name = "LblFloor";
-            this.LblFloor.Size = new System.Drawing.Size(49, 27);
-            this.LblFloor.TabIndex = 10;
-            this.LblFloor.Text = "Floor";
+            LblFloor.AutoSize = true;
+            LblFloor.Dock = DockStyle.Right;
+            LblFloor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblFloor.Location = new Point(126, 238);
+            LblFloor.Name = "LblFloor";
+            LblFloor.Size = new Size(60, 33);
+            LblFloor.TabIndex = 10;
+            LblFloor.Text = "Floor";
             // 
             // LblSection
             // 
-            this.LblSection.AutoSize = true;
-            this.LblSection.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblSection.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblSection.Location = new System.Drawing.Point(84, 212);
-            this.LblSection.Name = "LblSection";
-            this.LblSection.Size = new System.Drawing.Size(67, 27);
-            this.LblSection.TabIndex = 11;
-            this.LblSection.Text = "Section";
+            LblSection.AutoSize = true;
+            LblSection.Dock = DockStyle.Right;
+            LblSection.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblSection.Location = new Point(104, 271);
+            LblSection.Name = "LblSection";
+            LblSection.Size = new Size(82, 33);
+            LblSection.TabIndex = 11;
+            LblSection.Text = "Section";
             // 
             // LblShelf
             // 
-            this.LblShelf.AutoSize = true;
-            this.LblShelf.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblShelf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblShelf.Location = new System.Drawing.Point(102, 239);
-            this.LblShelf.Name = "LblShelf";
-            this.LblShelf.Size = new System.Drawing.Size(49, 27);
-            this.LblShelf.TabIndex = 9;
-            this.LblShelf.Text = "Shelf";
+            LblShelf.AutoSize = true;
+            LblShelf.Dock = DockStyle.Right;
+            LblShelf.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblShelf.Location = new Point(126, 304);
+            LblShelf.Name = "LblShelf";
+            LblShelf.Size = new Size(60, 33);
+            LblShelf.TabIndex = 9;
+            LblShelf.Text = "Shelf";
             // 
             // LblAvailable
             // 
-            this.LblAvailable.AutoSize = true;
-            this.LblAvailable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblAvailable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblAvailable.Location = new System.Drawing.Point(69, 266);
-            this.LblAvailable.Name = "LblAvailable";
-            this.LblAvailable.Size = new System.Drawing.Size(82, 21);
-            this.LblAvailable.TabIndex = 18;
-            this.LblAvailable.Text = "Available";
+            LblAvailable.AutoSize = true;
+            LblAvailable.Dock = DockStyle.Right;
+            LblAvailable.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblAvailable.Location = new Point(86, 337);
+            LblAvailable.Name = "LblAvailable";
+            LblAvailable.Size = new Size(100, 28);
+            LblAvailable.TabIndex = 18;
+            LblAvailable.Text = "Available";
             // 
             // LblNumOfCopies
             // 
-            this.LblNumOfCopies.AutoSize = true;
-            this.LblNumOfCopies.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LblNumOfCopies.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblNumOfCopies.Location = new System.Drawing.Point(3, 287);
-            this.LblNumOfCopies.Name = "LblNumOfCopies";
-            this.LblNumOfCopies.Size = new System.Drawing.Size(148, 27);
-            this.LblNumOfCopies.TabIndex = 16;
-            this.LblNumOfCopies.Text = "Number of Copies";
+            LblNumOfCopies.AutoSize = true;
+            LblNumOfCopies.Dock = DockStyle.Right;
+            LblNumOfCopies.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblNumOfCopies.Location = new Point(3, 365);
+            LblNumOfCopies.Name = "LblNumOfCopies";
+            LblNumOfCopies.Size = new Size(183, 33);
+            LblNumOfCopies.TabIndex = 16;
+            LblNumOfCopies.Text = "Number of Copies";
             // 
             // textBoxCreator
             // 
-            this.textBoxCreator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxCreator.Location = new System.Drawing.Point(157, 2);
-            this.textBoxCreator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxCreator.Name = "textBoxCreator";
-            this.textBoxCreator.Size = new System.Drawing.Size(386, 23);
-            this.textBoxCreator.TabIndex = 19;
+            textBoxCreator.Dock = DockStyle.Fill;
+            textBoxCreator.Location = new Point(192, 3);
+            textBoxCreator.Name = "textBoxCreator";
+            textBoxCreator.Size = new Size(441, 27);
+            textBoxCreator.TabIndex = 19;
             // 
             // comboBoxType
             // 
-            this.comboBoxType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "Book",
-            "Article"});
-            this.comboBoxType.Location = new System.Drawing.Point(157, 29);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(386, 23);
-            this.comboBoxType.TabIndex = 20;
-            this.comboBoxType.SelectedIndex = 0;
+            comboBoxType.Dock = DockStyle.Fill;
+            comboBoxType.Items.AddRange(new object[] { "Book", "Article" });
+            comboBoxType.Location = new Point(192, 36);
+            comboBoxType.Name = "comboBoxType";
+            comboBoxType.Size = new Size(441, 28);
+            comboBoxType.TabIndex = 20;
             // 
             // comboBoxGenre
             // 
-            this.comboBoxGenre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxGenre.Items.AddRange(new object[] {
-            "Fiction",
-            "NonFiction",
-            "ScienceFiction",
-            "Thriller",
-            "Fantasy",
-            "Romance",
-            "Adventure",
-            "Drama",
-            "Historical",
-            "Dystopian",
-            "Satire"});
-            this.comboBoxGenre.Location = new System.Drawing.Point(157, 56);
-            this.comboBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxGenre.Name = "comboBoxGenre";
-            this.comboBoxGenre.Size = new System.Drawing.Size(386, 23);
-            this.comboBoxGenre.TabIndex = 21;
-            this.comboBoxGenre.SelectedIndex = 0;
+            comboBoxGenre.Dock = DockStyle.Fill;
+            comboBoxGenre.Items.AddRange(new object[] { "Fiction", "NonFiction", "ScienceFiction", "Thriller", "Fantasy", "Romance", "Adventure", "Drama", "Historical", "Dystopian", "Satire" });
+            comboBoxGenre.Location = new Point(192, 70);
+            comboBoxGenre.Name = "comboBoxGenre";
+            comboBoxGenre.Size = new Size(441, 28);
+            comboBoxGenre.TabIndex = 21;
             // 
             // textBoxISBN
             // 
-            this.textBoxISBN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxISBN.Location = new System.Drawing.Point(157, 110);
-            this.textBoxISBN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxISBN.Name = "textBoxISBN";
-            this.textBoxISBN.Size = new System.Drawing.Size(386, 23);
-            this.textBoxISBN.TabIndex = 22;
+            textBoxISBN.Dock = DockStyle.Fill;
+            textBoxISBN.Location = new Point(192, 137);
+            textBoxISBN.Name = "textBoxISBN";
+            textBoxISBN.Size = new Size(441, 27);
+            textBoxISBN.TabIndex = 22;
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDescription.Location = new System.Drawing.Point(157, 137);
-            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxDescription.Multiline = true;
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(386, 19);
-            this.textBoxDescription.TabIndex = 23;
+            textBoxDescription.Dock = DockStyle.Fill;
+            textBoxDescription.Location = new Point(192, 170);
+            textBoxDescription.Multiline = true;
+            textBoxDescription.Name = "textBoxDescription";
+            textBoxDescription.Size = new Size(441, 31);
+            textBoxDescription.TabIndex = 23;
             // 
             // ComboBoxDiscriminator
             // 
-            this.ComboBoxDiscriminator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ComboBoxDiscriminator.Items.AddRange(new object[] {
-            "Physical Reference",
-            "Digital Reference"});
-            this.ComboBoxDiscriminator.Location = new System.Drawing.Point(157, 160);
-            this.ComboBoxDiscriminator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ComboBoxDiscriminator.Name = "ComboBoxDiscriminator";
-            this.ComboBoxDiscriminator.Size = new System.Drawing.Size(386, 23);
-            this.ComboBoxDiscriminator.TabIndex = 25;
-            this.ComboBoxDiscriminator.SelectedIndex = 0;
-            this.ComboBoxDiscriminator.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDiscriminator_SelectedIndexChanged);
+            ComboBoxDiscriminator.Dock = DockStyle.Fill;
+            ComboBoxDiscriminator.Items.AddRange(new object[] { "Physical Reference", "Digital Reference" });
+            ComboBoxDiscriminator.Location = new Point(192, 207);
+            ComboBoxDiscriminator.Name = "ComboBoxDiscriminator";
+            ComboBoxDiscriminator.Size = new Size(441, 28);
+            ComboBoxDiscriminator.TabIndex = 25;
+            ComboBoxDiscriminator.SelectedIndexChanged += ComboBoxDiscriminator_SelectedIndexChanged;
             // 
             // textBoxFloor
             // 
-            this.textBoxFloor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxFloor.Location = new System.Drawing.Point(157, 187);
-            this.textBoxFloor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxFloor.Name = "textBoxFloor";
-            this.textBoxFloor.Size = new System.Drawing.Size(386, 23);
-            this.textBoxFloor.TabIndex = 26;
+            textBoxFloor.Dock = DockStyle.Fill;
+            textBoxFloor.Location = new Point(192, 241);
+            textBoxFloor.Name = "textBoxFloor";
+            textBoxFloor.Size = new Size(441, 27);
+            textBoxFloor.TabIndex = 26;
             // 
             // textBoxSection
             // 
-            this.textBoxSection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxSection.Location = new System.Drawing.Point(157, 214);
-            this.textBoxSection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxSection.Name = "textBoxSection";
-            this.textBoxSection.Size = new System.Drawing.Size(386, 23);
-            this.textBoxSection.TabIndex = 27;
+            textBoxSection.Dock = DockStyle.Fill;
+            textBoxSection.Location = new Point(192, 274);
+            textBoxSection.Name = "textBoxSection";
+            textBoxSection.Size = new Size(441, 27);
+            textBoxSection.TabIndex = 27;
             // 
             // textBoxShelf
             // 
-            this.textBoxShelf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxShelf.Location = new System.Drawing.Point(157, 241);
-            this.textBoxShelf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxShelf.Name = "textBoxShelf";
-            this.textBoxShelf.Size = new System.Drawing.Size(386, 23);
-            this.textBoxShelf.TabIndex = 28;
+            textBoxShelf.Dock = DockStyle.Fill;
+            textBoxShelf.Location = new Point(192, 307);
+            textBoxShelf.Name = "textBoxShelf";
+            textBoxShelf.Size = new Size(441, 27);
+            textBoxShelf.TabIndex = 28;
             // 
             // textBoxNumOfCopies
             // 
-            this.textBoxNumOfCopies.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxNumOfCopies.Location = new System.Drawing.Point(157, 289);
-            this.textBoxNumOfCopies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxNumOfCopies.Name = "textBoxNumOfCopies";
-            this.textBoxNumOfCopies.Size = new System.Drawing.Size(386, 23);
-            this.textBoxNumOfCopies.TabIndex = 30;
+            textBoxNumOfCopies.Dock = DockStyle.Fill;
+            textBoxNumOfCopies.Location = new Point(192, 368);
+            textBoxNumOfCopies.Name = "textBoxNumOfCopies";
+            textBoxNumOfCopies.Size = new Size(441, 27);
+            textBoxNumOfCopies.TabIndex = 30;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonAdd.Location = new System.Drawing.Point(395, 316);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAdd.MaximumSize = new System.Drawing.Size(148, 26);
-            this.buttonAdd.MinimumSize = new System.Drawing.Size(148, 26);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(148, 26);
-            this.buttonAdd.TabIndex = 36;
-            this.buttonAdd.Text = "Add";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            buttonAdd.Dock = DockStyle.Right;
+            buttonAdd.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAdd.Location = new Point(464, 401);
+            buttonAdd.MaximumSize = new Size(169, 35);
+            buttonAdd.MinimumSize = new Size(169, 35);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(169, 35);
+            buttonAdd.TabIndex = 36;
+            buttonAdd.Text = "Add";
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
             // 
             // textBoxPublishedOn
             // 
-            this.textBoxPublishedOn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxPublishedOn.Location = new System.Drawing.Point(157, 83);
-            this.textBoxPublishedOn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxPublishedOn.Name = "textBoxPublishedOn";
-            this.textBoxPublishedOn.Size = new System.Drawing.Size(386, 23);
-            this.textBoxPublishedOn.TabIndex = 37;
+            textBoxPublishedOn.Dock = DockStyle.Fill;
+            textBoxPublishedOn.Location = new Point(192, 104);
+            textBoxPublishedOn.Name = "textBoxPublishedOn";
+            textBoxPublishedOn.Size = new Size(441, 27);
+            textBoxPublishedOn.TabIndex = 37;
             // 
             // checkBoxAvailable
             // 
-            this.checkBoxAvailable.AutoSize = true;
-            this.checkBoxAvailable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBoxAvailable.Location = new System.Drawing.Point(157, 268);
-            this.checkBoxAvailable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxAvailable.Name = "checkBoxAvailable";
-            this.checkBoxAvailable.Size = new System.Drawing.Size(386, 17);
-            this.checkBoxAvailable.TabIndex = 38;
-            this.checkBoxAvailable.UseVisualStyleBackColor = true;
+            checkBoxAvailable.AutoSize = true;
+            checkBoxAvailable.Dock = DockStyle.Fill;
+            checkBoxAvailable.Location = new Point(192, 340);
+            checkBoxAvailable.Name = "checkBoxAvailable";
+            checkBoxAvailable.Size = new Size(441, 22);
+            checkBoxAvailable.TabIndex = 38;
+            checkBoxAvailable.UseVisualStyleBackColor = true;
             // 
             // pictureBoxCoverImage
             // 
-            this.pictureBoxCoverImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxCoverImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxCoverImage.Image = global::Anababi.Properties.Resources.DefaultCoverImage;
-            this.pictureBoxCoverImage.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxCoverImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxCoverImage.Name = "pictureBoxCoverImage";
-            this.pictureBoxCoverImage.Size = new System.Drawing.Size(306, 344);
-            this.pictureBoxCoverImage.TabIndex = 34;
-            this.pictureBoxCoverImage.TabStop = false;
-            this.pictureBoxCoverImage.Click += new System.EventHandler(this.pictureBoxCoverImage_Click);
+            pictureBoxCoverImage.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBoxCoverImage.Dock = DockStyle.Fill;
+            pictureBoxCoverImage.Image = Resources.DefaultCoverImage;
+            pictureBoxCoverImage.Location = new Point(0, 20);
+            pictureBoxCoverImage.Name = "pictureBoxCoverImage";
+            pictureBoxCoverImage.Size = new Size(330, 399);
+            pictureBoxCoverImage.TabIndex = 34;
+            pictureBoxCoverImage.TabStop = false;
+            pictureBoxCoverImage.Click += pictureBoxCoverImage_Click;
             // 
             // PanelSearchResults
             // 
-            this.PanelSearchResults.AutoScroll = true;
-            this.PanelSearchResults.AutoSize = true;
-            this.PanelSearchResults.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PanelSearchResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelSearchResults.Controls.Add(this.tableLayoutPanel2);
-            this.PanelSearchResults.Controls.Add(this.panelCoverImageHolder);
-            this.PanelSearchResults.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSearchResults.Location = new System.Drawing.Point(9, 116);
-            this.PanelSearchResults.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelSearchResults.MinimumSize = new System.Drawing.Size(788, 226);
-            this.PanelSearchResults.Name = "PanelSearchResults";
-            this.PanelSearchResults.Padding = new System.Windows.Forms.Padding(35, 30, 35, 30);
-            this.PanelSearchResults.Size = new System.Drawing.Size(857, 406);
-            this.PanelSearchResults.TabIndex = 6;
+            PanelSearchResults.AutoScroll = true;
+            PanelSearchResults.AutoSize = true;
+            PanelSearchResults.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            PanelSearchResults.BorderStyle = BorderStyle.FixedSingle;
+            PanelSearchResults.Controls.Add(tableLayoutPanel2);
+            PanelSearchResults.Controls.Add(panelCoverImageHolder);
+            PanelSearchResults.Dock = DockStyle.Top;
+            PanelSearchResults.Location = new Point(10, 154);
+            PanelSearchResults.MinimumSize = new Size(900, 301);
+            PanelSearchResults.Name = "PanelSearchResults";
+            PanelSearchResults.Padding = new Padding(40);
+            PanelSearchResults.Size = new Size(980, 521);
+            PanelSearchResults.TabIndex = 6;
             // 
             // panelCoverImageHolder
             // 
-            this.panelCoverImageHolder.Controls.Add(this.pictureBoxCoverImage);
-            this.panelCoverImageHolder.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelCoverImageHolder.Location = new System.Drawing.Point(35, 30);
-            this.panelCoverImageHolder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelCoverImageHolder.Name = "panelCoverImageHolder";
-            this.panelCoverImageHolder.Size = new System.Drawing.Size(306, 344);
-            this.panelCoverImageHolder.TabIndex = 1;
+            panelCoverImageHolder.Controls.Add(pictureBoxCoverImage);
+            panelCoverImageHolder.Dock = DockStyle.Left;
+            panelCoverImageHolder.Location = new Point(40, 40);
+            panelCoverImageHolder.Name = "panelCoverImageHolder";
+            panelCoverImageHolder.Padding = new Padding(0, 20, 20, 20);
+            panelCoverImageHolder.Size = new Size(350, 439);
+            panelCoverImageHolder.TabIndex = 1;
             // 
             // PanelSearchBar
             // 
-            this.PanelSearchBar.BackColor = System.Drawing.SystemColors.Control;
-            this.PanelSearchBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelSearchBar.Controls.Add(this.txtTitle);
-            this.PanelSearchBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSearchBar.Location = new System.Drawing.Point(9, 8);
-            this.PanelSearchBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelSearchBar.Name = "PanelSearchBar";
-            this.PanelSearchBar.Padding = new System.Windows.Forms.Padding(35, 30, 35, 30);
-            this.PanelSearchBar.Size = new System.Drawing.Size(857, 108);
-            this.PanelSearchBar.TabIndex = 5;
+            PanelSearchBar.BackColor = SystemColors.Control;
+            PanelSearchBar.BorderStyle = BorderStyle.FixedSingle;
+            PanelSearchBar.Controls.Add(txtTitle);
+            PanelSearchBar.Dock = DockStyle.Top;
+            PanelSearchBar.Location = new Point(10, 11);
+            PanelSearchBar.Name = "PanelSearchBar";
+            PanelSearchBar.Padding = new Padding(40);
+            PanelSearchBar.Size = new Size(980, 143);
+            PanelSearchBar.TabIndex = 5;
             // 
             // txtTitle
             // 
-            this.txtTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtTitle.Location = new System.Drawing.Point(35, 30);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(785, 35);
-            this.txtTitle.TabIndex = 0;
-            this.txtTitle.Text = "Title";
-            this.txtTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            txtTitle.Dock = DockStyle.Fill;
+            txtTitle.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            txtTitle.Location = new Point(40, 40);
+            txtTitle.Margin = new Padding(3, 4, 3, 4);
+            txtTitle.Name = "txtTitle";
+            txtTitle.PlaceholderText = "Title";
+            txtTitle.Size = new Size(898, 42);
+            txtTitle.TabIndex = 0;
+            txtTitle.TextAlign = HorizontalAlignment.Center;
             // 
             // AddReferenceCenterDisplay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.PanelSearchResults);
-            this.Controls.Add(this.PanelSearchBar);
-            this.MinimumSize = new System.Drawing.Size(875, 300);
-            this.Name = "AddReferenceCenterDisplay";
-            this.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.Size = new System.Drawing.Size(875, 530);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverImage)).EndInit();
-            this.PanelSearchResults.ResumeLayout(false);
-            this.PanelSearchResults.PerformLayout();
-            this.panelCoverImageHolder.ResumeLayout(false);
-            this.PanelSearchBar.ResumeLayout(false);
-            this.PanelSearchBar.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            Controls.Add(PanelSearchResults);
+            Controls.Add(PanelSearchBar);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(1000, 400);
+            Name = "AddReferenceCenterDisplay";
+            Padding = new Padding(10, 11, 10, 11);
+            Size = new Size(1000, 686);
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).EndInit();
+            PanelSearchResults.ResumeLayout(false);
+            PanelSearchResults.PerformLayout();
+            panelCoverImageHolder.ResumeLayout(false);
+            PanelSearchBar.ResumeLayout(false);
+            PanelSearchBar.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
