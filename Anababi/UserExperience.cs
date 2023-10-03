@@ -57,7 +57,10 @@ namespace Anababi
             }
             else
             {
-                AddToPanel(new ConsumerNavigationPanel(), SplitContainerAll.Panel1);
+                ConsumerNavigationPanel normalUserNavigation = new ConsumerNavigationPanel();
+                normalUserNavigation.ButtonAddReference.Visible = false;
+                
+                AddToPanel(normalUserNavigation, SplitContainerAll.Panel1);
 
                 AddToPanelContent(new MyFeedPage(Reference.GetAllReferencesFromDB(), sortBy));
 

@@ -17,8 +17,7 @@ namespace Anababi
             //Application.Run(new LoginForm());
 
             //For testing only
-            User trial = new AnababiContext().Users.Where(u => u.IsAdmin).FirstOrDefault();
-            trial.ProfilePic = UserExperience.ImageToByteArray(Resources.user);
+            User trial = new AnababiContext().Users.FirstOrDefault(u => u.Username.Equals("gustavo"));
             Application.Run(new App(trial));
         }
     }
