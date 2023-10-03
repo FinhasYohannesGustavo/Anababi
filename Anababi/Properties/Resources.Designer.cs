@@ -133,6 +133,26 @@ namespace Anababi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DefaultCoverImage {
+            get {
+                object obj = ResourceManager.GetObject("DefaultCoverImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DefaultCoverImage1 {
+            get {
+                object obj = ResourceManager.GetObject("DefaultCoverImage1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap F__Scott_Fitzgerald_HD_pic {
             get {
                 object obj = ResourceManager.GetObject("F. Scott Fitzgerald HD pic", resourceCulture);

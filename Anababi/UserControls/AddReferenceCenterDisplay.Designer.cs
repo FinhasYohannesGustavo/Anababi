@@ -1,4 +1,6 @@
-﻿namespace Anababi.UserControls
+﻿using Anababi.Properties;
+
+namespace Anababi.UserControls
 {
     partial class AddReferenceCenterDisplay
     {
@@ -53,7 +55,7 @@
             this.textBoxShelf = new System.Windows.Forms.TextBox();
             this.textBoxNumOfCopies = new System.Windows.Forms.TextBox();
             this.pdfViewerFile = new PdfiumViewer.PdfViewer();
-            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxPublishedOn = new System.Windows.Forms.TextBox();
             this.checkBoxAvailable = new System.Windows.Forms.CheckBox();
             this.pictureBoxCoverImage = new System.Windows.Forms.PictureBox();
@@ -100,7 +102,7 @@
             this.tableLayoutPanel2.Controls.Add(this.textBoxShelf, 1, 10);
             this.tableLayoutPanel2.Controls.Add(this.textBoxNumOfCopies, 1, 12);
             this.tableLayoutPanel2.Controls.Add(this.pdfViewerFile, 1, 13);
-            this.tableLayoutPanel2.Controls.Add(this.buttonSave, 1, 14);
+            this.tableLayoutPanel2.Controls.Add(this.buttonAdd, 1, 14);
             this.tableLayoutPanel2.Controls.Add(this.textBoxPublishedOn, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.checkBoxAvailable, 1, 11);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -374,19 +376,20 @@
             this.pdfViewerFile.Size = new System.Drawing.Size(309, 184);
             this.pdfViewerFile.TabIndex = 35;
             // 
-            // buttonSave
+            // buttonAdd
             // 
-            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSave.Location = new System.Drawing.Point(395, 508);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonSave.MaximumSize = new System.Drawing.Size(148, 26);
-            this.buttonSave.MinimumSize = new System.Drawing.Size(148, 26);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(148, 26);
-            this.buttonSave.TabIndex = 36;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonAdd.Location = new System.Drawing.Point(395, 508);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAdd.MaximumSize = new System.Drawing.Size(148, 26);
+            this.buttonAdd.MinimumSize = new System.Drawing.Size(148, 26);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(148, 26);
+            this.buttonAdd.TabIndex = 36;
+            this.buttonAdd.Text = "Add";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxPublishedOn
             // 
@@ -412,12 +415,14 @@
             // 
             this.pictureBoxCoverImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxCoverImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxCoverImage.Image = global::Anababi.Properties.Resources.DefaultCoverImage1;
             this.pictureBoxCoverImage.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCoverImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxCoverImage.Name = "pictureBoxCoverImage";
             this.pictureBoxCoverImage.Size = new System.Drawing.Size(306, 536);
             this.pictureBoxCoverImage.TabIndex = 34;
             this.pictureBoxCoverImage.TabStop = false;
+            this.pictureBoxCoverImage.Click += new System.EventHandler(this.pictureBoxCoverImage_Click);
             // 
             // PanelSearchResults
             // 
@@ -525,7 +530,7 @@
         private TextBox textBoxNumOfCopies;
         private PictureBox pictureBoxCoverImage;
         private PdfiumViewer.PdfViewer pdfViewerFile;
-        private Button buttonSave;
+        private Button buttonAdd;
         private Panel panelCoverImageHolder;
         private TextBox textBoxPublishedOn;
         private CheckBox checkBoxAvailable;

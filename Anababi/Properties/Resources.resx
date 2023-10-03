@@ -145,11 +145,14 @@
   <data name="Love in the Time of Cholera book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Love in the Time of Cholera book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DefaultCoverImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultCoverImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Tender Is the Night book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tender Is the Night book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu-bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu-bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Great Expectations book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Great Expectations book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -162,9 +165,6 @@
   </data>
   <data name="Harper Lee HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Harper Lee HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Great Expectations book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Great Expectations book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="goneGirl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goneGirl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,20 +214,29 @@
   <data name="prideAndPrejudice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prideAndPrejudice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Leo Tolstoy HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Leo Tolstoy HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu-bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu-bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="font-symbol-of-letter-a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font-symbol-of-letter-a.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Anna Karenina book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Anna Karenina book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="War and Peace book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\War and Peace book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Leo Tolstoy HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Leo Tolstoy HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="theHungerGames" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theHungerGames.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sortingIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sortingIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Jane Austen HD pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jane Austen HD pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="War and Peace book cover HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\War and Peace book cover HD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Afewerk_Tekle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Afewerk_Tekle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,10 +259,7 @@
   <data name="1984" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1984.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sortingIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sortingIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="font-symbol-of-letter-a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\font-symbol-of-letter-a.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefaultCoverImage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultCoverImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
