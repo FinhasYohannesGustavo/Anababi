@@ -277,7 +277,6 @@ namespace Anababi.UserControls
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(386, 23);
             this.comboBoxType.TabIndex = 20;
-            this.comboBoxType.SelectedIndex = 0;
             // 
             // comboBoxGenre
             // 
@@ -299,7 +298,6 @@ namespace Anababi.UserControls
             this.comboBoxGenre.Name = "comboBoxGenre";
             this.comboBoxGenre.Size = new System.Drawing.Size(386, 23);
             this.comboBoxGenre.TabIndex = 21;
-            this.comboBoxGenre.SelectedIndex = 0;
             // 
             // textBoxISBN
             // 
@@ -331,7 +329,6 @@ namespace Anababi.UserControls
             this.ComboBoxDiscriminator.Name = "ComboBoxDiscriminator";
             this.ComboBoxDiscriminator.Size = new System.Drawing.Size(386, 23);
             this.ComboBoxDiscriminator.TabIndex = 25;
-            this.ComboBoxDiscriminator.SelectedIndex = 0;
             this.ComboBoxDiscriminator.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDiscriminator_SelectedIndexChanged);
             // 
             // textBoxFloor
