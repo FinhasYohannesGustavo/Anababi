@@ -38,6 +38,9 @@ namespace Anababi.UserControls
 
                 //Save button
                 buttonSave.Enabled = false;
+
+                //Remove button
+                buttonRemove.Enabled = false;
             }
 
             // The physical or digital nature of a reference is not editable.
@@ -67,6 +70,7 @@ namespace Anababi.UserControls
             //Set the text box representing the description of the reference.
             textBoxDescription.Text = CurrentReferenceNode.Value.Description;
             textBoxDescription.WordWrap = true;
+            //textBoxDescription.AutoSize = true;
             //Set the picture box representing the coverimage of the reference.
             pictureBoxCoverImage.BackgroundImage = UserExperience.ByteArrayToImage(CurrentReferenceNode.Value.CoverImage);
             pictureBoxCoverImage.BackgroundImageLayout = ImageLayout.Zoom;
@@ -127,16 +131,6 @@ namespace Anababi.UserControls
                 checkBoxAvailable.Visible = false;
 
             }
-
-        }
-
-        private void textBoxDescription_TextChanged(object sender, EventArgs e)
-        {
-            // Calculate the preferred height based on the content
-            int preferredHeight = TextRenderer.MeasureText(textBoxDescription.Text, textBoxDescription.Font, textBoxDescription.ClientSize, TextFormatFlags.WordBreak).Height;
-
-            // Set the TextBox's height to the preferred height
-            textBoxDescription.Height = preferredHeight;
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -223,6 +217,15 @@ namespace Anababi.UserControls
                 LoadPage();
 
             }
+        }
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+            // Calculate the preferred height based on the content
+            int preferredHeight = TextRenderer.MeasureText(textBoxDescription.Text, textBoxDescription.Font, textBoxDescription.ClientSize, TextFormatFlags.WordBreak).Height;
+
+            // Set the TextBox's height to the preferred height
+            textBoxDescription.Height = preferredHeight + 8;
         }
     }
 }

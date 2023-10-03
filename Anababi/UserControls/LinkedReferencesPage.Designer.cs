@@ -80,7 +80,7 @@
             panelCoverImageHolder.Location = new Point(40, 40);
             panelCoverImageHolder.Name = "panelCoverImageHolder";
             panelCoverImageHolder.Padding = new Padding(0, 20, 20, 20);
-            panelCoverImageHolder.Size = new Size(350, 664);
+            panelCoverImageHolder.Size = new Size(350, 702);
             panelCoverImageHolder.TabIndex = 1;
             // 
             // pictureBoxCoverImage
@@ -89,7 +89,7 @@
             pictureBoxCoverImage.Dock = DockStyle.Fill;
             pictureBoxCoverImage.Location = new Point(0, 20);
             pictureBoxCoverImage.Name = "pictureBoxCoverImage";
-            pictureBoxCoverImage.Size = new Size(330, 624);
+            pictureBoxCoverImage.Size = new Size(330, 662);
             pictureBoxCoverImage.TabIndex = 34;
             pictureBoxCoverImage.TabStop = false;
             // 
@@ -155,7 +155,7 @@
             LblDescription.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LblDescription.Location = new Point(65, 155);
             LblDescription.Name = "LblDescription";
-            LblDescription.Size = new Size(121, 28);
+            LblDescription.Size = new Size(121, 66);
             LblDescription.TabIndex = 6;
             LblDescription.Text = "Description";
             // 
@@ -164,7 +164,7 @@
             LblDiscriminator.AutoSize = true;
             LblDiscriminator.Dock = DockStyle.Right;
             LblDiscriminator.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblDiscriminator.Location = new Point(45, 183);
+            LblDiscriminator.Location = new Point(45, 221);
             LblDiscriminator.Name = "LblDiscriminator";
             LblDiscriminator.Size = new Size(141, 31);
             LblDiscriminator.TabIndex = 8;
@@ -175,7 +175,7 @@
             LblFloor.AutoSize = true;
             LblFloor.Dock = DockStyle.Right;
             LblFloor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblFloor.Location = new Point(126, 214);
+            LblFloor.Location = new Point(126, 252);
             LblFloor.Name = "LblFloor";
             LblFloor.Size = new Size(60, 31);
             LblFloor.TabIndex = 10;
@@ -186,7 +186,7 @@
             LblSection.AutoSize = true;
             LblSection.Dock = DockStyle.Right;
             LblSection.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblSection.Location = new Point(104, 245);
+            LblSection.Location = new Point(104, 283);
             LblSection.Name = "LblSection";
             LblSection.Size = new Size(82, 31);
             LblSection.TabIndex = 11;
@@ -197,7 +197,7 @@
             LblShelf.AutoSize = true;
             LblShelf.Dock = DockStyle.Right;
             LblShelf.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblShelf.Location = new Point(126, 276);
+            LblShelf.Location = new Point(126, 314);
             LblShelf.Name = "LblShelf";
             LblShelf.Size = new Size(60, 31);
             LblShelf.TabIndex = 9;
@@ -208,7 +208,7 @@
             LblAvailable.AutoSize = true;
             LblAvailable.Dock = DockStyle.Right;
             LblAvailable.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblAvailable.Location = new Point(86, 307);
+            LblAvailable.Location = new Point(86, 345);
             LblAvailable.Name = "LblAvailable";
             LblAvailable.Size = new Size(100, 28);
             LblAvailable.TabIndex = 18;
@@ -219,7 +219,7 @@
             LblNumOfCopies.AutoSize = true;
             LblNumOfCopies.Dock = DockStyle.Right;
             LblNumOfCopies.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblNumOfCopies.Location = new Point(3, 335);
+            LblNumOfCopies.Location = new Point(3, 373);
             LblNumOfCopies.Name = "LblNumOfCopies";
             LblNumOfCopies.Size = new Size(183, 33);
             LblNumOfCopies.TabIndex = 16;
@@ -230,7 +230,7 @@
             LblFile.AutoSize = true;
             LblFile.Dock = DockStyle.Right;
             LblFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LblFile.Location = new Point(141, 368);
+            LblFile.Location = new Point(141, 406);
             LblFile.Name = "LblFile";
             LblFile.Size = new Size(45, 255);
             LblFile.TabIndex = 17;
@@ -251,7 +251,7 @@
             PanelSearchResults.MinimumSize = new Size(1000, 300);
             PanelSearchResults.Name = "PanelSearchResults";
             PanelSearchResults.Padding = new Padding(40);
-            PanelSearchResults.Size = new Size(1080, 808);
+            PanelSearchResults.Size = new Size(1080, 846);
             PanelSearchResults.TabIndex = 8;
             // 
             // tableLayoutPanel2
@@ -309,7 +309,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(648, 664);
+            tableLayoutPanel2.Size = new Size(648, 702);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // textBoxCreator
@@ -355,13 +355,14 @@
             textBoxDescription.Margin = new Padding(3, 2, 3, 2);
             textBoxDescription.Multiline = true;
             textBoxDescription.Name = "textBoxDescription";
-            textBoxDescription.Size = new Size(453, 24);
+            textBoxDescription.Size = new Size(453, 62);
             textBoxDescription.TabIndex = 23;
+            textBoxDescription.TextChanged += textBoxDescription_TextChanged;
             // 
             // textBoxDiscriminator
             // 
             textBoxDiscriminator.Dock = DockStyle.Fill;
-            textBoxDiscriminator.Location = new Point(192, 185);
+            textBoxDiscriminator.Location = new Point(192, 223);
             textBoxDiscriminator.Margin = new Padding(3, 2, 3, 2);
             textBoxDiscriminator.Name = "textBoxDiscriminator";
             textBoxDiscriminator.Size = new Size(453, 27);
@@ -370,7 +371,7 @@
             // textBoxFloor
             // 
             textBoxFloor.Dock = DockStyle.Fill;
-            textBoxFloor.Location = new Point(192, 216);
+            textBoxFloor.Location = new Point(192, 254);
             textBoxFloor.Margin = new Padding(3, 2, 3, 2);
             textBoxFloor.Name = "textBoxFloor";
             textBoxFloor.Size = new Size(453, 27);
@@ -379,7 +380,7 @@
             // textBoxSection
             // 
             textBoxSection.Dock = DockStyle.Fill;
-            textBoxSection.Location = new Point(192, 247);
+            textBoxSection.Location = new Point(192, 285);
             textBoxSection.Margin = new Padding(3, 2, 3, 2);
             textBoxSection.Name = "textBoxSection";
             textBoxSection.Size = new Size(453, 27);
@@ -388,7 +389,7 @@
             // textBoxShelf
             // 
             textBoxShelf.Dock = DockStyle.Fill;
-            textBoxShelf.Location = new Point(192, 278);
+            textBoxShelf.Location = new Point(192, 316);
             textBoxShelf.Margin = new Padding(3, 2, 3, 2);
             textBoxShelf.Name = "textBoxShelf";
             textBoxShelf.Size = new Size(453, 27);
@@ -397,7 +398,7 @@
             // textBoxNumOfCopies
             // 
             textBoxNumOfCopies.Dock = DockStyle.Fill;
-            textBoxNumOfCopies.Location = new Point(192, 338);
+            textBoxNumOfCopies.Location = new Point(192, 376);
             textBoxNumOfCopies.Name = "textBoxNumOfCopies";
             textBoxNumOfCopies.Size = new Size(453, 27);
             textBoxNumOfCopies.TabIndex = 30;
@@ -405,7 +406,7 @@
             // pdfViewerFile
             // 
             pdfViewerFile.Dock = DockStyle.Fill;
-            pdfViewerFile.Location = new Point(193, 373);
+            pdfViewerFile.Location = new Point(193, 411);
             pdfViewerFile.Margin = new Padding(4, 5, 4, 5);
             pdfViewerFile.Name = "pdfViewerFile";
             pdfViewerFile.ShowToolbar = false;
@@ -416,7 +417,7 @@
             // 
             buttonSave.Dock = DockStyle.Right;
             buttonSave.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSave.Location = new Point(476, 626);
+            buttonSave.Location = new Point(476, 664);
             buttonSave.MaximumSize = new Size(169, 35);
             buttonSave.MinimumSize = new Size(169, 35);
             buttonSave.Name = "buttonSave";
@@ -424,6 +425,7 @@
             buttonSave.TabIndex = 36;
             buttonSave.Text = "Save";
             buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSave_Click;
             // 
             // textBoxPublishedOn
             // 
@@ -438,7 +440,7 @@
             // 
             checkBoxAvailable.AutoSize = true;
             checkBoxAvailable.Dock = DockStyle.Fill;
-            checkBoxAvailable.Location = new Point(192, 310);
+            checkBoxAvailable.Location = new Point(192, 348);
             checkBoxAvailable.Name = "checkBoxAvailable";
             checkBoxAvailable.Size = new Size(453, 22);
             checkBoxAvailable.TabIndex = 38;
@@ -449,7 +451,7 @@
             panelNextPreviousHolder.Controls.Add(buttonNext);
             panelNextPreviousHolder.Controls.Add(buttonPrevious);
             panelNextPreviousHolder.Dock = DockStyle.Bottom;
-            panelNextPreviousHolder.Location = new Point(40, 704);
+            panelNextPreviousHolder.Location = new Point(40, 742);
             panelNextPreviousHolder.Margin = new Padding(10);
             panelNextPreviousHolder.Name = "panelNextPreviousHolder";
             panelNextPreviousHolder.Padding = new Padding(0, 20, 0, 0);
@@ -527,7 +529,7 @@
             MinimumSize = new Size(1000, 509);
             Name = "LinkedReferencesPage";
             Padding = new Padding(10);
-            Size = new Size(1100, 971);
+            Size = new Size(1100, 1009);
             Load += LinkedReferencesPage_Load;
             panelCoverImageHolder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxCoverImage).EndInit();

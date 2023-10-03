@@ -27,7 +27,6 @@ namespace Anababi
             //Create as UserExperience object and add it to the control.
             UserExperience userExperience = new UserExperience(this.user);
             userExperience.Dock = DockStyle.Fill;
-            //Remember to replace `this` with `this.FindForm()` in the user authentication class.
             this.Controls.Add(userExperience);
 
         }
