@@ -47,7 +47,7 @@
             this.textBoxGenre = new System.Windows.Forms.TextBox();
             this.textBoxISBN = new System.Windows.Forms.TextBox();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.textBoxDiscriminator = new System.Windows.Forms.TextBox();
+            this.ComboBoxDiscriminator = new System.Windows.Forms.ComboBox();
             this.textBoxFloor = new System.Windows.Forms.TextBox();
             this.textBoxSection = new System.Windows.Forms.TextBox();
             this.textBoxShelf = new System.Windows.Forms.TextBox();
@@ -94,7 +94,7 @@
             this.tableLayoutPanel2.Controls.Add(this.textBoxGenre, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.textBoxISBN, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.textBoxDescription, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxDiscriminator, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.ComboBoxDiscriminator, 1, 7);
             this.tableLayoutPanel2.Controls.Add(this.textBoxFloor, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.textBoxSection, 1, 9);
             this.tableLayoutPanel2.Controls.Add(this.textBoxShelf, 1, 10);
@@ -316,14 +316,18 @@
             this.textBoxDescription.Size = new System.Drawing.Size(386, 19);
             this.textBoxDescription.TabIndex = 23;
             // 
-            // textBoxDiscriminator
+            // ComboBoxDiscriminator
             // 
-            this.textBoxDiscriminator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDiscriminator.Location = new System.Drawing.Point(157, 160);
-            this.textBoxDiscriminator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxDiscriminator.Name = "textBoxDiscriminator";
-            this.textBoxDiscriminator.Size = new System.Drawing.Size(386, 23);
-            this.textBoxDiscriminator.TabIndex = 25;
+            this.ComboBoxDiscriminator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ComboBoxDiscriminator.Items.AddRange(new object[] {
+            "Physical Reference",
+            "Digital Reference"});
+            this.ComboBoxDiscriminator.Location = new System.Drawing.Point(157, 160);
+            this.ComboBoxDiscriminator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ComboBoxDiscriminator.Name = "ComboBoxDiscriminator";
+            this.ComboBoxDiscriminator.Size = new System.Drawing.Size(386, 23);
+            this.ComboBoxDiscriminator.TabIndex = 25;
+            this.ComboBoxDiscriminator.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDiscriminator_SelectedIndexChanged);
             // 
             // textBoxFloor
             // 
@@ -364,7 +368,7 @@
             // pdfViewerFile
             // 
             this.pdfViewerFile.Location = new System.Drawing.Point(158, 318);
-            this.pdfViewerFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pdfViewerFile.Margin = new System.Windows.Forms.Padding(4);
             this.pdfViewerFile.Name = "pdfViewerFile";
             this.pdfViewerFile.ShowToolbar = false;
             this.pdfViewerFile.Size = new System.Drawing.Size(309, 184);
@@ -514,7 +518,7 @@
         private TextBox textBoxGenre;
         private TextBox textBoxISBN;
         private TextBox textBoxDescription;
-        private TextBox textBoxDiscriminator;
+        internal ComboBox ComboBoxDiscriminator;
         private TextBox textBoxFloor;
         private TextBox textBoxSection;
         private TextBox textBoxShelf;
