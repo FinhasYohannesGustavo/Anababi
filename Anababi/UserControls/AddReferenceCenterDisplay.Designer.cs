@@ -314,6 +314,7 @@ namespace Anababi.UserControls
             this.ComboBoxDiscriminator.Name = "ComboBoxDiscriminator";
             this.ComboBoxDiscriminator.Size = new System.Drawing.Size(386, 23);
             this.ComboBoxDiscriminator.TabIndex = 25;
+            this.ComboBoxDiscriminator.SelectedIndex = 0;
             this.ComboBoxDiscriminator.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDiscriminator_SelectedIndexChanged);
             // 
             // textBoxFloor
