@@ -30,7 +30,6 @@ This Library Management System is a versatile solution designed to cater to the 
 
 - The actual files of the digital references are not included. It was surprisingly difficult to store PDF files on a database and display them on the app. We intend to resolve it soon enough.
 - The form window is not resizable. Certain UI components would ruin the user experience if the window was resizable. We intend to resolve it soon enough.
-- Adding and removing references from the database through the UI is not yet functional.
 
 ## Collaborators
 
@@ -95,44 +94,28 @@ This Library Management System is a versatile solution designed to cater to the 
     **Password = "letmein"**
 
 
-### How to test sorting functionality
+### Steps to traverse the references with a linked list
 
-1. Navigate to the top of the app where you find the search button and click the drop down menu with the sorting icon next to it.
+1. Login with one of the credentials listed above.
+3. Click `Linked References` on the navigational panel.
 
-    ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/3efa5fe0-1870-45a9-bff4-56e6e80ae35d)
+   ![Linked References](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/0e6b8bff-b3ca-4c05-8f2c-34f31b317e01)
 
-    
-2. Choose either `Published Date`, `Author`, `Title` to tell the App on which property of the references it should sort the references with.
-3. Navigate to each category to view the sorted references with the criteria that you have set.
-4. The pages, which include `My Feed` and `Top References` will now be sorted with the sorting criteria that you have selected.
+5. To go to the next reference in the linked list, click `Next`.
 
-### How to test searching functionality
+   ![Next](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/032fd0e1-fab9-4001-8ab5-c82812c73f96)
 
-1. Navigate to the top of the app click the search button on the top right corner.
-2. After clicking on the search button you will have the option to search using binary or linear search.
+7. To go to the previous reference in the linked list, click `Previous`.
 
-    ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/d136868e-a4c0-4308-8dc8-b38ee6a4522f)
+   ![Previous](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/6e9e16fe-3dd3-4fa5-b402-4c52dc9417dc)
 
+9. To remove a reference in the linked list, click `Remove`. This functionality is only available for admin users.
 
-    
-3. Click on the toggle switch to choose the searching algorithm you want.
-    
-    ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/48d0c1fa-14a7-41af-8f43-3b479c4737f4)
+    ![Remove](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/0dc15543-7aa1-42fa-b075-9ad5f921cc2f)
 
+11. To add a reference to the linked list, click `Add a reference` on the navigational panel, fill in the properties and save. This functionality is only available for admin users.
 
-    
-4. The only difference between the two types of searching is that `binary searching` only works on already `sorted data`. Also the `search key` must be exactly what is found on the references properties to be found as a result of the search.
-5. To search by title you have to first sort by Title.
-6. To search by author you have to first sort by Author.
-
-    1. Note if you do search by Author make sure to either search the first name only or the last name only.
-    2. This is because a reference only has a first name or last name property and not a full name property.
-        
-       ![image](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/b5a46566-3e67-4053-a1b8-de1d668a638e)
-
-
-        
-7. Lastly to search by published date you have to first sort by Published Date.
+    ![Add a Reference](https://github.com/FinhasYohannesGustavo/Anababi/assets/96903785/971d6ceb-baf6-4adc-85e1-996e0cad93c1)
 
 
 > Bye... for now.
