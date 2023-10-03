@@ -44,8 +44,8 @@ namespace Anababi.UserControls
             this.LblAvailable = new System.Windows.Forms.Label();
             this.LblNumOfCopies = new System.Windows.Forms.Label();
             this.textBoxCreator = new System.Windows.Forms.TextBox();
-            this.textBoxType = new System.Windows.Forms.TextBox();
-            this.textBoxGenre = new System.Windows.Forms.TextBox();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
+            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
             this.textBoxISBN = new System.Windows.Forms.TextBox();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.ComboBoxDiscriminator = new System.Windows.Forms.ComboBox();
@@ -89,8 +89,8 @@ namespace Anababi.UserControls
             this.tableLayoutPanel2.Controls.Add(this.LblAvailable, 0, 11);
             this.tableLayoutPanel2.Controls.Add(this.LblNumOfCopies, 0, 12);
             this.tableLayoutPanel2.Controls.Add(this.textBoxCreator, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxType, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxGenre, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.comboBoxType, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.comboBoxGenre, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.textBoxISBN, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.textBoxDescription, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.ComboBoxDiscriminator, 1, 7);
@@ -266,23 +266,40 @@ namespace Anababi.UserControls
             this.textBoxCreator.Size = new System.Drawing.Size(386, 23);
             this.textBoxCreator.TabIndex = 19;
             // 
-            // textBoxType
+            // comboBoxType
             // 
-            this.textBoxType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxType.Location = new System.Drawing.Point(157, 29);
-            this.textBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(386, 23);
-            this.textBoxType.TabIndex = 20;
+            this.comboBoxType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "Book",
+            "Article"});
+            this.comboBoxType.Location = new System.Drawing.Point(157, 29);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(386, 23);
+            this.comboBoxType.TabIndex = 20;
+            this.comboBoxType.SelectedIndex = 0;
             // 
-            // textBoxGenre
+            // comboBoxGenre
             // 
-            this.textBoxGenre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxGenre.Location = new System.Drawing.Point(157, 56);
-            this.textBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxGenre.Name = "textBoxGenre";
-            this.textBoxGenre.Size = new System.Drawing.Size(386, 23);
-            this.textBoxGenre.TabIndex = 21;
+            this.comboBoxGenre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxGenre.Items.AddRange(new object[] {
+            "Fiction",
+            "NonFiction",
+            "ScienceFiction",
+            "Thriller",
+            "Fantasy",
+            "Romance",
+            "Adventure",
+            "Drama",
+            "Historical",
+            "Dystopian",
+            "Satire"});
+            this.comboBoxGenre.Location = new System.Drawing.Point(157, 56);
+            this.comboBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxGenre.Name = "comboBoxGenre";
+            this.comboBoxGenre.Size = new System.Drawing.Size(386, 23);
+            this.comboBoxGenre.TabIndex = 21;
+            this.comboBoxGenre.SelectedIndex = 0;
             // 
             // textBoxISBN
             // 
@@ -495,8 +512,8 @@ namespace Anababi.UserControls
         private Label LblAvailable;
         private Label LblNumOfCopies;
         private TextBox textBoxCreator;
-        private TextBox textBoxType;
-        private TextBox textBoxGenre;
+        private ComboBox comboBoxType;
+        private ComboBox comboBoxGenre;
         private TextBox textBoxISBN;
         private TextBox textBoxDescription;
         internal ComboBox ComboBoxDiscriminator;
