@@ -85,13 +85,22 @@ namespace Anababi.UserControls
                         Creator creatorOfReference = referenceToBeAdded.Creator;
                         if (ComboBoxDiscriminator.SelectedItem == "Physical Reference")
                         {
-                            PhysicalReference physicalReferenceToBeAdded = new PhysicalReference();
-                            physicalReferenceToBeAdded.Location.Floor = int.Parse(textBoxFloor.Text);
-                            physicalReferenceToBeAdded.Location.Section = int.Parse(textBoxSection.Text);
-                            physicalReferenceToBeAdded.Location.Shelf = int.Parse(textBoxShelf.Text);
-                            physicalReferenceToBeAdded.Available = checkBoxAvailable.Checked;
-                            physicalReferenceToBeAdded.NumOfCopies = int.Parse(textBoxNumOfCopies.Text);
-                            referenceToBeAdded = physicalReferenceToBeAdded;
+                            referenceToBeAdded.Title = txtTitle.Text;
+                            referenceToBeAdded.PublishedOn = DateTime.Parse(textBoxPublishedOn.Text);
+                            referenceToBeAdded.ISBN = textBoxISBN.Text;
+                            referenceToBeAdded.Type = Enum.Parse<Reference.ReferenceType>(textBoxType.Text);
+                            referenceToBeAdded.Genre = Enum.Parse<Reference.ReferenceGenre>(textBoxGenre.Text);
+                            referenceToBeAdded.CoverImage = UserExperience.ImageToByteArray(pictureBoxCoverImage.Image);
+                            referenceToBeAdded.Description = textBoxDescription.Text;
+                            referenceToBeAdded.Creator = creatorOfReference;
+                            PhysicalReference physicalReference = new PhysicalReference();
+   
+                            physicalReference.Location.Floor = int.Parse(textBoxFloor.Text);
+                            physicalReference.Location.Section = int.Parse(textBoxSection.Text);
+                            physicalReference.Location.Shelf = int.Parse(textBoxShelf.Text);
+                            physicalReference.Available = checkBoxAvailable.Checked;
+                            physicalReference.NumOfCopies = int.Parse(textBoxNumOfCopies.Text);
+                            referenceToBeAdded = physicalReference;
                         }
                         else
                         {
