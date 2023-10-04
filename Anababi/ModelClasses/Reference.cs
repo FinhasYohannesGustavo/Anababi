@@ -53,7 +53,7 @@ namespace Anababi.ModelClasses
                 creator = (
                     context.References.Where(r => r.Id == reference.Id)
                     .Include(r => r.Creator)
-                    .FirstOrDefault()
+                    .First()
                     ).Creator;
             }
 

@@ -144,10 +144,9 @@ namespace Anababi.UserControls
                     Reference referenceToBeUpdated = context.References.Where(r => r.Id == CurrentReferenceNode.Value.Id)
                         .Include(r => r.Creator)
                         .Include(r => (r as PhysicalReference).Location)
-                        .FirstOrDefault();
+                        .First();
 
-                    referenceToBeUpdated.Id = CurrentReferenceNode.Value.Id;
-                    referenceToBeUpdated.Title = CurrentReferenceNode.Value.Title;
+                    referenceToBeUpdated.Title = LblReferenceTitle.Text;
                     referenceToBeUpdated.PublishedOn = DateTime.Parse(textBoxPublishedOn.Text);
                     referenceToBeUpdated.ISBN = textBoxISBN.Text;
                     referenceToBeUpdated.Type = Enum.Parse<Reference.ReferenceType>(textBoxType.Text);
@@ -158,11 +157,12 @@ namespace Anababi.UserControls
                     // Check if the reference is digital or physical
                     if (referenceToBeUpdated is PhysicalReference)
                     {
-                        (referenceToBeUpdated as PhysicalReference).Location.Floor = int.Parse(textBoxFloor.Text);
-                        (referenceToBeUpdated as PhysicalReference).Location.Section = int.Parse(textBoxSection.Text);
-                        (referenceToBeUpdated as PhysicalReference).Location.Shelf = int.Parse(textBoxShelf.Text);
-                        (referenceToBeUpdated as PhysicalReference).Available = checkBoxAvailable.Checked;
-                        (referenceToBeUpdated as PhysicalReference).NumOfCopies = int.Parse(textBoxNumOfCopies.Text);
+                        PhysicalReference physicalReference = (referenceToBeUpdated as PhysicalReference);
+                        physicalReference.Location.Floor = int.Parse(textBoxFloor.Text);
+                        physicalReference.Location.Section = int.Parse(textBoxSection.Text);
+                        physicalReference.Location.Shelf = int.Parse(textBoxShelf.Text);
+                        physicalReference.Available = checkBoxAvailable.Checked;
+                        physicalReference.NumOfCopies = int.Parse(textBoxNumOfCopies.Text);
                     }
                     else
                     {
@@ -207,7 +207,7 @@ namespace Anababi.UserControls
             if (UserExperience.currentUser.IsAdmin)
             {
                 using AnababiContext context = new AnababiContext();
-                Reference toBeRemoved = context.References.Where(r => r.Id == CurrentReferenceNode.Value.Id).FirstOrDefault();
+                Reference toBeRemoved = context.References.Where(r => r.Id == CurrentReferenceNode.Value.Id).First();
 
                 context.Remove(toBeRemoved);
                 context.SaveChanges();

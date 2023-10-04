@@ -179,7 +179,7 @@ namespace Anababi.UserControls
                     Reference referenceToBeUpdated = context.References.Where(r => r.Id == Reference.Id)
                         .Include(r => r.Creator)
                         .Include(r => (r as PhysicalReference).Location)
-                        .FirstOrDefault();
+                        .First();
 
                     referenceToBeUpdated.Id = Reference.Id;
                     referenceToBeUpdated.Title = Reference.Title;

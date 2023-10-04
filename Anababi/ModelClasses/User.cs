@@ -73,7 +73,7 @@ namespace Anababi.ModelClasses
                 using AnababiContext context = new AnababiContext();
                 var toBeModified = context.References
                         .Where(r => r.Id == reference.Id)
-                        .FirstOrDefault();
+                        .First();
 
                 if (toBeModified is Reference)
                 {
@@ -101,7 +101,7 @@ namespace Anababi.ModelClasses
 
                 var toBeRemoved = context.References
                             .Where(r => r.Id == reference.Id) 
-                            .FirstOrDefault();
+                            .First();
 
                 if(toBeRemoved is Reference)
                 {
