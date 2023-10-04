@@ -62,7 +62,7 @@ namespace Anababi.AuthenticationItems
                 userToBeLoggedIn = context.Users.FirstOrDefault(c => c.Username.Equals(loginUserNameTextBox.Text));
             }
 
-            if (userToBeLoggedIn.ProfilePic == null)
+            if (userToBeLoggedIn!=null&&userToBeLoggedIn.ProfilePic == null)
             {
                 userToBeLoggedIn.ProfilePic = UserExperience.ImageToByteArray(Resources.user);
             }
