@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Anababi.DataStructures;
 using Anababi.ModelClasses;
 
 namespace Anababi.UserControls
@@ -50,7 +51,7 @@ namespace Anababi.UserControls
 
         private void BtnLinkedReferences_Click(object sender, EventArgs e)
         {
-            LinkedList<Reference> linkedReferences = new LinkedList<Reference>(Reference.GetAllReferencesFromDB());
+            DoublyLinkedList<Reference> linkedReferences = new DoublyLinkedList<Reference>(Reference.GetAllReferencesFromDB());
             CurrentExperience.AddToPanelContent(new LinkedReferencesPage(linkedReferences));
         }
 

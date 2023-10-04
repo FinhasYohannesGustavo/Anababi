@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using Anababi.Data;
+using Anababi.DataStructures;
 using Anababi.ModelClasses;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,14 +8,14 @@ namespace Anababi.UserControls
 {
     public partial class LinkedReferencesPage : UserControl
     {
-        LinkedList<Reference> LinkedReferences;
-        LinkedListNode<Reference> CurrentReferenceNode;
+        DoublyLinkedList<Reference> LinkedReferences;
+        DoublyLinkedListNode<Reference> CurrentReferenceNode;
 
-        public LinkedReferencesPage(LinkedList<Reference> references)
+        public LinkedReferencesPage(DoublyLinkedList<Reference> references)
         {
             InitializeComponent();
             LinkedReferences = references;
-            CurrentReferenceNode = new LinkedListNode<Reference>(new Reference());
+            CurrentReferenceNode = new DoublyLinkedListNode<Reference>(new Reference());
             CurrentReferenceNode = LinkedReferences.First;
 
             if (!UserExperience.currentUser.IsAdmin)
